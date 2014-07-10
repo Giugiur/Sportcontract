@@ -1,0 +1,35 @@
+$grey: #333333;
+$softGrey: #808080;
+$coldGrey: #505458;
+$solidGrey: #687174;
+$borderColor: #cccccc;
+$linkColor: #3b77d9;
+
+* { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f1f1f1;
+	color: $grey; font-size: 13px;
+}
+a {color: $linkColor; text-decoration: none;}
+input[type="text"] {
+	outline: none;
+	border: 1px solid #e5e9ec;
+	padding: 5px 10px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 18px;
+	@include border-radius(5px);
+}
+input[type="text"]:focus {
+	border: 1px solid #c3c3c3;
+}
+ul {list-style-type: none; padding-left: 0; margin: 0;}
+h2 {
+	font-size: 18px; font-weight: 400; color: $coldGrey;
+	margin-top: 0; padding-bottom: 8px; margin-bottom: 20px;
+	border-bottom: 1px solid $borderColor;
+}

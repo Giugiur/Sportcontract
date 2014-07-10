@@ -1,0 +1,29 @@
+	<div ui-view="header"></div>
+	<div id="main">
+				<div ui-view="sidebar"></div>
+                <div id="mainBody">
+                    <div id="tabs">
+                    	<div class="tabCtrls">
+						    <a href="#"><i class="fa fa-home"></i></a>
+						    <a href="#"><i class="fa fa-plus"></i></a>
+						</div>
+						<ul class="etabs">
+						    <li class="tab active">
+						        <a ui-sref="dashboard.countries" class="title active">Home</a>
+						        <span class="closeTab"><a href="#"></a></span>
+						    </li>
+						    <li class="tab">
+						        <a ui-sref="dashboard.sample" class="title">Views Sample</a>
+						        <span class="closeTab"><a href="#"></a></span>
+						    </li>
+						</ul>
+                        <div class="panelContainer">
+                            <div id="tab-home" class="tabContent active" >
+                                <div class="content"  ui-view="tabcontent" style="margin:0px">
+
+                               	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

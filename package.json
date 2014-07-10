@@ -1,0 +1,62 @@
+{
+  "name": "angular-super-seed",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "bower": "latest",
+    "chai": "1.7.0",
+    "chai-as-promised": "~4.1.1",
+    "connect-livereload": "~0.3.2",
+    "cucumber": "~0.3.3",
+    "karma": "~0.12.0",
+    "karma-chai": "*",
+    "karma-chrome-launcher": "*",
+    "karma-coverage": "0.2.0",
+    "karma-firefox-launcher": "*",
+    "karma-jasmine": "^0.1.5",
+    "karma-junit-reporter": "*",
+    "karma-mocha": "*",
+    "karma-osx-reporter": "0.0.4",
+    "karma-phantomjs-launcher": "*",
+    "karma-spec-reporter": "git://github.com/SpoBo/karma-spec-reporter.git",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0"
+  },
+  "engines": {
+    "node": "0.8.*"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-usemin": "*",
+    "gulp-uglify": "*",
+    "rimraf": "*",
+    "gulp-minify-html": "*",
+    "gulp-minify-css": "*",
+    "gulp-compass": "*",
+    "gulp-header": "*",
+    "gulp-bower": "*",
+    "gulp-inject": "*",
+    "gulp-imagemin": "*",
+    "gulp-angular-templatecache": "*",
+    "gulp-ngmin": "*",
+    "gulp-livereload": "*",
+    "gulp-jshint": "*",
+    "gulp-rev": "*",
+    "gulp-concat": "*",
+    "tiny-lr": "*",
+    "gulp-karma": "*",
+    "express": "*",
+    "connect-livereload": "*",
+    "lodash": "~2.4.1",
+    "load-grunt-tasks": "~0.2.1",
+    "time-grunt": "~0.2.8",
+    "underscore.string": "~2.3.3",
+    "wiredep": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "grunt test:default",
+    "update-webdriver": "./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
+    "protractor": "./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager start"
+  }
+}

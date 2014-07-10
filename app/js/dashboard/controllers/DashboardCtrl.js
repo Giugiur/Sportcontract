@@ -1,0 +1,3 @@
+var DashboardCtrl = function($scope) {
+  
+};
