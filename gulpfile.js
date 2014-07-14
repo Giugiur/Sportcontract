@@ -54,7 +54,10 @@ gulp.task('compass', function () {
         .pipe(gulp.dest('./.tmp'))
         .pipe(refresh(lrserver));
 });
-
+gulp.task('translation',function(){
+    return gulp.src('./app/js/(.*)/translation/*.json')
+        .pipe(gulp.dest('./.tmp/translation/$1'));
+})
 gulp.task('scripts', function() {
   gulp.src('./app/js/**/**/*.js')
     .pipe(concat('app.js'))
@@ -139,6 +142,7 @@ gulp.task('watch', function () {
     gulp.watch('app/js/**/*.html', ['views']);
     gulp.watch('app/js/**/*.js', ['scripts','test']);
     gulp.watch('app/js/*.js', ['scripts','test']);
+    gulp.watch('app/js/*/translation/*.json', ['translation']);
     gulp.watch('bower.json', ['bower']);
     gulp.watch('app/img/**/*.*', ['images']);
     gulp.watch('test/unit/**/*.js', ['test']);
@@ -148,7 +152,7 @@ gulp.task('watch', function () {
       ]).on('change', refresh.changed );
 });
 
-gulp.task('serve:app', ['bower','images','views','scripts','watch'], function() {
+gulp.task('serve:app', ['bower','images','views','scripts','translation','watch'], function() {
     var server = express();
     server.use(livereload({
       port: LIVERELOAD_PORT
