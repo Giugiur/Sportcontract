@@ -14,7 +14,8 @@
     "angular-svg-png": "*",
     "lodash": "~2.4.1",
     "angular-translate": "~2.2.0",
-    "angular-translate-loader-static-files": "~2.2.0"
+    "angular-translate-loader-static-files": "~2.2.0",
+    "restangular": "~1.4.0"
   },
   "devDependencies": {},
   "resolutions": {

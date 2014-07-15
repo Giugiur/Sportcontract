@@ -1,12 +1,13 @@
 angular.module('templates', []);
-angular.module('app.common', []);
+angular.module('app.common', ['restangular']);
 angular.module('app.dashboard', ['ui.router','pascalprecht.translate']);
+angular.module('app.login',['ui.router','app.common']);
 
-angular.module('app', ['app.dashboard', 'app.common', 'ngSanitize', 'ngAnimate', 'ui.router',
+angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates'])
 	.value('version', '0.1')
-    .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider'
-        function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider, $translatePartialLoaderProvider) {
+    .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider',
+        function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider) {
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
 			    .state('dashboard', {
@@ -33,7 +34,7 @@ angular.module('app', ['app.dashboard', 'app.common', 'ngSanitize', 'ngAnimate',
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "countries/views/countries.html",
-			      		controllers : CountriesCtrl
+			      		controller : CountriesCtrl
 			      	}
 			      }
 			    })
@@ -49,7 +50,7 @@ angular.module('app', ['app.dashboard', 'app.common', 'ngSanitize', 'ngAnimate',
 			      url: "/login",
 			      views:{
 			      	"main" : {
-			      		controller : LoginCtrl
+			      		controller : LoginCtrl,
 			      		templateUrl: "login/views/login.html"
 			      	}
 			      }
@@ -57,8 +58,8 @@ angular.module('app', ['app.dashboard', 'app.common', 'ngSanitize', 'ngAnimate',
 
 
 
-		    $translateProvider.useLoader('$translatePartialLoader', {
+		   /**$translateProvider.useLoader('$translatePartialLoader', {
 			  urlTemplate: '/i18n/{part}/{lang}.json'
 			});
-			$translateProvider.preferredLanguage('en');
+			$translateProvider.preferredLanguage('en');**/
         }]);
