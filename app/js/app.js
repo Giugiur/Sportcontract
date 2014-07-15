@@ -21,7 +21,8 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', '
 			      		templateUrl: "common/views/sidebar.html"
 			      	},
 			      	"header@dashboard" : {
-			      		templateUrl : "common/views/header.html"
+			      		templateUrl : "common/views/header.html",
+			      		controller : HeaderCtrl
 			      	},
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "countries/views/countries.html",

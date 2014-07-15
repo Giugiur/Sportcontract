@@ -16,7 +16,7 @@ angular.module('app.common').service('Storage',['$q','Restangular',function($q,R
 			}
 			localStorage.setItem(this.name,JSON.stringify(this.db))
 		}
-		this.updateTime = options.updateTime?options.updateTime:300000;
+		this.updateTime = options.updateTime?options.updateTime:10000000;
 	}
 	Storage.prototype.update = function(){
 		return Restangular.all(this.name).getList();
