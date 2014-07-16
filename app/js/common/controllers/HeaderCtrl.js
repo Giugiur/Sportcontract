@@ -1,3 +1,14 @@
-var HeaderCtrl = function($scope,User) {
+var HeaderCtrl = function($scope,User,Languages,$translate) {
  	$scope.user = User.getUser();
+ 	$scope.languages = Languages.getLanguages();
+ 	$scope.dropdown = false;
+
+ 	$scope.setDropdown = function(i){
+ 		$scope.dropdown = i;
+ 	}
+
+ 	$scope.changeLanguage = function(language){
+ 		$translate.use(language);
+ 		$translate.refresh();
+ 	}
 };

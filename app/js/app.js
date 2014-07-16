@@ -6,8 +6,8 @@ angular.module('app.login',['ui.router','app.common']);
 angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates'])
 	.value('version', '0.1')
-    .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider',
-        function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider) {
+    .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
+        function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
 			    .state('dashboard', {
@@ -37,7 +37,15 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', '
 			      		templateUrl: "countries/views/countries.html",
 			      		controller : CountriesCtrl
 			      	}
-			      }
+			      },
+			      resolve: {
+				    specificTranslations: function($translatePartialLoader, $translate) {
+				      $translatePartialLoader.addPart('countries');
+				      // add other needed parts
+				      return $translate.refresh();
+				    }
+				  }
+
 			    })
 			   .state('dashboard.sample', {
 			      url: "/sample",
@@ -58,9 +66,9 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', '
 			    })
 
 
-
-		   /**$translateProvider.useLoader('$translatePartialLoader', {
-			  urlTemplate: '/i18n/{part}/{lang}.json'
+	       
+		   $translateProvider.useLoader('$translatePartialLoader', {
+			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
-			$translateProvider.preferredLanguage('en');**/
+			$translateProvider.preferredLanguage('ru');
         }]);

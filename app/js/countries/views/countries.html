@@ -3,8 +3,8 @@
                                     <ul class="countries">
                                         <li ng-repeat="country in countries">
                                             <a href="#">
-                                                <img src="http://nodedevel.sportcontract.eu/{{country.flag}}" alt="International Competition">
-                                                <span>{{country.name}}</span>
+                                                <img ng-src="http://nodedevel.sportcontract.eu/{{country.flag}}" alt="International Competition">
+                                                <span>{{country.name.toLowerCase() | translate}}</span>
                                             </a>
                                         </li>
                                     </ul>

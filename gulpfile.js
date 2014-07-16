@@ -55,8 +55,8 @@ gulp.task('compass', function () {
         .pipe(refresh(lrserver));
 });
 gulp.task('translation',function(){
-    return gulp.src('./app/js/(.*)/translation/*.json')
-        .pipe(gulp.dest('./.tmp/translation/$1'));
+    return gulp.src('./app/js/**/**/*.json')
+        .pipe(gulp.dest('./.tmp/translation'));
 })
 gulp.task('scripts', function() {
   gulp.src('./app/js/**/**/*.js')

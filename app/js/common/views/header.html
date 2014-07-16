@@ -1,11 +1,18 @@
 <div id="header">
                 <div class="logo"><i class="fa fa-check-square-o"></i> Sport<span>Contract</span></div>
                 <div class="userOptions">
-                    <a href="#">
+                    <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown" >
                         <span class="userName">{{user.username}}</span>
                         <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span>
                         <i class="fa fa-caret-down"></i>
                     </a>
+                    <div ng-show="dropdown">
+                        <ul>
+                            <li ng-repeat="language in languages">
+                                <a href="" ng-click="changeLanguage(language);setDropdown(false);">{{language}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="search">
                     <i class="fa fa-search"></i>
