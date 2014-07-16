@@ -1,1 +1,0 @@
-SettingCtrl.js
