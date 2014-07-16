@@ -1,6 +1,6 @@
 angular.module('templates', []);
 angular.module('app.common', ['restangular']);
-angular.module('app.dashboard', ['ui.router','pascalprecht.translate']);
+angular.module('app.dashboard', ['ui.router','pascalprecht.translate','app.common']);
 angular.module('app.login',['ui.router','app.common']);
 
 angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', 'ngAnimate', 'ui.router',
@@ -45,6 +45,26 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', '
 				      return $translate.refresh();
 				    }
 				  }
+
+			    })
+			   .state('dashboard.leagues', {
+			      url: "/leagues/:_id",
+			      views:{
+			      	"tabcontent@dashboard" : {
+			      		templateUrl: "leagues/views/leagues.html",
+			      		controller : LeagueCtrl
+			      	}
+			      }
+
+			    })
+			   .state('dashboard.teams', {
+			      url: "/teams/:_id/:productionversionid",
+			      views:{
+			      	"tabcontent@dashboard" : {
+			      		templateUrl: "teams/views/teams.html",
+			      		controller : TeamCtrl
+			      	}
+			      }
 
 			    })
 			   .state('dashboard.sample', {

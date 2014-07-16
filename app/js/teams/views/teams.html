@@ -1,0 +1,11 @@
+
+                                    <h2 class="center">Select Team</h2>
+                                    <ul class="countries">
+                                        <li ng-repeat="team in teams" ng-click="goTeam(team);">
+                                            <a href="">
+                                                <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" alt="">
+                                                <span>{{team.name}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                

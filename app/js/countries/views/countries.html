@@ -1,8 +1,8 @@
 
                                     <h2 class="center">Select Country</h2>
                                     <ul class="countries">
-                                        <li ng-repeat="country in countries">
-                                            <a href="#">
+                                        <li ng-repeat="country in countries" >
+                                            <a ng-click="goCountry(country);"  href="">
                                                 <img ng-src="http://nodedevel.sportcontract.eu/{{country.flag}}" alt="International Competition">
                                                 <span>{{country.name.toLowerCase() | translate}}</span>
                                             </a>
