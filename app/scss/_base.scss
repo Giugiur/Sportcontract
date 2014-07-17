@@ -5,17 +5,8 @@ $solidGrey: #687174;
 $borderColor: #cccccc;
 $linkColor: #3b77d9;
 
-* { 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body {
-	font-family: 'Open Sans', sans-serif;
-	background-color: #f1f1f1;
-	color: $grey; font-size: 13px;
-}
-a {color: $linkColor; text-decoration: none;}
+a {color: $linkColor;}
+body {line-height: 1.428571429;}
 input[type="text"] {
 	outline: none;
 	border: 1px solid #e5e9ec;
@@ -27,9 +18,45 @@ input[type="text"] {
 input[type="text"]:focus {
 	border: 1px solid #c3c3c3;
 }
+select {
+	@include border-radius(4px); padding: 2px 3px; outline: none;
+	border-color: #c3c3c3;
+}
+button {
+	background-color: #fff; outline: none;
+	border: 1px solid #adadad; padding: 3px 10px;
+	@include single-transition(all, 0.1s);
+	@include border-radius(4px); position: relative;
+	font-weight: 700;
+
+	&:hover {background-color: #f2f2f2;} 
+	&:active {@include box-shadow(inset rgba(0,0,0,0.3) 0 0 3px); background-color: #e8e8e8;}
+}
 ul {list-style-type: none; padding-left: 0; margin: 0;}
-h2 {
+table {
+	width: 100%; color: $coldGrey;
+	a {text-decoration: underline;}
+	thead {
+		border-bottom: 1px solid #c5c5c5;
+		th {
+			text-transform: uppercase; text-align: left;
+			font-size: 10px; font-weight: 700; padding: 0 5px 4px 5px;
+		}
+	}
+	tbody {
+		tr {
+			&:nth-child(odd) {background-color: #f5f5f5;}
+			td {padding: 4px 5px;}
+		}
+	}
+}
+.h2 {
 	font-size: 18px; font-weight: 400; color: $coldGrey;
-	margin-top: 0; padding-bottom: 8px; margin-bottom: 20px;
+	padding-bottom: 8px; margin-bottom: 16px;
+	border-bottom: 1px solid $borderColor;
+}
+.h6 {
+	font-size: 10px; font-weight: 700; color: $coldGrey;
+	text-transform: uppercase; padding-bottom: 8px; margin-bottom: 10px;
 	border-bottom: 1px solid $borderColor;
 }

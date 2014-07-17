@@ -1,11 +1,7 @@
 .logo {
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 14px; margin-top: 7px;
-	span {font-weight: 400;}
+	width: 150px; height: 21px;
+	background: transparent url(../img/logo.png) no-repeat 0 0;
 }
-
 .userOptions a {
 	font-size: 11px; color: $softGrey;
 	display: block; position: relative;
@@ -81,8 +77,11 @@
 	li {
 		float: left; margin-right: 10px;
 		&:hover {
-			.closeTab {a {opacity: 1;}}
-			
+			.closeTab {margin-left:-10px; a {opacity: 1;}}
+			.title{
+				padding-left:20px;
+				padding-right : 20px;
+			}
 		}
 		&.active {
 			.closeTab {
@@ -102,13 +101,17 @@
 				width: 9px; height: 30px;
 				background: url('../img/tabSideR.png') no-repeat 0 0;
 			}
+			.title{
+			    background-color: #fff;
+				color: $grey; font-weight: 600;
+			}
 		}
 
 		.title {
 			color: #fff;
 			display: inline-block;
 			padding: 6px; float: left;
-			
+			transition : padding 0.5s;
 			&.active {
 				background-color: #fff;
 				color: $grey; font-weight: 600;
@@ -118,7 +121,7 @@
 		.closeTab {
 			float: left; display: block; height: 30px; width: 0;
 			background-color: $solidGrey; position: relative;
-
+			transition : margin 0.5s;
 			a {
 				display: block; width: 8px; height: 9px; position: absolute; top: 12px;
 				background: url('../img/tabClose.png') no-repeat; opacity: 0; transition: opacity .2s linear;
@@ -154,22 +157,22 @@
 
 			&.active {
 				a {
+					@include border-radius(5px);
 					color: #fff;
 					background-color: #3b76da;
-					@include border-radius(5px);
 				}
 			}
 		}
 	}
 }
 .anchors {
-	padding: 3px 15px 8px; background-color: #fff;
 	@include border-bottom-left-radius(5px);
 	@include border-bottom-right-radius(5px);
+	padding: 3px 15px 8px; background-color: #fff;
 
 	li {
-		border-bottom: 1px dotted $linkColor;
 		@include inline-block; margin-right: 12px;
+		border-bottom: 1px dotted $linkColor;
 		
 		a {
 			font-size: 12px;
@@ -177,40 +180,162 @@
 		}
 	}
 }
-.content {
+.section {
+	.close {
+		position: absolute; top: 12px; right: 25px; z-index: 10;
+		color: $softGrey;
+	}
+	@include border-radius(5px);
 	margin-top: 20px;
 	background-color: #fff;
-	padding: 15px;
-
-	@include border-radius(5px);
+	padding: 15px 10px;
 }
-.content.noViews {
-	margin-top: 0;
+.section.noViews {
 	@include border-top-left-radius(0px);
 	@include border-top-right-radius(0px);
+	margin-top: 0;
 }
 .center {text-align: center;}
 .countries {
-	overflow: hidden; padding-top: 10px;
+	overflow: hidden;
 
 	li {
 		float: left;
 		text-align: center;
 		width: 20%; min-height: 150px;
 
+		img {display: block;}
 		a {
 			display: block; width: 120px; margin: 0 auto;
-			img {margin-bottom: 12px;}
+			img {margin-bottom: 12px; @include single-transition(all, 0.18s);}
 			span {font-weight: 700; color: $coldGrey;}
+			@include single-transition(all, 0.3s);
+			position: relative;
 
+			&:active {top: 1px;}
 			&:hover {
-				img {
-					@include box-shadow(#8d8d8d 0 3px 15px);
-				}
+				img {@include box-shadow(#8d8d8d 0 3px 15px);}
 				span {color: $linkColor; text-decoration: underline;}
 			}
 		}
+	}
+}
+.finder {@include container-fixed();}
+.filter {
+	@include make-md-column(5);
+	@include make-xs-column(5);
 
-		img {display: block;}
+	.filterHead {@include make-row();}
+
+	.filterAdd {
+		@include make-md-column(8);
+		@include make-xs-column(8);
+		
+		select {width: 70%;}
+		button {margin-left: 5px;}
+	}
+	.filterCtrl {
+		@include make-md-column(4);
+		@include make-xs-column(4);
+
+		text-align: right;
+		a {margin: 0 9px;}
+	}
+	.secondary {
+		border-bottom: none; padding-bottom: 0;
+		li {border-bottom: none; margin-top: 0; padding-bottom: 0;}
+		.h6 {
+			margin-bottom: 6px;
+			a {right: 15px; top: -1px; font-size: 13px;}
+		}
+		.list li {line-height: 1.8;}
+		@include make-row();
+		.list {
+			@include make-md-column(6);
+			@include make-xs-column(6);
+		}
+	}
+}
+.filterList {
+	margin-top: 15px;
+	li {
+		position: relative; border-bottom: 1px solid #e0e0e0;
+		padding-bottom: 10px; margin-top: 10px;
+	}
+
+	.short {width: 22%; display: inline-block;}
+	.medium {width: 27%; margin-right: 3%; display: inline-block;}
+	.long {width: 40%; display: inline-block;}
+	select {width: 100%;}
+	.switch { label {margin-right: 10px;} }
+	.sliderWrap {
+		position: absolute; top: 7px;
+		.edge {float: left; width: 5%;}
+	}
+	.slider {
+		background-color: #e4e4e4; position: relative;
+		@include border-radius(2px);
+		height: 5px; float: left;
+		width: 86%; top: 7px; margin: 0 2%;
+		
+		.range {
+			background-color: #3cbd84; display: inline-block;
+			height: 100%; width: 50px; position: absolute; top: 0; left: 20px;
+		}
+		.handle {
+			display: block; width: 12px; height: 12px;
+			background-color: #8c8c8c; @include border-radius(6px);
+			position: absolute; top: -4px;
+			span {top: -18px; position: absolute; font-size: 11px;}
+		}
+	}
+	a {position: absolute; right: 0; top: 3px; color: $softGrey;}
+}
+.form {
+	input {vertical-align: middle;}
+	label {cursor: pointer;}
+}
+.btnModal {
+	i {color: $coldGrey;}
+	span {border-bottom: 1px dotted $linkColor;}
+}
+.result {
+	@include make-md-column(7);
+	@include make-xs-column(7);
+}
+
+#quickSearch {
+	max-height: 230px;
+}
+.quickSearch {
+	@include container-fixed();
+	.h6 {margin-bottom: 0;}
+	.results {
+		@include make-row();
+		
+		.col {
+			@include make-md-column(2);
+			@include make-xs-column(2);
+		}		
+	}
+	.list {
+		overflow-y: auto; max-height: 190px;
+
+		img {float: left;}
+		a {
+			display: block; color: $coldGrey; padding: 7px 0 7px 7px;
+			@include border-radius(4px);
+			&:hover {background: #edecec; @include single-transition(all, 0.3s);}
+		}
+		.info {
+			li {line-height: 1.33; b {font-size: 12px;}}
+			padding-left: 25px; margin-top: -2px;
+			.dob {color: #a6a6a6;}
+
+		}
+		.from span {
+			display: block; font-size: 12px;
+			font-style: italic;
+		}
 	}
 }

@@ -1,5 +1,5 @@
 <div id="header">
-                <div class="logo"><i class="fa fa-check-square-o"></i> Sport<span>Contract</span></div>
+                <div class="logo"></div>
                 <div class="userOptions">
                     <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown" >
                         <span class="userName">{{user.username}}</span>
@@ -16,7 +16,8 @@
                 </div>
                 <div class="search">
                     <i class="fa fa-search"></i>
-                    <input type="text" placeholder="League name, club, player, staff&#8230;">
+                    <input type="text" placeholder="League name, club, player, staff&#8230;" ng-model="search.searchterm">
+
                     <a href="#"><i class="fa fa-plus"></i></a>
                 </div>
 </div>

@@ -2,8 +2,9 @@ angular.module('templates', []);
 angular.module('app.common', ['restangular']);
 angular.module('app.dashboard', ['ui.router','pascalprecht.translate','app.common']);
 angular.module('app.login',['ui.router','app.common']);
+angular.module('app.quicksearch',['ui.router','app.common']);
 
-angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', 'ngAnimate', 'ui.router',
+angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
@@ -91,4 +92,8 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','ngSanitize', '
 			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
 			$translateProvider.preferredLanguage('ru');
+        }]).run(['$rootScope',function($rootScope){
+        	$rootScope.search={
+        		searchterm : ""
+        	};
         }]);

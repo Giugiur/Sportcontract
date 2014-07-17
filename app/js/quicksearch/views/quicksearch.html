@@ -1,0 +1,188 @@
+<div class="section first" id="quickSearch" ng-show="search.searchterm.length>0">
+          
+             
+<a href="#" class="close"><i class="fa fa-times"></i></a>
+          <div class="quickSearch">
+            <div class="results">
+              <div class="col">
+                <div class="h6">Players</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="player in players">
+                    <a href="">
+                      <img src="img/blank.gif" class="flag flag-{{player.fields.country['iso-3166-2'].toLowerCase()}}" alt="{{player.fields.country.name}}">
+                      <ul class="info">
+                        <li class="name">{{player.fields.firstName}} {{player.fields.lastName}} (D)</li>
+                        <li class="dob">{{player.fields.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li class="from">
+                          <span>13&#47;14 Kölner Haie</span>
+                          <span>DEL &#47; GER</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+             <!-- <div class="col">
+                <div class="h6">Staff</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                      <ul class="info">
+                        <li class="name">Uwe Krupp</li>
+                        <li class="dob">14.02.1965</li>
+                        <li><b>President</b></li>
+                        <li class="from">
+                          <span>13&#47;14 Ice Dragons</span>
+                          <span>DEL &#47; GER</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                      <ul class="info">
+                        <li class="name">Uwe Liebetrau</li>
+                        <li class="dob">05.11.1955</li>
+                        <li><b>Coach</b></li>
+                        <li class="from">
+                          <span>13&#47;14 Ice Dragons</span>
+                          <span>DEL, Germany</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                      <ul class="info">
+                        <li class="name">Uwe Krupp</li>
+                        <li class="dob">14.02.1965</li>
+                        <li><b>President</b></li>
+                        <li class="from">
+                          <span>13&#47;14 Ice Dragons</span>
+                          <span>DEL &#47; GER</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                      <ul class="info">
+                        <li class="name">Uwe Liebetrau</li>
+                        <li class="dob">05.11.1955</li>
+                        <li><b>Coach</b></li>
+                        <li class="from">
+                          <span>13&#47;14 Ice Dragons</span>
+                          <span>DEL, Germany</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="h6">Agents</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <ul class="info">
+                        <li class="name">Uwe Krupp</li>
+                        <li class="dob">14.02.1965</li>
+                        <li><b>Scout</b></li>
+                        <li class="from">
+                          <span>Agency Name, Germany</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                      <ul class="info">
+                        <li class="name">John Doe</li>
+                        <li class="dob">12.23.1987</li>
+                        <li><b>Agent</b></li>
+                        <li class="from">
+                          <span>Agency Name, Sweden</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>-->
+              <div class="col">
+                <div class="h6">Teams</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <ul class="info">
+                        <li class="name">Kölner Haie</li>
+                        <li class="from">
+                          <span>DEL &#47; GER</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                      <ul class="info">
+                        <li class="name">Ice Dragons Herford</li>
+                        <li class="from">
+                          <span>CHL &#47; CAN</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="h6">Leagues</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <ul class="info">
+                        <li class="name">DEL, Germany</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                      <ul class="info">
+                        <li class="name">CHL, Canada</li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="h6">Countries</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <ul class="info">
+                        <li class="name">Germany</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                      <ul class="info">
+                        <li class="name">Canada</li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           </div>
