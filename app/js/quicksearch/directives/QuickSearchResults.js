@@ -11,10 +11,10 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     scope.teams;
 	     scope.countries;
 	     scope.leagues;
-	     
+	     scope.staffs;
 
-	     scope.$watch('search',function(newval){
-	     		if(newval.searchterm && newval.searchterm.length>0){
+
+	     var searchFunc = _.throttle(function(newval){
 	     			$http.get(api +'/api/search/teams/' + newval.searchterm).success(function(data){
 	                    scope.teams = data.hits.hits;
 	                })
@@ -27,6 +27,14 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	                $http.get(api +'/api/search/countries/' + newval.searchterm).success(function(data){
 	                    scope.countries = data.hits.hits;
 	                })
+	                $http.get(api +'/api/search/staffs/' + newval.searchterm).success(function(data){
+	                    scope.staffs = data.hits.hits;
+	                })
+	            },100);
+	     
+	     scope.$watch('search',function(newval){
+	     		if(newval.searchterm && newval.searchterm.length>0){
+	     			searchFunc(newval);
 	     		}
 	     	 	
 	     },true)
