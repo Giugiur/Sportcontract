@@ -1,0 +1,20 @@
+@media only screen and (max-width: 980px) {
+	.search input {width: 80%;}
+	#mainBody {padding-left: 70px;}
+	#sideMenu {
+		width: 70px;
+		ul li {
+			&.active {
+				background: none;
+				a {background-color: transparent; color: $coldGrey;}
+			}
+			a {
+				background-color: transparent;
+				width: 100%; border-bottom: none;
+				color: $softGrey;
+			}
+
+			span {display: none;}
+		}
+	}
+}
