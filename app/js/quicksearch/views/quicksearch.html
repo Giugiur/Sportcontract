@@ -9,81 +9,40 @@
                 <ul class="list">
                   <li class="item" ng-repeat="player in players">
                     <a href="">
-                      <img src="img/blank.gif" class="flag flag-{{player.fields.country['iso-3166-2'].toLowerCase()}}" alt="{{player.fields.country.name}}">
+                      <img src="img/blank.gif" class="flag flag-{{player._source.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.country.name}}">
                       <ul class="info">
-                        <li class="name">{{player.fields.firstName}} {{player.fields.lastName}} (D)</li>
-                        <li class="dob">{{player.fields.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li class="name">{{player._source.firstName}} {{player._source.lastName}} (D)</li>
+                        <li class="dob">{{player._source.dateOfBirth | date:'MM.dd.yyyy'}}</li>
                         <li class="from">
-                          <span>13&#47;14 Kölner Haie</span>
-                          <span>DEL &#47; GER</span>
+                          <span>13&#47;14 {{player._source.latestPlayerStats.team.name}}</span>
+                          <span>{{player._source.latestPlayerStats.league.name}} &#47; {{player._source.latestPlayerStats.league.country.abbreviation}}</span>
                         </li>
                       </ul>
                     </a>
                   </li>
                 </ul>
               </div>
-             <!-- <div class="col">
+             <div class="col">
                 <div class="h6">Staff</div>
                 <ul class="list">
-                  <li class="item">
+                  <li class="item" ng-repeat="staff in staffs">
                     <a href="#">
-                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                      <img src="img/blank.gif" class="flag flag-{{staff._source.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
                       <ul class="info">
-                        <li class="name">Uwe Krupp</li>
-                        <li class="dob">14.02.1965</li>
-                        <li><b>President</b></li>
+                        <li class="name">{{staff._source.firstName}} {{staff._source.lastName}}</li>
+                        <li class="dob">{{staff._source.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li><b>{{staff._source.latestStaffStats.staffRole}}</b></li>
                         <li class="from">
-                          <span>13&#47;14 Ice Dragons</span>
-                          <span>DEL &#47; GER</span>
+                          <span>13&#47;14 {{staff._source.latestStaffStats.team.name}}</span>
+                          <span>{{staff._source.latestStaffStats.league.name}} &#47; {{staff._source.country['iso3166_3']}}</span>
                         </li>
                       </ul>
                     </a>
                   </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
-                      <ul class="info">
-                        <li class="name">Uwe Liebetrau</li>
-                        <li class="dob">05.11.1955</li>
-                        <li><b>Coach</b></li>
-                        <li class="from">
-                          <span>13&#47;14 Ice Dragons</span>
-                          <span>DEL, Germany</span>
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
-                      <ul class="info">
-                        <li class="name">Uwe Krupp</li>
-                        <li class="dob">14.02.1965</li>
-                        <li><b>President</b></li>
-                        <li class="from">
-                          <span>13&#47;14 Ice Dragons</span>
-                          <span>DEL &#47; GER</span>
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
-                      <ul class="info">
-                        <li class="name">Uwe Liebetrau</li>
-                        <li class="dob">05.11.1955</li>
-                        <li><b>Coach</b></li>
-                        <li class="from">
-                          <span>13&#47;14 Ice Dragons</span>
-                          <span>DEL, Germany</span>
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
-              <div class="col">
+              <!--<div class="col">
                 <div class="h6">Agents</div>
                 <ul class="list">
                   <li class="item">
@@ -117,24 +76,13 @@
               <div class="col">
                 <div class="h6">Teams</div>
                 <ul class="list">
-                  <li class="item">
+                  <li class="item" ng-repeat="team in teams">
                     <a href="#">
-                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <img src="img/blank.gif" class="flag flag-{{team._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
-                        <li class="name">Kölner Haie</li>
+                        <li class="name">{{team._source.name}}</li>
                         <li class="from">
-                          <span>DEL &#47; GER</span>
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
-                      <ul class="info">
-                        <li class="name">Ice Dragons Herford</li>
-                        <li class="from">
-                          <span>CHL &#47; CAN</span>
+                          <span>{{team._source.latestTeamStats.league.name}} &#47; {{team._source.latestTeamStats.league.country['iso3166_3']}}</span>
                         </li>
                       </ul>
                     </a>
@@ -144,19 +92,11 @@
               <div class="col">
                 <div class="h6">Leagues</div>
                 <ul class="list">
-                  <li class="item">
+                  <li class="item" ng-repeat="league in leagues">
                     <a href="#">
-                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <img src="img/blank.gif" class="flag flag-{{league._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
-                        <li class="name">DEL, Germany</li>
-                      </ul>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
-                      <ul class="info">
-                        <li class="name">CHL, Canada</li>
+                        <li class="name">{{league._source.name}}, {{league._source.country.name}}</li>
                       </ul>
                     </a>
                   </li>
@@ -165,22 +105,15 @@
               <div class="col">
                 <div class="h6">Countries</div>
                 <ul class="list">
-                  <li class="item">
+                  <li class="item" ng-repeat="country in countries">
                     <a href="#">
-                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <img src="img/blank.gif" class="flag flag-{{country._source['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
-                        <li class="name">Germany</li>
+                        <li class="name">{{country._source.name}}</li>
                       </ul>
                     </a>
                   </li>
-                  <li class="item">
-                    <a href="#">
-                      <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
-                      <ul class="info">
-                        <li class="name">Canada</li>
-                      </ul>
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
