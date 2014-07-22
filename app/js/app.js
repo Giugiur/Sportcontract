@@ -49,7 +49,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    },
 				    countries : function(ngProgress,Storage){
 				    	ngProgress.start();
-				    	var storageCountries = Storage.init('api/countries',true,{});
+				    	var storageCountries = Storage.init('api/countries',false,{});
 				    	return storageCountries.all();
 				    }
 				  }
