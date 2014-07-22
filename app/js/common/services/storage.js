@@ -1,4 +1,4 @@
-angular.module('app.common').value('api','http://nodedevel.sportcontract.eu')
+angular.module('app.common').value('api','http://nodedevel5.sportcontract.eu')
 angular.module('app.common').run(['Restangular','api',function(Restangular,api){
 	Restangular.setBaseUrl(api)
 }])
@@ -28,7 +28,9 @@ angular.module('app.common').service('Storage',['$q','Restangular',function($q,R
 			this.update().then(function(result){
 				_this.db.data = result;
 				_this.db.lastUpdated = new Date().getTime();
-				localStorage.setItem(_this.name,JSON.stringify(_this.db))
+				if(this.offline){
+					localStorage.setItem(_this.name,JSON.stringify(_this.db))
+				}
 				deferred.resolve(false);
 			})
 		}else{

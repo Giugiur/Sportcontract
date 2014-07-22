@@ -1,4 +1,4 @@
-angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootScope', function(api,$http,$rootScope) {
+angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootScope','Tabs', function(api,$http,$rootScope,Tabs) {
     return {
       restrict: 'E',
       scope: {
@@ -13,6 +13,10 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     scope.leagues;
 	     scope.staffs;
 
+	     scope.newTab = function(a,b,c){
+	     	console.log(a,b,c);
+	     	Tabs.newTab(a,b,c._source);
+	     }
 
 	     var searchFunc = _.throttle(function(newval){
 	     			$http.get(api +'/api/search/teams/' + newval.searchterm).success(function(data){

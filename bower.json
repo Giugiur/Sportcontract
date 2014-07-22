@@ -16,7 +16,8 @@
     "angular-translate": "~2.2.0",
     "angular-translate-loader-static-files": "~2.2.0",
     "restangular": "~1.4.0",
-    "angularjs-slider": "~0.1.6"
+    "angularjs-slider": "~0.1.6",
+    "ngprogress": "~1.0.4"
   },
   "devDependencies": {},
   "resolutions": {

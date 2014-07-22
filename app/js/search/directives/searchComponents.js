@@ -54,8 +54,9 @@ angular.module('app.search')
             },
             template : '<select class="class"><option value="">Select League</option><option ng-selected="{{lea.name == ngModel}}" ng-repeat="lea in leagueCollection" value="{{lea.name}}">{{lea.name}}</option></select>',
             link: function (scope, elem, attrs, advancedSearchCtrl) {
-                var storageLeagues = Storage.init('api/leagues',true,{});
+                var storageLeagues = Storage.init('api/leagues',false,{});
                   storageLeagues.all().then(function(outcome){
+                        console.log(outcome);
                         scope.leagueCollection = outcome;
                       })
                

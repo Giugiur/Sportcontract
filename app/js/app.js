@@ -6,7 +6,7 @@ angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
 
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','ngSanitize', 'ngAnimate', 'ui.router',
-	'pascalprecht.translate','templates','rzModule'])
+	'pascalprecht.translate','templates','rzModule','ngProgress'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
@@ -43,30 +43,96 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      resolve: {
 				    specificTranslations: function($translatePartialLoader, $translate) {
 				      $translatePartialLoader.addPart('countries');
+
 				      // add other needed parts
 				      return $translate.refresh();
+				    },
+				    countries : function(ngProgress,Storage){
+				    	ngProgress.start();
+				    	var storageCountries = Storage.init('api/countries',true,{});
+				    	return storageCountries.all();
 				    }
 				  }
 
 			    })
 			   .state('dashboard.leagues', {
-			      url: "/leagues/:_id",
+			      url: "/leagues/:id",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "leagues/views/leagues.html",
 			      		controller : LeagueCtrl
 			      	}
-			      }
+			      },
+			      resolve: {
+				    leagues : function(ngProgress,$http,$stateParams,$q,api){
+				    	ngProgress.start();
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/countries/' + $stateParams.id + '/leagues').success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    }
+				  }
 
 			    })
 			   .state('dashboard.teams', {
-			      url: "/teams/:_id/:productionversionid",
+			      url: "/teams/:id",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "teams/views/teams.html",
 			      		controller : TeamCtrl
 			      	}
-			      }
+			      },
+			      resolve: {
+				    teams : function(ngProgress,$http,$stateParams,$q,api){
+				    	ngProgress.start();
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams').success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    }
+				  }
+
+			    })
+			   .state('dashboard.players', {
+			      url: "/players/:id",
+			      views:{
+			      	"tabcontent@dashboard" : {
+			      		templateUrl: "players/views/players.html",
+			      		controller : PlayersCtrl
+			      	}
+			      },
+			      resolve: {
+				    players : function(ngProgress,$http,$stateParams,$q,api){
+				    	ngProgress.start();
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players').success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    }
+				  }
+
+			    })
+			   .state('dashboard.player', {
+			      url: "/player/:id",
+			      views:{
+			      	"tabcontent@dashboard" : {
+			      		templateUrl: "player/views/player.html",
+			      		controller : PlayerCtrl
+			      	}
+			      },
+			      resolve: {
+				    player : function(ngProgress,$http,$stateParams,$q,api){
+				    	ngProgress.start();
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    }
+				  }
 
 			    })
 			   .state('dashboard.sample', {

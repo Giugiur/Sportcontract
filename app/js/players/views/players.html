@@ -1,0 +1,18 @@
+<div class="section noViews">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                                    <h2 class="center">Select Player</h2>
+                                    <ul class="countries">
+                                        <li ng-repeat="player in players" ng-click="goPlayer(player);">
+                                            <a href="">
+                                                <img ng-src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                                                <span>{{player.firstName}} {{player.lastName}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                                

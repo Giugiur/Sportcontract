@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app.search')
-    .directive('advancedSearch', ['$http','asConditions','asService','api', function ($http, asConditions, asService,api) {
+    .directive('advancedSearch', ['$http','asConditions','asService','api','Tabs','$rootScope', function ($http, asConditions, asService,api,Tabs,$rootScope) {
 
         return {
             restrict : 'E',
@@ -18,9 +18,14 @@ angular.module('app.search')
             link : function(scope,element,attrs){
 
                 scope.mod = asService.loadModule('player');
-
+                scope.newTab = function(a,b,c){
+                    console.log(a,b,c);
+                    Tabs.newTab(a,b,c._source);
+                 }
                 scope.conditions = asService.loadConditions(scope.mod);
-
+                scope.close = function(){
+                    $rootScope.search.advanced = !$rootScope.search.advanced;
+                }
                 //scope.conditions = asService.loadConditionCharacteristics(scope.conditions);
 
 
