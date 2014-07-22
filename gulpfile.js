@@ -22,7 +22,7 @@ var gulp = require('gulp')
     , wiredep = require('wiredep');;
 
 // Constants
-var SERVER_PORT = 5000;
+var SERVER_PORT = 19056;
 var LIVERELOAD_PORT = 35729;
 
 // Header configuration
