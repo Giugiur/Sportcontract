@@ -4,10 +4,10 @@
                     <div class="col-md-12">
                                     <h2 class="center">Select Team</h2>
                                     <ul class="countries">
-                                        <li ng-repeat="team in teams" ng-click="goTeam(team);">
+                                        <li ng-repeat="team in teams" ng-click="goTeam(team.team);">
                                             <a href="">
-                                                <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" alt="">
-                                                <span>{{team.name}}</span>
+                                                <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.team.imageUrl}}" alt="">
+                                                <span>{{team.team.name}}</span>
                                             </a>
                                         </li>
                                     </ul>

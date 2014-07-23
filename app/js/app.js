@@ -87,7 +87,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    teams : function(ngProgress,$http,$stateParams,$q,api){
 				    	ngProgress.start();
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams').success(function(result){
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
@@ -107,7 +107,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    players : function(ngProgress,$http,$stateParams,$q,api){
 				    	ngProgress.start();
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players').success(function(result){
+				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
