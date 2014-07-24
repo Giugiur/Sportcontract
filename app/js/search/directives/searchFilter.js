@@ -900,11 +900,15 @@ angular.module('app.search')
                             '}' +
                         '}';
 
-                    console.log(query);
-
-                    $http.get(api  + '/api/advancedSearch/players/'+query).success(function (data) {
-                        scope.results = data;
-                    });
+                    console.log(scope.filters);
+                    if(scope.filters && scope.filters.conditions.length>0){
+                        $http.get(api  + '/api/advancedSearch/players/'+query).success(function (data) {
+                            scope.results = data;
+                        });
+                    }else{
+                        scope.results = [];
+                    }
+                    
 
                 }
 

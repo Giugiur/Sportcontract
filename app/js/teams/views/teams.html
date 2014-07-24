@@ -3,6 +3,9 @@
                   <div class="row">
                     <div class="col-md-12">
                                     <h2 class="center">Select Team</h2>
+                                    <select ng-options="season as season for season in seasons" ng-model="season" ng-change="changeSeason();" >
+                                      <option value="">Select a season</option>
+                                    </select>
                                     <ul class="countries">
                                         <li ng-repeat="team in teams" ng-click="goTeam(team.team);">
                                             <a href="">

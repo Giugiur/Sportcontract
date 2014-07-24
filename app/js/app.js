@@ -76,7 +76,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
 			    })
 			   .state('dashboard.teams', {
-			      url: "/teams/:id",
+			      url: "/teams/:id/:season",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "teams/views/teams.html",
@@ -87,7 +87,15 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    teams : function(ngProgress,$http,$stateParams,$q,api){
 				    	ngProgress.start();
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team').success(function(result){
+				    	var season = $stateParams.season?$stateParams.season:2013;
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team&season=' + season).success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    },
+				    seasons : function($http,$stateParams,$q,api){
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/seasons').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
@@ -96,7 +104,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
 			    })
 			   .state('dashboard.players', {
-			      url: "/players/:id",
+			      url: "/players/:id/:season",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "players/views/players.html",
@@ -107,7 +115,15 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    players : function(ngProgress,$http,$stateParams,$q,api){
 				    	ngProgress.start();
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player').success(function(result){
+				    	var season = $stateParams.season?$stateParams.season:2013;
+				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player&season=' + season).success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    },
+				    seasons : function($http,$stateParams,$q,api){
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/teams/' + $stateParams.id + '/seasons').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
@@ -159,10 +175,18 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
 			$translateProvider.preferredLanguage('ru');
-        }]).run(['$rootScope',function($rootScope){
+        }]).run(['$rootScope','ngProgress',function($rootScope,ngProgress){
         	$rootScope.search={
         		searchterm : "",
         		advanced: false
         	};
-        	
+        	$rootScope.loader;
+        	$rootScope.$on('$routeChangeStart', function(next, current) { 
+			  $rootScope.loader = $timeout(function(){
+			  	ngProgress.complete();
+			  },5000);
+			 });
+        	$rootScope.$on('$routeChangeSuccess', function(next, current) { 
+			  $rootScope.cancel();
+			});
         }]);

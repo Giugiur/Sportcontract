@@ -6,7 +6,7 @@
                                     <ul class="countries">
                                         <li ng-repeat="league in leagues" ng-click="goLeague(league);">
                                             <a href="">
-                                                <img ng-src="http://nodedevel.sportcontract.eu/{{league.logo}}" alt="">
+                                                <img ng-src="{{league.imageUrl}}" alt="">
                                                 <span>{{league.name}}</span>
                                             </a>
                                         </li>
