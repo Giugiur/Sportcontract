@@ -1,4 +1,4 @@
-angular.module('app.common').value('api','http://nodedevel5.sportcontract.eu')
+angular.module('app.common').value('api','http://nodedevel5.sportcontract.eu');
 angular.module('app.common').run(['Restangular','api',function(Restangular,api){
 	Restangular.setBaseUrl(api)
 }])

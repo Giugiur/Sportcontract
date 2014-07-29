@@ -4,8 +4,9 @@ angular.module('app.dashboard', ['ui.router','pascalprecht.translate','app.commo
 angular.module('app.login',['ui.router','app.common']);
 angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
+angular.module('app.calendar',['ui.router','app.common']);
 
-angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','ngSanitize', 'ngAnimate', 'ui.router',
+angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.calendar','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates','rzModule','ngProgress'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
@@ -64,14 +65,14 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
-				    leagues : function(ngProgress,$http,$stateParams,$q,api){
-				    	ngProgress.start();
-				    	var defered = $q.defer();
-				    	$http.get(api + '/api/countries/' + $stateParams.id + '/leagues').success(function(result){
-				    		defered.resolve(result);
-				    	})
-				    	return defered.promise;
-				    }
+                        leagues : function(ngProgress,$http,$stateParams,$q,api){
+                            ngProgress.start();
+                            var defered = $q.defer();
+                            $http.get(api + '/api/countries/' + $stateParams.id + '/leagues').success(function(result){
+                                defered.resolve(result);
+                            })
+                            return defered.promise;
+                        }
 				  }
 
 			    })
@@ -151,7 +152,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				  }
 
 			    })
-			   .state('dashboard.sample', {
+               .state('dashboard.sample', {
 			      url: "/sample",
 			      views:{
 			      	"tabcontent@dashboard" : {
@@ -168,10 +169,53 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      }
 			    })
+                .state('calendar', {
+                    url: "/calendar",
+                    views:{
+                        "main" : {
+                            templateUrl: "calendar/views/calendar.html",
+                            controller : CalendarCtrl
+                        },
+                        "sidebar@calendar" : {
+                            templateUrl: "common/views/sidebar.html"
+                        },
+                        "header@calendar" : {
+                            templateUrl : "common/views/header.html",
+                            controller : HeaderCtrl
+                        }
+                    },
+                    resolve: {
+                        leagues : function(ngProgress,$q,Restangular){
+                            ngProgress.start();
+                            var defered = $q.defer();
+                            /*
+                            $http.get(api + '/api/leagues').success(function(result){
+
+                                defered.resolve(result);
+                            })
+                            */
+                            Restangular.all('api/leaguesCalendar').getList({hasgame:true, game:true}).then(function(result){
+                                //console.log(result);
+                                defered.resolve(result);
+                            });
+                            return defered.promise;
+                        },
+                        teams : function(ngProgress, $q, Restangular){
+                            ngProgress.start();
+                            var defered = $q.defer();
+                            Restangular.all('api/teamsCalendar').getList().then(function(result){
+                                defered.resolve(result);
+                            });
+                            return defered.promise;
+                        }
+                    }
+
+                })
 
 
-	       
-		   $translateProvider.useLoader('$translatePartialLoader', {
+
+
+            $translateProvider.useLoader('$translatePartialLoader', {
 			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
 			$translateProvider.preferredLanguage('ru');

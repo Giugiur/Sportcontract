@@ -1,5 +1,5 @@
 <div id="header">
-                <div class="logo"></div>
+                <a href="#/dashboard/countries"><div class="logo"></div></a>
                 <div class="userOptions">
                     <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown" >
                         <span class="userName">{{user.username}}</span>
@@ -14,7 +14,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="search">
+                <div class="search" ng-hide="onPage('/calendar')">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="League name, club, player, staff&#8230;" ng-model="search.searchterm">
 
