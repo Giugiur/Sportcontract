@@ -14,7 +14,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="search" ng-hide="onPage('/calendar')">
+                <div class="search" ng-show="!hideSearch">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="League name, club, player, staff&#8230;" ng-model="search.searchterm">
 
