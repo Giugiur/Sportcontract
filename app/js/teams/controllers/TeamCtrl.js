@@ -1,5 +1,5 @@
 var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons, ngProgress) {
-  ngProgress.complete();
+  
   $scope.teams = teams;
   $scope.seasons = seasons;
   $scope.season=$stateParams.season?$stateParams.season:2013;

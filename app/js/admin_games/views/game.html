@@ -1,0 +1,62 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Selected game</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Home</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
+    	ng-model="game.home.name">
+    
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="team in gridOptionsHome.data">
+      <td>
+        {{team._source.name}}
+      </td>
+      <td><a href="" ng-click="changeGame(team,'home');">Select</a></td>
+    </tr> 
+  </tbody>
+</table>
+
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Away</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
+    	ng-model="game.away.name">
+    
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="team in gridOptionsAway.data">
+      <td>
+        {{team._source.name}}
+      </td>
+      <td><a href="" ng-click="changeGame(team,'away');">Select</a></td>
+    </tr> 
+  </tbody>
+</table>
+
+</fieldset>
+<button ng-click="saveGame()">Save</button>
+</form>

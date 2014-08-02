@@ -1,5 +1,5 @@
 var CountriesCtrl = function($scope,$http, Storage, $state, Tabs,ngProgress,countries) {
-  ngProgress.complete();
+ 
 
 
   $scope.countries = countries;
