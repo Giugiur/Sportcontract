@@ -8,8 +8,8 @@
                 <div class="h6">Players</div>
                 <ul class="list">
                   <li class="item" ng-repeat="player in players">
-                    <a href="" ng-click="newTab('Player: '+ player._source.firstName +  ' ' + player._source.lastName,'dashboard.player',player)">
-                      <img src="img/blank.gif" class="flag flag-{{player._source.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.country.name}}">
+                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player)">
+                      <img src="img/blank.gif" class="flag flag-{{player._source.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.team.country.name}}">
                       <ul class="info">
                         <li class="name">{{player._source.player.firstName}} {{player._source.player.lastName}} (D)</li>
                         <li class="dob">{{player._source.player.dateOfBirth | date:'MM.dd.yyyy'}}</li>
