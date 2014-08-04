@@ -8,7 +8,7 @@
                 <div class="h6">Players</div>
                 <ul class="list">
                   <li class="item" ng-repeat="player in players">
-                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player)">
+                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player.player)">
                       <img src="img/blank.gif" class="flag flag-{{player._source.team.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.team.country.name}}">
                       <ul class="info">
                         <li class="name">{{player._source.player.firstName}} {{player._source.player.lastName}} (D)</li>
@@ -77,12 +77,12 @@
                 <div class="h6">Teams</div>
                 <ul class="list">
                   <li class="item" ng-repeat="team in teams">
-                    <a href="" ng-click="newTab('Players of '+ team._source.name,'dashboard.players',team)">
+                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team.team)">
                       <img src="img/blank.gif" class="flag flag-{{team._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
-                        <li class="name">{{team._source.name}}</li>
+                        <li class="name">{{team._source.team.name}}</li>
                         <li class="from">
-                          <span>{{team._source.latestTeamStats.league.name}} &#47; {{team._source.latestTeamStats.league.country['iso3166_3']}}</span>
+                          <span>{{team._source.league.name}} &#47; {{team._source.country['iso3166_3']}}</span>
                         </li>
                       </ul>
                     </a>
