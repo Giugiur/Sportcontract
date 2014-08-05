@@ -27,14 +27,14 @@
                 <ul class="list">
                   <li class="item" ng-repeat="staff in staffs">
                     <a href="#">
-                      <img src="img/blank.gif" class="flag flag-{{staff._source.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
+                      <img src="img/blank.gif" class="flag flag-{{staff._source.staff.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
                       <ul class="info">
-                        <li class="name">{{staff._source.firstName}} {{staff._source.lastName}}</li>
-                        <li class="dob">{{staff._source.dateOfBirth | date:'MM.dd.yyyy'}}</li>
-                        <li><b>{{staff._source.latestStaffStats.staffRole}}</b></li>
+                        <li class="name">{{staff._source.staff.firstName}} {{staff._source.staff.lastName}}</li>
+                        <li class="dob">{{staff._source.staff.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li><b>{{staff._source.staffRole}}</b></li>
                         <li class="from">
-                          <span>13&#47;14 {{staff._source.latestStaffStats.team.name}}</span>
-                          <span>{{staff._source.latestStaffStats.league.name}} &#47; {{staff._source.country['iso3166_3']}}</span>
+                          <span>13&#47;14 {{staff._source.team.name}}</span>
+                          <span>{{staff._source.league.name}} &#47; {{staff._source.league.country['iso3166_3']}}</span>
                         </li>
                       </ul>
                     </a>
@@ -77,7 +77,7 @@
                 <div class="h6">Teams</div>
                 <ul class="list">
                   <li class="item" ng-repeat="team in teams">
-                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team.team)">
+                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team._source.team)">
                       <img src="img/blank.gif" class="flag flag-{{team._source.league.country['iso3166_2'].toLowerCase()}}" alt="{{team._source.league.country.name}}">
                       <ul class="info">
                         <li class="name">{{team._source.team.name}}</li>
