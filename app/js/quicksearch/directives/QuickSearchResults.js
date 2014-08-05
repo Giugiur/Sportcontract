@@ -14,8 +14,7 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     scope.staffs;
 
 	     scope.newTab = function(a,b,c){
-	     	console.log(a,b,c);
-	     	Tabs.newTab(a,b,c._source);
+	     	Tabs.newTab(a,b,c._source?c._source:c);
 	     }
 
 	     var searchFunc = _.throttle(function(newval){
