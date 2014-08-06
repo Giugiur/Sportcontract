@@ -140,8 +140,8 @@ gulp.task('watch', function () {
     gulp.watch('app/index.html', ['views']);
     gulp.watch('app/**/*.html', ['views',]);
     gulp.watch('app/js/**/*.html', ['views']);
-    gulp.watch('app/js/**/*.js', ['scripts','test']);
-    gulp.watch('app/js/*.js', ['scripts','test']);
+    // gulp.watch('app/js/**/*.js', ['scripts','test']);
+    // gulp.watch('app/js/*.js', ['scripts','test']);
     gulp.watch('app/js/*/translation/*.json', ['translation']);
     gulp.watch('bower.json', ['bower']);
     gulp.watch('app/img/**/*.*', ['images']);
