@@ -2,19 +2,46 @@
 	width: 150px; height: 21px;
 	background: transparent url(../img/logo.png) no-repeat 0 0;
 }
-.userOptions a {
-	font-size: 11px; color: $softGrey;
-	display: block; position: relative;
-	padding-right: 12px;
+.userOptions {
+	a {
+		color: $softGrey;
+		display: block; position: relative;
+		padding-right: 12px;
 
-	&:hover {text-decoration: none;}
-	.userName {
-		display: block; font-size: 13px;
-		color: $grey; font-weight: 600;
+		&:hover {text-decoration: none;}
+		.userName {
+			display: block; font-size: 13px;
+			color: $grey; font-weight: 600;
+		}
+		span {font-size: 11px;}
+		i.fa-caret-down {
+			font-size: 14px; position: absolute;
+			right: 10px; top: 7px;
+		}
 	}
-	i.fa {
-		font-size: 14px; position: absolute;
-		right: 0; top: 10px;
+}
+.btnMulti {
+	position: relative;
+	a {padding: 5px 10px; border: 1px solid transparent; border-bottom: none;}
+	.open {
+		border: 1px solid $borderColor; border-bottom: none;
+		@include border-radius(5px 5px 0 0);
+	}
+
+	.dropdown {
+		background-color: #fff;
+		border: 1px solid $borderColor;
+		width: 100%;
+		@include border-radius(0 0 5px 5px);
+		
+		&.active {position: absolute; z-index: 10;}
+		li {
+			&:first-child a {padding-top: 6px};
+			&:last-child a {padding-bottom: 6px};
+			a {display: block; padding: 4px 12px;}
+			a:hover{background-color: #f1f1f1;}
+			i.fa {margin-right: 3px;}
+		}
 	}
 }
 

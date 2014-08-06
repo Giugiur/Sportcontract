@@ -6,6 +6,11 @@ $solidGrey: #687174;
 $borderColor: #cccccc;
 $linkColor: #3b77d9;
 
+.clearfix:before,
+.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
 a {color: $linkColor;}
 body {line-height: 1.428571429;}
 input[type="text"] {
