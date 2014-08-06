@@ -40,17 +40,28 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     		
 	     	}
 	     };
+	     var alwaysSuccess = function(request,callback){
+	     	request.success(function(data){
+	     		callback(data)
+	     	}).error(function(err){
+	     		callback({
+	     			hits:{
+	     				hits:[]
+	     			}
+	     		});
+	     	})
+	     }
 	     var searchFunc = _.throttle(function(newval){
 	     			
-	     			$http.get(api +'/api/search/teams/' + newval.searchterm).success(function(data){
+	     			alwaysSuccess($http.get(api +'/api/search/teams/' + newval.searchterm),function(data){
 	     				scope.teams = data.hits.hits;
-	     				$http.get(api +'/api/search/leagues/' + newval.searchterm).success(function(data){
+	     				alwaysSuccess($http.get(api +'/api/search/leagues/' + newval.searchterm),function(data){
 		     				scope.leagues = data.hits.hits;
-		     				$http.get(api +'/api/search/players/' + newval.searchterm).success(function(data){
+		     				alwaysSuccess($http.get(api +'/api/search/players/' + newval.searchterm),function(data){
 			                    scope.players = data.hits.hits;
-			                    $http.get(api +'/api/search/countries/' + newval.searchterm).success(function(data){
+			                    alwaysSuccess($http.get(api +'/api/search/countries/' + newval.searchterm),function(data){
 	                    			scope.countries = data.hits.hits;
-	                    			 $http.get(api +'/api/search/staffs/' + newval.searchterm).success(function(data){
+	                    			 alwaysSuccess($http.get(api +'/api/search/staffs/' + newval.searchterm),function(data){
 						                scope.staffs = data.hits.hits;
 						                propagateUp();    
 						             })
