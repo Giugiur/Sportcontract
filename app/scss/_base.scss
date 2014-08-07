@@ -12,23 +12,26 @@ $linkColor: #3b77d9;
 .clearfix {*zoom: 1;}
 
 a {color: $linkColor;}
+img {max-width: 100%;}
 body {line-height: 1.428571429;}
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
 	outline: none;
 	border: 1px solid #e5e9ec;
-	padding: 5px 10px;
+	padding: 4px 10px;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 18px;
 	@include border-radius(5px);
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
 	border: 1px solid #c3c3c3;
 }
 select {
 	@include border-radius(4px); padding: 2px 3px; outline: none;
 	border-color: #c3c3c3;
 }
-button {
+button, input[type="submit"] {
 	background-color: #fff; outline: none;
 	border: 1px solid #adadad; padding: 3px 10px;
 	@include single-transition(all, 0.1s);
@@ -56,6 +59,11 @@ table {
 		}
 	}
 }
+form {
+	fieldset {margin: 0; padding: 0; border: none;}
+	input {vertical-align: middle;}
+}
+label {cursor: pointer;}
 .h2 {
 	font-size: 18px; font-weight: 400; color: $coldGrey;
 	padding-bottom: 8px; margin-bottom: 16px;
