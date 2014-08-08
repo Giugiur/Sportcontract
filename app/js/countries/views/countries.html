@@ -6,7 +6,7 @@
                                     <ul class="countries">
                                         <li ng-repeat="country in countries | orderBy:'name'" >
                                             <a ng-click="goCountry(country);"  href="">
-                                                <img ng-src="http://beta.eliteprospects.com/images/flags/64/{{country['iso3166_3']}}.png" alt="{{country.name}}" style="width:120px;height:120px;">
+                                                <img ng-src="{{getFlag(country)}}"  alt="{{country.name}}" style="width:120px;height:120px;">
                                                 <span style="text-tranform:capitalize;display:block;height:18px;overflow-y:hidden;">{{country.name.toLowerCase() | translate }}</span>
                                             </a>
                                         </li>

@@ -6,7 +6,7 @@ angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
 
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','ngSanitize', 'ngAnimate', 'ui.router',
-	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid'])
+	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
