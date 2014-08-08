@@ -1,17 +1,35 @@
-<div id="header">
+<div id="header" class="clearfix">
                 <div class="logo"></div>
                 <div class="userOptions">
-                    <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown" >
-                        <span class="userName">{{user.username}}</span>
-                        <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span>
-                        <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div ng-show="dropdown">
-                        <ul>
-                            <li ng-repeat="language in languages">
-                                <a href="" ng-click="changeLanguage(language);setDropdown(false);">{{language}}</a>
-                            </li>
-                        </ul>
+                    
+                    <script>
+                        $(".btnMulti").on("click", function() {
+                            $(this).children("a").toggleClass("open");
+                            $(this).children(".dropdown").toggleClass("active");
+                        });
+                    </script>
+
+                    <div class="btnMulti">
+                        <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown">
+                            <!-- <span class="userName">{{user.username}}</span>
+                            <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span> -->
+                            <span class="userName">Peter Manager</span>
+                            <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown" ng-show="dropdown">
+                            <!-- <ul>
+                                <li ng-repeat="language in languages">
+                                    <a href="" ng-click="changeLanguage(language);setDropdown(false);">{{language}}</a>
+                                </li>
+                            </ul> -->
+                            <ul>
+                                <li><a href="#"><i class="fa fa-user"></i> My Profile</a></li>
+                                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                                <li><a href="#"><i class="fa fa-key"></i> Admin</a></li>
+                                <li><a href="#"><i class="fa fa-sign-out"></i> Sign out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="search">
