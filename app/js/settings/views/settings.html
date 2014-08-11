@@ -44,15 +44,15 @@
                       <option value="yyyy/mm/dd">yyyy/mm/dd</option>
                       
                     </select>
-                    <span class="example">Example&#58; <span>{{getNow()|date:dateformat}}</span></span>
+                    <span class="example">Example&#58; <span>{{date|date:dateformat}}</span></span>
                   </fieldset>
                   <div class="h2">Time format</div>
                   <fieldset>
-                    <select>
+                    <select ng-model="time">
                       <option value="HH:mm:ss">24 h</option>
                       <option value="hh:mm:ss">12 h</option>
                     </select>
-                    <span class="example">Example&#58; <span>{{getNow()|date}}</span></span>
+                    <span class="example">Example&#58; <span>{{date|date:time}}</span></span>
                   </fieldset>
                   <div class="h2">Week starts on</div>
                   <fieldset>

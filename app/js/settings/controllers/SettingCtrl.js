@@ -1,7 +1,5 @@
 var SettingsCtrl = function($scope, $http) {
+  	$scope.date = new Date();
   
-  
-	$scope.getNow = function(){
-		return new Date().getTime();
-	}
+	
 };
