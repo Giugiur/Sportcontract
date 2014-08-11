@@ -6,26 +6,10 @@
                 	<quicksearch search="search">
 
                 	</quicksearch>
-                    <div id="tabs">
-                    	<div class="tabCtrls">
-						    <a href="#"><i class="fa fa-home"></i></a>
-						    <a href="#"><i class="fa fa-plus"></i></a>
-						</div>
-						<ul class="etabs">
+                    
+                    <div class="content"  ui-view="tabcontent" style="margin:0px">
 
-							<li ng-repeat="tab in tabs" class="tab {{active(tab)}}" ui-sref-active="active" >
-								<a ng-href="{{tab.href}}" class="title">{{tab.name |translate}}</a>
-								<span class="closeTab" ><a href="" ng-click="closeTab(tab);"></a></span>
-							</li>
-						    
-						</ul>
-                        <div class="panelContainer">
-                            <div id="tab-home" class="tabContent active" >
-                                <div class="content"  ui-view="tabcontent" style="margin:0px">
-
-                               	</div>
-                            </div>
-                        </div>
                     </div>
+                           
                 </div>
             </div>

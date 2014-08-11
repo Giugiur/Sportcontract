@@ -188,6 +188,24 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    }
 				  }
 
+			    }).state('settings', {
+			      url: "/settings",
+			      views:{
+			      	"main" : {
+			      		templateUrl: "common/views/clear_template.html"
+			      	},
+			      	"sidebar@settings" : {
+			      		templateUrl: "common/views/sidebar.html"
+			      	},
+			      	"header@settings" : {
+			      		templateUrl : "common/views/header.html",
+			      		controller : HeaderCtrl
+			      	},
+			      	"tabcontent@settings" : {
+			      		templateUrl: "settings/views/settings.html",
+			      		controllers : SettingsCtrl
+			      	}
+			      }
 			    }).state('login', {
 			      url: "/login",
 			      views:{

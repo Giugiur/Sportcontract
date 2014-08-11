@@ -1,1 +1,184 @@
-settings.html
+
+        <div class="viewBar">
+          <span class="title">Settings</span>
+          <ul class="views right">
+            <li class="active">
+              <a href="#">Preferences</a>
+            </li>
+            <li>
+              <a href="#">Billing</a>
+            </li>
+            <li>
+              <a href="#">SportContract Plans</a>
+            </li>
+          </ul>
+          <a href="#" class="close"><i class="fa fa-times"></i></a>
+        </div>
+
+        <div class="section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="preferences">
+                <form action="">
+                  <div class="h2">Language</div>
+                  <fieldset>
+                    <select ng-model="language">
+                      <option value="en">English</option>
+                      <option value="de">German</option>
+                      <option value="ru">Russian</option>
+                      <option value="nl">Dutch</option>
+                    </select>
+                  </fieldset>
+                  <div class="h2">Time zone</div>
+                  <fieldset>
+                    <select ng-model="timezone">
+                      <option value="+1">Europe - Madrid (GMT+1)</option>
+                      
+                    </select>
+                  </fieldset>
+                  <div class="h2">Date format</div>
+                  <fieldset>
+                    <select ng-model="dateformat">
+                      <option value="">dd/mm/yyyy</option>
+                      <option value="">mm.dd.yy</option>
+                      <option value="">yyyy/mm/dd</option>
+                      
+                    </select>
+                    <span class="example">Example&#58; <span>{{getNow()|date:dateformat}}</span></span>
+                  </fieldset>
+                  <div class="h2">Time format</div>
+                  <fieldset>
+                    <select>
+                      <option value="">24 h</option>
+                      <option value="">12 h</option>
+                    </select>
+                    <span class="example">Example&#58; <span>21:08</span></span>
+                  </fieldset>
+                  <div class="h2">Week starts on</div>
+                  <fieldset>
+                    <select>
+                      <option value="">Monday</option>
+                      <option value="">Sunday</option>
+                    </select>
+                  </fieldset>
+                  <input type="submit" value="Apply">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="invoices">
+              <div class="h2">Invoices</div>
+              <form action="">
+                <span>
+                  <input type="radio" name="range" checked="checked">
+                  <input type="text"> &#8212; <input type="text">
+                </span>
+                <i>or</i>
+                <span>
+                  <input type="radio" name="range">
+                  <select>
+                    <option value="">All time</option>
+                    <option value="">Last month</option>
+                    <option value="">Last 3 months</option>
+                  </select>
+                </span>
+                <input type="submit" value="Show">
+              </form>
+              <table>
+                <col style="width: 20%;">
+                <col style="width: 13%;">
+                <col style="width: 45%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <thead>
+                  <tr>
+                    <th>Date &#47; Time</th>
+                    <th>Type</th>
+                    <th>Detail</th>
+                    <th>PDF</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>1&#47;30&#47;2014</span> <span>9:31 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Expert Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;29.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>12&#47;31&#47;2013</span> <span>14:03 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Professional Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;49.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>11&#47;30&#47;2014</span> <span>11:21 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Unlimited Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;79.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>1&#47;30&#47;2014</span> <span>9:31 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Expert Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;29.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>12&#47;31&#47;2013</span> <span>14:03 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Professional Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;49.95</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid billSettings">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="section">
+                <div class="h2">Billing profile <i class="fa fa-chevron-down"></i></div>
+                <img src="img/billProfile.jpg" alt="">
+                <button>Save</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="section">
+                <div class="h2">Payment information <i class="fa fa-chevron-down"></i></div>
+                <img src="img/billInfo.jpg" alt="">
+                <button>Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="plans">
+                <img src="img/plans.jpg" alt="">
+                <div class="disclaimer">
+                  <p>You will be charged a plan rate <b>&#36;79.95</b> now (your new plan will start today), then <b>&#36;79.95</b> every month until you cancel.</p>
+                  <p>Your card will be charged again on a monthly basis starting on <b>02.01.2014.</b></p>
+                  <p>Current card on the profile Visa 0123 will be charged.</p>
+                  <button>Update my account</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
