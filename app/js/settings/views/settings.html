@@ -39,9 +39,9 @@
                   <div class="h2">Date format</div>
                   <fieldset>
                     <select ng-model="dateformat">
-                      <option value="">dd/mm/yyyy</option>
-                      <option value="">mm.dd.yy</option>
-                      <option value="">yyyy/mm/dd</option>
+                      <option value="dd/mm/yyyy">dd/mm/yyyy</option>
+                      <option value="mm.dd.yy">mm.dd.yy</option>
+                      <option value="yyyy/mm/dd">yyyy/mm/dd</option>
                       
                     </select>
                     <span class="example">Example&#58; <span>{{getNow()|date:dateformat}}</span></span>
@@ -49,10 +49,10 @@
                   <div class="h2">Time format</div>
                   <fieldset>
                     <select>
-                      <option value="">24 h</option>
-                      <option value="">12 h</option>
+                      <option value="HH:mm:ss">24 h</option>
+                      <option value="hh:mm:ss">12 h</option>
                     </select>
-                    <span class="example">Example&#58; <span>21:08</span></span>
+                    <span class="example">Example&#58; <span>{{getNow()|date}}</span></span>
                   </fieldset>
                   <div class="h2">Week starts on</div>
                   <fieldset>
