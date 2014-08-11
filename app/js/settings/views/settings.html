@@ -3,19 +3,19 @@
           <span class="title">Settings</span>
           <ul class="views right">
             <li class="active">
-              <a href="#">Preferences</a>
+              <a href="" ng-click="sh='preferences'">Preferences</a>
             </li>
             <li>
-              <a href="#">Billing</a>
+              <a href="" ng-click="sh='billing'">Billing</a>
             </li>
             <li>
-              <a href="#">SportContract Plans</a>
+              <a href="" ng-click="sh='plans'">SportContract Plans</a>
             </li>
           </ul>
           <a href="#" class="close"><i class="fa fa-times"></i></a>
         </div>
 
-        <div class="section">
+        <div class="section" ng-show="sh=='preferences'">
           <div class="container-fluid">
             <div class="row">
               <div class="preferences">
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <!--<div class="section">
+        <div class="section" ng-show="sh=='billing'">
           <div class="container-fluid">
             <div class="row">
               <div class="invoices">
@@ -147,7 +147,7 @@
           </div>
         </div>
 
-        <div class="container-fluid billSettings">
+        <div class="container-fluid billSettings" ng-show="sh=='billing'">
           <div class="row">
             <div class="col-md-6">
               <div class="section">
@@ -167,7 +167,7 @@
           </div>
         </div>
 
-        <div class="section">
+        <div class="section" ng-show="sh=='plans'">
           <div class="container-fluid">
             <div class="row">
               <div class="plans">
