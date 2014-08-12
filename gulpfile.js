@@ -152,7 +152,7 @@ gulp.task('watch', function () {
       ]).on('change', refresh.changed );
 });
 
-gulp.task('serve:app', ['bower','images','views','scripts','translation','watch'], function() {
+gulp.task('serve:app', ['bower','images','views','scripts','translation','watch','compass'], function() {
     var server = express();
     server.use(livereload({
       port: LIVERELOAD_PORT

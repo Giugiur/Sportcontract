@@ -22,7 +22,7 @@
                 <form action="">
                   <div class="h2">Language</div>
                   <fieldset>
-                    <select ng-model="language">
+                    <select ng-model="user.profile.language">
                       <option value="en">English</option>
                       <option value="de">German</option>
                       <option value="ru">Russian</option>
@@ -31,37 +31,37 @@
                   </fieldset>
                   <div class="h2">Time zone</div>
                   <fieldset>
-                    <select ng-model="timezone">
+                    <select ng-model="user.profile.timezone">
                       <option value="+1">Europe - Madrid (GMT+1)</option>
                       
                     </select>
                   </fieldset>
                   <div class="h2">Date format</div>
                   <fieldset>
-                    <select ng-model="dateformat">
-                      <option value="dd/mm/yyyy">dd/mm/yyyy</option>
-                      <option value="mm.dd.yy">mm.dd.yy</option>
-                      <option value="yyyy/mm/dd">yyyy/mm/dd</option>
+                    <select ng-model="user.profile.dateformat">
+                      <option value="dd/MM/yyyy">dd/mm/yyyy</option>
+                      <option value="MM.dd.yy">mm.dd.yy</option>
+                      <option value="yyyy/MM/dd">yyyy/mm/dd</option>
                       
                     </select>
-                    <span class="example">Example&#58; <span>{{date|date:dateformat}}</span></span>
+                    <span class="example">Example&#58; <span>{{date|date:user.profile.dateformat}}</span></span>
                   </fieldset>
                   <div class="h2">Time format</div>
                   <fieldset>
-                    <select ng-model="time">
+                    <select ng-model="user.profile.time">
                       <option value="HH:mm:ss">24 h</option>
                       <option value="hh:mm:ss">12 h</option>
                     </select>
-                    <span class="example">Example&#58; <span>{{date|date:time}}</span></span>
+                    <span class="example">Example&#58; <span>{{date|date:user.profile.time}}</span></span>
                   </fieldset>
                   <div class="h2">Week starts on</div>
                   <fieldset>
-                    <select>
-                      <option value="">Monday</option>
-                      <option value="">Sunday</option>
+                    <select ng-model="user.profile.weekstart">
+                      <option value="monday">Monday</option>
+                      <option value="sunday">Sunday</option>
                     </select>
                   </fieldset>
-                  <input type="submit" value="Apply">
+                  <input type="submit" value="Apply" ng-click="User.$save();">
                 </form>
               </div>
             </div>
