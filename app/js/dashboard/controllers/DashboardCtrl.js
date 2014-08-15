@@ -4,11 +4,5 @@ var DashboardCtrl = function($scope,Tabs,$state,$rootScope) {
   	$scope.Tab = Tabs;
   	
 
-  	$scope.active = function(state){
-  		if($state.href(state.state,state.params) == '#' + window.location.href.split('#')[1]){
-  			return "active";
-  		}else{
-  			return "";
-  		}
-  	}
+  	
 };

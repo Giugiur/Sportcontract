@@ -17,12 +17,21 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     	Tabs.newTab(a,b,c._source?c._source:c);
 	     }
 	     var propagateUp = function(){
-	     	if((!scope.teams || scope.teams.length==0) && scope.players[0] ){
-	     		var team = {_source:{}};
-	     		team._source.team = scope.players[0]._source.team;
-	     		team._source.league = scope.players[0]._source.league;
-	     		
-	     		scope.teams.push(team);
+	     	if((!scope.teams || scope.teams.length==0) ){
+	     		if(scope.players[0]){
+	     			var team = {_source:{}};
+		     		team._source.team = scope.players[0]._source.team;
+		     		team._source.league = scope.players[0]._source.league;
+		     		
+		     		scope.teams.push(team);
+	     		}
+	     		if(scope.staffs[0]){
+	     			var team = {_source:{}};
+		     		team._source.team = scope.staffs[0]._source.team;
+		     		team._source.league = scope.staffs[0]._source.league;
+		     		
+		     		scope.teams.push(team);
+	     		}
 	     		
 	     	}
 	     	if((!scope.leagues || scope.leagues.length==0) && scope.teams[0]){

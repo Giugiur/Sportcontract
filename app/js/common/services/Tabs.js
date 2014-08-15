@@ -33,15 +33,38 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		})
 		$state.go(state,params);
 	}
-	self.closeTab = function(id){
-		var temp  = _.filter(self.tabs,function(item){
-			return !item.id == id;
-		})
-		self.tabs.length = 0;
-		for(var i in temp){
-			self.tabs.push(temp[i]);
+	self.closeTab = function(tab){
+		var index ;
+
+		for(var i in self.tabs){
+			if(self.tabs[i].id == tab.id){
+				index = i;
+			}
 		}
+		console.log(tab,index);
+		if(index){
+			self.tabs.splice(index,1);
+		}
+		if(self.tabs.length == 0){
+			self.initTabs();
+		}
+		if(self.active(tab)){
+			if(index-1 == -1){
+				$state.go("dashboard.countries");
+			}else{
+				$state.go(self.tabs[index-1].state,self.tabs[index-1].params);
+			}
+			
+		}
+		
 	}
+	self.active = function(state){
+  		if($state.href(state.state,state.params) == '#' + window.location.href.split('#')[1]){
+  			return true;
+  		}else{
+  			return false;
+  		}
+  	}
 	self.setTabs = function(tabs){
 		
 	}

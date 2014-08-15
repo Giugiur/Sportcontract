@@ -8,7 +8,7 @@
                 <div class="h6">Players</div>
                 <ul class="list">
                   <li class="item" ng-repeat="player in players">
-                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player._source.player)">
+                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player._source.player);search.searchterm='';">
                       <img src="img/blank.gif" class="flag flag-{{player._source.team.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.team.country.name}}">
                       <ul class="info">
                         <li class="name">{{player._source.player.firstName}} {{player._source.player.lastName}} (D)</li>
@@ -26,7 +26,7 @@
                 <div class="h6">Staff</div>
                 <ul class="list">
                   <li class="item" ng-repeat="staff in staffs">
-                    <a href="#">
+                    <a href="">
                       <img src="img/blank.gif" class="flag flag-{{staff._source.staff.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
                       <ul class="info">
                         <li class="name">{{staff._source.staff.firstName}} {{staff._source.staff.lastName}}</li>
@@ -77,7 +77,7 @@
                 <div class="h6">Teams</div>
                 <ul class="list">
                   <li class="item" ng-repeat="team in teams">
-                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team._source.team)">
+                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team._source.team);search.searchterm='';">
                       <img src="img/blank.gif" class="flag flag-{{team._source.league.country['iso3166_2'].toLowerCase()}}" alt="{{team._source.league.country.name}}">
                       <ul class="info">
                         <li class="name">{{team._source.team.name}}</li>
@@ -93,7 +93,7 @@
                 <div class="h6">Leagues</div>
                 <ul class="list">
                   <li class="item" ng-repeat="league in leagues">
-                    <a href="" ng-click="newTab('Teams of '+ league._source.name,'dashboard.teams',league)">
+                    <a href="" ng-click="newTab('Teams of '+ league._source.name,'dashboard.teams',league);search.searchterm='';">
                       <img src="img/blank.gif" class="flag flag-{{league._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
                         <li class="name">{{league._source.name}}, {{league._source.country.name}}</li>
@@ -106,7 +106,7 @@
                 <div class="h6">Countries</div>
                 <ul class="list">
                   <li class="item" ng-repeat="country in countries">
-                    <a href="" ng-click="newTab('Leagues of '+ country._source.name,'dashboard.leagues',country)">
+                    <a href="" ng-click="newTab('Leagues of '+ country._source.name,'dashboard.leagues',country);search.searchterm='';">
                       <img src="img/blank.gif" class="flag flag-{{country._source['iso3166_2'].toLowerCase()}}" alt="Germany">
                       <ul class="info">
                         <li class="name">{{country._source.name}}</li>

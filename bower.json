@@ -18,7 +18,8 @@
     "restangular": "~1.4.0",
     "angularjs-slider": "~0.1.6",
     "ngprogress": "~1.0.4",
-    "angular-img-fallback": "*"
+    "angular-img-fallback": "*",
+    "videojs": "~4.7.1"
   },
   "devDependencies": {},
   "resolutions": {
