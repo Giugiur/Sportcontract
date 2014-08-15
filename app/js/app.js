@@ -7,10 +7,13 @@ angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
 
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
-	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback'])
+	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
+        "com.2fdevs.videogular.plugins.overlayplay",
+        "com.2fdevs.videogular.plugins.buffering"])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
+        	$httpProvider.interceptors.push('interceptorNgProgress');
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
 			    .state('dashboard', {
@@ -229,20 +232,54 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
         		searchterm : "",
         		advanced: false
         	};
-        	$rootScope.loader;
         	
-        	$rootScope.$on('$stateChangeStart', function(next, current) { 
-        	  ngProgress.start();
-			  $rootScope.loader = $timeout(function(){
-			  	ngProgress.complete();
-			  },1000);
-			 });
-        	$rootScope.$on('$stateChangeSuccess', function(next, current) { 
-        		ngProgress.complete();
-        		if($rootScope.loader){
-        			$timeout.cancel($rootScope.loader);
-
-        		}
-			  
-			});
         }]);
+
+angular.module('app').factory('interceptorNgProgress', function ($injector) {
+  var complete_progress, getNgProgress, ng_progress, working;
+  ng_progress = null;
+  working = false;
+
+  getNgProgress = function() {
+    ng_progress = ng_progress || $injector.get("ngProgress");
+    
+    return ng_progress;
+  };
+
+  complete_progress = function() {
+    var ngProgress;
+    if (working) {
+      ngProgress = getNgProgress();
+      ngProgress.complete();
+      return working = false;
+    }
+  };
+
+  return {
+    request: function(request) {
+      var ngProgress;
+      ngProgress = getNgProgress();
+      if (request.url.indexOf('.html') > 0) {
+        return request;
+      }
+      if (!working) {
+        ngProgress.reset();
+        ngProgress.start();
+        working = true;
+      }
+      return request;
+    },
+    requestError: function(request) {
+      complete_progress();
+      return request;
+    },
+    response: function(response) {
+      complete_progress();
+      return response;
+    },
+    responseError: function(response) {
+      complete_progress();
+      return response;
+    }
+  }
+});

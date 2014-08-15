@@ -1,6 +1,15 @@
-<video data-setup="{'techOrder': ['html5', 'flash']}"  class="video-js vjs-default-skin" id="myvideo" video-loader="tutorialNumber" id="video" controls>
-    <source type="video/mp4" src="file:///Users/landervanbreda/Downloads/big_buck_bunny.mp4"></source>
+<videogular vg-width="config.width" 
+    vg-height="config.height" 
+    vg-theme="config.theme.url" 
+    vg-autoplay="config.autoPlay" 
+    vg-stretch="config.stretch.value" 
+    vg-responsive="config.responsive">
+    <video preload='metadata'>
+        <source src="assets/videos/videogular.mp4" type="video/mp4">
+        <source src="assets/videos/videogular.webm" type="video/webm">
 
-    <track kind="chapters" src="file:///Users/landervanbreda/Downloads/webvtt_talk_navigation.vtt" srclang="en" label="English" default>
-    Your browser does not support the video tag.
-</video>
+        
+    </video>
+
+    <vg-overlay-play></vg-overlay-play>
+</videogular>

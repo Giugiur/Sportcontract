@@ -19,7 +19,10 @@
     "angularjs-slider": "~0.1.6",
     "ngprogress": "~1.0.4",
     "angular-img-fallback": "*",
-    "videojs": "~4.7.1"
+    "videojs": "~4.7.1",
+    "videogular": "~0.4.2",
+    "videogular-overlay-play": "~0.4.2",
+    "videogular-poster": "~0.4.2"
   },
   "devDependencies": {},
   "resolutions": {
