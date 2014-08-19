@@ -185,21 +185,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                         }
                     },
                     resolve: {
-                        leagues : function(ngProgress,$q,Restangular){
-                            ngProgress.start();
-                            var defered = $q.defer();
-                            /*
-                            $http.get(api + '/api/leagues').success(function(result){
 
-                                defered.resolve(result);
-                            })
-                            */
-                            Restangular.all('api/leaguesCalendar').getList({hasgame:true, game:true}).then(function(result){
-                                //console.log(result);
-                                defered.resolve(result);
-                            });
-                            return defered.promise;
-                        },
                         teams : function(ngProgress, $q, Restangular){
                             ngProgress.start();
                             var defered = $q.defer();

@@ -1,8 +1,7 @@
-var CalendarCtrl = function($scope,$http, Storage, $state, Tabs,ngProgress,leagues,teams) {
+var CalendarCtrl = function($scope,$http, Storage, $state, Tabs, ngProgress, teams) {
+
     ngProgress.complete();
 
-
-    $scope.leagues = leagues;
     $scope.teams = teams;
     $scope.mapped_teams = {};
 
