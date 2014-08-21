@@ -1,6 +1,24 @@
+.container-fluid .row:first-child {overflow: hidden;}
+.note {
+	@include border-radius(5px);
+	font-size: 11px; 
+	background-color: #ffffdd;
+	border: 1px solid #f7df92;
+	padding: 4px 9px;
+
+	i.fa {font-size: 13px; color: #e7cc76; margin-right: 5px;}
+}
+@media only screen and (max-width: 1080px) {
+	.note {margin-left: 0; margin-top: 10px; width: 70%;}
+}
+
 .logo {
 	width: 150px; height: 21px;
 	background: transparent url(../img/logo.png) no-repeat 0 0;
+	&.admin {
+		width: 283px; height: 21px;
+		background: transparent url(../img/logoAdmin.png) no-repeat 0 0;
+	}
 }
 .userOptions {
 	a {
@@ -19,6 +37,9 @@
 			right: 10px; top: 7px;
 		}
 	}
+}
+@media only screen and (max-width: 1080px) {
+	.userOptions {width: 25%;}
 }
 .btnMulti {
 	position: relative;
@@ -106,7 +127,6 @@
 		&:hover {
 			.closeTab {margin-left:-10px; a {opacity: 1;}}
 			.title{
-				padding-left:20px;
 				padding-right : 20px;
 			}
 		}
@@ -147,8 +167,7 @@
 
 		.closeTab {
 			float: left; display: block; height: 30px; width: 0;
-			background-color: $solidGrey; position: relative;
-			transition : margin 0.5s;
+			position: relative; transition : margin 0.5s;
 			a {
 				display: block; width: 8px; height: 9px; position: absolute; top: 12px;
 				background: url('../img/tabClose.png') no-repeat; opacity: 0; transition: opacity .2s linear;
@@ -182,9 +201,18 @@
 .viewBar {
 	background-color: #fff; overflow: hidden;
 	@include border-radius(5px);
-	padding: 11px 15px; position: relative;
+	padding: 9px 15px; position: relative;
+	.views {
+		ul {@include clearfix;}
+	}
+	.anchors {
+		border-top: 1px solid $borderColor;
+		padding: 0; margin-top: 8px;
+		ul {margin-top: 4px;}
+	}
 	.close {right: 15px; top: 10px;}
 	.title {font-size: 18px; font-weight: 400; color: #505458; line-height: 1; float: left;}
+
 
 }
 .tabViews {
@@ -226,7 +254,19 @@
 	@include border-radius(5px);
 	margin-top: 20px;
 	background-color: #fff;
-	padding: 15px 10px;
+	padding: 15px 20px;
+	&.collapsed {
+		.h2 {border-bottom: none; margin: 0; padding: 0;}
+		.inner {display: none;}
+	}
+	&.collapsible {
+		.h2 {
+			i.fa {
+				font-size: 13px; position: relative;
+				top: -2px;
+			}
+		}
+	}
 }
 .section.noViews {
 	@include border-top-left-radius(0px);
@@ -234,6 +274,7 @@
 	margin-top: 0;
 }
 .center {text-align: center;}
+.mt {margin-top: 20px;}
 .countries {
 	overflow: hidden;
 
@@ -261,7 +302,6 @@
 @media only screen and (max-width: 880px) {
 	.countries { li {width: 25%;} }
 }
-.finder {@include container-fixed();}
 .filter {
 	@include make-md-column(5);
 	@include make-xs-column(5);
@@ -345,14 +385,11 @@
 	max-height: 230px;
 }
 .quickSearch {
-	@include container-fixed();
 	.h6 {margin-bottom: 0;}
 	.results {
-		@include make-row();
-		
+		overflow: hidden;
 		.col {
-			@include make-md-column(2);
-			@include make-xs-column(2);
+			width: 16.5%; float: left; padding-right: 20px;
 		}		
 	}
 	.list {
@@ -377,9 +414,11 @@
 	}
 }
 .preferences {
-	padding-bottom: 15px;
-	@include make-md-column(6);
-	@include make-md-column-offset(3);
+	form {width: 50%; margin: 0 auto;}
+	@media only screen and (max-width: 980px) {
+		form {width: 100%;}
+	}
+
 	fieldset {
 		margin-bottom: 25px;
 		.example {margin-left: 12px;}
@@ -398,7 +437,6 @@
 	}
 }
 .invoices {
-	@include make-md-column(12);
 	form {
 		i {margin: 0 7px;}
 		input[type="text"], select {margin: 0 3px;}
@@ -413,6 +451,115 @@
 	}
 }
 .billSettings {
-	i.fa {color: #1693e5; font-size: 13px;}
 	button {margin-top: 20px;}
+}
+.photo {@include border-radius(5px);}
+.admin {
+	table {
+		td {vertical-align: top; padding: 8px;}
+	}
+}
+.manageStaff {
+	table {
+		tr {
+			border-left: 4px solid transparent;
+			&.online {border-color: #76c95f;}
+			&.newRecord {
+				.addPhoto {
+					display: block; background-color: #fff;
+					border: 1px solid #c2c2c2; text-align: center;
+					width: 60px; height: 60px; line-height: 60px;
+					font-size: 16px;
+					@include border-radius(5px);
+				}
+			}
+		}
+		th {
+			padding-left: 8px;
+			&:nth-child(6), &:nth-child(7) {text-align: center; padding-left: 0;}
+		}
+		td {
+			&:first-child {padding-left: 12px;}
+			&:nth-child(6), &:nth-child(7) {
+				text-align: center; font-size: 16px;
+				vertical-align: middle;
+			}
+			input, select {width: 80%;}
+			ul {
+				margin-bottom: 5px;
+				li {margin-bottom: 5px;}
+			}
+			.remove {display: inline-block; width: 15%; text-align: center;}
+			.updatePhoto {
+				font-size: 11px; text-decoration: none;
+				border-bottom: 1px dotted $linkColor;}
+			.online {
+				display: block; font-size: 11px; color: #46ac29; margin-top: 3px;
+				i {font-size: 8px; position: relative; top: -2px;}
+			}
+		}
+	}
+}
+.userRights {
+	table {
+		td {
+			&:first-child {padding-left: 12px;}
+			span, b {display: block;}
+			&:nth-child(3) {padding-top: 15px;}
+		}
+	}
+	.rightsList {
+		@include clearfix;
+		li {
+			float: left; margin: 0 7px 7px 0; border: 1px solid #e0e0e0;
+			background-color: #fff; padding: 4px 10px;
+			@include border-radius(5px);
+			a {color: #bfbfbf; margin-left: 3px;}
+
+			&:hover {
+				border-color: #bfbfbf;
+				a {color: #808080;}
+			}
+		}
+	}
+}
+.userList {
+	overflow: hidden;
+	li {
+		float: left; text-align: center; margin: 0 50px 30px 0;
+		div {
+			position: relative; width: 60px; margin: 0 auto 5px;
+			a {
+				position: absolute; top: 0; right: 0; color: #d3d4d4;
+				background-color: rgba(0, 0, 0, 0.4); padding: 0 2px;
+				@include border-radius(0 5px 0 5px);
+			}
+		}
+		span, b {display: block;}
+		&.addUser {
+			div {
+				height: 60px; line-height: 60px; font-size: 16px;
+				border: 2px dashed #3b77d9;
+				@include border-radius(5px);
+			}
+		}
+		&.selected {
+			div {@include border-radius(5px); border: 2px solid #3b77d9;}
+		}
+	}
+}
+.selectStaff {
+	position: relative; margin-top: -20px;
+	.userList li {cursor: pointer;}
+	.separator {
+		border-bottom: 1px solid #ddd; margin-bottom: 10px;
+		.arrow {
+			display: block; height: 15px; margin-bottom: -1px;
+			background: url(../img/staffArrow.png) no-repeat 0 0;
+			position: relative; left: 15px;
+		}
+	}
+	.h2 {border-bottom: none; padding-bottom: 0;}
+	.close {top: 25px; right: 0;}
+	button {position: relative; top: -10px;}
 }

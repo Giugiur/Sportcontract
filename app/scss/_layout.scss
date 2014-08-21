@@ -1,10 +1,14 @@
-.wrapper {max-width: 1350px; min-width: 750px; padding-right: 20px;}
-#header {padding: 21px 0 21px 30px;}
+.wrapper {max-width: 1365px; min-width: 750px; padding-right: 5px;}
+#header {padding: 21px 0 21px 15px;}
 .logo {float: left;}
 .search {width: 35%; margin: -5px auto 0;}
 .userOptions {width: 20%; float: right;}
-#main {overflow: hidden;}
+.note {width: 45%; float: left; margin-left: 30px;}
+#main {
+	overflow: hidden;
+	&.admin {padding-left: 5px;}
+}
 #sideMenu {width: 142px; float: left;}
-#mainBody {padding-left: 162px;}
-.section {overflow: hidden; position: relative;}
+#mainBody {padding-left: 147px;}
+.section {position: relative;}
 .section {&.first {margin: 0 0 20px;}}
