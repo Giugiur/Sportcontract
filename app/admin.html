@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Administrator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="header" class="clearfix">
+            <div class="logo admin"></div>
+            <div class="userOptions">
+              <a href="#">
+                <span class="userName">Peter Manager</span>
+                <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </div>
+            <div class="note">
+              <i class="fa fa-exclamation-circle"></i>
+              You have temporary access to administrative functions. <a href="#">Drop access</a> if you no longer require it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="main" class="admin">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="viewBar">
+                <div class="views">
+                  <ul>
+                    <li>
+                      <a href="#">Staff management</a>
+                    </li>
+                    <li>
+                      <a href="#">Club team</a>
+                    </li>
+                    <li>
+                      <a href="#">User rights</a>
+                    </li>
+                    <li>
+                      <a href="#">Email</a>
+                    </li>
+                    <li class="active">
+                      <a href="#">Templates</a>
+                    </li>
+                    <li>
+                      <a href="#">Billing</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="anchors">
+                  <ul>
+                    <li><a href="#">Other template</a></li>
+                    <li><a href="#">Scouting template</a></li>
+                    <li><a href="#">Player rating template</a></li>
+                  </ul>
+                </div>
+                <a href="#" class="close"><i class="fa fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="center mt">
+                <button>Add new staff</button>
+              </div>
+
+              <div class="manageStaff section">
+                <table>
+                  <colgroup>
+                    <col style="width: 7%;">
+                    <colgroup>
+                      <col span="4" style="width: 18%;">
+                    </colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Phone</th>
+                      <th>Language</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="newRecord">
+                      <td>
+                        <a href="#" class="addPhoto">
+                          <i class="fa fa-plus"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <input type="text">
+                      </td>
+                      <td>
+                        <input type="text">
+                      </td>
+                      <td>
+                        <input type="text">
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <select>
+                              <option value="">Swedish</option>
+                              <option value="">English</option>
+                              <option value="">German</option>
+                            </select>
+                          </li>
+                        </ul>
+                        <div>
+                          <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Apply changes"><i class="fa fa-check"></i></a>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Remove user"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr class="online">
+                      <td>
+                        <img src="img/userpic1.jpg" class="photo" alt="">
+                      </td>
+                      <td>
+                        <span>Tony Zabel</span>
+                        <span class="online"><i class="fa fa-circle"></i> Online</span>
+                      </td>
+                      <td>Head coach</td>
+                      <td>
+                        <ul>
+                          <li>+4686008100</li>
+                          <li>+4670822166</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Swedish</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Modify records"><i class="fa fa-edit"></i></a>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Remove user"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/userpic2.jpg" class="photo" alt="">
+                        <a href="#" class="updatePhoto">New photo</a>
+                      </td>
+                      <td>
+                        <span>Stefan Nyman</span>
+                      </td>
+                      <td>
+                        <input type="text" value="Assistant coach">
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <input type="text" value="+4686008100">
+                            <a href="#" class="remove"><i class="fa fa-trash-o"></i></a>
+                          </li>
+                          <li>
+                            <input type="text" value="+4670822166">
+                            <a href="#" class="remove"><i class="fa fa-trash-o"></i></a>
+                          </li>
+                        </ul>
+                        <div>
+                          <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <select>
+                              <option value="">Swedish</option>
+                              <option value="">English</option>
+                              <option value="">German</option>
+                            </select>
+                            <a href="#" class="remove"><i class="fa fa-trash-o"></i></a>
+                          </li>
+                          <li>
+                            <select>
+                              <option value="">English</option>
+                              <option value="">Swedish</option>
+                              <option value="">German</option>
+                            </select>
+                            <a href="#" class="remove"><i class="fa fa-trash-o"></i></a>
+                          </li>
+                        </ul>
+                        <div>
+                          <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Apply changes"><i class="fa fa-check"></i></a>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Remove user"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr class="online">
+                      <td>
+                        <img src="img/userpic1.jpg" class="photo" alt="">
+                      </td>
+                      <td>
+                        <span>Tony Zabel</span>
+                        <span class="online"><i class="fa fa-circle"></i> Online</span>
+                      </td>
+                      <td>General manager</td>
+                      <td>
+                        <ul>
+                          <li>+4670822166</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>German</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Modify records"><i class="fa fa-edit"></i></a>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Remove user"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/userpic2.jpg" class="photo" alt="">
+                      </td>
+                      <td>
+                        <span>Stefan Nyman</span>
+                      </td>
+                      <td>Goalie coach</td>
+                      <td>
+                        <ul>
+                          <li>+4686008100</li>
+                          <li>+4670822166</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>German</li>
+                          <li>Swedish</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Modify records"><i class="fa fa-edit"></i></a>
+                      </td>
+                      <td>
+                        <a href="#" data-toggle="tooltip" title="Remove user"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="userRights section collapsible">
+                <div class="h2">Summary <a href="#"><i class="fa fa-chevron-up"></i></a></div>
+                <div class="inner">
+                  <table>
+                    <colgroup>
+                      <col style="width: 10%;">
+                      <col style="width: 13%;">
+                      <col style="width: 60%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Staff member</th>
+                        <th>Remove rights</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </td>
+                        <td>
+                          <span>Tony Zabel</span>
+                          <b>Head coach</b>
+                        </td>
+                        <td>
+                          <ul class="rightsList">
+                            <li>Admin <a href="#"><i class="fa fa-times"></i></a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="img/userpic2.jpg" class="photo" alt="">
+                        </td>
+                        <td>
+                          <span>Stefan Nyman</span>
+                          <b>Assistant coach</b>
+                        </td>
+                        <td>
+                          <ul class="rightsList">
+                            <li>Scouting <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Tasks <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Budget planning <a href="#"><i class="fa fa-times"></i></a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </td>
+                        <td>
+                          <span>Tony Zabel</span>
+                          <b>General manager</b>
+                        </td>
+                        <td>
+                          <ul class="rightsList">
+                            <li>Scouting <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Tasks <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Video system <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Player offers <a href="#"><i class="fa fa-times"></i></a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="img/userpic2.jpg" class="photo" alt="">
+                        </td>
+                        <td>
+                          <span>Stefan Nyman</span>
+                          <b>Goalie coach</b>
+                        </td>
+                        <td>
+                          <ul class="rightsList">
+                            <li>Video system <a href="#"><i class="fa fa-times"></i></a></li>
+                            <li>Vide upload <a href="#"><i class="fa fa-times"></i></a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="section collapsible">
+                <div class="h2">Admin <a href="#"><i class="fa fa-chevron-up"></i></a></div>
+                <div class="inner">
+                  <ul class="userList">
+                    <li>
+                      <div>
+                        <a href="#"><i class="fa fa-times"></i></a>
+                        <img src="img/userpic1.jpg" class="photo" alt="">
+                      </div>
+                      <span>Tony Zabel</span>
+                      <b>Head coach</b>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#"><i class="fa fa-times"></i></a>
+                        <img src="img/userpic2.jpg" class="photo" alt="">
+                      </div>
+                      <span>Stefan Nyman</span>
+                      <b>Assistant coach</b>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#"><i class="fa fa-times"></i></a>
+                        <img src="img/userpic1.jpg" class="photo" alt="">
+                      </div>
+                      <span>Tony Zabel</span>
+                      <b>General manager</b>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#"><i class="fa fa-times"></i></a>
+                        <img src="img/userpic2.jpg" class="photo" alt="">
+                      </div>
+                      <span>Stefan Nyman</span>
+                      <b>Assistant coach</b>
+                    </li>
+                    <li class="addUser">
+                      <a href="#">
+                        <div>
+                          <i class="fa fa-plus"></i>
+                        </div>
+                        <span>Add user</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="selectStaff">
+                    <a href="#" class="close"><i class="fa fa-times"></i></a>
+                    <div class="separator"><div class="arrow"></div></div>
+                    <div class="h2">Select staff&#58;</div>
+                    <ul class="userList">
+                      <li class="selected">
+                        <div>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </div>
+                        <span>Tony Zabel</span>
+                        <b>Head coach</b>
+                      </li>
+                      <li class="selected">
+                        <div>
+                          <img src="img/userpic2.jpg" class="photo" alt="">
+                        </div>
+                        <span>Stefan Nyman</span>
+                        <b>Assistant coach</b>
+                      </li>
+                      <li>
+                        <div>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </div>
+                        <span>Tony Zabel</span>
+                        <b>General manager</b>
+                      </li>
+                    </ul>
+                    <button>Add</button>
+                  </div>
+                </div>
+              </div><!--.section-->
+
+              <div class="section collapsible">
+                <div class="h2">Scouting <a href="#"><i class="fa fa-chevron-up"></i></a></div>
+                <div class="inner">
+                  <ul class="userList">
+                    <li class="addUser">
+                      <a href="#">
+                        <div>
+                          <i class="fa fa-plus"></i>
+                        </div>
+                        <span>Add user</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="selectStaff">
+                    <a href="#" class="close"><i class="fa fa-times"></i></a>
+                    <div class="separator"><div class="arrow"></div></div>
+                    <div class="h2">Select staff&#58;</div>
+                    <ul class="userList">
+                      <li>
+                        <div>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </div>
+                        <span>Tony Zabel</span>
+                        <b>Head coach</b>
+                      </li>
+                      <li class="selected">
+                        <div>
+                          <img src="img/userpic2.jpg" class="photo" alt="">
+                        </div>
+                        <span>Stefan Nyman</span>
+                        <b>Assistant coach</b>
+                      </li>
+                      <li class="selected">
+                        <div>
+                          <img src="img/userpic1.jpg" class="photo" alt="">
+                        </div>
+                        <span>Tony Zabel</span>
+                        <b>General manager</b>
+                      </li>
+                    </ul>
+                    <button>Add</button>
+                  </div>
+                </div>
+              </div><!--.section-->
+
+              <div class="section collapsible collapsed">
+                <div class="h2">Player rating <a href="#"><i class="fa fa-chevron-down"></i></a></div>
+                <div class="inner">
+                  <p>Collapsed content to be expanded here by removing .collapsed class from the section</p>
+                </div>
+              </div><!--.section-->
+
+            </div><!--.col-md-12-->
+          </div><!--.row-->
+
+        </div><!--.container-fluid-->
+
+    </div><!--.main-->
+  </div><!--.wrappper-->
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="assets/javascripts/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SportContract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="header" class="clearfix">
+            <div class="logo"></div>
+            <div class="userOptions">
+              <a href="#">
+                <span class="userName">Peter Manager</span>
+                <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </div>
+            <div class="search">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="League name, club, player, staff&#8230;">
+              <a href="#"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="sideMenu">
+        <ul>
+          <li>
+              <a href="#">
+                <i class="fa fa-comments-o"></i>
+                <span>Communication</span>
+              </a>
+          </li>
+          <li class="active">
+            <a href="#">
+              <i class="fa fa-cubes"></i>
+              <span>Organisation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Scouting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="mainBody">
+
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="section first">
+                <a href="#" class="close"><i class="fa fa-times"></i></a>
+                <div class="finder">
+                  <div class="row">
+                      <div class="filter">
+                        <div class="h2">Filter</div>
+                        <div class="filterHead">
+                          <div class="filterAdd">
+                            <select>
+                              <option>Select condition</option>
+                              <option>Country</option>
+                              <option>Position</option>
+                            </select>
+                            <button>Add</button>
+                          </div>
+                          <div class="filterCtrl">
+                            <a href="#" class="btnModal"><i class="fa fa-folder-open-o"></i> <span>load</span></li></a>
+                            <a href="#" class="btnModal"><i class="fa fa-save"></i> <span>save</span></li></a>
+                          </div>
+                        </div>
+                        <div class="filterList form">
+                          <ul>
+                              <li>
+                                <label class="short">
+                                    <input type="checkbox" checked="checked"> Country
+                                </label>
+                                <span class="medium switch">
+                                  <label>
+                                    <input type="radio" name="toggleCountry" checked="checked"> is
+                                  </label>
+                                  <label>
+                                    <input type="radio" name="toggleCountry"> not
+                                  </label>
+                                </span>
+                                <span class="long">
+                                  <select>
+                                    <option>Sweden</option>
+                                    <option>Germany</option>
+                                  </select>
+                                </span>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                              </li>
+                              <li>
+                                <label class="short">
+                                  <input type="checkbox" checked="checked"> Position
+                                </label>
+                                <span class="medium switch">
+                                  <label>
+                                    <input type="radio" name="togglePosition"> is
+                                  </label>
+                                  <label>
+                                    <input type="radio" name="togglePosition" checked="checked"> not
+                                  </label>
+                                </span>
+                                <span class="long">
+                                  <select>
+                                    <option>Defenseman</option>
+                                    <option>Forward</option>
+                                  </select>
+                                </span>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                              </li>
+                              <li>
+                                <label class="short">
+                                  <input type="checkbox"> Age
+                                </label>
+                                <span class="medium">
+                                  <select>
+                                    <option>Between</option>
+                                    <option>Older than</option>
+                                    <option>Younger than</option>
+                                  </select>
+                                </span>
+                                <span class="long sliderWrap">
+                                  <span class="edge">0</span>
+                                  <div class="slider">
+                                    <span class="range"></span>
+                                    <span class="handle" style="left: 20px;"><span>21</span></span>
+                                    <span class="handle"  style="left: 70px;"><span>39</span></span>
+                                  </div>
+                                  <span class="edge">80</span>
+                                </span>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                              </li>
+                              <li class="secondary">
+                                <div class="list">
+                                  <div class="h6">Age <a href="#"><i class="fa fa-times"></i></a></div>
+                                  <ul>
+                                   <li>
+                                     <label>
+                                       <input type="checkbox"> Any &#40;<span>286</span>&#41;
+                                     </label>
+                                   </li>
+                                   <li>
+                                     <label>
+                                       <input type="checkbox"> 1975 &#45; 1979 &#40;<span>9</span>&#41;
+                                     </label>
+                                   </li>
+                                   <li>
+                                     <label>
+                                       <input type="checkbox"> 1980 &#45; 1984 &#40;<span>55</span>&#41;
+                                     </label>
+                                   </li>
+                                   <li>
+                                     <label>
+                                       <input type="checkbox"> 1985 &#45; 1989 &#40;<span>134</span>&#41;
+                                     </label>
+                                   </li>
+                                  </ul>
+                                </div>
+                                 <div class="list">
+                                    <div class="h6">Division <a href="#"><i class="fa fa-times"></i></a></div>
+                                    <ul>
+                                      <li>
+                                        <label>
+                                          <input type="checkbox"> Any &#40;<span>236</span>&#41;
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label>
+                                          <input type="checkbox"> I Division &#40;<span>236</span>&#41;
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label>
+                                          <input type="checkbox"> II Division &#40;<span>30</span>&#41;
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label>
+                                          <input type="checkbox"> III Division &#40;<span>3</span>&#41;
+                                        </label>
+                                      </li>
+                                    </ul>
+                                 </div>
+                              </li>
+                          </ul>
+                        </div><!--.filterList-->
+                      </div><!--.row-->
+                      <div class="result">
+                        <div class="h2">Results</div>
+                        <table>
+                          <colgroup style="width: 5%;">
+                          <colgroup span="4" style="width: 22%;"></colgroup>
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Name</th>
+                              <th>Position</th>
+                              <th>Born</th>
+                              <th>League</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                              </td>
+                              <td><a href="#">Pontus Petterström</a></td>
+                              <td>Defenseman</td>
+                              <td>1992-03-14</td>
+                              <td>ET</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-de" alt="Germany"></td>
+                              <td><a href="#">Martin Lundberg</a></td>
+                              <td>Centre</td>
+                              <td>1994-09-29</td>
+                              <td>Division 1</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-ca" alt="Canada"></td>
+                              <td><a href="#">Jimmie Ericsson</a></td>
+                              <td>Right wing</td>
+                              <td>1980-04-28</td>
+                              <td>ET</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-ch" alt="Switzerland"></td>
+                              <td><a href="#">David Gunnarsson</a></td>
+                              <td>Forward</td>
+                              <td>1991-04-12</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-ro" alt="Romania"></td>
+                              <td><a href="#">Robin Bystram</a></td>
+                              <td>Goalie</td>
+                              <td>1995-12-02</td>
+                              <td>SHL</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-ca" alt="Canada"></td>
+                              <td><a href="#">Victor Ekarv</a></td>
+                              <td>Forward</td>
+                              <td>1995-06-03</td>
+                              <td>International</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-no" alt="Norway"></td>
+                              <td><a href="#">Jesper Ollas</a></td>
+                              <td>Left wing</td>
+                              <td>1992-11-16</td>
+                              <td>Allsvenskan</td>
+                            </tr>
+                            <tr>
+                              <td><img src="img/blank.gif" class="flag flag-fj" alt="Fiji"></td>
+                              <td><a href="#">Dallas Kesper</a></td>
+                              <td>Defenseman</td>
+                              <td>1992-11-16</td>
+                              <td>Division 2</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div><!--.finder-->
+              </div><!--.section.first-->
+            </div>
+          </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section first" id="quickSearch">
+                    <a href="#" class="close"><i class="fa fa-times"></i></a>
+                    <div class="quickSearch">
+                      <div class="results">
+
+                        <div class="col">
+                          <div class="h6">Players</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">Uwe Geisert (D)</li>
+                                  <li class="dob">2 Apr 1984</li>
+                                  <li class="from">
+                                    <span>13&#47;14 Kölner Haie</span>
+                                    <span>DEL &#47; GER</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">Uwe Geiselmann (F)</li>
+                                  <li class="dob">12.23.1987</li>
+                                  <li class="from">
+                                    <span>07&#47;08 Ice Dragons Herford</span>
+                                    <span>DEL, Germany</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="h6">Staff</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                                <ul class="info">
+                                  <li class="name">Uwe Krupp</li>
+                                  <li class="dob">14.02.1965</li>
+                                  <li><b>President</b></li>
+                                  <li class="from">
+                                    <span>13&#47;14 Ice Dragons</span>
+                                    <span>DEL &#47; GER</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                                <ul class="info">
+                                  <li class="name">Uwe Liebetrau</li>
+                                  <li class="dob">05.11.1955</li>
+                                  <li><b>Coach</b></li>
+                                  <li class="from">
+                                    <span>13&#47;14 Ice Dragons</span>
+                                    <span>DEL, Germany</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                                <ul class="info">
+                                  <li class="name">Uwe Krupp</li>
+                                  <li class="dob">14.02.1965</li>
+                                  <li><b>President</b></li>
+                                  <li class="from">
+                                    <span>13&#47;14 Ice Dragons</span>
+                                    <span>DEL &#47; GER</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                                <ul class="info">
+                                  <li class="name">Uwe Liebetrau</li>
+                                  <li class="dob">05.11.1955</li>
+                                  <li><b>Coach</b></li>
+                                  <li class="from">
+                                    <span>13&#47;14 Ice Dragons</span>
+                                    <span>DEL, Germany</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="h6">Agents</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">Uwe Krupp</li>
+                                  <li class="dob">14.02.1965</li>
+                                  <li><b>Scout</b></li>
+                                  <li class="from">
+                                    <span>Agency Name, Germany</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                                <ul class="info">
+                                  <li class="name">John Doe</li>
+                                  <li class="dob">12.23.1987</li>
+                                  <li><b>Agent</b></li>
+                                  <li class="from">
+                                    <span>Agency Name, Sweden</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="h6">Teams</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">Kölner Haie</li>
+                                  <li class="from">
+                                    <span>DEL &#47; GER</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                                <ul class="info">
+                                  <li class="name">Ice Dragons Herford</li>
+                                  <li class="from">
+                                    <span>CHL &#47; CAN</span>
+                                  </li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="h6">Leagues</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">DEL, Germany</li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                                <ul class="info">
+                                  <li class="name">CHL, Canada</li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <div class="h6">Countries</div>
+                          <ul class="list">
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                                <ul class="info">
+                                  <li class="name">Germany</li>
+                                </ul>
+                              </a>
+                            </li>
+                            <li class="item">
+                              <a href="#">
+                                <img src="img/blank.gif" class="flag flag-ca" alt="Canada">
+                                <ul class="info">
+                                  <li class="name">Canada</li>
+                                </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--.row-->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="tabs">
+                    <div class="tabCtrls">
+                      <a href="#"><i class="fa fa-home"></i></a>
+                      <a href="#"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <ul class="etabs">
+                      <li class="tab active">
+                        <a href="#tab-home" class="title">Home</a>
+                        <span class="closeTab"><a href="#"></a></span>
+                      </li>
+                      <li class="tab">
+                        <a href="#tab-two" class="title">Views Sample</a>
+                        <span class="closeTab"><a href="#"></a></span>
+                      </li>
+                    </ul>
+                    <div class="panelContainer">
+                      <div id="tab-home" class="tabContent">
+                        <div class="section noViews">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="h2 center">Select Country</div>
+                                <ul class="countries">
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/international.jpg" alt="International Competition">
+                                      <span>International Competition</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/austria.jpg" alt="Austria">
+                                      <span>Austria</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/germany.jpg" alt="Germany">
+                                      <span>Germany</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/denmark.jpg" alt="Denmark">
+                                      <span>Denmark</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/norvey.jpg" alt="Norvey">
+                                      <span>Norvey</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/russia.jpg" alt="Russia">
+                                      <span>Russia</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/finland.jpg" alt="Finland">
+                                      <span>Finland</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/czech.jpg" alt="Czech Republic">
+                                      <span>Czech Republic</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/sweden.jpg" alt="Sweden">
+                                      <span>Sweden</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <img src="img/flags/switzerland.jpg" alt="Switzerland">
+                                      <span>Switzerland</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--.noViews-->
+                      </div>
+                      <div id="tab-two" class="tabContent">
+                        <div class="tabViews">
+                          <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+                          <ul class="views">
+                            <li class="active">
+                              <a href="#">Detailed View</a>
+                            </li>
+                            <li>
+                              <a href="#">Games</a>
+                            </li>
+                            <li>
+                              <a href="#">Contact View</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="anchors">
+                          <ul>
+                            <li><a href="#">Cold facts</a></li>
+                            <li><a href="#">Career Statistics</a></li>
+                          </ul>
+                        </div>
+                        <div class="section">
+                          Content goes here&#8230;
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--#tabs-->
+                </div>
+              </div><!--.row-->
+
+        </div><!--.container-fluid-->
+
+      </div><!--.mainBody-->
+    </div><!--.main-->
+  </div><!--.wrappper-->
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.easytabs.min.js"></script>
+  <script>
+    $(document).ready( function() {
+      $('#tabs').easytabs({animate: false, updateHash: false});
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

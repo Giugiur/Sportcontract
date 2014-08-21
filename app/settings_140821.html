@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="header" class="clearfix">
+            <div class="logo"></div>
+            <div class="userOptions">
+              <a href="#">
+                <span class="userName">Peter Manager</span>
+                <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </div>
+            <div class="search">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="League name, club, player, staff&#8230;">
+              <a href="#"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="main">
+      <div id="sideMenu">
+        <ul>
+          <li>
+              <a href="#">
+                <i class="fa fa-comments-o"></i>
+                <span>Communication</span>
+              </a>
+          </li>
+          <li class="active">
+            <a href="#">
+              <i class="fa fa-cubes"></i>
+              <span>Organisation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Scouting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="mainBody">
+
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="viewBar">
+                <span class="title">Settings</span>
+                <ul class="views right">
+                  <li class="active">
+                    <a href="#">Preferences</a>
+                  </li>
+                  <li>
+                    <a href="#">Billing</a>
+                  </li>
+                  <li>
+                    <a href="#">SportContract Plans</a>
+                  </li>
+                </ul>
+                <a href="#" class="close"><i class="fa fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="preferences section">
+                <form action="">
+                  <div class="h2">Language</div>
+                  <fieldset>
+                    <select>
+                      <option value="">English</option>
+                      <option value="">German</option>
+                    </select>
+                  </fieldset>
+                  <div class="h2">Time zone</div>
+                  <fieldset>
+                    <select>
+                      <option value="">Europe - Madrid</option>
+                      <option value="">Other</option>
+                    </select>
+                  </fieldset>
+                  <div class="h2">Date format</div>
+                  <fieldset>
+                    <select>
+                      <option value="">dd/mm/yyyy</option>
+                      <option value="">mm.dd.yy</option>
+                      <option value="">Other</option>
+                    </select>
+                    <span class="example">Example&#58; <span>22/04/2014</span></span>
+                  </fieldset>
+                  <div class="h2">Time format</div>
+                  <fieldset>
+                    <select>
+                      <option value="">24 h</option>
+                      <option value="">12 h</option>
+                    </select>
+                    <span class="example">Example&#58; <span>21:08</span></span>
+                  </fieldset>
+                  <div class="h2">Week starts on</div>
+                  <fieldset>
+                    <select>
+                      <option value="">Monday</option>
+                      <option value="">Sunday</option>
+                    </select>
+                  </fieldset>
+                  <input type="submit" value="Apply">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="invoices section">
+              <div class="h2">Invoices</div>
+              <form action="">
+                <span>
+                  <input type="radio" name="range" checked="checked">
+                  <input type="text"> &#8212; <input type="text">
+                </span>
+                <i>or</i>
+                <span>
+                  <input type="radio" name="range">
+                  <select>
+                    <option value="">All time</option>
+                    <option value="">Last month</option>
+                    <option value="">Last 3 months</option>
+                  </select>
+                </span>
+                <input type="submit" value="Show">
+              </form>
+              <table>
+                <col style="width: 20%;">
+                <col style="width: 13%;">
+                <col style="width: 45%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <thead>
+                  <tr>
+                    <th>Date &#47; Time</th>
+                    <th>Type</th>
+                    <th>Detail</th>
+                    <th>PDF</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>1&#47;30&#47;2014</span> <span>9:31 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Expert Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;29.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>12&#47;31&#47;2013</span> <span>14:03 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Professional Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;49.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>11&#47;30&#47;2014</span> <span>11:21 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Unlimited Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;79.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>1&#47;30&#47;2014</span> <span>9:31 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Expert Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;29.95</td>
+                  </tr>
+                  <tr>
+                    <td><span>12&#47;31&#47;2013</span> <span>14:03 EST</span></td>
+                    <td>Charge</td>
+                    <td><span>SportContract Professional Plan</span> (<span>1/2/2014</span> - <span>1/3/2014</span>)</td>
+                    <td><a href=""><i class="fa fa-download"></i></a></td>
+                    <td>&#36;49.95</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="billSettings">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="section collapsible">
+                  <div class="h2">Billing profile <a href="#"><i class="fa fa-chevron-down"></i></a></div>
+                  <img src="img/billProfile.jpg" alt="">
+                  <button>Save</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="section collapsible">
+                  <div class="h2">Payment information <a href="#"><i class="fa fa-chevron-down"></i></a></div>
+                  <img src="img/billInfo.jpg" alt="">
+                  <button>Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div><!--.container-fluid-->
+
+        <div class="container-fluid">
+          <div class="section">
+            <div class="row">
+              <div class="plans">
+                <img src="img/plans.jpg" alt="">
+                <div class="disclaimer">
+                  <p>You will be charged a plan rate <b>&#36;79.95</b> now (your new plan will start today), then <b>&#36;79.95</b> every month until you cancel.</p>
+                  <p>Your card will be charged again on a monthly basis starting on <b>02.01.2014.</b></p>
+                  <p>Current card on the profile Visa 0123 will be charged.</p>
+                  <button>Update my account</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div><!--.mainBody-->
+    </div><!--.main-->
+  </div><!--.wrappper-->
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.easytabs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
