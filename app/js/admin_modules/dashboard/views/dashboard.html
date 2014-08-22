@@ -1,0 +1,47 @@
+	<div ui-view="header"></div>
+	<div id="main" class="admin">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="viewBar">
+                <div class="views">
+                  <ul>
+                    <li ui-sref-active="active">
+                      <a ui-sref="admin.staff">Staff management</a>
+                    </li>
+                    <li>
+                      <a href="#">Club team</a>
+                    </li>
+                    <li ui-sref-active="active"> 
+                      <a ui-sref="admin.user_rights">User rights</a>
+                    </li>
+                    <li>
+                      <a href="#">Email</a>
+                    </li>
+                    <li >
+                      <a href="#">Templates</a>
+                    </li>
+                    <li>
+                      <a href="#">Billing</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="anchors" ng-show="$state.includes('templates')">
+                  <ul>
+                    <li><a href="#">Other template</a></li>
+                    <li><a href="#">Scouting template</a></li>
+                    <li><a href="#">Player rating template</a></li>
+                  </ul>
+                </div>
+                <a href="#" class="close"><i class="fa fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row" ui-view="content">
+
+          </div>
+          
+
+        </div><!--.container-fluid-->
+
+    </div>

@@ -44,9 +44,7 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     	if((!scope.countries || scope.countries.length==0) && scope.leagues[0]){
 	     		var country = {_source:{}};
 	     		country._source = scope.leagues[0]._source.country;
-	     		
 	     		scope.countries.push(country);
-	     		
 	     	}
 	     };
 	     var alwaysSuccess = function(request,callback){
@@ -61,7 +59,6 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     	})
 	     }
 	     var searchFunc = _.throttle(function(newval){
-	     			
 	     			alwaysSuccess($http.get(api +'/api/search/teams/' + newval.searchterm),function(data){
 	     				scope.teams = data.hits.hits;
 	     				alwaysSuccess($http.get(api +'/api/search/leagues/' + newval.searchterm),function(data){

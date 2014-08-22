@@ -8,8 +8,7 @@ angular.module('app.search',['ui.router','app.common','rzModule']);
 
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
-        "com.2fdevs.videogular.plugins.overlayplay",
-        "com.2fdevs.videogular.plugins.buffering"])
+        "com.2fdevs.videogular.plugins.controls"])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
@@ -117,6 +116,25 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				  }
 
 			    })
+			   .state('dashboard.video', {
+			      url: "/video/:gameid",
+			      views:{
+			      	"tabcontent@dashboard" : {
+			      		templateUrl: "video/views/video.html",
+			      		controller : VideoCtrl
+			      	}
+			      },
+			      resolve: {
+				    game : function($http,$stateParams,$q,api){
+				    	var defered = $q.defer();
+				    	$http.get(api + '/api/new/games/' + $stateParams.gameid).success(function(result){
+				    		defered.resolve(result);
+				    	})
+				    	return defered.promise;
+				    }
+				  }
+
+			    })
 			   .state('dashboard.teams', {
 			      url: "/teams/:id/:season",
 			      views:{
@@ -209,6 +227,36 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	"tabcontent@settings" : {
 			      		templateUrl: "settings/views/settings.html",
 			      		controller : SettingsCtrl
+			      	}
+			      }
+			    }).state('admin', {
+			      url: "/admin",
+			      views:{
+			      	"header@admin" : {
+			      		templateUrl : "admin_modules/common/views/header.html",
+			      		controller : AdminHeaderCtrl
+			      	},
+			      	"main" : {
+			      		
+			      		templateUrl: "admin_modules/dashboard/views/dashboard.html"
+			      	}
+			      }
+			    }).state('admin.staff', {
+			      url: "/staff",
+			      views:{
+			      	
+			      	"content@admin" : {
+			      		templateUrl : "admin_modules/staff/views/staff.html"
+			      		
+			      	}
+			      }
+			    }).state('admin.user_rights', {
+			      url: "/userrights",
+			      views:{
+			      	
+			      	"content@admin" : {
+			      		templateUrl : "admin_modules/user_rights/views/user_rights.html"
+			      		
 			      	}
 			      }
 			    }).state('login', {

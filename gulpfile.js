@@ -97,7 +97,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('views', function() {
-    gulp.src('./app/js/**/*.html')
+    gulp.src(['./app/js/**/*.html','./app/js/**/**/*.html'])
         .pipe(templateCache())
         .pipe(gulp.dest('./app/js'));
     gulp.src('./app/index.html')
