@@ -70,7 +70,6 @@ angular.module('app.calendar')
                 for(var i in scope.leagues){
                   var league = scope.leagues[i];
                   if(league && league.active){
-                      console.log(league);
                     for(var o in league.games){
 
                       var temp = league.games[o];
