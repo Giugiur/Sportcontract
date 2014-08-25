@@ -15,14 +15,16 @@ a {color: $linkColor;}
 img {max-width: 100%;}
 body {line-height: 1.428571429;}
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+textarea {
 	outline: none;
 	border: 1px solid #e5e9ec;
-	padding: 4px 8px;
+	padding: 3px 8px;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 18px;
 	@include border-radius(5px);
 }
+textarea {resize: vertical;}
 input[type="text"]:focus,
 input[type="password"]:focus {
 	border: 1px solid #c3c3c3;

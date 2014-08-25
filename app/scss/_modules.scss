@@ -43,19 +43,19 @@
 }
 .btnMulti {
 	position: relative;
-	a {padding: 5px 10px; border: 1px solid transparent; border-bottom: none;}
+	a {padding: 5px 10px; border: 1px solid transparent; border-bottom: none; color: #808080;}
 	.open {
-		border: 1px solid $borderColor; border-bottom: none;
+		border: 1px solid $borderColor; border-bottom-color: transparent;
 		@include border-radius(5px 5px 0 0);
 	}
 
 	.dropdown {
 		background-color: #fff;
 		border: 1px solid $borderColor;
-		width: 100%;
+		width: 100%; display: none;
 		@include border-radius(0 0 5px 5px);
 		
-		&.active {position: absolute; z-index: 10;}
+		&.active {position: absolute; z-index: 10; display: block;}
 		li {
 			&:first-child a {padding-top: 6px};
 			&:last-child a {padding-bottom: 6px};
@@ -275,6 +275,7 @@
 }
 .center {text-align: center;}
 .mt {margin-top: 20px;}
+.mb {margin-bottom: 20px;}
 .countries {
 	overflow: hidden;
 
@@ -454,10 +455,8 @@
 	button {margin-top: 20px;}
 }
 .photo {@include border-radius(5px);}
-.admin {
-	table {
-		td {vertical-align: top; padding: 8px;}
-	}
+table.large {
+	td {vertical-align: top; padding: 8px;}
 }
 .manageStaff {
 	table {
@@ -562,4 +561,111 @@
 	.h2 {border-bottom: none; padding-bottom: 0;}
 	.close {top: 25px; right: 0;}
 	button {position: relative; top: -10px;}
+}
+.hasCtrls {
+	position: relative;
+	.editCtrls {
+		position: absolute; right: 0; top: 0; font-size: 13px;
+		a {margin-left: 4px;}
+	}
+}
+.selectMulti {
+	margin-bottom: 20px;
+	select {
+		width: 100%; min-height: 200px; padding: 0; margin-bottom: 15px;
+		@include border-radius(0); border: none;
+		optgroup {background-color: #f0f0f0; font-size: 10px; text-transform: uppercase;}
+	}
+	input {width: 65%;}
+	@media only screen and (max-width: 980px) { input {width: 100%;} }
+}
+.sectionCtrl {
+	margin-bottom: 20px; float: right;
+	@include clearfix;
+	li {
+		float: left;
+		a {margin: 0 9px;}
+		i {color: #505458;}
+		span {border-bottom: 1px dotted #3B77D9;}
+	}
+}
+.fieldList {
+	clear: right;
+	@include make-row();
+	& + .btnMulti {
+		width: 200px;
+		button {width: 100%;}
+	}
+	.field {
+		margin-bottom: 20px;
+		@include make-xs-column(6);
+		&.fw {clear: left; width: 100%;}
+
+		table {
+			th, td {text-align: center;}
+			&.ratesTop {
+				th:nth-child(2),
+				td:nth-child(2) {text-align: left;}
+				tbody tr:last-child {background-color: #F5F5F5;}
+			}
+			thead {
+				a {font-size: 13px; margin: 0 2px;}
+				input {width: 65%; font-size: 13px; font-weight: 400;}
+			}
+			tbody {
+				tr:nth-child(odd) {background-color: #fff;}
+			}
+		}
+		.btnMulti {
+			width: 40%;
+			button {width: 100%;}
+		}
+		@media only screen and (max-width: 980px) { .btnMulti {width: 80%;} }
+		.handle, .inner {background-color: #f5f5f5;}
+		.handle {
+			float: right; width: 30px; text-align: center;
+			@include border-radius(0 5px 5px 0);
+			a {display: block; padding: 4px 0;}
+			.move a {color: #b2b2b2; cursor: move;}
+		}
+		.body {
+			padding-right: 30px;
+		}
+		.inner {
+			@include border-radius(5px 0 5px 5px);
+			padding: 10px 15px; min-height: 56px;
+			.title {
+				margin-bottom: 8px;
+				span {margin-right: 5px;}
+				&.editing {
+					border-bottom: 1px solid $borderColor;
+					input {
+						width: 85%; background-color: transparent;
+						border: none; padding: 3px 0;
+					}
+				}
+			}
+			.inputCtrl {
+				margin-bottom: 20px;
+				select {margin: 0 5px;}
+			}
+			.inputs {
+				.item {
+					position: relative; display: block;
+					.edit {margin-right: 7px;}
+					.remove {position: absolute; top: 3px;}
+				}
+				li.item {
+					margin-bottom: 7px;
+					&:last-child {margin-bottom: 0; padding-left: 5px;}
+				}
+				input, textarea, select {width: 70%; margin-right: 7px;}
+				textarea {min-height: 63px;}
+				@media only screen and (max-width: 980px) {
+					input, textarea {width: 90%;}
+					select {width: 80%;}
+				}
+			}
+		}
+	}
 }
