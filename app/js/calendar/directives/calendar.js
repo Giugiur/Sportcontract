@@ -17,11 +17,10 @@ angular.module('app.calendar')
                 var d_start = new Date(moment(view.start._d).format());
                 var d_end = new Date(moment(view.end._d).format());
 
-                var start = d_start.getFullYear()+"-"+d_start.getMonth()+"-"+ d_start.getDate();
-                var end = d_end.getFullYear()+"-"+d_end.getMonth()+"-"+ d_end.getDate();
+                var start = d_start.getFullYear()+"-"+(((d_start.getMonth() + 1) < 10 ) ? "0" + (d_start.getMonth() + 1) : (d_start.getMonth() + 1))+"-"+ ((d_start.getDate() < 10) ? "0" + d_start.getDate() : d_start.getDate());
+                var end = d_end.getFullYear()+"-"+(((d_end.getMonth() + 1) < 10 ) ? "0" + (d_end.getMonth() + 1) : (d_end.getMonth() + 1))+"-"+ ((d_end.getDate() < 10) ? "0" + d_end.getDate() : d_end.getDate());
 
                 Restangular.all('api/leaguesCalendar').getList({hasgame:true, game:true, start:start,  end:end}).then(function(result){
-
                     defered.resolve(result);
                 });
                 return defered.promise;
@@ -71,6 +70,7 @@ angular.module('app.calendar')
                 for(var i in scope.leagues){
                   var league = scope.leagues[i];
                   if(league && league.active){
+                      console.log(league);
                     for(var o in league.games){
 
                       var temp = league.games[o];
