@@ -22,7 +22,10 @@
     "videojs": "~4.7.1",
     "videogular": "~0.4.2",
     "videogular-overlay-play": "~0.4.2",
-    "videogular-poster": "~0.4.2"
+    "videogular-poster": "~0.4.2",
+    "ui-bootstrap": "~0.11.0",
+    "angular-ui-bootstrap": "~0.11.0",
+    "angular-bootstrap": "~0.11.0"
   },
   "devDependencies": {},
   "resolutions": {

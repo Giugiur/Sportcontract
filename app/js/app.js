@@ -5,10 +5,11 @@ angular.module('app.login',['ui.router','app.common']);
 angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
-
+angular.module('app.admin',['ui.bootstrap','ui.bootstrap.tpls'])
+angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls'])
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
-        "com.2fdevs.videogular.plugins.controls"])
+        "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
@@ -259,7 +260,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		
 			      	}
 			      }
-			    }).state('login', {
+			    }).state('admin.templates', {
+                    url: "/templates",
+                    views:{
+
+                        "content@admin" : {
+                            templateUrl : "admin_modules/templates/views/templates.html"
+
+                        }
+                    }
+                }).state('login', {
 			      url: "/login",
 			      views:{
 			      	"main" : {
