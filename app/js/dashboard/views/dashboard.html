@@ -17,9 +17,12 @@
                           <span class="closeTab"><a ng-click="Tab.closeTab(tab);"></a></span>
                         </li>
                       </ul>
-                    <div class="content"  ui-view="tabcontent" style="margin:0px">
+                      <div class="panelContainer">
+                          <div id="tab-one" class="tabContent" ui-view="tabcontent">
 
-                    </div>
+                          </div>
+                      </div>
+
                     </div>
                            
                 </div>

@@ -5,11 +5,12 @@ angular.module('app.login',['ui.router','app.common']);
 angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
+angular.module('app.simple_contact',['app.common']);
 angular.module('app.admin',['ui.bootstrap','ui.bootstrap.tpls'])
 angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls'])
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
 	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
-        "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls'])
+        "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls','app.simple_contact'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
@@ -106,10 +107,10 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
-				    leagues : function(ngProgress,$http,$stateParams,$q,api){
+				    associations : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/countries/' + $stateParams.id + '/leagues').success(function(result){
+				    	$http.get(api + '/api/countries/' + $stateParams.id + '/associations').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;

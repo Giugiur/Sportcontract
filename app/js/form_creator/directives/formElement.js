@@ -1,4 +1,17 @@
+angular.module('formCreator', [])
+    .directive('formElement', function() {
+        return {
+            require: ['form'],
+            restrict: 'E',
+            transclude: true,
+            scope: {
+                title: '=',
+                edit:'=',
+                type:'='
+            },
+            link: function(scope, element, attrs) {
 
-/**
- * Created by landervanbreda on 29/08/14.
- */
+            },
+            templateUrl: 'form_creator/views/formElement.html'
+        };
+    });
