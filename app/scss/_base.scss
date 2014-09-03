@@ -66,11 +66,22 @@ form {
 	input {vertical-align: middle;}
 }
 label {cursor: pointer;}
+.h1, .h2, .h3, .h4, .h5, .h6 {margin-top: 0;}
+.h1 {
+	font-size: 24px; font-weight: 700; letter-spacing: -1px;
+	margin-bottom: 15px;
+}
 .h2 {
 	font-size: 18px; font-weight: 400; color: $coldGrey;
-	padding-bottom: 8px; margin-bottom: 16px;
+	padding-bottom: 4px; margin-bottom: 16px; position: relative;
 	border-bottom: 1px solid $borderColor;
 	i.fa {font-size: 13px; position: relative; top: -2px;}
+	.views {position: absolute; right: 0; top: -3px;}
+}
+.h3 {
+	font-size: 15px; font-weight: 400; color: $coldGrey;
+	padding-bottom: 4px; margin-bottom: 12px; position: relative;
+	border-bottom: 1px solid $borderColor;
 }
 .h6 {
 	font-size: 10px; font-weight: 700; color: $coldGrey;
