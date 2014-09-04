@@ -1,21 +1,456 @@
-<div class="section noViews">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12">
-                                    <h2 class="center">Select Team</h2>
-                                    <select ng-options="season.startYear as season.name for season in seasons" ng-model="season" ng-change="changeSeason();" >
-                                      <option value="">Select a season</option>
-                                    </select>
-                                    <ul class="countries">
-                                        <li ng-repeat="team in teams" ng-click="goTeam(team.team);">
-                                            <a href="">
-                                                <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.team.imageUrl}}" alt="">
-                                                <span>{{team.team.name}}</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                                
+<div id="tab-one" class="tabContent">
+<div class="tabViews">
+    <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+    <ul class="views">
+        <li class="active">
+            <a href="#">Overview</a>
+        </li>
+        <li>
+            <a href="#">Contacts</a>
+        </li>
+    </ul>
+</div>
+<div class="anchors">
+    <ul>
+        <li><a href="#">Facts</a></li>
+        <li><a href="#">Standings</a></li>
+        <li><a href="#">Player stats</a></li>
+        <li><a href="#">All time high</a></li>
+        <li><a href="#">Free agents</a></li>
+        <li><a href="#">Next season free agents</a></li>
+        <li><a href="#">Injuries</a></li>
+        <li><a href="#">Champions</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">Interesting facts</a></li>
+        <li><a href="#">Transfers</a></li>
+    </ul>
+</div>
+
+<div class="row">
+<div class="col-xs-8">
+<div class="section">
+<div class="leagueName">
+    <img ng-src="{{league.logo}}" class="leagueLogo" alt="">
+    <div>
+        <img src="img/blank.gif" class="flag flag-{{league.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{league.name}}
+    </div>
+    <div class="seasonSwitch">
+        Season
+        <select>
+            <option>2013-2014</option>
+            <option>2012-2013</option>
+            <option>2011-2012</option>
+        </select>
+    </div>
+</div>
+<div class="dates row">
+    <div class="col-xs-4">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">Regular season</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Start</td>
+                <td>08.09.14</td>
+            </tr>
+            <tr>
+                <td>End</td>
+                <td>20.02.15</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-4">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">Play off qualification</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Start</td>
+                <td>24.02.15</td>
+            </tr>
+            <tr>
+                <td>End</td>
+                <td>02.03.15</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-4">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">Play down</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Start</td>
+                <td>24.02.15</td>
+            </tr>
+            <tr>
+                <td>End</td>
+                <td>28.03.15</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!--.row-->
+
+<div class="collapsed-rm">
+<div class="h2">Teams <a href="#"><i class="fa fa-chevron-down"></i></a></div>
+<div class="inner">
+<ul class="teams">
+<li ng-repeat="team in teams">
+    <ul class="lastGames">
+        <li>
+            <span class="win" tooltip="Win, 3-1, Lulea"></span>
+        </li>
+        <li>
+            <span class="loss" tooltip="Loss, 1-3, Lulea"></span>
+        </li>
+        <li>
+            <span  class="draw" tooltip="Draw, 3-3, Lulea"></span>
+        </li>
+        <li>
+            <span class="draw" tooltip="Draw, 3-3, Lulea"></span>
+        </li>
+        <li>
+            <span  class="win" tooltip="Win, 2-0, Lulea"></span>
+        </li>
+    </ul>
+    <a href="">
+        <div>
+            <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.team.imageUrl}}" alt="">
+        </div>
+        <span>{{team.team.name}}</span>
+    </a>
+</li>
+
+</ul>
+</div>
+</div><!--.collapsed-->
+
+</div>
+</div>
+<div class="col-xs-4">
+<div class="section">
+    <div class="h2">Scoring leaders</div>
+    <table>
+        <thead>
+        <tr>
+            <th>&#35;</th>
+            <th>Player</th>
+            <th>GP</th>
+            <th>G</th>
+            <th>A</th>
+            <th>TP</th>
+            <th>PPG</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="leader in leaders">
+            <td>{{$index + 1}}</td>
+            <td><a href="">{{leader.player.firstName}} {{leader.player.lastName}}</a></td>
+            <td>{{leader.GP}}</td>
+            <td>{{leader.G}}</td>
+            <td>{{leader.A}}</td>
+            <td>{{leader.TP}}</td>
+            <td>{{leader.PPG}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="section">
+<div class="h2">Games</div>
+<ul class="gameList">
+<li class="gameItem">
+    <a href="#">
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="3" class="date">
+                    <span>15.12.2013</span>, <span>Regular season</span>
+                </td>
+            </tr>
+            <tr class="score">
+                <td>AIK</td>
+                <td>1 &#58; 8</td>
+                <td>Brynäs IF</td>
+            </tr>
+            </tbody>
+        </table>
+    </a>
+    <ul class="nav nav-pills" role="tablist">
+        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
+        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
+        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" id="game1lp">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">Forwards</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Defencemen</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Dmitry Danilov</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Goalies</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game1gs">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">1st Period</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">2nd Period</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">3rd Period</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game1dl">Download options here</div>
+    </div>
+</li>
+
+<li class="gameItem">
+    <a href="#">
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="3" class="date">
+                    <span>14.12.2013</span>, <span>Regular season</span>
+                </td>
+            </tr>
+            <tr class="score">
+                <td>Örebro HK</td>
+                <td>3 &#58; 4</td>
+                <td>Färjestad BK</td>
+            </tr>
+            </tbody>
+        </table>
+    </a>
+    <ul class="nav nav-pills" role="tablist">
+        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
+        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
+        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" id="game2lp">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">Forwards</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Defencemen</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Dmitry Danilov</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Goalies</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game2gs">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">1st Period</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">2nd Period</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">3rd Period</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game2dl">Download options here</div>
+    </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>

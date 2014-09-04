@@ -48,7 +48,7 @@
 <div class="leagues">
     <ul>
         <li ng-repeat="league in association.leagues">
-            <a href="">
+            <a ng-click="goLeague(league);">
                 <img src="img/leagueLogo1.png" alt="">
                                       <span>
                                             {{league.name}}

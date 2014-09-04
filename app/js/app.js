@@ -146,6 +146,13 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                    league : function($http,$stateParams,$q,api){
+                        var defered = $q.defer();
+                        $http.get(api + '/api/leagues/' + $stateParams.id).success(function(result){
+                            defered.resolve(result);
+                        })
+                        return defered.promise;
+                    },
 				    teams : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
@@ -161,7 +168,14 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
-				    }
+				    },
+                    leaders : function($http,$stateParams,$q,api){
+                        var defered = $q.defer();
+                        $http.get(api + '/api/leagues/' + $stateParams.id + '/leaders').success(function(result){
+                            defered.resolve(result);
+                        })
+                        return defered.promise;
+                    }
 				  }
 
 			    })
