@@ -889,6 +889,7 @@ table.large {
 	.playerList {
 		overflow: hidden; margin: -20px 0 30px;
 		&:last-child {margin-bottom: 0;}
+        img {width : 120px; }
 		li {float: left; margin: 20px 30px 0 0;}
 		a {text-align: center; display: block;}
 		span {display: block; font-weight: 700; color: #333; margin-top: 10px;}

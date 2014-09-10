@@ -157,7 +157,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    	
 				    	var defered = $q.defer();
 				    	var season = $stateParams.season?$stateParams.season:2013;
-				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team&season=' + season).success(function(result){
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position&season=' + season).success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
@@ -188,11 +188,23 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      team : function(ngProgress,$http,$stateParams,$q,api){
+
+                          var defered = $q.defer();
+
+                          $http.get(api + '/api/teams/' + $stateParams.id ).success(function(result){
+                              defered.resolve(result);
+                          })
+                          return defered.promise;
+                      },
 				    players : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
 				    	var season = $stateParams.season?$stateParams.season:2013;
 				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player&season=' + season).success(function(result){
+                            result = _.map(result,function(res){
+                                return res.player;
+                            })
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
