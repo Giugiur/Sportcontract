@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SportContract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="h2">Compose message <a href="#" class="close" data-dismiss="modal"><i class="fa fa-times"></i></a></div>
+          <div class="user">
+            <img src="img/userpic2.jpg" class="photo">
+            <div class="details">
+              <span class="name">Brett Sterling</span>
+              <span class="itl">USA, Washington</span>
+            </div>
+          </div>
+          <div class="inputs">
+            <textarea></textarea>
+            <div>
+              <button>Send</button>
+              <button data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="header" class="clearfix">
+            <div class="logo"></div>
+            <div class="userOptions">
+              <a href="#">
+                <span class="userName">Peter Manager</span>
+                <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </div>
+            <div class="search">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="League name, club, player, staff&#8230;">
+              <a href="#"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="sideMenu">
+        <ul>
+          <li>
+              <a href="#">
+                <i class="fa fa-comments-o"></i>
+                <span>Communication</span>
+              </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-cubes"></i>
+              <span>Organisation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Scouting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="mainBody">
+
+        <div class="container-fluid">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="tabs">
+                    <div class="tabCtrls">
+                      <a href="#"><i class="fa fa-home"></i></a>
+                      <a href="#"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <ul class="etabs">
+                      <li class="tab active">
+                        <a href="#tab-one" class="title">Moritz Möller</a>
+                        <span class="closeTab"><a href="#"></a></span>
+                      </li>
+                    </ul>
+                    <div class="panelContainer">
+                      <div id="tab-one" class="tabContent">
+                        <div class="tabViews">
+                          <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+                          <ul class="views">
+                            <li class="active">
+                              <a href="#">Overview</a>
+                            </li>
+                            <li>
+                              <a href="#">Contacts</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="anchors">
+                          <ul>
+                            <li><a href="#">Facts</a></li>
+                            <li><a href="#">Roster</a></li>
+                            <li><a href="#">Player stats</a></li>
+                            <li><a href="#">Team stats</a></li>
+                            <li><a href="#">Captains</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Arena</a></li>
+                            <li><a href="#">Retired numbers</a></li>
+                            <li><a href="#">Season best</a></li>
+                            <li><a href="#">All time high</a></li>
+                            <li><a href="#">Where are they now?</a></li>
+                            <li><a href="#">Transfers</a></li>
+                            <li><a href="#">Editorial notes</a></li>
+                          </ul>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="section">
+                              <div class="playerInfo">
+                                <div class="h1">Moritz Möller
+                                  <span class="muted">20 y.o.</span>
+                                </div>
+                                <div class="mb">
+                                  <div class="image">
+                                    <img src="img/playerPhoto.jpg" alt="">
+                                  </div>
+                                  <div class="factsList">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <th>Born:</th>
+                                          <td>30 March, 1994</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Place of birth:</th>
+                                          <td><img src="img/blank.gif" class="flag flag-se" alt="Sweden"> Sweden, Stockholm</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Passport country:</th>
+                                          <td><img src="img/blank.gif" class="flag flag-se" alt="Sweden"> Sweden</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div>
+                                  <table class="large">
+                                    <thead>
+                                      <tr>
+                                        <th>Position</th>
+                                        <th>Number</th>
+                                        <th>Height</th>
+                                        <th>Weight</th>
+                                        <th>Shoots</th>
+                                        <th>BMI</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Forward</td>
+                                        <td>
+                                          <div class="number">72</div>
+                                        </td>
+                                        <td>1.84m</td>
+                                        <td>90kg</td>
+                                        <td>Left</td>
+                                        <td>24.5</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div> 
+                            </div>
+                          </div>
+
+                          <div class="col-xs-6">
+                            <div class="contract section">
+                              <div class="h2">Current contract</div>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Club</th>
+                                    <th>Agency</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>HFIK Helsinki, Liiga, FIN</td>
+                                    <td>Player Consulting Ltd.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Contract until</th>
+                                    <th>Salary</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><span>30.06.2018</span> (4 years 4 months)</td>
+                                    <td>$2m &#47; year</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <div class="section">
+                              <div class="playerActions">
+                                <button>Contact</button>
+                                <button>Signing request</button>
+                                <button>Add to scouting department</button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <div class="playlist section">
+                              <div class="h2">
+                                Playlists
+                                
+                              </div>
+                              <div class="sectionCtrl">
+                                <a href="#"><i class="fa fa-check-square-o"></i> <span>show more</span></a>
+                              </div>
+                              <div class="playLists">
+                                <ul class="list-inline">
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Best actions</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Assist</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Puck control</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Best actions</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Assist</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Puck control</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Best actions</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Assist</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Puck control</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Best actions</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Assist</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Puck control</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Best actions</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Assist</a></li>
+                                  <li><a href="#"><i class="fa fa-play-circle"></i> Puck control</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <div class="section">
+                              <div class="h2">Scouting reports</div>
+                              <div class="scoutReports">
+                                <ul>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic1.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Teal Fowler</span>
+                                        <span class="itl">Manager sport</span>
+                                        <span>04.02.12, 06:48 PM</span>
+                                      </div>
+                                    </div>
+                                    <div class="report">
+                                      <p>Has been hands down the best all-around player in the AHL the past two seasons. Possibly the best pure passing set-up man in the AHL. A classic playmaking centre who reads and anticipates plays well in all three zones and is a highly intelligent and instinctive player. Holds onto the puck that extra split second to give linemates time to break to open ice, and can make delicate touch, saucer passes through traffic off both sides of the blade. Shows terrific imagination and creativity.</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic2.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Cedrick Desjardins</span>
+                                        <span class="itl">Manager sport</span>
+                                        <span>04.02.12, 06:48 PM</span>
+                                      </div>
+                                    </div>
+                                    <div class="report">
+                                      <p>Has been hands down the best all-around player in the AHL the past two seasons. Possibly the best pure passing set-up man in the AHL. A classic playmaking centre who reads and anticipates plays well in all three zones and is a highly intelligent and instinctive player. Holds onto the puck that extra split second to give linemates time to break to open ice, and can make delicate touch, saucer passes through traffic off both sides of the blade. Shows terrific imagination and creativity.</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <div class="section">
+                              <div class="h2">Career statistics</div>
+                              <p>Profile career appearances statistics</p>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Season</th>
+                                    <th>Team</th>
+                                    <th>League</th>
+                                    <th>GP</th>
+                                    <th>G</th>
+                                    <th>A</th>
+                                    <th>TP</th>
+                                    <th>PIM</th>
+                                    <th>+ &#47; -</th>
+                                    <th>Postseas.</th>
+                                    <th>GP</th>
+                                    <th>G</th>
+                                    <th>A</th>
+                                    <th>TP</th>
+                                    <th>PIM</th>
+                                    <th>+ &#47; -</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>2013-14</td>
+                                    <td>Kölner Haie</td>
+                                    <td>DEL</td>
+                                    <td>34</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>59</td>
+                                    <td>5</td>
+                                    <td>Playoffs</td>
+                                    <td>10</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>16</td>
+                                    <td>4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2012-13</td>
+                                    <td>Kölner Haie</td>
+                                    <td>DEL</td>
+                                    <td>52</td>
+                                    <td>3</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>48</td>
+                                    <td>4</td>
+                                    <td>Playoffs</td>
+                                    <td>10</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>16</td>
+                                    <td>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                        </div><!--.row-->
+
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="section">
+                              <div class="h2">Contact club staff</div>
+                              <div class="contactList">
+                                <ul>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic1.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Cedrick Desjardins</span>
+                                        <span class="itl">Sport manager</span>
+                                      </div>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#myModal">Contact</button>
+                                  </li>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic2.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Frank Wilson</span>
+                                        <span class="itl">Head coach</span>
+                                      </div>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#myModal">Contact</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="section">
+                              <div class="h2">Contact agency</div>
+                              <div class="details first">
+                                <span class="name">Player Consulting Ltd.</span>
+                                <span class="itl">Germany, Frankfurt am Main</span>
+                              </div>
+                              <div class="contactList">
+                                <ul>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic2.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Jeff Taffe</span>
+                                        <span class="itl">France, Paris</span>
+                                      </div>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#myModal">Contact</button>
+                                  </li>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic1.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Mike Zigomanis</span>
+                                        <span class="itl">Grece, Athens</span>
+                                      </div>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#myModal">Contact</button>
+                                  </li>
+                                  <li>
+                                    <div class="user">
+                                      <img src="img/userpic2.jpg" class="photo">
+                                      <div class="details">
+                                        <span class="name">Brett Sterling</span>
+                                        <span class="itl">USA, Washington</span>
+                                      </div>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#myModal">Contact</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <div class="section">
+                              <div class="h2">Clubs &amp; staff</div>
+                              <div>
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th>Season</th>
+                                      <th>Team</th>
+                                      <th>League</th>
+                                      <th>Coach</th>
+                                      <th>Assistant coach</th>
+                                      <th>Manager</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>2014-15</td>
+                                      <td>Ambri Piotta</td>
+                                      <td>NLA</td>
+                                      <td>Teal Fowler <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                      <td>Josh Henessy <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                      <td>Jason Jaffray <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>2013-14</td>
+                                      <td>Chicago Wolves</td>
+                                      <td>NCA III</td>
+                                      <td>Yan Danis <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                      <td>Corey Locke <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                      <td>Teal Fowler <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o"></i></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--#tabs-->
+                </div><!--.col-md-12-->
+              </div><!--.row-->
+
+        </div><!--.container-fluid-->
+
+      </div><!--.mainBody-->
+    </div><!--.main-->
+  </div><!--.wrappper-->
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="assets/javascripts/bootstrap.js"></script>
+  <script src="js/jquery.easytabs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $('[data-toggle="tooltip"]').tooltip();
+    $(document).ready( function() {
+      $('#tabs').easytabs({animate: false, updateHash: false});
+    });
+  </script>
+</body>
+</html>
