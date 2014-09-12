@@ -90,7 +90,11 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
 
 
   ],enableFiltering:true};
-  $scope.gridTransfers = {enableFiltering:true};
+  $scope.gridTransfers = {columnDefs : [
+      {name : 'From',field:'fromTeam.name'},
+      {name : 'To',field:'toTeam.name'},
+      {name : 'Date',field:'transferDate'}
+  ],enableFiltering:true};
 
 
       SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
@@ -131,7 +135,7 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
     /*
     *  Transfer
      */
-    $http.get(api + '/api/leagues/' + $stateParams.id + '/tranfers').success(function(players){
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/transfers').success(function(players){
         $scope.gridTransfers.data = players;
     })
 }
