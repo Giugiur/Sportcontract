@@ -84,12 +84,12 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
-				    /*specificTranslations: function($translatePartialLoader, $translate) {
+				    specificTranslations: function($translatePartialLoader, $translate) {
 				      $translatePartialLoader.addPart('countries');
 
 				      // add other needed parts
 				      return $translate.refresh();
-				    },*/
+				    },
 				    countries : function(ngProgress,Storage){
 				    	
 				    	var storageCountries = Storage.init('api/countries',false,{});
@@ -321,53 +321,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      }
 			    })
 
-/*
-            function getFile(url) {
-                var AJAX;
-                if (window.XMLHttpRequest) {
-                    AJAX=new XMLHttpRequest();
-                } else {
-                    AJAX=new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                if (AJAX) {
-                    AJAX.open("GET", url, false);
-                    AJAX.send(null);
-                    return AJAX.responseText;
-                } else {
-                    return false;
-                }
-            }
 
-            //browser language recognition
-            //maybe needs to be removed later on think about the american coach in russia ;)
-            //otherwise find a way to simply add a new language by simply putting a new .json
-            //file with the wanted tranlation into the tranlation folder so everything is addded automatically
-
-            var userLang = navigator.language || navigator.userLanguage;
-            var lang = "en";
-            var language = getFile("translations/" + userLang.substring(0,2) +".json");
-            try{
-                language = JSON.parse(language);
-                lang = userLang.substring(0,2);
-            }catch(e){
-                try{
-                    language = JSON.parse(getFile("translations/en.json"));
-                }catch(e){
-                    language = {};
-                }
-
-            }
-
-            //console.log(language);
-            $translateProvider.translations(lang,language);
-            $translateProvider.useStaticFilesLoader({
-                'prefix': 'translations/',
-                'suffix': '.json'
-            });
-
-            $translateProvider.preferredLanguage(lang);
-
-*/
 		   $translateProvider.useLoader('$translatePartialLoader', {
 			  urlTemplate: '/translation/{part}/{lang}.json'
 			});
@@ -377,7 +331,8 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
         	$rootScope.search={
         		searchterm : "",
         		advanced: false
-        	};
+
+            };
         	
         }]);
 
