@@ -231,9 +231,9 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    player : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
-				    		defered.resolve(result);
-				    	})
+                        $http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
+                            defered.resolve(result);
+				    	});
 				    	return defered.promise;
 				    }
 				  }
@@ -256,7 +256,22 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		templateUrl: "settings/views/settings.html",
 			      		controller : SettingsCtrl
 			      	}
-			      }
+			      },
+                  "resolve" : {
+                      languages : function($http, $q, api){
+                          var defered = $q.defer();
+                          var langs = [];
+                          $http.get(api + '/api/getLanguages').success(function(result){
+
+                              angular.forEach(result,function(value){
+                                  langs.push(value.substr(3));
+                              });
+                              defered.resolve(langs);
+                          });
+
+                          return defered.promise;
+                      }
+                  }
 			    }).state('admin', {
 			      url: "/admin",
 			      views:{
