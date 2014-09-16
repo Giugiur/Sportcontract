@@ -44,8 +44,8 @@
                 </select>
             </div>
             <div class="main">
-                <div class="logo">
-                    <img src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" class="leagueLogo" alt="">
+                <div class="">
+                    <img src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" class="leagueLogo"  alt="">
                     <ul class="list-inline">
                         <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -82,7 +82,7 @@
             <div class="h2">Goalies</div>
             <div class="playerList">
                 <ul>
-                    <li ng-repeat="player in players | filter:{'playerPosition':'GOALIE'}">
+                    <li ng-repeat="player in players | filter:{'playerPosition':'GOALIE'}" ng-click="goPlayer(player)">
                         <a href="">
                             <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
                             <span>{{player.firstName}} {{player.lastName}}</span>
@@ -95,7 +95,7 @@
             <div class="h2">Defense</div>
             <div class="playerList">
                 <ul>
-                    <li ng-repeat="player in players | filter:{'playerPosition':'DEFENSEMAN'}">
+                    <li ng-repeat="player in players | filter:{'playerPosition':'DEFENSEMAN'}" ng-click="goPlayer(player)">
                         <a href="">
                             <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
                             <span>{{player.firstName}} {{player.lastName}}</span>
@@ -107,13 +107,13 @@
             <div class="h2">Forwards</div>
             <div class="playerList">
                 <ul>
-                    <li ng-repeat="player in players | filter:{'playerPosition':'FORWARD'}">
+                    <li ng-repeat="player in players | filter:{'playerPosition':'FORWARD'}" ng-click="goPlayer(player)">
                         <a href="">
                             <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
                             <span>{{player.firstName}} {{player.lastName}}</span>
                         </a>
                     </li>
-                    <li ng-repeat="player in players | filter:{'playerPosition':'CENTRE'}">
+                    <li ng-repeat="player in players | filter:{'playerPosition':'CENTRE'}" ng-click="goPlayer(player)">
                         <a href="">
                             <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
                             <span>{{player.firstName}} {{player.lastName}}</span>

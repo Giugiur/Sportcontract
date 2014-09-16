@@ -10,6 +10,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
 
   $scope.goPlayer = function(object){
   	object.season = $scope.season;
+      console.log(object);
   	$state.go('dashboard.player',object);
   }
   $scope.changeSeason = function(){
