@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_layout.scss" afterPath="$PROJECT_DIR$/app/scss/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/52f7bdb7ce746bfd7eaa1985bd9cfa93-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/a6d8cf8e4ec09cdbc8633c31745a07dd-le64.cache-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-3" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/templates.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_modules.scss" afterPath="$PROJECT_DIR$/app/scss/_modules.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/views/clear_template.html" afterPath="$PROJECT_DIR$/app/js/common/views/clear_template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/dashboard/views/dashboard.html" afterPath="$PROJECT_DIR$/app/js/dashboard/views/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/views/header.html" afterPath="$PROJECT_DIR$/app/js/common/views/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/views/players.html" afterPath="$PROJECT_DIR$/app/js/players/views/players.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/views/teams.html" afterPath="$PROJECT_DIR$/app/js/teams/views/teams.html" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82633865" vertical-offset="404" max-vertical-offset="1095">
+            <state vertical-scroll-proportion="-23.791666" vertical-offset="404" max-vertical-offset="1095">
               <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clear_template.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/common/views/clear_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/common/views/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
-              <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.10853835" vertical-offset="0" max-vertical-offset="795">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -97,21 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="285">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="teams.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="7860">
-              <caret line="518" column="6" selection-start-line="509" selection-start-column="0" selection-end-line="518" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="8025">
+              <caret line="529" column="6" selection-start-line="524" selection-start-column="43" selection-end-line="529" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -185,9 +199,9 @@
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/app/js/common/views/header.html" />
         <option value="$PROJECT_DIR$/app/scss/_layout.scss" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/common/views/header.html" />
       </list>
     </option>
   </component>
@@ -309,6 +323,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,13 +614,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/form_creator/views/components/survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="808">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/form_creator/views/components/multiselect.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="832">
@@ -851,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="7860">
-          <caret line="518" column="6" selection-start-line="509" selection-start-column="0" selection-end-line="518" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="8025">
+          <caret line="529" column="6" selection-start-line="524" selection-start-column="43" selection-end-line="529" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -877,14 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2685">
           <caret line="160" column="41" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -915,8 +962,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82633865" vertical-offset="404" max-vertical-offset="1095">
+        <state vertical-scroll-proportion="-23.791666" vertical-offset="404" max-vertical-offset="1095">
           <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/views/clear_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10853835" vertical-offset="0" max-vertical-offset="795">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
           <folding />
         </state>
       </provider>
