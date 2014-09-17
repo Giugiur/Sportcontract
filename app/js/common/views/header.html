@@ -1,5 +1,6 @@
 <div id="header" class="clearfix">
-                <div class="logo"></div>
+                <a href="#/dashboard/countries"><div class="logo"></div></a>
+
                 <div class="userOptions">
                     
                     <script>
@@ -32,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="search">
+                <div class="search" ng-show="!hideSearch">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="League name, club, player, staff&#8230;" ng-model="search.searchterm">
 

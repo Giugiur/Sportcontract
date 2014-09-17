@@ -132,16 +132,16 @@ gulp.task('compile', ['clean', 'views', 'images', 'compass', 'lint','scripts'], 
 gulp.task('reload:html', function () {
     return gulp.src('./app/**/*.html')
         .pipe(lrserver.changed);
-})
+});
 
 gulp.task('watch', function () {
     refresh.listen(LIVERELOAD_PORT);
     gulp.watch('app/scss/**/*.scss', ['compass']);
     gulp.watch('app/index.html', ['views']);
-    gulp.watch('app/**/*.html', ['views','scripts']);
-    gulp.watch('app/js/**/*.html', ['views','scripts']);
-    // gulp.watch('app/js/**/*.js', ['scripts','test']);
-    // gulp.watch('app/js/*.js', ['scripts','test']);
+    gulp.watch('app/**/*.html', ['views','script']);
+    gulp.watch('app/js/**/*.html', ['views','script']);
+    gulp.watch('app/js/**/*.js', ['scripts','test']);
+    gulp.watch('app/js/*.js', ['scripts','test']);
     gulp.watch('app/js/*/translation/*.json', ['translation']);
     gulp.watch('bower.json', ['bower']);
     gulp.watch('app/img/**/*.*', ['images']);
@@ -152,7 +152,8 @@ gulp.task('watch', function () {
       ]).on('change', refresh.changed );
 });
 
-gulp.task('serve:app', ['bower','images','views','scripts','translation','watch','compass'], function() {
+
+gulp.task('serve:app', ['compass','bower','images','views','scripts','translation','watch'], function() {
     var server = express();
     server.use(livereload({
       port: LIVERELOAD_PORT

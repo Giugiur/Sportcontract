@@ -5,6 +5,7 @@ angular.module('app.login',['ui.router','app.common']);
 angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
+angular.module('app.calendar',['ui.router','app.common']);
 angular.module('app.simple_contact',['app.common']);
 angular.module('app.admin',['ui.bootstrap','ui.bootstrap.tpls'])
 angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls'])
@@ -133,7 +134,15 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
-				    }
+				    },
+                        leagues : function(ngProgress,$http,$stateParams,$q,api){
+                            ngProgress.start();
+                            var defered = $q.defer();
+                            $http.get(api + '/api/countries/' + $stateParams.id + '/leagues').success(function(result){
+                                defered.resolve(result);
+                            })
+                            return defered.promise;
+                        }
 				  }
 
 			    })
@@ -238,9 +247,10 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    }
 				  }
 
+
 			    }).state('settings', {
 			      url: "/settings",
-			      views:{
+                  views:{
 			      	"main" : {
 			      		
 			      		templateUrl: "common/views/clear_template.html"
@@ -305,10 +315,39 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      }
 			    })
+                .state('calendar', {
+                    url: "/calendar",
+                    views:{
+                        "main" : {
+                            templateUrl: "calendar/views/calendar.html",
+                            controller : CalendarCtrl
+                        },
+                        "sidebar@calendar" : {
+                            templateUrl: "common/views/sidebar.html"
+                        },
+                        "header@calendar" : {
+                            templateUrl : "common/views/header.html",
+                            controller : HeaderCtrl
+                        }
+                    },
+                    resolve: {
+
+                        teams : function(ngProgress, $q, Restangular){
+                            ngProgress.start();
+                            var defered = $q.defer();
+                            Restangular.all('api/teamsCalendar').getList().then(function(result){
+                                defered.resolve(result);
+                            });
+                            return defered.promise;
+                        }
+                    }
+
+                })
 
 
-	       
-		   $translateProvider.useLoader('$translatePartialLoader', {
+
+
+            $translateProvider.useLoader('$translatePartialLoader', {
 			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
 			$translateProvider.preferredLanguage('ru');
