@@ -2,11 +2,11 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Selected game</legend>
+<legend>{{'selected_game' | translate}}</legend>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="textinput">Home</label>
+  <label class="control-label" for="textinput">{{'home' | translate}}</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
     	ng-model="game.home.name">
@@ -16,7 +16,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>{{'name' | translate}}</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -25,7 +25,7 @@
       <td>
         {{team._source.name}}
       </td>
-      <td><a href="" ng-click="changeGame(team,'home');">Select</a></td>
+      <td><a href="" ng-click="changeGame(team,'home');">{{'select' | translate}}</a></td>
     </tr> 
   </tbody>
 </table>
@@ -33,7 +33,7 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="textinput">Away</label>
+  <label class="control-label" for="textinput">{{'away' | translate}}</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
     	ng-model="game.away.name">
@@ -43,7 +43,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>{{'name' | translate}}</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -52,13 +52,13 @@
       <td>
         {{team._source.name}}
       </td>
-      <td><a href="" ng-click="changeGame(team,'away');">Select</a></td>
+      <td><a href="" ng-click="changeGame(team,'away');">{{'select' | translate}}</a></td>
     </tr> 
   </tbody>
 </table>
 
 <div class="control-group">
-  <label class="control-label" for="textinput">Away</label>
+  <label class="control-label" for="textinput">{{'away' | translate}}</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
       ng-model="game.league.name">
@@ -68,7 +68,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>{{'name' | translate}}</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -77,11 +77,11 @@
       <td>
         {{league._source.name}}
       </td>
-      <td><a href="" ng-click="changeGame(league,'league');">Select</a></td>
+      <td><a href="" ng-click="changeGame(league,'league');">{{'select' | translate}}</a></td>
     </tr> 
   </tbody>
 </table>
 
 </fieldset>
-<button ng-click="saveGame()">Save</button>
+<button ng-click="saveGame()">{{'save' | translate}}</button>
 </form>

@@ -3,26 +3,26 @@
     <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="active">
-            <a href="#">Overview</a>
+            <a href="#">{{'overview' | translate}}</a>
         </li>
         <li>
-            <a href="#">Contacts</a>
+            <a href="#">{{'contacts' | translate}}</a>
         </li>
     </ul>
 </div>
 <div class="anchors">
     <ul>
-        <li><a href="#">Facts</a></li>
-        <li><a href="#">Standings</a></li>
-        <li><a href="#">Player stats</a></li>
-        <li><a href="#">All time high</a></li>
-        <li><a href="#">Free agents</a></li>
-        <li><a href="#">Next season free agents</a></li>
-        <li><a href="#">Injuries</a></li>
-        <li><a href="#">Champions</a></li>
-        <li><a href="#">Awards</a></li>
-        <li><a href="#">Interesting facts</a></li>
-        <li><a href="#">Transfers</a></li>
+        <li><a href="#">{{'facts' | translate}}</a></li>
+        <li><a href="#">{{'standings' | translate}}</a></li>
+        <li><a href="#">{{'player_stats' | translate}}</a></li>
+        <li><a href="#">{{'all_time_high' | translate}}</a></li>
+        <li><a href="#">{{'free_agents' | translate}}</a></li>
+        <li><a href="#">{{'next_season_free_agents' | translate}}</a></li>
+        <li><a href="#">{{'injuries' | translate}}</a></li>
+        <li><a href="#">{{'champions' | translate}}</a></li>
+        <li><a href="#">{{'awards' | translate}}</a></li>
+        <li><a href="#">{{'interesting_facts' | translate}}</a></li>
+        <li><a href="#">{{'transfers' | translate}}</a></li>
     </ul>
 </div>
 
@@ -35,7 +35,7 @@
         <img src="img/blank.gif" class="flag flag-{{league.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{league.name}}
     </div>
     <div class="seasonSwitch">
-        Season
+        {{'season' | translate}}
         <select>
             <option>2013-2014</option>
             <option>2012-2013</option>
@@ -48,16 +48,16 @@
         <table>
             <thead>
             <tr>
-                <th colspan="2">Regular season</th>
+                <th colspan="2">{{'regular_season' | translate}}</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Start</td>
+                <td>{{'start' | translate}}</td>
                 <td>08.09.14</td>
             </tr>
             <tr>
-                <td>End</td>
+                <td>{{'end' | translate}}</td>
                 <td>20.02.15</td>
             </tr>
             </tbody>
@@ -67,16 +67,16 @@
         <table>
             <thead>
             <tr>
-                <th colspan="2">Play off qualification</th>
+                <th colspan="2">{{'play_off_qualification' | translate}}</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Start</td>
+                <td>{{'start' | translate}}</td>
                 <td>24.02.15</td>
             </tr>
             <tr>
-                <td>End</td>
+                <td>{{'end' | translate}}</td>
                 <td>02.03.15</td>
             </tr>
             </tbody>
@@ -86,16 +86,16 @@
         <table>
             <thead>
             <tr>
-                <th colspan="2">Play down</th>
+                <th colspan="2">{{'play_down' | translate}}</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Start</td>
+                <td>{{'start' | translate}}</td>
                 <td>24.02.15</td>
             </tr>
             <tr>
-                <td>End</td>
+                <td>{{'end' | translate}}</td>
                 <td>28.03.15</td>
             </tr>
             </tbody>
@@ -104,7 +104,7 @@
 </div><!--.row-->
 
 <div class="collapsed-rm">
-<div class="h2">Teams <a href="#"><i class="fa fa-chevron-down"></i></a></div>
+<div class="h2">{{'teams' | translate}} <a href="#"><i class="fa fa-chevron-down"></i></a></div>
 <div class="inner">
 <ul class="teams">
 <li ng-repeat="team in teams">
@@ -141,12 +141,12 @@
 </div>
 <div class="col-xs-4">
 <div class="section">
-    <div class="h2">Scoring leaders</div>
+    <div class="h2">{{'scoring_leaders' | translate}}</div>
     <table>
         <thead>
         <tr>
             <th>&#35;</th>
-            <th>Player</th>
+            <th>{{'player' | translate}}</th>
             <th>GP</th>
             <th>G</th>
             <th>A</th>
@@ -169,7 +169,7 @@
     </table>
 </div>
 <div class="section">
-<div class="h2">Games</div>
+<div class="h2">{{'games' | translate}}</div>
 <ul class="gameList">
 <li class="gameItem">
     <a href="#">
@@ -177,7 +177,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>15.12.2013</span>, <span>Regular season</span>
+                    <span>15.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -198,7 +198,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -219,7 +219,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -239,7 +239,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -262,7 +262,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -273,7 +273,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2">{{'2nd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -291,7 +291,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -306,7 +306,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game1dl">Download options here</div>
+        <div class="tab-pane" id="game1dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 
@@ -316,7 +316,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>14.12.2013</span>, <span>Regular season</span>
+                    <span>14.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -328,16 +328,16 @@
         </table>
     </a>
     <ul class="nav nav-pills" role="tablist">
-        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
-        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
-        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheets' | translate}}</a></li>
+        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'download' | translate}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" id="game2lp">
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -358,7 +358,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -378,7 +378,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -401,7 +401,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -412,7 +412,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2">{{'2nd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -428,7 +428,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -446,7 +446,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game2dl">Download options here</div>
+        <div class="tab-pane" id="game2dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 </ul>
@@ -458,7 +458,7 @@
 
 <a name="standings"></a>
 <div class="row">
-<h1>Standings</h1>
+<h1>{{'standings' | translate}}</h1>
 <div class="col-xs-12">
     <div class="section">
         <div ui-grid="gridStandings" class="grid" style="height:400px;">
@@ -469,14 +469,14 @@
 
 <a name="stats"></a>
 <div class="row">
-    <h1>Players</h1>
+    <h1>{{'players' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsPlayers" class="grid" style="height:400px;">
             </div>
         </div>
     </div>
-    <h1>Goalies</h1>
+    <h1>{{'goalies' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsGoalies" class="grid" style="height:400px;">
@@ -487,7 +487,7 @@
 
 <a name="statsalltime"></a>
 <div class="row">
-    <h1>All time stats</h1>
+    <h1>{{'all_time_stats' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsPlayersAllTime" class="grid" style="height:400px;">
@@ -498,7 +498,7 @@
 
 <a name="injured"></a>
 <div class="row">
-    <h1>Injured</h1>
+    <h1>{{'injured' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridInjured" class="grid" style="height:400px;">
@@ -509,7 +509,7 @@
 
 <a name="transfers"></a>
 <div class="row">
-    <h1>Transfered</h1>
+    <h1>{{'transfered' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTransfers" class="grid" style="height:400px;">

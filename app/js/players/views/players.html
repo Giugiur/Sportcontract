@@ -1,30 +1,29 @@
-
 <div class="tabViews">
     <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="active">
-            <a href="#">Overview</a>
+            <a href="#">{{'overview' | translate}}</a>
         </li>
         <li>
-            <a href="#">Contacts</a>
+            <a href="#">{{'contacts' | translate}}</a>
         </li>
     </ul>
 </div>
 <div class="anchors">
     <ul>
-        <li><a href="#">Facts</a></li>
-        <li><a href="#">Roster</a></li>
-        <li><a href="#">Player stats</a></li>
-        <li><a href="#">Team stats</a></li>
-        <li><a href="#">Captains</a></li>
-        <li><a href="#">Staff</a></li>
-        <li><a href="#">Arena</a></li>
-        <li><a href="#">Retired numbers</a></li>
-        <li><a href="#">Season best</a></li>
-        <li><a href="#">All time high</a></li>
-        <li><a href="#">Where are they now?</a></li>
-        <li><a href="#">Transfers</a></li>
-        <li><a href="#">Editorial notes</a></li>
+        <li><a href="#">{{'facts' | translate}}</a></li>
+        <li><a href="#">{{'roster' | translate}}</a></li>
+        <li><a href="#">{{'player_stats' | translate}}</a></li>
+        <li><a href="#">{{'team_stats' | translate}}</a></li>
+        <li><a href="#">{{'captains' | translate}}</a></li>
+        <li><a href="#">{{'staff' | translate}}</a></li>
+        <li><a href="#">{{'arena' | translate}}</a></li>
+        <li><a href="#">{{'retired_nubers' | translate}}</a></li>
+        <li><a href="#">{{'season_best' | translate}}</a></li>
+        <li><a href="#">{{'all_time_high' | translate}}</a></li>
+        <li><a href="#">{{'where_are_they_now' | translate}}</a></li>
+        <li><a href="#">{{'transfers' | translate}}</a></li>
+        <li><a href="#">{{'editorial_notes' | translate}}</a></li>
     </ul>
 </div>
 
@@ -36,7 +35,7 @@
                 <a href="" title="{{team.latestTeamStats.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.latestTeamStats.league.name}}</a>
             </div>
             <div class="seasonSwitch">
-                Season
+                {{'season' | translate}}
                 <select>
                     <option>2013-2014</option>
                     <option>2012-2013</option>
@@ -49,25 +48,25 @@
                     <ul class="list-inline">
                         <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" title="Official website"><i class="fa fa-external-link"></i></a></li>
+                        <li><a href="#" title="{{'official_website' | translate}}"><i class="fa fa-external-link"></i></a></li>
                     </ul>
                 </div>
                 <table>
                     <tbody>
                     <tr>
-                        <th>Town:</th>
+                        <th>{{'town' | translate}}:</th>
                         <td>{{team.locality.name}}</td>
                     </tr>
                     <tr>
-                        <th>Founded:</th>
+                        <th><ut>founded</ut>:</th>
                         <td>{{team.foundedYear}}</td>
                     </tr>
                     <tr>
-                        <th>Colors:</th>
+                        <th>{{'colors' | translate}}:</th>
                         <td>{{team.colors}}</td>
                     </tr>
                     <tr>
-                        <th>Affiliates:</th>
+                        <th>{{'affiliates' | translate}}:</th>
                         <td>
                             <ul>
                                 <li><a href="#">Färjestad J20</a></li>
@@ -79,7 +78,7 @@
                 </table>
             </div>
 
-            <div class="h2">Goalies</div>
+            <div class="h2">{{'goalies' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'GOALIE'}">
@@ -92,7 +91,7 @@
                 </ul>
             </div>
 
-            <div class="h2">Defense</div>
+            <div class="h2">{{'defense' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'DEFENSEMAN'}">
@@ -104,7 +103,7 @@
                 </ul>
             </div>
 
-            <div class="h2">Forwards</div>
+            <div class="h2">{{'forwards' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'FORWARD'}">
@@ -127,7 +126,7 @@
 
 <div class="col-xs-6">
 <div class="section">
-<div class="h2">Games</div>
+<div class="h2">{{'games' | translate}}</div>
 <ul class="gameList">
 <li class="gameItem">
     <a href="#">
@@ -135,7 +134,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>15.12.2013</span>, <span>Regular season</span>
+                    <span>15.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -147,16 +146,16 @@
         </table>
     </a>
     <ul class="nav nav-pills" role="tablist">
-        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
-        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
-        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheets' | translate}}</a></li>
+        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'downloads' | translate}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" id="game1lp">
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -177,7 +176,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -197,7 +196,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -220,7 +219,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -231,7 +230,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2"><ut>2nd_period</ut></th>
                 </tr>
                 <tr>
                     <td>
@@ -249,7 +248,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -264,7 +263,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game1dl">Download options here</div>
+        <div class="tab-pane" id="game1dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 
@@ -320,7 +319,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>14.12.2013</span>, <span>Regular season</span>
+                    <span>14.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -332,16 +331,16 @@
         </table>
     </a>
     <ul class="nav nav-pills" role="tablist">
-        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
-        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
-        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheet' | translate}}</a></li>
+        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'download' | translate}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" id="game2lp">
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -362,7 +361,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -382,7 +381,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -405,7 +404,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -416,7 +415,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2">{{'2nd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -432,7 +431,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -450,7 +449,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game2dl">Download options here</div>
+        <div class="tab-pane" id="game2dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 </ul>
@@ -463,14 +462,14 @@
 
 <a name="stats"></a>
 <div class="row">
-    <h1>Player Stats</h1>
+    <h1>{{'player_stats' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsPlayers" class="grid" style="height:400px;">
             </div>
         </div>
     </div>
-    <h1>Goalies Stats</h1>
+    <h1>{{'goalies_stats' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsGoalies" class="grid" style="height:400px;">
@@ -481,7 +480,7 @@
 
 <a name="teamstats"></a>
 <div class="row">
-    <h1>Team Stats</h1>
+    <h1>{{'team_stats' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridStatsTeam" class="grid" style="height:400px;">
@@ -492,7 +491,7 @@
 </div>
 <a name="captains"></a>
 <div class="row">
-    <h1>Team captains</h1>
+    <h1>{{'team_captains' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTeamCaptains" class="grid" style="height:400px;">
@@ -503,7 +502,7 @@
 </div>
 <a name="staff"></a>
 <div class="row">
-    <h1>Team Staff</h1>
+    <h1>{{'team_staff' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTeamStaff" class="grid" style="height:400px;">
@@ -514,7 +513,7 @@
 </div>
 <a name="topplayers"></a>
 <div class="row">
-    <h1>Top Players</h1>
+    <h1>{{'top_players' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTopPlayers" class="grid" style="height:400px;">
@@ -525,7 +524,7 @@
 </div>
 <a name="topplayersall"></a>
 <div class="row">
-    <h1>Top Players All Time</h1>
+    <h1>{{'top_players_all_time' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTopPlayersAll" class="grid" style="height:400px;">
@@ -536,7 +535,7 @@
 </div>
 <a name="transfers"></a>
 <div class="row">
-    <h1>Transfers</h1>
+    <h1>{{'transfers' | translate}}</h1>
     <div class="col-xs-12">
         <div class="section">
             <div ui-grid="gridTransfers" class="grid" style="height:400px;">

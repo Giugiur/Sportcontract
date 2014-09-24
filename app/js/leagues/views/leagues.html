@@ -3,7 +3,7 @@
     <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="active">
-            <a href="#">Overview</a>
+            <a href="#">{{'overview' | translate}}</a>
         </li>
     </ul>
 </div>
@@ -16,10 +16,10 @@
     <div class="views pull-right">
         <ul>
             <li class="{{view=='overview'&&'active'||''}}">
-                <a href="" ng-click="view='overview'">Overview</a>
+                <a href="" ng-click="view='overview'">{{'overview' | translate}}</a>
             </li>
             <li class="{{view=='contacts'&&'active'||''}}">
-                <a href="" ng-click="view='contacts'">Contacts</a>
+                <a href="" ng-click="view='contacts'">{{'contacts' | translate}}</a>
             </li>
         </ul>
     </div>
@@ -28,10 +28,10 @@
         <thead>
         <tr>
             <th style="width: 90px;"></th>
-            <th style="width: 25%;">Name</th>
-            <th>Phone</th>
-            <th>Language</th>
-            <th class="center">Send message</th>
+            <th style="width: 25%;">{{'name' | translate}}</th>
+            <th>{{'phone' | translate}}</th>
+            <th>{{'language' | translate}}</th>
+            <th class="center">{{'send_message' | translate}}</th>
         </tr>
         </thead>
         <tbody>
@@ -456,7 +456,7 @@
 <div ng-if="association.teams"
         > <!--National teams -->
 <div class="h2">
-    National teams
+    {{'national_teams' | translate}}
 
 </div>
 
@@ -474,7 +474,7 @@
 </div>
 <div ng-if="association.leagues && view=='overview'" >
 <div class="h2">
-    Leagues
+    {{'leagues' | translate}}
 </div>
 <div class="leagues">
     <ul>
@@ -483,7 +483,7 @@
                 <img src="img/leagueLogo1.png" alt="">
                                       <span>
                                             {{league.name}}
-                                        <span>Tagged video &amp; statistics</span>
+                                        <span>{{'tagged_video' | translate}} &amp; {{'statistics' | translate}}</span>
                                       </span>
             </a>
         </li>
@@ -499,7 +499,7 @@
 <div class="col-xs-3">
     <div class="section text-center">
         <div class="seasonSwitch mb">
-            Season
+            {{'season' | translate}}
             <select>
                 <option>2013-2014</option>
                 <option>2012-2013</option>
