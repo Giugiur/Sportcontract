@@ -38,6 +38,15 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      }
 			    })
+                .state('communication', {
+                    url: "/communication",
+                    views:{
+                        "main" : {
+                            controller : CommunicationCtrl,
+                            templateUrl: "communication/views/communication.html"
+                        }
+                    }
+                })
 			    .state('dashboard.admin', {
 			      url: "/admin",
 			      views:{
