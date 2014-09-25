@@ -5,7 +5,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   $scope.players=players;
   $scope.seasons = seasons;
   $scope.season=$stateParams.season?$stateParams.season:2013;
-  
+
 
 
   $scope.goPlayer = function(object){
@@ -106,6 +106,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
         {name : 'Lastname',field:'staff.lastName'},
         {name : 'Staff Role',field:'staffRole'}
     ],enableFiltering:true};
+  $scope.affiliates;
   SetupPlayerGrids(api,players,$stateParams,$scope,$http);
 };
 
@@ -153,4 +154,9 @@ var SetupPlayerGrids = function(api,players,$stateParams,$scope,$http){
     $http.get(api + '/api/teams/' + $stateParams.id + '/transfers').success(function(teams){
         $scope.gridTransfers.data = teams;
     })
+    $http.get('http://api.eliteprospects.com/beta/teams/' + $stateParams.id +'/affiliates').success(function(teams){
+        $scope.affiliates = teams;
+    })
+
+
 }

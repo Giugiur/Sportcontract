@@ -71,8 +71,8 @@
                             <th>Affiliates:</th>
                             <td>
                                 <ul>
-                                    <li><a href="#">Färjestad J20</a></li>
-                                    <li><a href="#">Färjestad J18</a></li>
+                                    <li ng-repeat="team in affiliates"><a ui-sref="dashboard.players(team.team)">{{team.team.name}}</a></li>
+
                                 </ul>
                             </td>
                         </tr>
@@ -543,6 +543,21 @@
             <div class="h2">Transfers</div>
             <div ui-grid="gridTransfers" class="grid" style="height:400px;">
             </div>
+        </div>
+    </div>
+
+</div>
+<a name="arena"></a>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Arena</div>
+            <img ng-src="http://files.eliteprospects.com/layout/arenas/{{team.arena.imageUrl}}"/>
+            <ul>
+                <li>Location : {{team.arena.locality.name}}</li>
+                <li>Capacity : {{team.arena.capacity}}</li>
+                <li>Constructed : {{team.arena.yearOfConstruction}}</li>
+            </ul>
         </div>
     </div>
 

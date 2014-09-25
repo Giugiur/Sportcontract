@@ -95,7 +95,9 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
       {name : 'To',field:'toTeam.name'},
       {name : 'Date',field:'transferDate'}
   ],enableFiltering:true};
-
+    $scope.gridAwards = {columnDefs : [
+        {name : 'Name',field:'name'}
+    ],enableFiltering:true};
 
       SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
 
@@ -137,5 +139,11 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
      */
     $http.get(api + '/api/leagues/' + $stateParams.id + '/transfers').success(function(players){
         $scope.gridTransfers.data = players;
+    })
+    /*
+     *  Awards
+     */
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/awards').success(function(awards){
+        $scope.gridAwards.data = players;
     })
 }
