@@ -176,6 +176,7 @@
 }
 .views {
 	&.right {float: right; margin-right: 20px;}
+	@include clearfix;
 	li {
 		float: left;
 
@@ -203,6 +204,11 @@
 	.views {
 		ul {@include clearfix;}
 	}
+	.backBtn {
+		margin: -9px 15px -9px -15px; float: left;
+		border-right: 1px solid $borderColor;
+		a {display: block; line-height: 36px; padding: 0 12px; font-size: 16px;}
+	}
 	.anchors {
 		border-top: 1px solid $borderColor;
 		padding: 0; margin-top: 8px;
@@ -210,8 +216,23 @@
 	}
 	.close {right: 15px; top: 10px;}
 	.title {font-size: 18px; font-weight: 400; color: #505458; line-height: 1; float: left;}
-
-
+	&.wrapping {
+		.views {float: right; margin-right: 20px;}
+		@media only screen and (max-width: 1080px) {
+			.views {
+				float: none; clear: left; border-top: 1px solid $borderColor; margin: 0 -15px 0; padding: 3px 12px 0;
+				li {margin-top: 4px;}
+			}
+			.viewBtn {margin-bottom: 9px;}
+		}
+	}
+}
+.viewBtn {
+	font-size: 10px; font-weight: 700; float: left;
+	text-transform: uppercase; padding: 2px 9px;
+	background-color: #d14836; color: #fff;
+	@include border-radius(5px);
+	&:hover {color: #fff;}
 }
 .tabViews {
 	background-color: #fff;
@@ -665,6 +686,9 @@ table.large {
 		& + div {color: #808080;}
 	}
 	.seasonSwitch {position: absolute; right: 0; top: 0;}
+	@media only screen and (max-width: 1080px) {
+		.seasonSwitch {position: initial; text-align: center; margin-bottom: 10px;}
+	}
 }
 .dates {
 	margin-bottom: 10px;
@@ -692,7 +716,7 @@ table.large {
 	& > li {
 		float: left;
 		text-align: center;
-		width: 25%; min-height: 185px;
+		width: 25%; min-height: 200px;
 		@media only screen and (max-width: 1020px) {
 			& {width: 33%;}
 		}
@@ -701,7 +725,7 @@ table.large {
 			div	{
 				height: 120px; border: 1px solid $borderColor;
 				@include single-transition(all, 0.18s);
-				margin-bottom: 12px; padding-top: 20px;
+				margin-bottom: 7px; padding-top: 20px;
 			}
 			span {font-weight: 700; color: $coldGrey;}
 			@include single-transition(all, 0.3s);
@@ -876,6 +900,13 @@ table.large {
 		a {text-align: center; display: block;}
 		span {display: block; font-weight: 700; color: #333; margin-top: 10px;}
 	}
+	@media only screen and (max-width: 1020px) {
+		.seasonSwitch {position: initial; margin-bottom: 10px; text-align: center;}
+	}
+	@media only screen and (max-width: 850px) {
+		.image {width: 80px;}
+		.factsList {padding-left: 110px;}
+	}
 }
 .factsList {
 	padding-left: 140px;
@@ -965,4 +996,117 @@ table.large {
 		textarea {width: 100%; height: 100px; margin-bottom: 15px;}
 		button {margin-right: 5px;}
 	}
+}
+.inboxPagi {
+	@include clearfix; margin: 0 -20px 0; padding: 0 20px 10px;
+	border-bottom: 1px solid $borderColor;
+	.btn-group {float: left;}
+	.counter {
+		vertical-align: middle; float: right;
+		select {margin-left: 5px;}
+	}
+	@media only screen and (max-width: 1080px) {
+		& {padding: 0 0 15px;}
+		.counter {float: none; text-align: center;}
+		.btn-group {
+			float: none; width: 80%; margin: 10px auto 0; display: block;
+			button {width: 50%;}
+		}
+	}
+}
+.inboxList {margin: 0-20px 0; max-height: 580px; min-height: 580px; overflow-y: scroll;}
+.inboxItem {
+	border-bottom: 1px solid $borderColor; border-left: 4px solid transparent;
+	background-color: #f7f7f7;
+	a {display: block; padding: 12px;}
+	.name span {display: inline; color: #333;}
+	.user {position: relative;}
+	.details {
+		padding-left: 55px;
+		p {margin: 0; font-size: 12px; color: #808080;}
+	}
+	.timestamp {font-size: 10px; margin: 3px 0;}
+	&.online {border-left-color: #76c95f;}
+	&.new {
+		background-color: #fff;
+		.name {font-weight: 700;}
+	}
+	@media only screen and (max-width: 980px) {
+		.photo {display: none;}
+		.details {padding-left: 0;}
+	}
+}
+.chatHead {
+	.btnGroup {float: right;}
+	@include clearfix;
+	.contact {
+		float: left;
+		.name {font-size: 16px;}
+		.job {color: #808080;}
+	}
+}
+.btnGroup {
+	.item {
+		margin-left: 6px;
+		@include inline-block;
+	}
+}
+@media only screen and (max-width: 1240px) {
+	.chatHead {
+		.btnGroup {
+			float: none; margin-top: 15px;
+			.item {margin-left: 0; margin-right: 4px;}
+		}
+		.contact {float: none;}
+	}
+}
+@media only screen and (max-width: 800px) {
+	.chatHead .btnGroup {
+		.item button {padding: 3px 5px;}
+	}
+}
+.thread {
+	min-height: 500px; max-height: 500px; overflow-y: scroll; padding-right: 10px; margin: 20px 0 15px;
+	.message {@include clearfix; padding-right: 70px;}
+	.timestamp {float: right; color: #b2b2b2; line-height: 40px;}
+	.photo {float: left;}
+	.bubble {
+		position: relative; margin-left: 60px;
+		border: 1px solid #d9d9d9; padding: 7px 12px;
+		@include border-radius(5px);
+		.pointer {
+			position: absolute; display: block; width: 11px; height: 12px;
+			top: 6px; left: -11px; background: url(../img/messageArrow.png) no-repeat;
+		}
+	}
+	.item {
+		margin-top: 15px;
+		@include clearfix;
+		&:first-child {margin-top: 0;}
+		&.own {
+			.photo {float: right;}
+			.bubble {
+				border-color: #c3deff; background-color: #f6faff; margin-right: 60px;
+				.pointer {
+					left: inherit; right: -11px; background: url(../img/messageArrowBlue.png) no-repeat;
+				}
+			}
+		}
+	}
+}
+.composer {
+	background-color: #fafafa; border: 1px solid #e5e9ec;
+	@include border-radius(5px);
+	padding: 10px 13px;
+	.attach {float: left; color: #808080; font-size: 20px; position: relative; z-index: 10;}
+	.inputs {
+		position: relative; padding: 0 65px 0 25px;
+		input {width: 100%;}
+		button {position: absolute; top: 0; right: 0;}
+	}
+}
+.popover-content {padding: 5px 10px;}
+.popList {
+	li {padding: 3px 0;}
+	a {color: #808080;}
 }

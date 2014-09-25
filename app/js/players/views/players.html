@@ -32,9 +32,6 @@
 <div class="col-xs-6">
     <div class="section">
         <div class="clubInfo">
-            <div class="h1">{{team.name}}
-                <a href="" class="muted" title="{{team.latestTeamStats.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.latestTeamStats.league.name}}</a>
-            </div>
             <div class="seasonSwitch">
                 Season
                 <select>
@@ -42,6 +39,9 @@
                     <option>2012-2013</option>
                     <option>2011-2012</option>
                 </select>
+            </div>
+            <div class="h1">{{team.name}}
+                <a href="" class="muted" title="{{team.latestTeamStats.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.latestTeamStats.league.name}}</a>
             </div>
             <div class="mb">
                 <div class="image">
