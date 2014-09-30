@@ -1,5 +1,6 @@
 {
-	"germany" : "Германия",
+    "select_country": "Select Country",
+    "germany" : "Германия",
     "finland" : "Финляндия",
     "france" : "Франция",
     "austria" : "Австрия",

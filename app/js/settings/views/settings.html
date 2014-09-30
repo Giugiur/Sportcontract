@@ -27,14 +27,13 @@
                   </fieldset>
                   <div class="h2">{{'time_zone' | translate}}</div>
                   <fieldset>
-                    <select ng-model="user.profile.timezone">
-                      <option value="+1">Europe - Madrid (GMT+1)</option>
-                      
-                    </select>
+                      <select ng-model="user.profile.timezone" ng-options="zone.TimeZoneId as zone.TimeZoneId for zone in timezones" ng-change="User.$save();">
+                          <!--<option value="">{{user.profile.timezone.TimeZoneId}}</option>-->
+                      </select>
                   </fieldset>
                   <div class="h2">{{'date_format' | translate}}</div>
                   <fieldset>
-                    <select ng-model="user.profile.dateformat">
+                    <select ng-model="user.profile.dateformat" ng-change="User.$save();">
                       <option value="dd/MM/yyyy">dd/mm/yyyy</option>
                       <option value="MM.dd.yy">mm.dd.yy</option>
                       <option value="yyyy/MM/dd">yyyy/mm/dd</option>
@@ -44,7 +43,7 @@
                   </fieldset>
                   <div class="h2">{{'time_format' | translate}}</div>
                   <fieldset>
-                    <select ng-model="user.profile.time">
+                    <select ng-model="user.profile.time" ng-change="User.$save();">
                       <option value="HH:mm:ss">24 h</option>
                       <option value="hh:mm:ss">12 h</option>
                     </select>
@@ -52,7 +51,7 @@
                   </fieldset>
                   <div class="h2">{{'week_starts_on' | translate}}</div>
                   <fieldset>
-                    <select ng-model="user.profile.weekstart">
+                    <select ng-model="user.profile.weekstart" ng-change="User.$save();">
                       <option value="monday">{{'monday' | translate}}</option>
                       <option value="sunday">{{'sunday' | translate}}</option>
                     </select>

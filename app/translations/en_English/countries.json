@@ -1,4 +1,5 @@
-{   "select_country": "Select Country",
+{
+    "select_country": "Select Country",
     "germany" : "Germany",
     "france" : "France",
     "austria" : "Austria",
