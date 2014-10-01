@@ -138,8 +138,8 @@ gulp.task('watch', function () {
     refresh.listen(LIVERELOAD_PORT);
     gulp.watch('app/scss/**/*.scss', ['compass']);
     gulp.watch('app/index.html', ['views']);
-    gulp.watch('app/**/*.html', ['views','script']);
-    gulp.watch('app/js/**/*.html', ['views','script']);
+    gulp.watch('app/**/*.html', ['views','scripts']);
+    gulp.watch('app/js/**/*.html', ['views','scripts']);
     // gulp.watch('app/js/**/*.js', ['scripts','test']);
     // gulp.watch('app/js/*.js', ['scripts','test']);
     gulp.watch('app/js/*/translation/*.json', ['translation']);
