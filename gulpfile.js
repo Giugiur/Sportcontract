@@ -64,28 +64,28 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./.tmp/js'))
   
 });
-gulp.task('test', function() {
-  var bowerDeps = wiredep({
-    directory: 'app/bower_components',
-    dependencies: true,
-    devDependencies: true
-  });
+// gulp.task('test', function() {
+//   var bowerDeps = wiredep({
+//     directory: 'app/bower_components',
+//     dependencies: true,
+//     devDependencies: true
+//   });
 
-  var testFiles = bowerDeps.js.concat([
-    'app/js/**/*.js',
-    'test/unit/**/*.js'
-  ]);
+//   var testFiles = bowerDeps.js.concat([
+//     'app/js/**/*.js',
+//     'test/unit/**/*.js'
+//   ]);
 
-  return gulp.src(testFiles)
-    .pipe(karma({
-      configFile: 'test/karma-unit.conf.js',
-      action: 'run'
-    }))
-    .on('error', function(err) {
-      console.log(err);
-    });
+//   return gulp.src(testFiles)
+//     .pipe(karma({
+//       configFile: 'test/karma-unit.conf.js',
+//       action: 'run'
+//     }))
+//     .on('error', function(err) {
+//       console.log(err);
+//     });
   
-});
+// });
 gulp.task('bower', function() {
   bower().pipe(gulp.dest('./.tmp/bower_components'))
 });
@@ -140,12 +140,12 @@ gulp.task('watch', function () {
     gulp.watch('app/index.html', ['views']);
     gulp.watch('app/**/*.html', ['views','script']);
     gulp.watch('app/js/**/*.html', ['views','script']);
-    gulp.watch('app/js/**/*.js', ['scripts','test']);
-    gulp.watch('app/js/*.js', ['scripts','test']);
+    // gulp.watch('app/js/**/*.js', ['scripts','test']);
+    // gulp.watch('app/js/*.js', ['scripts','test']);
     gulp.watch('app/js/*/translation/*.json', ['translation']);
     gulp.watch('bower.json', ['bower']);
     gulp.watch('app/img/**/*.*', ['images']);
-    gulp.watch('test/unit/**/*.js', ['test']);
+    // gulp.watch('test/unit/**/*.js', ['test']);
     gulp.watch([
         '.tmp/**/*',
         '.tmp/*'

@@ -873,11 +873,16 @@ table.large {
 .leagues {
 	overflow: hidden; margin-top: -20px;
 	li {
-		float: left; text-align: center; margin: 20px 40px 0 0;
+		display: inline-block; width: 24.5%;
+		text-align: center; margin-top: 20px;
+		a {display: block; text-decoration: none; cursor: pointer;}
 		span {
 			display: block; font-weight: 700; color: #333; margin-top: 10px;
 			span {font-size: 11px; color: #b2b2b2; font-weight: 400; margin-top: 0;}
 		}
+	}
+	@media only screen and (max-width: 900px) {
+		li {width: 33.33%;}
 	}
 }
 .clubInfo {
