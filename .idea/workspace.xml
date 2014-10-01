@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" afterPath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leagues.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="leagues.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="6870" max-vertical-offset="7845">
-              <caret line="490" column="6" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.49401197" vertical-offset="6900" max-vertical-offset="7860">
+              <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5202312" vertical-offset="1770" max-vertical-offset="2685">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="2685">
               <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
               <folding />
             </state>
@@ -187,13 +187,13 @@
         <option value="$PROJECT_DIR$/app/js/common/views/sidebar.html" />
         <option value="$PROJECT_DIR$/app/js/communication/views/communication.html" />
         <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
-        <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
         <option value="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
       </list>
     </option>
   </component>
@@ -1223,18 +1223,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="6870" max-vertical-offset="7845">
-          <caret line="490" column="6" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="2685">
+          <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5202312" vertical-offset="1770" max-vertical-offset="2685">
-          <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.49401197" vertical-offset="6900" max-vertical-offset="7860">
+          <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
           <folding />
         </state>
       </provider>
