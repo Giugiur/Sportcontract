@@ -462,7 +462,7 @@
 
 <!-- Start of the overview which contains national teams -->
 <ul class="list-inline mb" ng-if="view=='overview'">
-    <li ng-repeat="team in association.teams"><a href="">{{team.team.name}}</a></li>
+    <li ng-repeat="team in association.teams"><a ng-click="goTeam(team.team);" href="">{{team.team.name}}</a></li>
 </ul>
 <!-- End of the overview part -->
     <div class="mb" ng-if="view=='contacts'" ng-repeat="team in association.teams">
@@ -480,7 +480,7 @@
     <ul>
         <li ng-repeat="league in association.leagues">
             <a ng-click="goLeague(league);">
-                <img src="img/leagueLogo1.png" alt="">
+                <img src="{{league.logo && league.logo || 'img/leagueLogo1.png'}}" alt="">
                                       <span>
                                             {{league.name}}
                                         <span>Tagged video &amp; statistics</span>

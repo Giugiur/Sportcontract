@@ -1,4 +1,4 @@
-var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api) {
+var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,$anchorScroll) {
 
 
   $scope.team = team;
@@ -7,7 +7,12 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   $scope.season=$stateParams.season?$stateParams.season:2013;
 
 
+    $scope.scrollTo = function(i){
+        $location.hash(i);
 
+        // call $anchorScroll()
+        $anchorScroll();
+    }
   $scope.goPlayer = function(object){
   	object.season = $scope.season;
       console.log(object);

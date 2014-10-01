@@ -12,17 +12,17 @@
 </div>
 <div class="anchors">
     <ul>
-        <li><a href="#">Facts</a></li>
-        <li><a href="#">Standings</a></li>
-        <li><a href="#">Player stats</a></li>
-        <li><a href="#">All time high</a></li>
+        <li><a ng-click="scrollTo('facts')">Facts</a></li>
+        <li><a ng-click="scrollTo('standings')">Standings</a></li>
+        <li><a ng-click="scrollTo('stats')">Player stats</a></li>
+        <li><a ng-click="scrollTo('statsalltime')">All time high</a></li>
         <li><a href="#">Free agents</a></li>
         <li><a href="#">Next season free agents</a></li>
-        <li><a href="#">Injuries</a></li>
-        <li><a href="#">Champions</a></li>
-        <li><a href="#">Awards</a></li>
+        <li><a ng-click="scrollTo('injured')">Injuries</a></li>
+        <li><a >Champions</a></li>
+        <li><a ng-click="scrollTo('awards')">Awards</a></li>
         <li><a href="#">Interesting facts</a></li>
-        <li><a href="#">Transfers</a></li>
+        <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
     </ul>
 </div>
 
@@ -467,7 +467,7 @@
 </div>
 </div> -->
 
-<a name="standings"></a>
+<a id="standings"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">
@@ -478,7 +478,7 @@
     </div>
 </div>
 
-<a name="stats"></a>
+<a id="stats"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">
@@ -496,7 +496,7 @@
     </div>
 </div>
 
-<a name="statsalltime"></a>
+<a id="statsalltime"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">
@@ -507,7 +507,7 @@
     </div>
 </div>
 
-<a name="injured"></a>
+<a id="injured"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">
@@ -518,7 +518,7 @@
     </div>
 </div>
 
-<a name="transfers"></a>
+<a id="transfers"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">
@@ -528,7 +528,7 @@
         </div>
     </div>
 </div>
-<a name="awards"></a>
+<a id="awards"></a>
 <div class="row">
     <div class="col-xs-12">
         <div class="section">

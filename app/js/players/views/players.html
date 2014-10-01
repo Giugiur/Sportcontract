@@ -12,18 +12,18 @@
 </div>
 <div class="anchors">
     <ul>
-        <li><a href="#">Facts</a></li>
+        <li><a ng-click="goTo('facts')">Facts</a></li>
         <li><a href="#">Roster</a></li>
-        <li><a href="#">Player stats</a></li>
-        <li><a href="#">Team stats</a></li>
-        <li><a href="#">Captains</a></li>
-        <li><a href="#">Staff</a></li>
-        <li><a href="#">Arena</a></li>
+        <li><a ng-click="goTo('stats')">Player stats</a></li>
+        <li><a ng-click="goTo('teamstats')">Team stats</a></li>
+        <li><a ng-click="goTo('captain')">Captains</a></li>
+        <li><a ng-click="goTo('staff')">Staff</a></li>
+        <li><a ng-click="goTo('arena')">Arena</a></li>
         <li><a href="#">Retired numbers</a></li>
-        <li><a href="#">Season best</a></li>
-        <li><a href="#">All time high</a></li>
+        <li><a ng-click="goTo('topplayers')">Season best</a></li>
+        <li><a ng-click="goTo('topplayersall')">All time high</a></li>
         <li><a href="#">Where are they now?</a></li>
-        <li><a href="#">Transfers</a></li>
+        <li><a ng-click="goTo('transfers')">Transfers</a></li>
         <li><a href="#">Editorial notes</a></li>
     </ul>
 </div>
@@ -116,6 +116,18 @@
                         </a>
                     </li>
                     <li ng-repeat="player in players | filter:{'playerPosition':'CENTRE'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'RIGHT_WING'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'LEFT_WING'}" ng-click="goPlayer(player)">
                         <a href="">
                             <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
                             <span>{{player.firstName}} {{player.lastName}}</span>

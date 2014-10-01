@@ -1,4 +1,4 @@
-var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,leaders,league,api, ngProgress ,$timeout) {
+var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,leaders,league,api, ngProgress ,$timeout,$anchorScroll) {
   
   $scope.teams = teams;
   $scope.leaders = leaders;
@@ -6,6 +6,13 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
   $scope.league = league;
   $scope.season=  $stateParams.season?$stateParams.season:2013;
 
+
+  $scope.scrollTo = function(i){
+      $location.hash(i);
+
+      // call $anchorScroll()
+      $anchorScroll();
+  }
 
   $scope.goTeam = function(object){
   	object.season = $scope.season;

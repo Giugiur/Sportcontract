@@ -1,55 +1,8 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div id="header" class="clearfix">
-                <div class="logo"></div>
-                <div class="userOptions">
-                    <a href="#">
-                        <span class="userName">Peter Manager</span>
-                        <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
-                        <i class="fa fa-caret-down"></i>
-                    </a>
-                </div>
-                <div class="search">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="League name, club, player, staff&#8230;">
-                    <a href="#"><i class="fa fa-plus"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div ui-view="header"></div>
 
 
 <div id="main">
-<div id="sideMenu">
-    <ul>
-        <li class="active">
-            <a href="#">
-                <i class="fa fa-comments-o"></i>
-                <span>Communication</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-cubes"></i>
-                <span>Organisation</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-globe"></i>
-                <span>Scouting</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-calendar"></i>
-                <span>Calendar</span>
-            </a>
-        </li>
-    </ul>
-</div>
+<div ui-view="sidebar"></div>
 <div id="mainBody">
 
 <div class="container-fluid">
