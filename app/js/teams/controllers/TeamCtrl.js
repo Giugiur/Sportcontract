@@ -1,4 +1,4 @@
-var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,leaders,league,api, ngProgress ,$timeout,$anchorScroll) {
+var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,leaders,league,api, ngProgress ,$timeout,$anchorScroll,$location) {
   
   $scope.teams = teams;
   $scope.leaders = leaders;

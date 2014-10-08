@@ -10,7 +10,9 @@ var HeaderCtrl = function($scope,User,Languages,$translate,$rootScope, $location
  	$scope.setDropdown = function(i){
  		$scope.dropdown = i;
  	}
-
+    $scope.home = function(){
+        $state.go("dashboard.countries",{});
+    }
     $scope.changeLanguage = function(language){
  		$translate.use(language);
  		$translate.refresh();

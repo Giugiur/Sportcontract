@@ -32,8 +32,8 @@
 <div  class="col-xs-6">
     <div class="section">
         <div class="playerInfo">
-            <div class="h1">Moritz Möller
-                <span class="muted">20 y.o.</span>
+            <div class="h1">{{player.player.firstName}} {{player.player.lastName}}
+                <span class="muted">{{player.player.dateOfBirth}}</span>
             </div>
             <div class="mb">
                 <div class="image">
@@ -48,11 +48,11 @@
                         </tr>
                         <tr>
                             <th>Place of birth:</th>
-                            <td><img src="img/blank.gif" class="flag flag-se" alt="Sweden"> {{player.player.country.name}}</td>
+                            <td><img src="img/blank.gif" class="flag flag-{{player.player.country['iso3166_3']}}" alt="Sweden"> {{player.player.country.name}}</td>
                         </tr>
                         <tr>
                             <th>Passport country:</th>
-                            <td><img src="img/blank.gif" class="flag flag-se" alt="Sweden"> {{player.player.country.name}}</td>
+                            <td><img src="img/blank.gif" class="flag flag-{{player.player.country['iso3166_3']}}" alt="Sweden"> {{player.player.country.name}}</td>
                         </tr>
                         </tbody>
                     </table>
