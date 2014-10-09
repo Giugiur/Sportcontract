@@ -66,7 +66,9 @@
                         <th>Number</th>
                         <th>Height</th>
                         <th>Weight</th>
-                        <th>Shoots</th>
+
+                        <th ng-if="player.playerPosition=='SKATER'">Shoots</th>
+                        <th ng-if="player.playerPosition=='GOALIE'">Catches</th>
                         <th>BMI</th>
                     </tr>
                     </thead>
@@ -78,7 +80,8 @@
                         </td>
                         <td>{{player.player.height | number:2}}m</td>
                         <td>{{player.player.weight}}kg</td>
-                        <td>{{player.player.shoots}}</td>
+                        <td ng-if="player.playerPosition=='SKATER'">{{player.player.shoots}}</td>
+                        <td ng-if="player.playerPosition=='GOALIE'">{{player.player.catches}}</td>
                         <td>{{calculateBMI(player.player.height,player.player.weight)}}</td>
                     </tr>
                     </tbody>
