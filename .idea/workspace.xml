@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="" />
+    <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/views/teams.html" afterPath="$PROJECT_DIR$/app/js/teams/views/teams.html" />
+    </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +48,9 @@
       <file leaf-file-name="teams.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8465991" vertical-offset="0" max-vertical-offset="1845">
-              <caret line="465" column="10" selection-start-line="465" selection-start-column="10" selection-end-line="465" selection-end-column="10" />
-              <folding>
-                <element signature="tag#div#2" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.9131693" vertical-offset="7529" max-vertical-offset="8295">
+              <caret line="544" column="12" selection-start-line="544" selection-start-column="12" selection-end-line="544" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,8 +187,8 @@
         <option value="$PROJECT_DIR$/app/js/common/views/header.html" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
-        <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
+        <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
       </list>
     </option>
   </component>
@@ -1015,11 +1015,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8465991" vertical-offset="0" max-vertical-offset="1845">
-          <caret line="465" column="10" selection-start-line="465" selection-start-column="10" selection-end-line="465" selection-end-column="10" />
-          <folding>
-            <element signature="tag#div#2" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.9131693" vertical-offset="7529" max-vertical-offset="8295">
+          <caret line="544" column="12" selection-start-line="544" selection-start-column="12" selection-end-line="544" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
