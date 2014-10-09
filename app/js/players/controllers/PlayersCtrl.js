@@ -26,6 +26,10 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   	}
   	window.location.href = $state.href($state.current.name,temp);
   }
+    $scope.gridRoster={
+        enableFiltering:true,
+        data : $scope.players
+    }
   $scope.gridStatsPlayers={
       columnDefs : [
           {name : 'Player',

@@ -474,7 +474,17 @@
 
 
 </div><!--.row-->
+<a name="roster"></a>
+<div class="row" ng-show="gridRoster.data && gridRoster.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Roster</div>
+            <div ui-grid="gridRoster" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
 
+</div>
 <a name="stats"></a>
 <div class="row" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">

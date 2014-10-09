@@ -41,6 +41,14 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                 .state('communication', {
                     url: "/communication",
                     views:{
+
+                    "sidebar@communication" : {
+                        templateUrl: "common/views/sidebar.html"
+                    },
+                    "header@communication" : {
+                        templateUrl : "common/views/header.html",
+                        controller : HeaderCtrl
+                    },
                         "main" : {
                             controller : CommunicationCtrl,
                             templateUrl: "communication/views/communication.html"
