@@ -1,4 +1,4 @@
-var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,$anchorScroll,$location) {
+var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,$anchorScroll,$location,$filter) {
 
 
   $scope.team = team;
@@ -24,8 +24,12 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   		id : $stateParams.id,
   		season : $scope.season
   	}
+    for(var i in $scope.players){
+        $scope.players[i].age = $filter('age')($scope.players[i].dateOfBirth);
+    }
   	window.location.href = $state.href($state.current.name,temp);
   }
+
     $scope.gridRoster={
         enableFiltering:true,
         data : $scope.players
