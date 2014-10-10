@@ -1,30 +1,29 @@
-
 <div class="tabViews" ng-init="view='overview'">
     <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="{{view=='overview'&&'active'||''}}">
-            <a href="" ng-click="view='overview'">Overview</a>
+            <a href="" ng-click="view='overview'">{{'overview' | translate}}</a>
         </li>
         <li class="{{view=='contacts'&&'active'||''}}">
-            <a href="" ng-click="view='contacts'">Contacts</a>
+            <a href="" ng-click="view='contacts'">{{'contacts' | translate}}</a>
         </li>
     </ul>
 </div>
 <div class="anchors" ng-if="view=='overview'">
     <ul>
-        <li><a ng-click="scrollTo('facts')">Facts</a></li>
-        <li><a href="">Roster</a></li>
-        <li><a ng-click="scrollTo('stats')">Player stats</a></li>
-        <li><a ng-click="scrollTo('teamstats')">Team stats</a></li>
-        <li><a ng-click="scrollTo('captain')">Captains</a></li>
-        <li><a ng-click="scrollTo('staff')">Staff</a></li>
-        <li><a ng-click="scrollTo('arena')">Arena</a></li>
-        <li><a href="">Retired numbers</a></li>
-        <li><a ng-click="scrollTo('topplayers')">Season best</a></li>
-        <li><a ng-click="scrollTo('topplayersall')">All time high</a></li>
-        <li><a href="">Where are they now?</a></li>
-        <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
-        <li><a href="">Editorial notes</a></li>
+        <li><a ng-click="scrollTo('facts')">{{'facts' | translate}}</a></li>
+        <li><a href="">{{'roster' | translate}}</a></li>
+        <li><a ng-click="scrollTo('stats')">{{'player_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('teamstats')">{{'team_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('captain')">{{'captains' | translate}}</a></li>
+        <li><a ng-click="scrollTo('staff')">{{'staff' | translate}}</a></li>
+        <li><a ng-click="scrollTo('arena')">{{'arena' | translate}}</a></li>
+        <li><a href="">{{'retired_numbers' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayers')">{{'season_best' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayersall')">{{'all_time_high' | translate}}</a></li>
+        <li><a href="">{{'where_are_they_now' | translate}}</a></li>
+        <li><a ng-click="scrollTo('transfers')">{{'transfers' | translate}}</a></li>
+        <li><a href="">{{'editorial_notes' | translate}}</a></li>
     </ul>
 </div>
 
@@ -33,7 +32,7 @@
     <div class="section">
         <div class="clubInfo">
             <div class="seasonSwitch">
-                Season
+                {{'season' | translate}}
                 <select>
                     <option>2013-2014</option>
                     <option>2012-2013</option>
@@ -49,30 +48,30 @@
                     <ul class="list-inline">
                         <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" title="Official website"><i class="fa fa-external-link"></i></a></li>
+                        <li><a href="#" title="{{'official_website' | translate}}"><i class="fa fa-external-link"></i></a></li>
                     </ul>
                 </div>
+
                 <div class="factsList">
                     <table>
                         <tbody>
                         <tr>
-                            <th>Town:</th>
+                            <th>{{'town' | translate}}:</th>
                             <td>{{team.locality.name}}</td>
                         </tr>
                         <tr>
-                            <th>Founded:</th>
+                            <th><ut>founded</ut>:</th>
                             <td>{{team.foundedYear}}</td>
                         </tr>
                         <tr>
-                            <th>Colors:</th>
+                            <th>{{'colors' | translate}}:</th>
                             <td>{{team.colors}}</td>
                         </tr>
                         <tr>
-                            <th>Affiliates:</th>
+                            <th>{{'affiliates' | translate}}:</th>
                             <td>
                                 <ul>
                                     <li ng-repeat="team in affiliates"><a ui-sref="dashboard.players(team.team)">{{team.team.name}}</a></li>
-
                                 </ul>
                             </td>
                         </tr>
@@ -81,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="h2">Goalies</div>
+            <div class="h2">{{'goalies' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'GOALIE'}" ng-click="goPlayer(player)">
@@ -94,7 +93,7 @@
                 </ul>
             </div>
 
-            <div class="h2">Defense</div>
+            <div class="h2">{{'defense' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'DEFENSEMAN'}" ng-click="goPlayer(player)">
@@ -106,7 +105,7 @@
                 </ul>
             </div>
 
-            <div class="h2">Forwards</div>
+            <div class="h2">{{'forwards' | translate}}</div>
             <div class="playerList">
                 <ul>
                     <li ng-repeat="player in players | filter:{'playerPosition':'FORWARD'}" ng-click="goPlayer(player)">
@@ -141,7 +140,7 @@
 
 <div class="col-xs-6">
 <div class="section">
-<div class="h2">Games</div>
+<div class="h2">{{'games' | translate}}</div>
 <ul class="gameList">
 <li class="gameItem">
     <a href="#">
@@ -149,7 +148,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>15.12.2013</span>, <span>Regular season</span>
+                    <span>15.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -161,16 +160,16 @@
         </table>
     </a>
     <ul class="nav nav-pills" role="tablist">
-        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
-        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
-        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheets' | translate}}</a></li>
+        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'downloads' | translate}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" id="game1lp">
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -191,7 +190,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -211,7 +210,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -234,7 +233,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -245,7 +244,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2"><ut>2nd_period</ut></th>
                 </tr>
                 <tr>
                     <td>
@@ -263,7 +262,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -278,7 +277,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game1dl">Download options here</div>
+        <div class="tab-pane" id="game1dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 
@@ -334,7 +333,7 @@
             <tbody>
             <tr>
                 <td colspan="3" class="date">
-                    <span>14.12.2013</span>, <span>Regular season</span>
+                    <span>14.12.2013</span>, <span>{{'regular_season' | translate}}</span>
                 </td>
             </tr>
             <tr class="score">
@@ -346,16 +345,16 @@
         </table>
     </a>
     <ul class="nav nav-pills" role="tablist">
-        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> Lineups</a></li>
-        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Gamesheet</a></li>
-        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> Download</a></li>
+        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheet' | translate}}</a></li>
+        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'download' | translate}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" id="game2lp">
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">Forwards</th>
+                    <th colspan="2">{{'forwards' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -376,7 +375,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Defencemen</th>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -396,7 +395,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Goalies</th>
+                    <th colspan="2">{{'goalies' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -419,7 +418,7 @@
             <table class="gameTable">
                 <tbody>
                 <tr>
-                    <th colspan="2">1st Period</th>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -430,7 +429,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">2nd Period</th>
+                    <th colspan="2">{{'2nd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -446,7 +445,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">3rd Period</th>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
                 </tr>
                 <tr>
                     <td>
@@ -464,7 +463,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane" id="game2dl">Download options here</div>
+        <div class="tab-pane" id="game2dl">{{'download_options_here' | translate}}</div>
     </div>
 </li>
 </ul>
@@ -486,17 +485,19 @@
 
 </div>
 <a name="stats"></a>
+
 <div class="row" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Player Stats</div>
+            <div class="h2">{{'player_stats' | translate}}</div>
             <div ui-grid="gridStatsPlayers" class="grid" style="height:400px;">
             </div>
         </div>
     </div>
+
     <div class="col-xs-12">
         <div class="section">
-        <div class="h2">Goalies Stats</div>
+        <div class="h2">{{'goalies_stats' | translate}}</div>
             <div ui-grid="gridStatsGoalies" class="grid" style="height:400px;">
             </div>
         </div>
@@ -507,7 +508,7 @@
 <div class="row" ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-        <div class="h2">Team Stats</div>
+        <div class="h2">{{'team_stats' | translate}}</div>
             <div ui-grid="gridStatsTeam" class="grid" style="height:400px;">
             </div>
         </div>
@@ -518,7 +519,7 @@
 <div class="row" ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Team captains</div>
+            <div class="h2">{{'team_captains' | translate}}</div>
             <div ui-grid="gridTeamCaptains" class="grid" style="height:400px;">
             </div>
         </div>
@@ -529,7 +530,7 @@
 <div class="row" ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Team Staff</div>
+            <div class="h2">{{'team_staff' | translate}}</div>
             <div ui-grid="gridTeamStaff" class="grid" style="height:400px;">
             </div>
         </div>
@@ -540,7 +541,7 @@
 <div class="row" ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Top Players</div>
+            <div class="h2">{{'top_players' | translate}}</div>
             <div ui-grid="gridTopPlayers" class="grid" style="height:400px;">
             </div>
         </div>
@@ -551,7 +552,7 @@
 <div class="row" ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Top Players All Time</div>
+            <div class="h2">{{'top_players_all_time' | translate}}</div>
             <div ui-grid="gridTopPlayersAll" class="grid" style="height:400px;">
             </div>
         </div>
@@ -562,7 +563,7 @@
 <div class="row" ng-show="gridTransfers.data && gridTransfers.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
         <div class="section">
-            <div class="h2">Transfers</div>
+            <div class="h2">{{'transfers' | translate}}</div>
             <div ui-grid="gridTransfers" class="grid" style="height:400px;">
             </div>
         </div>

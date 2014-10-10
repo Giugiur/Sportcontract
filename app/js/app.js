@@ -7,9 +7,10 @@ angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
 angular.module('app.calendar',['ui.router','app.common']);
 angular.module('app.simple_contact',['app.common']);
-angular.module('app.admin',['ui.bootstrap','ui.bootstrap.tpls'])
-angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls'])
+angular.module('app.admin',['ui.bootstrap','ui.bootstrap.tpls']);
+angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls']);
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
+
 	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
         "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls','app.simple_contact','app.calendar'])
 	.value('version', '0.1')
@@ -36,7 +37,23 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		templateUrl: "countries/views/countries.html",
 			      		controllers : CountriesCtrl
 			      	}
-			      }
+			      },
+                  resolve:{
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('dashboard');
+                          $translatePartialLoader.addPart('header');
+                          $translatePartialLoader.addPart('sidebar');
+                          $translatePartialLoader.addPart('countries');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      }
+
+                  }
 			    })
                 .state('communication', {
                     url: "/communication",
@@ -102,10 +119,14 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
-				    specificTranslations: function($translatePartialLoader, $translate) {
-				      $translatePartialLoader.addPart('countries');
+				    specificTranslations: function($translatePartialLoader, $translate, User) {
 
-				      // add other needed parts
+                      var user = User.getUser();
+                      $translate.use(user.profile.language);
+
+                      $translatePartialLoader.addPart('countries');
+
+                      // add other needed parts
 				      return $translate.refresh();
 				    },
 				    countries : function(ngProgress,Storage){
@@ -125,7 +146,17 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
-				    associations : function(ngProgress,$http,$stateParams,$q,api){
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('leagues');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
+                      associations : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
 				    	$http.get(api + '/api/countries/' + $stateParams.id + '/associations').success(function(result){
@@ -257,9 +288,9 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    player : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
-				    	$http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
-				    		defered.resolve(result);
-				    	})
+                        $http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
+                            defered.resolve(result);
+				    	});
 				    	return defered.promise;
 				    }
 				  }
@@ -283,7 +314,36 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		templateUrl: "settings/views/settings.html",
 			      		controller : SettingsCtrl
 			      	}
-			      }
+			      },
+                  "resolve" : {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('header');
+                          $translatePartialLoader.addPart('sidebar');
+                          $translatePartialLoader.addPart('settings');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
+                      languages : function($http, $q, api){
+                          var defered = $q.defer();
+
+                          $http.get(api + '/api/getLanguages').success(function(result){
+
+                              /*
+                              angular.forEach(result,function(value){
+                                  langs.push(value.substr(3));
+                              });
+                              */
+                              defered.resolve(result);
+                          });
+
+                          return defered.promise;
+                      }
+                  }
 			    }).state('admin', {
 			      url: "/admin",
 			      views:{
@@ -361,18 +421,19 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
                 })
 
+		   $translateProvider.useLoader('$translatePartialLoader', {
+			  urlTemplate: '/translations/{lang}/{part}.json'
 
-
-
-            $translateProvider.useLoader('$translatePartialLoader', {
-			  urlTemplate: 'translation/{part}/translation/{lang}.json'
 			});
-			$translateProvider.preferredLanguage('ru');
+
+            $translateProvider.preferredLanguage('ru_Russian');
+
         }]).run(['$rootScope','ngProgress','$timeout',function($rootScope,ngProgress,$timeout){
         	$rootScope.search={
         		searchterm : "",
         		advanced: false
-        	};
+
+            };
         	
         }]);
 
