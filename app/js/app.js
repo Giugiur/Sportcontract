@@ -59,16 +59,30 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                     url: "/communication",
                     views:{
 
-                    "sidebar@communication" : {
-                        templateUrl: "common/views/sidebar.html"
-                    },
-                    "header@communication" : {
-                        templateUrl : "common/views/header.html",
-                        controller : HeaderCtrl
-                    },
+                        "sidebar@communication" : {
+                            templateUrl: "common/views/sidebar.html"
+                        },
+                        "header@communication" : {
+                            templateUrl : "common/views/header.html",
+                            controller : HeaderCtrl
+                        },
                         "main" : {
                             controller : CommunicationCtrl,
                             templateUrl: "communication/views/communication.html"
+                        }
+                    },
+                    resolve:{
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('header');
+                            $translatePartialLoader.addPart('sidebar');
+                            //$translatePartialLoader.addPart('communication');
+
+                            // add other needed parts
+                            return $translate.refresh();
                         }
                     }
                 })
@@ -81,6 +95,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('admin_modules/dashboard/dashboard');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
 			      	games : function($q,$http,api){
 			      		var defered = $q.defer();
 			      		console.log("hi");
@@ -100,6 +124,17 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve:{
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('admin_games/admin_games');
+                            $translatePartialLoader.addPart('admin_games/game');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
 			      	game : function($q,$http,api,$stateParams){
 			      		var defered = $q.defer();
 			      		
@@ -176,6 +211,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('video');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
 				    game : function($http,$stateParams,$q,api){
 				    	var defered = $q.defer();
 				    	$http.get(api + '/api/new/games/' + $stateParams.gameid).success(function(result){
@@ -203,6 +248,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('teams');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
                     league : function($http,$stateParams,$q,api){
                         var defered = $q.defer();
                         $http.get(api + '/api/leagues/' + $stateParams.id).success(function(result){
@@ -245,6 +300,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('players');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
                       team : function(ngProgress,$http,$stateParams,$q,api){
 
                           var defered = $q.defer();
@@ -285,6 +350,16 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      	}
 			      },
 			      resolve: {
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('player');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      },
 				    player : function(ngProgress,$http,$stateParams,$q,api){
 				    	
 				    	var defered = $q.defer();
@@ -355,7 +430,20 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		
 			      		templateUrl: "admin_modules/dashboard/views/dashboard.html"
 			      	}
-			      }
+			      },
+                  resolve:{
+                      specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                          var user = User.getUser();
+                          $translate.use(user.profile.language);
+
+                          $translatePartialLoader.addPart('admin_modules/dashboard/dashboard');
+                          $translatePartialLoader.addPart('admin_modules/common/header');
+
+                          // add other needed parts
+                          return $translate.refresh();
+                      }
+                  }
 			    }).state('admin.staff', {
 			      url: "/staff",
 			      views:{
@@ -364,7 +452,19 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		templateUrl : "admin_modules/staff/views/staff.html"
 			      		
 			      	}
-			      }
+			      },
+                    resolve:{
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('admin_modules/staff/staff');
+
+                            // add other needed parts
+                            return $translate.refresh();
+                        }
+                    }
 			    }).state('admin.user_rights', {
 			      url: "/userrights",
 			      views:{
@@ -373,7 +473,19 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		templateUrl : "admin_modules/user_rights/views/user_rights.html"
 			      		
 			      	}
-			      }
+			      },
+                    resolve:{
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('admin_modules/user_rights/user_rights');
+
+                            // add other needed parts
+                            return $translate.refresh();
+                        }
+                    }
 			    }).state('admin.templates', {
                     url: "/templates",
                     views:{
@@ -381,6 +493,18 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                         "content@admin" : {
                             templateUrl : "admin_modules/templates/views/templates.html"
 
+                        }
+                    },
+                    resolve:{
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('admin_modules/templates/templates');
+
+                            // add other needed parts
+                            return $translate.refresh();
                         }
                     }
                 }).state('login', {
@@ -390,7 +514,19 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		controller : LoginCtrl,
 			      		templateUrl: "login/views/login.html"
 			      	}
-			      }
+			      },
+                    resolve:{
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
+
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('login');
+
+                            // add other needed parts
+                            return $translate.refresh();
+                        }
+                    }
 			    })
                 .state('calendar', {
                     url: "/calendar",
@@ -408,7 +544,18 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                         }
                     },
                     resolve: {
+                        specificTranslations: function($translatePartialLoader, $translate, User) {
 
+                            var user = User.getUser();
+                            $translate.use(user.profile.language);
+
+                            $translatePartialLoader.addPart('header');
+                            $translatePartialLoader.addPart('sidebar');
+                            $translatePartialLoader.addPart('calendar');
+
+                            // add other needed parts
+                            return $translate.refresh();
+                        },
                         teams : function(ngProgress, $q, Restangular){
                             ngProgress.start();
                             var defered = $q.defer();
