@@ -132,7 +132,14 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
-				    }
+				    },
+                    country : function($http,$stateParams,$q,api){
+                        var defered = $q.defer();
+                        $http.get(api + '/api/countries/' + $stateParams.id ).success(function(result){
+                            defered.resolve(result);
+                        })
+                        return defered.promise;
+                    }
 				  }
 
 			    })

@@ -32,6 +32,17 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
 
     $scope.gridRoster={
         enableFiltering:true,
+        columnDefs : [
+            {name : 'Player',
+                cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'},
+            {name : 'Age',
+                cellTemplate: '<span>{{row.entity.player.dateOfBirth | age}}</span>'},
+            {name : 'Born',field : 'player.dateOfBirth'},
+            {name : 'Birthplace', field :'player.country.name'},
+            {name : 'HT',field : 'player.height'},
+            {name : 'WT',field : 'player.weight'},
+            {name : 'Shoots', field : 'player.shoots'}
+        ],
         data : $scope.players
     }
   $scope.gridStatsPlayers={
@@ -65,6 +76,13 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
 
       ],
       enableFiltering:true};
+    $scope.gridRetired = {
+        columnDefs : [
+            {name : 'Player',
+                cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'}
+
+        ],
+        enableFiltering:true};
   $scope.gridStatsTeam = {
       enableFiltering:true};
   $scope.gridTeamCaptains = {

@@ -12,19 +12,10 @@
 </div>
 <div class="anchors">
     <ul>
-        <li><a href="#">Facts</a></li>
-        <li><a href="#">Roster</a></li>
-        <li><a href="#">Player stats</a></li>
-        <li><a href="#">Team stats</a></li>
-        <li><a href="#">Captains</a></li>
-        <li><a href="#">Staff</a></li>
-        <li><a href="#">Arena</a></li>
-        <li><a href="#">Retired numbers</a></li>
-        <li><a href="#">Season best</a></li>
-        <li><a href="#">All time high</a></li>
-        <li><a href="#">Where are they now?</a></li>
-        <li><a href="#">Transfers</a></li>
-        <li><a href="#">Editorial notes</a></li>
+        <li><a ng-click="scrollTo('stats')">Statistics</a></li>
+        <li><a ng-click="scrollTo('total')">Carreer totals</a></li>
+        <li><a ng-click="scrollTo('highlight')">Carreer Highlights</a></li>
+        <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
     </ul>
 </div>
 
@@ -199,7 +190,7 @@
         </div>
     </div>
 </div>
-
+<a name="stats"></a>
 <div class="col-xs-12">
     <div class="section">
         <div class="h2">Career statistics</div>
@@ -366,7 +357,7 @@
     <div ng-show="type=='overview'" class="row">
     <div class="col-xs-12">
     <a name="total"></a>
-    <div class="row">
+    <div class="row" ng-show="gridCarreerTotal.data && gridCarreerTotal.data.length>0">
         <div class="col-xs-12">
             <div class="section">
                 <div class="h2">Totals</div>
@@ -378,7 +369,7 @@
     </div>
 
     <a name="highlight"></a>
-    <div class="row">
+    <div class="row" ng-show="gridCarreerHighlights.data && gridCarreerHighlights.data.length>0">
         <div class="col-xs-12">
             <div class="section">
                 <div class="h2">Highlight</div>
@@ -389,7 +380,7 @@
 
     </div>
     <a name="transfers"></a>
-    <div class="row">
+    <div class="row" ng-show="gridCarreerTransfers.data && gridCarreerTransfers.data.length>0">
         <div class="col-xs-12">
             <div class="section">
                 <div class="h2">Transfers</div>

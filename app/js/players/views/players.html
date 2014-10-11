@@ -12,19 +12,18 @@
 </div>
 <div class="anchors" ng-if="view=='overview'">
     <ul>
-        <li><a ng-click="scrollTo('facts')">Facts</a></li>
-        <li><a href="">Roster</a></li>
+        <li><a ng-click="scrollTo('Roster')">Roster</a></li>
         <li><a ng-click="scrollTo('stats')">Player stats</a></li>
         <li><a ng-click="scrollTo('teamstats')">Team stats</a></li>
         <li><a ng-click="scrollTo('captain')">Captains</a></li>
         <li><a ng-click="scrollTo('staff')">Staff</a></li>
         <li><a ng-click="scrollTo('arena')">Arena</a></li>
-        <li><a href="">Retired numbers</a></li>
+        <li><a ng-click="scrollTo('retired')">Retired numbers</a></li>
         <li><a ng-click="scrollTo('topplayers')">Season best</a></li>
         <li><a ng-click="scrollTo('topplayersall')">All time high</a></li>
-        <li><a href="">Where are they now?</a></li>
+        <!--<li><a >Where are they now?</a></li>-->
         <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
-        <li><a href="">Editorial notes</a></li>
+
     </ul>
 </div>
 
@@ -569,6 +568,18 @@
     </div>
 
 </div>
+<a name="retired"></a>
+<div class="row" ng-show="gridRetired.data && gridRetired.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Retired</div>
+            <div ui-grid="gridRetired" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <a name="arena"></a>
 <div class="row" ng-if="view=='overview'">
     <div class="col-xs-12">

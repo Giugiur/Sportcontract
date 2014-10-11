@@ -1,7 +1,7 @@
 
 <div class="tabViews" ng-init="view='overview'">
     <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
-    <ul>
+    <ul class="views">
         <li class="{{view=='overview'&&'active'||''}}">
             <a href="" ng-click="view='overview'">Overview</a>
         </li>
@@ -12,16 +12,15 @@
 </div>
 <div class="anchors">
     <ul>
-        <li><a ng-click="scrollTo('facts')">Facts</a></li>
         <li><a ng-click="scrollTo('standings')">Standings</a></li>
         <li><a ng-click="scrollTo('stats')">Player stats</a></li>
         <li><a ng-click="scrollTo('statsalltime')">All time high</a></li>
-        <li><a href="#">Free agents</a></li>
-        <li><a href="#">Next season free agents</a></li>
+        <li><a ng-click="scrollTo('freeagents')">Free agents</a></li>
+        <!--<li><a href="#">Next season free agents</a></li>-->
         <li><a ng-click="scrollTo('injured')">Injuries</a></li>
-        <li><a >Champions</a></li>
+        <li><a ng-click="scrollTo('champions')">Champions</a></li>
         <li><a ng-click="scrollTo('awards')">Awards</a></li>
-        <li><a href="#">Interesting facts</a></li>
+
         <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
     </ul>
 </div>
@@ -538,7 +537,26 @@
         </div>
     </div>
 </div>
-
+<a id="freeagents"></a>
+<div class="row" ng-show="gridFreeAgents.data && gridFreeAgents.data.length>0 && view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Free Agents</div>
+            <div ui-grid="gridFreeAgents" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+</div>
+<a id="champions"></a>
+<div class="row" ng-show="gridChampions.data && gridChampions.data.length>0 && view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Champions</div>
+            <div ui-grid="gridChampions" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row" ng-if="view=='contacts'">
     <div class="col-xs-12">
         <div class="section">

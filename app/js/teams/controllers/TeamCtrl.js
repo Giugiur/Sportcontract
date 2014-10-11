@@ -105,7 +105,31 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
     $scope.gridAwards = {columnDefs : [
         {name : 'Name',field:'name'}
     ],enableFiltering:true};
+    $scope.gridFreeAgents = {
+        columnDefs : [
+            {name : 'Player',
+                cellTemplate: '<span>{{row.entity.firstName}} {{row.entity.lastName}}</span>'},
+            {name : 'Team',field:'latestPlayerStats.team.name'},
+            {name : 'GP',field:'latestPlayerStats.GP'},
+            {name : 'G',field : 'latestPlayerStats.G'},
+            {name : 'A',field:'latestPlayerStats.A'},
+            {name : 'TP',field:'latestPlayerStats.TP'},
+            {name : 'PPG',field:'latestPlayerStats.PPG'},
+            {name : 'PIM',field:'latestPlayerStats.PIM'}
 
+
+        ],
+        enableFiltering:true
+    }
+    $scope.gridChampions = {
+        columnDefs : [
+            {
+                name : 'Season', field : 'season.name'
+            },{
+                name : 'Team',field:'team.name'
+            }
+        ]
+    }
       SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
 
 };
@@ -152,5 +176,14 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
      */
     $http.get(api + '/api/leagues/' + $stateParams.id + '/awards').success(function(awards){
         $scope.gridAwards.data = players;
+    })
+
+    $http.get("http://api.eliteprospects.com/beta/players?filter=" +
+        "(playerPosition!%3Dgoalie%26contract%3D13%2F14%26latestPlayerStats.season.startYear%3D2013%26playerStatus%3Dactive%26" +
+        "latestPlayerStats.league.id%3D"+ $stateParams.id +")").success(function(agents){
+        $scope.gridFreeAgents.data = agents;
+    })
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/champions').success(function(champions){
+        $scope.gridChampions.data = agents;
     })
 }
