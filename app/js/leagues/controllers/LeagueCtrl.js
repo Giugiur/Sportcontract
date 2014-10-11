@@ -1,7 +1,7 @@
-var LeagueCtrl = function($scope, $http, Storage, $state, $stateParams, Tabs,api,associations,ngProgress) {
+var LeagueCtrl = function($scope, $http, Storage, $state, $stateParams, Tabs,api,associations,country,ngProgress) {
   
   $scope.associations = associations;
-
+  $scope.country = country;
   console.log($scope.associations)
 
 

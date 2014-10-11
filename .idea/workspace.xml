@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" afterPath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" afterPath="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="leagues.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.7" vertical-offset="0" max-vertical-offset="2685">
-              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            <state vertical-scroll-proportion="-11.0" vertical-offset="2045" max-vertical-offset="2685">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -51,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -77,26 +77,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.307692" vertical-offset="2603" max-vertical-offset="9915">
-              <caret line="207" column="21" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
-              <folding>
-                <marker date="1413051664000" expanded="true" signature="2445:2636" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="2948:3683" placeholder="{&quot;templateUrl&quot;: &quot;common/views/sidebar.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="3774:3894" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="3986:4090" placeholder="{&quot;templateUrl&quot;: &quot;communication/views/communication.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="14880:14891" placeholder="{&quot;templateUrl&quot;: &quot;common/views/clear_template.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="14912:14949" placeholder="{&quot;templateUrl&quot;: &quot;common/views/sidebar.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="14994:15067" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="15103:16363" placeholder="{&quot;templateUrl&quot;: &quot;settings/views/settings.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="16594:16653" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/common/views/header.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="16681:17198" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/dashboard/views/dashboard.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="17520:17948" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/staff/views/staff.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="18233:18690" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/user_rights/views/user_rights.html&quot;...}" />
-                <marker date="1413051664000" expanded="true" signature="19001:19508" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/templates/views/templates.html&quot;...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.58678955" vertical-offset="2603" max-vertical-offset="9915">
+              <caret line="199" column="47" selection-start-line="199" selection-start-column="47" selection-end-line="199" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7826087" vertical-offset="75" max-vertical-offset="1095">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1095">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -205,11 +191,11 @@
         <option value="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
         <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
       </list>
     </option>
   </component>
@@ -1292,28 +1278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.307692" vertical-offset="2603" max-vertical-offset="9915">
-          <caret line="207" column="21" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
-          <folding>
-            <marker date="1413051664000" expanded="true" signature="2445:2636" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="2948:3683" placeholder="{&quot;templateUrl&quot;: &quot;common/views/sidebar.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="3774:3894" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="3986:4090" placeholder="{&quot;templateUrl&quot;: &quot;communication/views/communication.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="14880:14891" placeholder="{&quot;templateUrl&quot;: &quot;common/views/clear_template.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="14912:14949" placeholder="{&quot;templateUrl&quot;: &quot;common/views/sidebar.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="14994:15067" placeholder="{&quot;templateUrl&quot;: &quot;common/views/header.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="15103:16363" placeholder="{&quot;templateUrl&quot;: &quot;settings/views/settings.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="16594:16653" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/common/views/header.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="16681:17198" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/dashboard/views/dashboard.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="17520:17948" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/staff/views/staff.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="18233:18690" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/user_rights/views/user_rights.html&quot;...}" />
-            <marker date="1413051664000" expanded="true" signature="19001:19508" placeholder="{&quot;templateUrl&quot;: &quot;admin_modules/templates/views/templates.html&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/countries/views/countries.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="360">
@@ -1327,24 +1291,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="10" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="9" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.7" vertical-offset="0" max-vertical-offset="2685">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1379,8 +1325,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7826087" vertical-offset="75" max-vertical-offset="1095">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1095">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0" vertical-offset="2045" max-vertical-offset="2685">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58678955" vertical-offset="2603" max-vertical-offset="9915">
+          <caret line="199" column="47" selection-start-line="199" selection-start-column="47" selection-end-line="199" selection-end-column="47" />
           <folding />
         </state>
       </provider>
