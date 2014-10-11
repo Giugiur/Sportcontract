@@ -34,7 +34,8 @@
     "disclaimer_3": "every month until you cancel.",
     "disclaimer_4": "Your card will be charged again on a monthly basis starting on",
     "disclaimer_5": "Current card on the profile Visa 0123 will be charged.",
-    "update_my_account" : "Update my account"
-
+    "update_my_account" : "Update my account",
+    "successfully_saved" : "successfully saved!",
+    "error" : "an error occurred!"
 
 }

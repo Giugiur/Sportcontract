@@ -34,7 +34,8 @@
     "disclaimer_3": "monatlich bis zur Beendigung des Vertragsverhältnisses.",
     "disclaimer_4": "Your card will be charged again on a monthly basis starting on",
     "disclaimer_5": "Current card on the profile Visa 0123 will be charged.",
-    "update_my_account" : "Erweitere mein Konto"
-
+    "update_my_account" : "Erweitere mein Konto",
+    "successfully_saved" : "erfolgreich gespeichert!",
+    "error" : "ein Fehler ist aufgetreten!"
 
 }

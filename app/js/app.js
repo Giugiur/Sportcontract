@@ -514,19 +514,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		controller : LoginCtrl,
 			      		templateUrl: "login/views/login.html"
 			      	}
-			      },
-                    resolve:{
-                        specificTranslations: function($translatePartialLoader, $translate, User) {
-
-                            var user = User.getUser();
-                            $translate.use(user.profile.language);
-
-                            $translatePartialLoader.addPart('login');
-
-                            // add other needed parts
-                            return $translate.refresh();
-                        }
-                    }
+			      }
 			    })
                 .state('calendar', {
                     url: "/calendar",

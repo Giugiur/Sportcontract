@@ -20,20 +20,35 @@
             <div class="row">
               <div class="preferences">
                 <form action="">
-                  <div class="h2">{{'language' | translate}}</div>
+                  <div class="h2">{{'language' | translate}}
+                      <div class="language right" style="display:none;">
+                          <i class="fa"></i>
+                          <span>{{msg}}</span>
+                      </div>
+                  </div>
                   <fieldset>
-                    <select ng-model="user.profile.language" ng-options="lang as lang.substr(3) for lang in languages" ng-change="User.$save();">
+                    <select ng-model="user.profile.language" ng-options="lang as lang.substr(3) for lang in languages" ng-change="save('language');">
                     </select>
                   </fieldset>
-                  <div class="h2">{{'time_zone' | translate}}</div>
+                  <div class="h2">{{'time_zone' | translate}}
+                      <div class="timezone right" style="display:none;">
+                          <i class="fa"></i>
+                          <span>{{msg}}</span>
+                      </div>
+                  </div>
                   <fieldset>
-                      <select ng-model="user.profile.timezone" ng-options="zone.TimeZoneId as zone.TimeZoneId for zone in timezones" ng-change="User.$save();">
+                      <select ng-model="user.profile.timezone" ng-options="zone.TimeZoneId as zone.TimeZoneId for zone in timezones" ng-change="save('timezone');">
                           <!--<option value="">{{user.profile.timezone.TimeZoneId}}</option>-->
                       </select>
                   </fieldset>
-                  <div class="h2">{{'date_format' | translate}}</div>
+                  <div class="h2">{{'date_format' | translate}}
+                      <div class="date-format right" style="display:none;">
+                          <i class="fa"></i>
+                          <span>{{msg}}</span>
+                      </div>
+                  </div>
                   <fieldset>
-                    <select ng-model="user.profile.dateformat" ng-change="User.$save();">
+                    <select ng-model="user.profile.dateformat" ng-change="save('date-format');">
                       <option value="dd/MM/yyyy">dd/mm/yyyy</option>
                       <option value="MM.dd.yy">mm.dd.yy</option>
                       <option value="yyyy/MM/dd">yyyy/mm/dd</option>
@@ -41,17 +56,27 @@
                     </select>
                     <span class="example">{{'example' | translate}}&#58; <span>{{date|date:user.profile.dateformat}}</span></span>
                   </fieldset>
-                  <div class="h2">{{'time_format' | translate}}</div>
+                  <div class="h2">{{'time_format' | translate}}
+                      <div class="time-format right" style="display:none;">
+                          <i class="fa"></i>
+                          <span>{{msg}}</span>
+                      </div>
+                  </div>
                   <fieldset>
-                    <select ng-model="user.profile.time" ng-change="User.$save();">
+                    <select ng-model="user.profile.time" ng-change="save('time-format');">
                       <option value="HH:mm:ss">24 h</option>
                       <option value="hh:mm:ss">12 h</option>
                     </select>
                     <span class="example">{{'example' | translate}}&#58; <span>{{date|date:user.profile.time}}</span></span>
                   </fieldset>
-                  <div class="h2">{{'week_starts_on' | translate}}</div>
+                  <div class="h2">{{'week_starts_on' | translate}}
+                      <div class="week-starts-on right" style="display:none;">
+                          <i class="fa"></i>
+                          <span>{{msg}}</span>
+                      </div>
+                  </div>
                   <fieldset>
-                    <select ng-model="user.profile.weekstart" ng-change="User.$save();">
+                    <select ng-model="user.profile.weekstart" ng-change="save('week-starts-on');">
                       <option value="monday">{{'monday' | translate}}</option>
                       <option value="sunday">{{'sunday' | translate}}</option>
                     </select>
