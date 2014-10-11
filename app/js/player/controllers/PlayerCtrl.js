@@ -30,7 +30,7 @@ var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, 
     };
     $scope.gridCarreerHighlight = {columnDefs : [
         {name : 'Season',field:'season.name'},
-        {name : 'Award' : field:'award.name'}
+        {name : 'Award' , field:'award.name'}
 
     ]};
     $scope.gridTransfers = {columnDefs : [

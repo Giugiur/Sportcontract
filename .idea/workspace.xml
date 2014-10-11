@@ -2,172 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_games/admin_games.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_games/admin_games.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_games/admin_games.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_games/admin_games.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/calendar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/calendar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/calendar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/calendar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/clear_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/clear_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/clear_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/clear_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/common.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/common.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/common.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/common.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/dashboard/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/dashboard/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/dashboard/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/dashboard/dashboard.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/datefiield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/datefiield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/datefiield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/datefiield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/dropdown.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/dropdown.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/dropdown.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/dropdown.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/common/editablefield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/common/editablefield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/common/editablefield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/form.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/form.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/form.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/form.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/formElement.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/formElement.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/formElement.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/formElement.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_games/game.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_games/game.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_games/game.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_games/game.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/common/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/common/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/common/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/common/header.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/leagues.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/leagues.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/leagues.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/leagues.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/common/loginmodal.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/common/loginmodal.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/common/loginmodal.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/common/loginmodal.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/multiselect.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/multiselect.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/multiselect.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/multiselect.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/player.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/player.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/player.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/player.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/players.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/players.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/players.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/players.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/quicksearch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/quicksearch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/quicksearch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/quicksearch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/search.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/search.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/search.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/search.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/settings.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/settings.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/settings.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/settings.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/sidebar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/sidebar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/sidebar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/sidebar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/simple_contacts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/simple_contacts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/simple_contacts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/simple_contacts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/staff/staff.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/staff/staff.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/staff/staff.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/staff/staff.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/survey.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/survey.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/survey.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/survey.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/teams.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/teams.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/teams.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/teams.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/templates/templates.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/templates/templates.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/templates/templates.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/templates/templates.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/textarea.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/textarea.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/textarea.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/textarea.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/form_creator/components/textfield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/form_creator/components/textfield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/form_creator/components/textfield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/form_creator/components/textfield.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/timezones.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/user_rights/user_rights.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/admin_modules/user_rights/user_rights.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/admin_modules/user_rights/user_rights.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/admin_modules/user_rights/user_rights.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/de_German/video.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/en_English/video.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/video.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/video.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/dashboard/translation/de.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/dashboard/translation/en.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/countries/translation/de.json" afterPath="$PROJECT_DIR$/app/translations/de_German/countries.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/countries/translation/en.json" afterPath="$PROJECT_DIR$/app/translations/en_English/countries.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/countries/translation/nl.json" afterPath="$PROJECT_DIR$/app/translations/nl_Dutch/countries.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/countries/translation/ru.json" afterPath="$PROJECT_DIR$/app/translations/ru_Russian/countries.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/dashboard/translation/ru.json" afterPath="$PROJECT_DIR$/app/translations/de_German/admin_modules/common/editablefield.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js" afterPath="$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/settings/controllers/SettingCtrl.js" afterPath="$PROJECT_DIR$/app/js/settings/controllers/SettingCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_modules.scss" afterPath="$PROJECT_DIR$/app/scss/_modules.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/countries/views/countries.html" afterPath="$PROJECT_DIR$/app/js/countries/views/countries.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/dashboard/views/dashboard.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/dashboard/views/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/form_creator/views/components/dropdown.html" afterPath="$PROJECT_DIR$/app/js/form_creator/views/components/dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_games/views/game.html" afterPath="$PROJECT_DIR$/app/js/admin_games/views/game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/common/views/header.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/common/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/views/header.html" afterPath="$PROJECT_DIR$/app/js/common/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" afterPath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/login/views/login.html" afterPath="$PROJECT_DIR$/app/js/login/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/common/views/loginmodal.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/common/views/loginmodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/views/players.html" afterPath="$PROJECT_DIR$/app/js/players/views/players.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/quicksearch/views/quicksearch.html" afterPath="$PROJECT_DIR$/app/js/quicksearch/views/quicksearch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/search/views/search.html" afterPath="$PROJECT_DIR$/app/js/search/views/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/settings/views/settings.html" afterPath="$PROJECT_DIR$/app/js/settings/views/settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/views/sidebar.html" afterPath="$PROJECT_DIR$/app/js/common/views/sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/simple_contacts/views/simple_contacts.html" afterPath="$PROJECT_DIR$/app/js/simple_contacts/views/simple_contacts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/staff/views/staff.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/staff/views/staff.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/views/teams.html" afterPath="$PROJECT_DIR$/app/js/teams/views/teams.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/templates/views/templates.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/templates/views/templates.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/templates.js" afterPath="$PROJECT_DIR$/app/js/templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/admin_modules/user_rights/views/user_rights.html" afterPath="$PROJECT_DIR$/app/js/admin_modules/user_rights/views/user_rights.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" afterPath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -266,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="players.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="players.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06891271" vertical-offset="150" max-vertical-offset="9120">
+            <state vertical-scroll-proportion="-1.875" vertical-offset="150" max-vertical-offset="9120">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#11;n#!!top" expanded="true" />
@@ -301,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1095">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.7826087" vertical-offset="75" max-vertical-offset="1095">
+              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -369,12 +204,12 @@
         <option value="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
-        <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
+        <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
       </list>
     </option>
   </component>
@@ -1457,22 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1095">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/simple_contacts/views/simple_contacts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.307692" vertical-offset="2603" max-vertical-offset="9915">
@@ -1542,11 +1361,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06891271" vertical-offset="150" max-vertical-offset="9120">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="150" max-vertical-offset="9120">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#11;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/simple_contacts/views/simple_contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7826087" vertical-offset="75" max-vertical-offset="1095">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
