@@ -4,19 +4,19 @@
           <div class="finder">
             <div class="row">
                 <div class="filter">
-                  <div class="h2">Filter</div>
+                  <div class="h2">{{'filter' | translate}}</div>
                   <div class="filterHead">
                     <div class="filterAdd">
                       <select ng-model="condition"
                         ng-options="condition as condition for condition in mod" >
-                        <option>Select condition</option>
+                        <option>{{'select_condition' | translate}}</option>
                         
                       </select>
-                      <button ng-click="addFilter();">Add</button>
+                      <button ng-click="addFilter();">{{'add' | translate}}</button>
                     </div>
                     <div class="filterCtrl">
-                      <a href="#" class="btnModal"><i class="fa fa-folder-open-o"></i> <span>load</span></li></a>
-                      <a href="#" class="btnModal"><i class="fa fa-save"></i> <span>save</span></li></a>
+                      <a href="#" class="btnModal"><i class="fa fa-folder-open-o"></i> <span>{{'load' | translate}}</span></li></a>
+                      <a href="#" class="btnModal"><i class="fa fa-save"></i> <span>{{'save' | translate}}</span></li></a>
                     </div>
                   </div>
                   <div class="filterList form">
@@ -30,11 +30,11 @@
                           <span class="medium switch" ng-if="!filter.condition.char_ctrl == 'slider'">
                             <label>
                               <input ng-model="filter.condition.operator"
-                                 type="radio" name="toggleCountry" checked="checked" value="must"> is
+                                 type="radio" name="toggleCountry" checked="checked" value="must"> {{'is' | translate}}
                             </label>
                             <label>
                               <input ng-model="filter.condition.operator" 
-                                 type="radio" name="toggleCountry" value="must_not"> not
+                                 type="radio" name="toggleCountry" value="must_not"> {{'not' | translate}}
                             </label>
                           </span>
 
@@ -67,22 +67,22 @@
                   </div><!--.filterList-->
                 </div><!--.row-->
                 <div class="result" style="overflow-y:auto;max-height:440px;">
-                  <div class="h2">Results</div>
+                  <div class="h2">{{'results' | translate}}</div>
                   <table>
                     <colgroup style="width: 5%;">
                     <colgroup span="4" style="width: 22%;"></colgroup>
                     <thead>
                       <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Born</th>
-                        <th>League</th>
+                        <th>{{'name' | translate}}</th>
+                        <th>{{'position' | translate}}</th>
+                        <th>{{'born' | translate}}</th>
+                        <th>{{'league' | translate}}</th>
                       </tr>
                     </thead>
                     <tbody >
                       <tr ng-show="!results || results.hits.length==0">
-                        <td colspan="2">No results, please create a query</td>
+                        <td colspan="2">{{'no_results' | translate}}y</td>
                       <tr>
                       <tr ng-repeat="player in results.hits">
                         <td>

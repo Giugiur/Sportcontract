@@ -7,6 +7,31 @@
 
 	i.fa {font-size: 13px; color: #e7cc76; margin-right: 5px;}
 }
+
+.note-success{
+  @extend .note;
+  background: none repeat scroll 0 0 #ffffff;
+  border: medium none;
+  bottom: 8px;
+  position: relative;
+  font-size:14px;
+
+  span {position:relative;bottom:2px;color:#008000}
+  i.fa {margin-top:5px; font-size: 16px; color: #008000; margin-right: 5px;}
+}
+
+.note-error{
+  @extend .note;
+  background: none repeat scroll 0 0 #ffffff;
+  border: medium none;
+  bottom: 8px;
+  position: relative;
+  font-size:14px;
+
+  span {position:relative;bottom:2px;color:#FF0000}
+  i.fa {margin-top:5px; font-size: 16px; color: #FF0000; margin-right: 5px;}
+}
+
 @media only screen and (max-width: 1080px) {
 	.note {margin-left: 0; margin-top: 10px; width: 70%;}
 }
@@ -1118,4 +1143,16 @@ table.large {
 a{
   cursor: pointer !important;
 
+}
+
+.right{
+  float:right !important;
+}
+
+.hidden{
+  display:none !important;
+}
+
+.visible{
+  display:block !important;
 }

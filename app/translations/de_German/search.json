@@ -1,0 +1,16 @@
+{
+    "filter": "Filter",
+    "select_condition": "Select condition",
+    "add": "Add",
+    "load": "Load",
+    "save": "Save",
+    "is": "Is",
+    "not": "Not",
+    "results": "Results",
+    "name": "Name",
+    "position": "Position",
+    "born": "Born",
+    "league": "League",
+    "no_results": "No results, please create a query"
+    
+}
