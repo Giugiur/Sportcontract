@@ -186,7 +186,7 @@ var SetupPlayerGrids = function(api,players,$stateParams,$scope,$http){
         $scope.gridTransfers.data = teams;
     })
     $http.get('http://api.eliteprospects.com/beta/teams/' + $stateParams.id +'/affiliates').success(function(teams){
-        $scope.affiliates = teams;
+        $scope.affiliates = teams.data;
     })
 
 
