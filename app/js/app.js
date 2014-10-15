@@ -621,7 +621,8 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
     }
   }
 });
-angular.module('app').factory('seasonInterceptor', function () {
+angular.module('app').factory('seasonInterceptor', function ($injector) {
+    var User = $injector.get('User');
     return {
         request: function (config) {
             if (User.getUser().season) {
