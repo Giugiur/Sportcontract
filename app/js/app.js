@@ -622,14 +622,12 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
   }
 });
 angular.module('app').factory('seasonInterceptor', function ($injector) {
-    var User = $injector.get('User');
+    var Season = $injector.get('Season');
     return {
         request: function (config) {
-            if (User.getUser().season) {
-                config.url =  URI(config.url).addSearch({'season':User.getUser().season}).toString();
-            }else{
-                config.url =  URI(config.url).addSearch({'season':2013}).toString();
-            }
+
+                config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
+
             return config;
         }
     };
