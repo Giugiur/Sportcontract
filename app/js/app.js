@@ -17,6 +17,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
         	$httpProvider.interceptors.push('interceptorNgProgress');
+            $httpProvider.interceptors.push('seasonInterceptor');
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
 			    .state('dashboard', {
@@ -620,6 +621,18 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
     }
   }
 });
+angular.module('app').factory('seasonInterceptor', function (User) {
+    return {
+        request: function (config) {
+            if (User.getUser().season) {
+                config.url =  URI(config.url).addSearch({'season':User.getUser().season?}).toString();
+            }else{
+                config.url =  URI(config.url).addSearch({'season':2013}).toString();
+            }
+            return config;
+        }
+    };
+})
 angular.module('app').filter('age',function(){
     return function(input){
         function getAge(birthDate) {

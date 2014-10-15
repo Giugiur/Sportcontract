@@ -1,4 +1,5 @@
-var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,league,api, ngProgress ,$timeout,$anchorScroll,$location) {
+var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,league,
+                        api, ngProgress ,$timeout,$anchorScroll,$location) {
   
   $scope.teams = teams;
   $scope.leaders ;
@@ -144,7 +145,7 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
 
 
     /**stats**/
-    $http.get(api + '/api/leagues/' + $stateParams.id + '/players').success(function(players){
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/players' ).success(function(players){
         $scope.gridStatsPlayers.data =  players['SKATER'];
         $scope.gridStatsGoalies.data =  players['GOALIE'];
     })
