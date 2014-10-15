@@ -1,4 +1,4 @@
-var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, ngProgress,api,$anchorScroll,$location) {
+var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, ngProgress,api,$anchorScroll,$location,$rootScope,$timeout) {
 
 
     $scope.scrollTo = function(i){
@@ -48,7 +48,14 @@ var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, 
         enableFiltering:true,
         data : player.awards
     }
+    $rootScope.$on('seasonchanged',function(){
+        SetupSinglePlayerGrids(api,player,$stateParams,$scope,$http);
+    })
+    $timeout(function(){
+
+
     SetupSinglePlayerGrids(api,player,$stateParams,$scope,$http);
+    },0)
 };
 
 var SetupSinglePlayerGrids = function(api,player,$stateParams,$scope,$http){

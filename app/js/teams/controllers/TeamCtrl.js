@@ -1,5 +1,5 @@
 var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,league,
-                        api, ngProgress ,$timeout,$anchorScroll,$location) {
+                        api, ngProgress ,$timeout,$anchorScroll,$location,$rootScope) {
   
   $scope.teams = teams;
   $scope.leaders ;
@@ -131,6 +131,9 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
             }
         ]
     }
+    $rootScope.$on('seasonchanged',function(){
+        SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
+    })
     $timeout(function(){
         SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
     },0)
