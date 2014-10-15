@@ -625,8 +625,10 @@ angular.module('app').factory('seasonInterceptor', function ($injector) {
     var Season = $injector.get('Season');
     return {
         request: function (config) {
+                if(config.url.indexOf('html')==-1){
+                    config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
+                }
 
-                config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
 
             return config;
         }
