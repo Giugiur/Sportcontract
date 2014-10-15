@@ -12,17 +12,17 @@
 <div class="anchors" ng-if="view=='overview'">
     <ul>
 
-        <li><a ng-click="scrollTo('Roster')">{{'roster' | translate}}</a></li>
-        <li><a ng-click="scrollTo('stats')">{{'player_stats' | translate}}</a></li>
-        <li><a ng-click="scrollTo('teamstats')">{{'team_stats' | translate}}</a></li>
-        <li><a ng-click="scrollTo('captain')">{{'captains' | translate}}</a></li>
-        <li><a ng-click="scrollTo('staff')">{{'staff' | translate}}</a></li>
-        <li><a ng-click="scrollTo('arena')">{{'arena' | translate}}</a></li>
-        <li><a ng-click="scrollTo('retired')">{{'retired_numbers' | translate}}</a></li>
-        <li><a ng-click="scrollTo('topplayers')">{{'season_best' | translate}}</a></li>
-        <li><a ng-click="scrollTo('topplayersall')">{{'all_time_high' | translate}}</a></li>
+        <li><a ng-click="scrollTo('Roster')" ng-show="gridRoster.data && gridRoster.data.length>0">{{'roster' | translate}}</a></li>
+        <li><a ng-click="scrollTo('stats')" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0">{{'player_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('teamstats')" ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0">{{'team_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('captain')" ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0">{{'captains' | translate}}</a></li>
+        <li><a ng-click="scrollTo('staff')" ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0">{{'staff' | translate}}</a></li>
+        <li><a ng-click="scrollTo('arena')" >{{'arena' | translate}}</a></li>
+        <li><a ng-click="scrollTo('retired')" ng-show="gridRetired.data && gridRetired.data.length>0">{{'retired_numbers' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayers')" ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0">{{'season_best' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayersall')" ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0">{{'all_time_high' | translate}}</a></li>
         <!--<li><a >Where are they now?</a></li>-->
-        <li><a ng-click="scrollTo('transfers')">{{'transfers' | translate}}</a></li>
+        <li><a ng-click="scrollTo('transfers')" ng-show="gridTransfers.data && gridTransfers.data.length>0">{{'transfers' | translate}}</a></li>
 
 
     </ul>
@@ -34,10 +34,11 @@
         <div class="clubInfo">
             <div class="seasonSwitch">
                 {{'season' | translate}}
-                <select>
-                    <option>2013-2014</option>
-                    <option>2012-2013</option>
-                    <option>2011-2012</option>
+                <select >
+                    <option value="2014">2014-2015</option>
+                    <option value="2013">2013-2014</option>
+                    <option value="2012">2012-2013</option>
+                    <option value="2011">2011-2012</option>
                 </select>
             </div>
             <div class="h1">{{team.name}}

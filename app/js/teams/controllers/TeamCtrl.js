@@ -1,7 +1,7 @@
-var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,leaders,league,api, ngProgress ,$timeout,$anchorScroll,$location) {
+var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,league,api, ngProgress ,$timeout,$anchorScroll,$location) {
   
   $scope.teams = teams;
-  $scope.leaders = leaders;
+  $scope.leaders ;
   $scope.seasons = seasons;
   $scope.league = league;
   $scope.season=  $stateParams.season?$stateParams.season:2013;
@@ -130,7 +130,10 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
             }
         ]
     }
-      SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
+    $timeout(function(){
+        SetupTeamGrids(api,$scope.teams,$stateParams,$scope,$http);
+    },0)
+
 
 };
 
@@ -138,7 +141,7 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
     /**standings **/
 
     $scope.gridStandings.data =  _.sortBy(teams,function(item){return item.position;});
-    console.log("hallo",$http);
+
 
     /**stats**/
     $http.get(api + '/api/leagues/' + $stateParams.id + '/players').success(function(players){
@@ -185,5 +188,8 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
     })
     $http.get(api + '/api/leagues/' + $stateParams.id + '/champions').success(function(champions){
         $scope.gridChampions.data = agents;
+    })
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/leaders').success(function(leaders){
+        $scope.leaders = leaders;
     })
 }

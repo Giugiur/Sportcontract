@@ -1,4 +1,4 @@
-var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,$anchorScroll,$location,$filter) {
+var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,$anchorScroll,$location,$filter,$timeout) {
 
 
   $scope.team = team;
@@ -138,7 +138,10 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
         {name : 'Staff Role',field:'staffRole'}
     ],enableFiltering:true};
   $scope.affiliates;
-  SetupPlayerGrids(api,players,$stateParams,$scope,$http);
+  $timeout(function(){
+      SetupPlayerGrids(api,players,$stateParams,$scope,$http);
+  },0)
+
 };
 
 var SetupPlayerGrids = function(api,players,$stateParams,$scope,$http){

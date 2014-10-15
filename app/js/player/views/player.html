@@ -13,9 +13,9 @@
 <div class="anchors">
     <ul>
         <li><a ng-click="scrollTo('stats')">Statistics</a></li>
-        <li><a ng-click="scrollTo('total')">Carreer totals</a></li>
-        <li><a ng-click="scrollTo('highlight')">Carreer Highlights</a></li>
-        <li><a ng-click="scrollTo('transfers')">Transfers</a></li>
+        <li><a ng-click="scrollTo('total')" ng-show="gridCarreerTotal.data && gridCarreerTotal.data.length>0">Carreer totals</a></li>
+        <li><a ng-click="scrollTo('highlight')" ng-show="gridCarreerHighlights.data && gridCarreerHighlights.data.length>0">Carreer Highlights</a></li>
+        <li><a ng-click="scrollTo('transfers')" ng-show="gridCarreerTransfers.data && gridCarreerTransfers.data.length>0">Transfers</a></li>
     </ul>
 </div>
 
