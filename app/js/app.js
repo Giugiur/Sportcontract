@@ -625,7 +625,7 @@ angular.module('app').factory('seasonInterceptor', function (User) {
     return {
         request: function (config) {
             if (User.getUser().season) {
-                config.url =  URI(config.url).addSearch({'season':User.getUser().season?}).toString();
+                config.url =  URI(config.url).addSearch({'season':User.getUser().season}).toString();
             }else{
                 config.url =  URI(config.url).addSearch({'season':2013}).toString();
             }
