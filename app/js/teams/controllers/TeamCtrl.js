@@ -182,7 +182,7 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
      *  Awards
      */
     $http.get(api + '/api/leagues/' + $stateParams.id + '/awards').success(function(awards){
-        $scope.gridAwards.data = players;
+        $scope.gridAwards.data = awards;
     })
 
     $http.get("http://api.eliteprospects.com/beta/players?filter=" +
@@ -191,7 +191,7 @@ var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
         $scope.gridFreeAgents.data = agents;
     })
     $http.get(api + '/api/leagues/' + $stateParams.id + '/champions').success(function(champions){
-        $scope.gridChampions.data = agents;
+        $scope.gridChampions.data = champions;
     })
     $http.get(api + '/api/leagues/' + $stateParams.id + '/leaders').success(function(leaders){
         $scope.leaders = leaders;
