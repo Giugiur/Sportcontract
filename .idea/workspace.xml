@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" afterPath="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" afterPath="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7214286" vertical-offset="8900" max-vertical-offset="10020">
+            <state vertical-scroll-proportion="0.0" vertical-offset="8900" max-vertical-offset="10020">
               <caret line="627" column="115" selection-start-line="627" selection-start-column="115" selection-end-line="627" selection-end-column="115" />
               <folding />
             </state>
@@ -77,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seasonDropdown.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="seasonDropdown.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="630">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.21037868" vertical-offset="0" max-vertical-offset="713">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -179,7 +177,6 @@
         <option value="$PROJECT_DIR$/app/js/common/views/header.html" />
         <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
-        <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
         <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
@@ -191,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
       </list>
     </option>
   </component>
@@ -1072,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1815" max-vertical-offset="3075">
@@ -1114,8 +1104,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7214286" vertical-offset="8900" max-vertical-offset="10020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8900" max-vertical-offset="10020">
           <caret line="627" column="115" selection-start-line="627" selection-start-column="115" selection-end-line="627" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21037868" vertical-offset="0" max-vertical-offset="713">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
       </provider>

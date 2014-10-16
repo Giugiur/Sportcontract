@@ -8,7 +8,7 @@ angular.module('app.common').directive('season',['$rootScope','User', function($
         template: '<select ng-model="selectedSeason" ng-options="season.name as season.display for season in seasons">' +
             '</select>',
         link : function link(scope, element, attrs) {
-            scope.selectedSeason = undefined;
+            scope.selectedSeason = 2014;
             scope.seasons = [
                 {
                     name : 2014,
