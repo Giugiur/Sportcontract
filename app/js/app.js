@@ -273,10 +273,10 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                         })
                         return defered.promise;
                     },
-				    teams : function(ngProgress,$http,$stateParams,$q,api){
+				    teams : function(ngProgress,$http,$stateParams,$q,api,Season){
 				    	
 				    	var defered = $q.defer();
-				    	var season = $stateParams.season?$stateParams.season:2013;
+				    	var season = Season.getSeason();
 				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position&season=' + season).success(function(result){
 				    		defered.resolve(result);
 				    	})
