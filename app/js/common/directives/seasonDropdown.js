@@ -5,7 +5,7 @@ angular.module('app.common').directive('season',['$rootScope','User', function($
 
         },
         transclude : true,
-        template: '<select ng-model="selectedSeason.val" ng-options="season.name as season.display for season in seasons">' +
+        template: '<select ng-model="selectedSeason.val" ng-options="season.name as season.display for season in seasons" ng-change="changed();">' +
             '</select>',
         link : function link(scope, element, attrs) {
             scope.selectedSeason = {
@@ -29,10 +29,10 @@ angular.module('app.common').directive('season',['$rootScope','User', function($
                     display : "2011/2012"
                 }
             ]
-            scope.$watch('selectedSeason',function(){
+            scope.changed = function(){
                 User.setSeason(scope.selectedSeason.val);
                 $rootScope.$emit('seasonchanged');
-            });
+            }
         }
 
     };
