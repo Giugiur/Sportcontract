@@ -2,105 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/australia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/australia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/austria2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/belarus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/belarus2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/belgium.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/belgium2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/bosnia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/bosniaandherzegovina.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/bulgaria.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/bulgaria2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/canada.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/canada2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/china.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/china2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/croatia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/croatia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/czech2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/czechrepublic.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/denmark2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/estonia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/estonia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/finland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/flag_uca.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/flag_uca2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/france.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/france2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/german2xy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/greece.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/greece2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/hongkong.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/hongkong2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/hungary.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/hungary2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/iceland.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/iceland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/international2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/ireland.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/ireland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/israel.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/israel2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/italy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/italy2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/japan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/japan2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/kazahstan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/kazahstan2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/latvia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/latvia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/lithuania.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/lithuania2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/luxembourg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/luxembourg2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/mexico.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/mexico2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/mongolia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/mongolia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/netherlands.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/netherlands2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/newzealand.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/newzeland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/norway.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/norway2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/poland.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/poland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/romania.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/romania2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/russia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/serbia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/serbia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/slovakia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/slovakia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/slovenia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/slovenia2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/southafrica.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/southafrica2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/spain.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/spain2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/sweden2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/switzerland2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/turkey.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/turkey2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/uae2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/uk2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/ukraine.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/ukraine2x.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/unitedarab.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/unitedkingdom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/unitedstates.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flags/us2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/austria.jpg" afterPath="$PROJECT_DIR$/app/img/flags/austria.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/denmark.jpg" afterPath="$PROJECT_DIR$/app/img/flags/denmark.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/finland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/finland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/germany.jpg" afterPath="$PROJECT_DIR$/app/img/flags/germany.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/international.jpg" afterPath="$PROJECT_DIR$/app/img/flags/international.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/russia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/russia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/sweden.jpg" afterPath="$PROJECT_DIR$/app/img/flags/sweden.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/switzerland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/switzerland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js" afterPath="$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/flag_uca2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/img/flags/kazahstan.jpg" afterPath="$PROJECT_DIR$/app/img/flags/kazakhstan.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/img/flags/russia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/russianfederation.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/img/flags/unitedarab.jpg" afterPath="$PROJECT_DIR$/app/img/flags/unitedarabemirates.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flag_uca.jpg" afterPath="$PROJECT_DIR$/app/img/flag_uca.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/countries/views/countries.html" afterPath="$PROJECT_DIR$/app/js/countries/views/countries.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="refactor_sport.iws" />
@@ -137,18 +44,8 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9405" max-vertical-offset="10020">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9318" max-vertical-offset="10020">
               <caret line="627" column="115" selection-start-line="627" selection-start-column="115" selection-end-line="627" selection-end-column="115" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1110">
-              <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -167,28 +64,32 @@
       <file leaf-file-name="countries.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/countries/views/countries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="360">
-              <caret line="9" column="160" selection-start-line="9" selection-start-column="134" selection-end-line="9" selection-end-column="160" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountriesCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="kazakhstan.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/img/flags/kazakhstan.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="russianfederation.jpg" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/img/flags/russianfederation.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountriesCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16783217" vertical-offset="0" max-vertical-offset="715">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <caret line="8" column="106" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/common/services/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="510">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -197,7 +98,7 @@
       <file leaf-file-name="TeamCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="3060">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2345" max-vertical-offset="3060">
               <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
               <folding />
             </state>
@@ -259,7 +160,6 @@
         <option value="$PROJECT_DIR$/app/js/simple_contacts/controllers/SimpleContactCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/simple_contacts/directives/SimpleContactList.js" />
         <option value="$PROJECT_DIR$/app/js/simple_contacts/views/simple_contacts.html" />
-        <option value="$PROJECT_DIR$/app/js/countries/views/countries.html" />
         <option value="$PROJECT_DIR$/app/js/common/filters/DeepFilter.js" />
         <option value="$PROJECT_DIR$/app/scss/_bootstrap.scss" />
         <option value="$PROJECT_DIR$/app/js/common/filters/FilterMultiple.js" />
@@ -288,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
         <option value="$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/countries/views/countries.html" />
       </list>
     </option>
   </component>
@@ -824,6 +725,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/img" />
       <recent name="$PROJECT_DIR$/.tmp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -888,13 +790,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17547569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17547569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -948,21 +850,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="8565">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_queries.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="12840">
@@ -1262,34 +1149,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1200">
-          <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="8565">
           <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="3060">
-          <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8900" max-vertical-offset="10020">
-          <caret line="627" column="115" selection-start-line="627" selection-start-column="115" selection-end-line="627" selection-end-column="115" />
           <folding />
         </state>
       </provider>
@@ -1302,20 +1165,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/countries/views/countries.html">
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="360">
-          <caret line="9" column="160" selection-start-line="9" selection-start-column="134" selection-end-line="9" selection-end-column="160" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8900" max-vertical-offset="10020">
+          <caret line="627" column="115" selection-start-line="627" selection-start-column="115" selection-end-line="627" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/countries/controllers/CountriesCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16783217" vertical-offset="0" max-vertical-offset="715">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="8" column="106" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="3060">
+          <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1200">
+          <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/countries/views/countries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/img/flags/kazakhstan.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/img/flags/russianfederation.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
