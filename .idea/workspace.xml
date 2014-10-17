@@ -38,9 +38,15 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65591395" vertical-offset="3758" max-vertical-offset="10020">
-              <caret line="279" column="128" selection-start-line="279" selection-start-column="128" selection-end-line="279" selection-end-column="128" />
-              <folding />
+            <state vertical-scroll-proportion="0.19508448" vertical-offset="4058" max-vertical-offset="10020">
+              <caret line="279" column="129" selection-start-line="279" selection-start-column="129" selection-end-line="279" selection-end-column="129" />
+              <folding>
+                <marker date="1413577488000" expanded="true" signature="1127:11330" placeholder="[...]" />
+                <marker date="1413577488000" expanded="true" signature="1359:11313" placeholder="{...}" />
+                <marker date="1413577488000" expanded="true" signature="9918:11269" placeholder="{&quot;url&quot;: &quot;/teams/:id/:season&quot;...}" />
+                <marker date="1413577488000" expanded="true" signature="10135:11269" placeholder="{...}" />
+                <marker date="1413577488000" expanded="true" signature="10993:11269" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1163,9 +1169,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65591395" vertical-offset="3758" max-vertical-offset="10020">
-          <caret line="279" column="128" selection-start-line="279" selection-start-column="128" selection-end-line="279" selection-end-column="128" />
-          <folding />
+        <state vertical-scroll-proportion="0.19508448" vertical-offset="4058" max-vertical-offset="10020">
+          <caret line="279" column="129" selection-start-line="279" selection-start-column="129" selection-end-line="279" selection-end-column="129" />
+          <folding>
+            <marker date="1413577488000" expanded="true" signature="1127:11330" placeholder="[...]" />
+            <marker date="1413577488000" expanded="true" signature="1359:11313" placeholder="{...}" />
+            <marker date="1413577488000" expanded="true" signature="9918:11269" placeholder="{&quot;url&quot;: &quot;/teams/:id/:season&quot;...}" />
+            <marker date="1413577488000" expanded="true" signature="10135:11269" placeholder="{...}" />
+            <marker date="1413577488000" expanded="true" signature="10993:11269" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

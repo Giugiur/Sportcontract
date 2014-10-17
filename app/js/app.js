@@ -277,7 +277,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				    	
 				    	var defered = $q.defer();
 				    	var season = Season.getSeason();
-				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position).success(function(result){
+				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position').success(function(result){
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;
