@@ -18,7 +18,7 @@
     "restangular": "~1.4.0",
     "angularjs-slider": "~0.1.6",
     "ngprogress": "~1.0.4",
-    "angular-img-fallback": "*",
+    "angular-img-fallback": "~0.0.2",
     "videojs": "~4.7.1",
     "videogular": "~0.4.2",
     "videogular-overlay-play": "~0.4.2",
