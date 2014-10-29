@@ -798,6 +798,15 @@ table.large {
 			}
 		}
 	}
+	@media only screen and (max-width: 1030px) {
+		.score {
+			td {width: 40%;}
+			td:first-child {padding-left: 5px;}
+			td:last-child {padding-right: 5px;}
+			td:nth-child(2) {width: 20%; font-size: 16px;}
+		}
+		.nav-pills li a i {display: block;}
+	}
 }
 .videoContainer {
 	position: relative;
