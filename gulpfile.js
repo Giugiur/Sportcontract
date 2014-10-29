@@ -1,174 +1,85 @@
-var gulp = require('gulp')
-    , usemin = require('gulp-usemin')
-    , uglify = require('gulp-uglify')
-    , rimraf = require('rimraf')
-    , minifyHtml = require('gulp-minify-html')
-    , minifyCss = require('gulp-minify-css')
-    , compass = require('gulp-compass')
-    , header = require('gulp-header')
-    , inject = require('gulp-inject')
-    , imagemin = require('gulp-imagemin')
-    , templateCache = require('gulp-angular-templatecache')
-    , ngmin = require('gulp-ngmin')
-    , refresh = require('gulp-livereload')
-    , jshint = require('gulp-jshint')
-    , rev = require('gulp-rev')
-    , lrserver = require('tiny-lr')()
-    , express = require('express')
-    , livereload = require('connect-livereload')
-    , concat = require('gulp-concat')
-    , bower = require('gulp-bower')
-    , karma = require('gulp-karma')
-    , wiredep = require('wiredep');;
-
-// Constants
-var SERVER_PORT = 19056;
-var LIVERELOAD_PORT = 35729;
-
-// Header configuration
-var pkg = require('./package.json');
-var banner = ['/**',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @link <%= pkg.homepage %>',
-  ' * @license <%= pkg.license %>',
-  ' */',
-  ''].join('\n');
-
-// Compilation tasks
-gulp.task('clean', function (cb) {
-    rimraf.sync('./build');
-    cb(null);
-});
+var gulp = require('gulp');
+var angularFilesort = require('gulp-angular-filesort');
+var templateCache = require('gulp-angular-templatecache');
+var connect = require('gulp-connect');
+var bowerFiles = require('main-bower-files');
+var inject = require('gulp-inject');
+var es = require('event-stream');
+var compass = require('gulp-compass');
+var protractor = require("gulp-protractor").protractor;
+var webdriver_standalone = require("gulp-protractor").webdriver_standalone;
 
 gulp.task('compass', function () {
     return gulp.src('./app/scss/main.scss')
         .pipe(compass({
-            css: '.tmp/css',
-            sass: 'app/scss',
-            image: 'app/img'
+            css: './build',
+            sass: './app/scss',
+            image: './app/img'
         }))
         .on('error', function(err) {
             console.log(err.message);
         })
-        .pipe(gulp.dest('./.tmp'))
-        .pipe(refresh(lrserver));
-});
-gulp.task('translation',function(){
-    return gulp.src('./app/js/**/**/*.json')
-        .pipe(gulp.dest('./.tmp/translation'));
-})
-gulp.task('scripts', function() {
-  gulp.src('./app/js/**/**/*.js')
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('./.tmp/js'))
-  
-});
-// gulp.task('test', function() {
-//   var bowerDeps = wiredep({
-//     directory: 'app/bower_components',
-//     dependencies: true,
-//     devDependencies: true
-//   });
-
-//   var testFiles = bowerDeps.js.concat([
-//     'app/js/**/*.js',
-//     'test/unit/**/*.js'
-//   ]);
-
-//   return gulp.src(testFiles)
-//     .pipe(karma({
-//       configFile: 'test/karma-unit.conf.js',
-//       action: 'run'
-//     }))
-//     .on('error', function(err) {
-//       console.log(err);
-//     });
-  
-// });
-gulp.task('bower', function() {
-  bower().pipe(gulp.dest('./.tmp/bower_components'))
-});
-gulp.task('lint', function() {
-    return gulp.src('./app/js/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter('fail'));
+        .pipe(gulp.dest('./build'));
 });
 
-gulp.task('views', function() {
-    gulp.src(['./app/js/**/*.html','./app/js/**/**/*.html'])
-        .pipe(templateCache())
-        .pipe(gulp.dest('./app/js'));
+gulp.task('templates',function(){
+    //combine all template files of the app into a js file
+    gulp.src(['!./app/index.html',
+        './app/js/**/*.html'])
+        .pipe(templateCache('templates.js',{standalone:true}))
+        .pipe(gulp.dest('./build'));
+});
+
+gulp.task('index',function(){
     gulp.src('./app/index.html')
-     .pipe(gulp.dest('./.tmp'))
-});
+        .pipe(inject(gulp.src(bowerFiles({debug:true}), {read: false}), {name: 'bower'}))
+        .pipe(inject(es.merge(
+            gulp.src('./app/js/**/*.css', {read: false}),
+            gulp.src(['./app/js/**/*.js','./gpx.js','!./app/js/**/*test.js']).pipe(angularFilesort())
+        )))
+        .pipe(gulp.dest('./build'));
+})
+gulp.task('copy',function(){
+    gulp.src(['./app/js/**/*.*','./app/bower_components/**/*.*'],{ base: './' })
+        .pipe(gulp.dest('./build'));
+    gulp.src(['./app/assets/**/*.*','./app/img/**/*.*','./app/translations/**/*.*'],{ base: './app/' })
+        .pipe(gulp.dest('./build'));
+})
 
-gulp.task('images', function() {
-    return gulp.src('./app/img/**/*.*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./.tmp/img'));
-});
-
-gulp.task('compile', ['clean', 'views', 'images', 'compass', 'lint','scripts'], function() {
-    var projectHeader = header(banner, { pkg : pkg } );
-    gulp.src('./app/*.html')
-        .pipe(inject(gulp.src('./.tmp/assets/javascripts/templates.js', {read: false}),
-            {
-                starttag: '<!-- inject:templates:js -->',
-                ignorePath: '/.tmp'
-            }
-        ))
-        .pipe(usemin({
-            css:          [minifyCss(), rev(), projectHeader],
-            html:         [minifyHtml({ empty: true })],
-            js:           [ngmin(), uglify(), rev(), projectHeader],
-            js_libs:      [rev()]
+gulp.task('e2etest',function(){
+    gulp.src(["./modules/**/uitest.js"])
+        .pipe(protractor({
+            configFile: "./protractor.config.js",
+            args: ['--baseUrl', 'http://127.0.0.1:9000']
         }))
-        .pipe(gulp.dest('build/'));
-});
+        .on('error', function(e) {  })
+})
+gulp.task('webdriver_standalone', webdriver_standalone);
 
-// Serve tasks
-gulp.task('reload:html', function () {
-    return gulp.src('./app/**/*.html')
-        .pipe(lrserver.changed);
-});
 
-gulp.task('watch', function () {
-    refresh.listen(LIVERELOAD_PORT);
-    gulp.watch('app/scss/**/*.scss', ['compass']);
-    gulp.watch('app/index.html', ['views']);
-    gulp.watch('app/**/*.html', ['views','scripts']);
-    gulp.watch('app/js/**/*.html', ['views','scripts']);
-    gulp.watch('app/js/**/*.js', ['scripts']);
-    gulp.watch('app/js/*.js', ['scripts']);
-    gulp.watch('app/js/*/translation/*.json', ['translation']);
-    gulp.watch('bower.json', ['bower']);
-    gulp.watch('app/img/**/*.*', ['images']);
-    // gulp.watch('test/unit/**/*.js', ['test']);
+gulp.task('watch',function(){
     gulp.watch([
-        '.tmp/**/*',
-        '.tmp/*'
-      ]).on('change', refresh.changed );
+        'build/**/*.html',
+        'build/**/*.js',
+        'build/**/*.css'
+    ], function(event) {
+        return gulp.src(event.path)
+            .pipe(connect.reload());
+    });
+    gulp.watch(['./app/js/**/*.js','./app/js/**/*.json','./app/bower_components/**/*.js','!./app/js/**/*test.js'],['index','copy']);
+    gulp.watch(['!./app/index.html','./app/js/**/*.html'],['templates','index','copy']);
+    gulp.watch(['./app/scss/*.scss'],['compass']);
+    gulp.watch(['./img/**.*'],['copy']);
+    gulp.watch('./modules/index.html',['index']);
+
 });
 
+gulp.task('connect',function(){connect.server({
+    root: ['build'],
+    port: 9000,
+    livereload: true
+})});
 
-gulp.task('serve:app', ['compass','bower','images','views','scripts','translation','watch'], function() {
-    var server = express();
-    server.use(livereload({
-      port: LIVERELOAD_PORT
-    }));
-    server.use(express.static('./.tmp'));
-    server.use(express.static('./app'));
-    server.listen(SERVER_PORT);
-
-    
-});
-
-gulp.task('serve:build', function() {
-    var server = express();
-    server.use(express.static('./build'));
-    server.listen(SERVER_PORT);
-});
-
-gulp.task('default', ['compile']);
+gulp.task('default',['connect','copy','templates','compass','index','watch']);
+gulp.task('build',['copy','templates','compass','index']);
+gulp.task('prot',['connect','e2etest']);

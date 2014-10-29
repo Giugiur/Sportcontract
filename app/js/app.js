@@ -1,4 +1,4 @@
-angular.module('templates', []);
+
 angular.module('app.common', ['restangular']);
 angular.module('app.dashboard', ['ui.router','pascalprecht.translate','app.common','app.search']);
 angular.module('app.login',['ui.router','app.common']);
