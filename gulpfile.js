@@ -10,16 +10,16 @@ var protractor = require("gulp-protractor").protractor;
 var webdriver_standalone = require("gulp-protractor").webdriver_standalone;
 
 gulp.task('compass', function () {
-    return gulp.src('./app/scss/main.scss')
+    return gulp.src('app/scss/main.scss')
         .pipe(compass({
-            css: './build',
-            sass: './app/scss',
-            image: './app/img'
+            css: 'build',
+            sass: 'app/scss',
+            image: 'app/img'
         }))
         .on('error', function(err) {
             console.log(err.message);
         })
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('build'));
 });
 
 gulp.task('templates',function(){
