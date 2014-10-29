@@ -14,6 +14,7 @@ $linkColor: #3b77d9;
 a {color: $linkColor;}
 img {max-width: 100%;}
 body {line-height: 1.428571429;}
+input[type="checkbox"] {vertical-align: middle;}
 input[type="text"],
 input[type="password"],
 textarea {
@@ -59,6 +60,7 @@ table {
 		tr {
 			&:nth-child(odd) {background-color: #f5f5f5;}
 			td {padding: 4px 5px;}
+			@media only screen and (max-width: 1030px) { td {padding: 4px 0;} }
 		}
 	}
 }
@@ -79,8 +81,13 @@ label {cursor: pointer;}
 	font-size: 18px; font-weight: 400; color: $coldGrey;
 	padding-bottom: 6px; margin-bottom: 16px; position: relative;
 	border-bottom: 1px solid $borderColor;
-	i.fa {font-size: 13px; position: relative; top: -2px;}
+	i.fa {font-size: 13px;}
+	i.fa-chevron-up, i.fa-chevron-down {position: relative; top: -2px;}
 	.views {position: absolute; right: 0; top: -3px;}
+	.sectionCtrl {
+		margin-bottom: 0;
+		a {margin: 0 9px 0 0; &:last-child {margin-right: 0;}}
+	}
 	@media only screen and (max-width: 900px) {& {font-size: 16.5px;}}
 }
 .h3 {
