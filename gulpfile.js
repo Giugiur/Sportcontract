@@ -81,5 +81,5 @@ gulp.task('connect',function(){connect.server({
 })});
 
 gulp.task('default',['connect','copy','templates','compass','index','watch']);
-gulp.task('build',['connect','copy','templates','compass','index']);
+gulp.task('build',['copy','templates','compass','index']);
 gulp.task('prot',['connect','e2etest']);
