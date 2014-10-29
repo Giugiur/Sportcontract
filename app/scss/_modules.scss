@@ -324,8 +324,8 @@
 		img {display: block;}
 		a {
 			display: block; width: 120px; margin: 0 auto;
-			img {margin-bottom: 12px; @include single-transition(all, 0.18s);}
-			span {font-weight: 700; color: $coldGrey;}
+			img {margin-bottom: 12px; @include single-transition(all, 0.18s); border: 1px solid #ddd;}
+			span {font-weight: 700; color: $coldGrey; text-transform: capitalize;}
 			@include single-transition(all, 0.3s);
 			position: relative;
 
