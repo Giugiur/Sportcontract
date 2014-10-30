@@ -26,7 +26,9 @@
     "ui-bootstrap": "~0.11.0",
     "angular-ui-bootstrap": "~0.11.0",
     "angular-bootstrap": "~0.11.0",
-    "fullcalendar": "~2.1.1"
+    "fullcalendar": "~2.1.1",
+    "videogular-controls": "~0.6.2",
+    "angular-ui-grid": "~3.0.0-rc.12"
   },
   "devDependencies": {},
   "resolutions": {
