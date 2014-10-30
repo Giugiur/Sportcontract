@@ -25,7 +25,8 @@
     "videogular-poster": "~0.4.2",
     "ui-bootstrap": "~0.11.0",
     "angular-ui-bootstrap": "~0.11.0",
-    "angular-bootstrap": "~0.11.0"
+    "angular-bootstrap": "~0.11.0",
+    "fullcalendar": "~2.1.1"
   },
   "devDependencies": {},
   "resolutions": {
