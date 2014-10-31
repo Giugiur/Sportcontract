@@ -1,0 +1,87 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>{{'selected_game' | translate}}</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">{{'home' | translate}}</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
+    	ng-model="game.home.name">
+    
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>{{'name' | translate}}</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="team in gridOptionsHome.data">
+      <td>
+        {{team._source.name}}
+      </td>
+      <td><a href="" ng-click="changeGame(team,'home');">{{'select' | translate}}</a></td>
+    </tr> 
+  </tbody>
+</table>
+
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">{{'away' | translate}}</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
+    	ng-model="game.away.name">
+    
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>{{'name' | translate}}</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="team in gridOptionsAway.data">
+      <td>
+        {{team._source.name}}
+      </td>
+      <td><a href="" ng-click="changeGame(team,'away');">{{'select' | translate}}</a></td>
+    </tr> 
+  </tbody>
+</table>
+
+<div class="control-group">
+  <label class="control-label" for="textinput">{{'away' | translate}}</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" 
+      ng-model="game.league.name">
+    
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>{{'name' | translate}}</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="league in gridOptionsLeague.data">
+      <td>
+        {{league._source.name}}
+      </td>
+      <td><a href="" ng-click="changeGame(league,'league');">{{'select' | translate}}</a></td>
+    </tr> 
+  </tbody>
+</table>
+
+</fieldset>
+<button ng-click="saveGame()">{{'save' | translate}}</button>
+</form>

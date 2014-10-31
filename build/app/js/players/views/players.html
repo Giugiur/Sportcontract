@@ -1,0 +1,598 @@
+<div class="tabViews" ng-init="view='overview'">
+    <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+    <ul class="views">
+        <li class="{{view=='overview'&&'active'||''}}">
+            <a href="" ng-click="view='overview'">{{'overview' | translate}}</a>
+        </li>
+        <li class="{{view=='contacts'&&'active'||''}}">
+            <a href="" ng-click="view='contacts'">{{'contacts' | translate}}</a>
+        </li>
+    </ul>
+</div>
+<div class="anchors" ng-if="view=='overview'">
+    <ul>
+
+        <li><a ng-click="scrollTo('Roster')" ng-show="gridRoster.data && gridRoster.data.length>0">{{'roster' | translate}}</a></li>
+        <li><a ng-click="scrollTo('stats')" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0">{{'player_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('teamstats')" ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0">{{'team_stats' | translate}}</a></li>
+        <li><a ng-click="scrollTo('captain')" ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0">{{'captains' | translate}}</a></li>
+        <li><a ng-click="scrollTo('staff')" ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0">{{'staff' | translate}}</a></li>
+        <li><a ng-click="scrollTo('arena')" >{{'arena' | translate}}</a></li>
+        <li><a ng-click="scrollTo('retired')" ng-show="gridRetired.data && gridRetired.data.length>0">{{'retired_numbers' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayers')" ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0">{{'season_best' | translate}}</a></li>
+        <li><a ng-click="scrollTo('topplayersall')" ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0">{{'all_time_high' | translate}}</a></li>
+        <!--<li><a >Where are they now?</a></li>-->
+        <li><a ng-click="scrollTo('transfers')" ng-show="gridTransfers.data && gridTransfers.data.length>0">{{'transfers' | translate}}</a></li>
+
+
+    </ul>
+</div>
+
+<div class="row" ng-if="view=='overview'">
+<div class="col-xs-6">
+    <div class="section">
+        <div class="clubInfo">
+            <div class="seasonSwitch">
+                {{'season' | translate}}
+               <season></season>
+            </div>
+            <div class="h1">{{team.name}}
+                <a href="" class="muted" title="{{team.latestTeamStats.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.latestTeamStats.league.name}}</a>
+            </div>
+            <div class="mb">
+                <div class="image">
+                    <img src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" class="leagueLogo"  alt="">
+                    <ul class="list-inline">
+                        <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" title="{{'official_website' | translate}}"><i class="fa fa-external-link"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="factsList">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>{{'town' | translate}}:</th>
+                            <td>{{team.locality.name}}</td>
+                        </tr>
+                        <tr>
+                            <th><ut>founded</ut>:</th>
+                            <td>{{team.foundedYear}}</td>
+                        </tr>
+                        <tr>
+                            <th>{{'colors' | translate}}:</th>
+                            <td>{{team.colors}}</td>
+                        </tr>
+                        <tr>
+                            <th>{{'affiliates' | translate}}:</th>
+                            <td>
+                                <ul>
+                                    <li ng-repeat="team in affiliates"><a ui-sref="dashboard.players(team.team)">{{team.team.name}}</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="h2">{{'goalies' | translate}}</div>
+            <div class="playerList">
+                <ul>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'GOALIE'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="h2">{{'defense' | translate}}</div>
+            <div class="playerList">
+                <ul>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'DEFENSEMAN'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="h2">{{'forwards' | translate}}</div>
+            <div class="playerList">
+                <ul>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'FORWARD'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'CENTRE'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'RIGHT_WING'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="player in players | filter:{'playerPosition':'LEFT_WING'}" ng-click="goPlayer(player)">
+                        <a href="">
+                            <img src="http://files.eliteprospects.com/layout/players/{{player.imageUrl}}" alt="">
+                            <span>{{player.firstName}} {{player.lastName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-6">
+<div class="section">
+<div class="h2">{{'games' | translate}}</div>
+<ul class="gameList">
+<li class="gameItem">
+    <a href="#">
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="3" class="date">
+                    <span>15.12.2013</span>, <span>{{'regular_season' | translate}}</span>
+                </td>
+            </tr>
+            <tr class="score">
+                <td>Färjestad</td>
+                <td>1 &#58; 8</td>
+                <td>Brynäs IF</td>
+            </tr>
+            </tbody>
+        </table>
+    </a>
+    <ul class="nav nav-pills" role="tablist">
+        <li><a href="#game1lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game1gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheets' | translate}}</a></li>
+        <li><a href="#game1dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'downloads' | translate}}</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" id="game1lp">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">{{'forwards' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Dmitry Danilov</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'goalies' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game1gs">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><ut>2nd_period</ut></th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game1dl">{{'download_options_here' | translate}}</div>
+    </div>
+</li>
+
+<li class="gameItem">
+    <div class="videoContainer">
+        <video autoplay>
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+        <div class="videoCtrls">
+            <div class="seekFragment">
+                <span class="start">0 sec</span>
+                <span class="mid">60 sec</span>
+                <span class="end">120 sec</span>
+                <div class="seekBar">
+                    <div class="handle"></div>
+                    <div class="length"></div>
+                </div>
+            </div>
+            <div class="seekFull">
+                <div class="seek">
+                    <div class="progress">
+                        <a href="#" class="play"><i class="fa fa-play"></i></a>
+                        <div class="seekBar">
+                            <div class="handle"></div>
+                            <div class="length"></div>
+                        </div>
+                        <div class="time">
+                            <div>
+                                <span>00</span>&#58;<span>02</span>
+                            </div> &#47;
+                            <div>
+                                <span>00</span>&#58;<span>43</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="volume">
+                        <i class="fa fa-volume-down"></i>
+                        <div class="seekBar">
+                            <div class="handle"></div>
+                            <div class="length"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenCtrl">
+                    <a href="#"><i class="fa fa-expand"></i></a>
+                    <a href="#" class="playerMed"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#">
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="3" class="date">
+                    <span>14.12.2013</span>, <span>{{'regular_season' | translate}}</span>
+                </td>
+            </tr>
+            <tr class="score">
+                <td>Färjestad</td>
+                <td>3 &#58; 4</td>
+                <td>Örebro HK</td>
+            </tr>
+            </tbody>
+        </table>
+    </a>
+    <ul class="nav nav-pills" role="tablist">
+        <li><a href="#game2lp" role="tab" data-toggle="tab"><i class="fa fa-navicon"></i> {{'line_ups' | translate}}</a></li>
+        <li><a href="#game2gs" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> {{'game_sheet' | translate}}</a></li>
+        <li><a href="#game2dl" role="tab" data-toggle="tab"><i class="fa fa-download"></i> {{'download' | translate}}</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" id="game2lp">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">{{'forwards' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Jonathan Huberdeau</a></li>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'defence_men' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Dmitry Danilov</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'goalies' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game2gs">
+            <table class="gameTable">
+                <tbody>
+                <tr>
+                    <th colspan="2">{{'1st_period' | translate}}</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'2nd_period' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Brian Campbell</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Nick Bjugstad</a></li>
+                            <li><a href="#">Kris Versteeg</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">{{'3rd_period' | translate}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="#">Erik Gudbranson</a></li>
+                            <li><a href="#">Mike Weaver</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Tomas Fleischmann</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="game2dl">{{'download_options_here' | translate}}</div>
+    </div>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+</div><!--.row-->
+<a name="roster"></a>
+<div class="row" ng-show="gridRoster.data && gridRoster.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Roster</div>
+            <div ui-grid="gridRoster" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="stats"></a>
+
+<div class="row" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'player_stats' | translate}}</div>
+            <div ui-grid="gridStatsPlayers" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="section">
+        <div class="h2">{{'goalies_stats' | translate}}</div>
+            <div ui-grid="gridStatsGoalies" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<a name="teamstats"></a>
+<div class="row" ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+        <div class="h2">{{'team_stats' | translate}}</div>
+            <div ui-grid="gridStatsTeam" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="captains"></a>
+<div class="row" ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'team_captains' | translate}}</div>
+            <div ui-grid="gridTeamCaptains" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="staff"></a>
+<div class="row" ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'team_staff' | translate}}</div>
+            <div ui-grid="gridTeamStaff" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="topplayers"></a>
+<div class="row" ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'top_players' | translate}}</div>
+            <div ui-grid="gridTopPlayers" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="topplayersall"></a>
+<div class="row" ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'top_players_all_time' | translate}}</div>
+            <div ui-grid="gridTopPlayersAll" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="transfers"></a>
+<div class="row" ng-show="gridTransfers.data && gridTransfers.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">{{'transfers' | translate}}</div>
+            <div ui-grid="gridTransfers" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+<a name="retired"></a>
+<div class="row" ng-show="gridRetired.data && gridRetired.data.length>0" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Retired</div>
+            <div ui-grid="gridRetired" class="grid" style="height:400px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<a name="arena"></a>
+<div class="row" ng-if="view=='overview'">
+    <div class="col-xs-12">
+        <div class="section">
+            <div class="h2">Arena</div>
+            <img ng-src="http://files.eliteprospects.com/layout/arenas/{{team.arena.imageUrl}}"/>
+            <ul>
+                <li>Location : {{team.arena.locality.name}}</li>
+                <li>Capacity : {{team.arena.capacity}}</li>
+                <li>Constructed : {{team.arena.yearOfConstruction}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<simplecontact ng-if="view=='contacts'" teamid="team.id"></simplecontact>

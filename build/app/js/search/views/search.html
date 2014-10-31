@@ -1,0 +1,103 @@
+<div>
+<div class="section first"  style="max-height:460px;">
+          <a href="" ng-click="close()" class="close"><i class="fa fa-times"></i></a>
+          <div class="finder">
+            <div class="row">
+                <div class="filter">
+                  <div class="h2">{{'filter' | translate}}</div>
+                  <div class="filterHead">
+                    <div class="filterAdd">
+                      <select ng-model="condition"
+                        ng-options="condition as condition for condition in mod" >
+                        <option>{{'select_condition' | translate}}</option>
+                        
+                      </select>
+                      <button ng-click="addFilter();">{{'add' | translate}}</button>
+                    </div>
+                    <div class="filterCtrl">
+                      <a href="#" class="btnModal"><i class="fa fa-folder-open-o"></i> <span>{{'load' | translate}}</span></li></a>
+                      <a href="#" class="btnModal"><i class="fa fa-save"></i> <span>{{'save' | translate}}</span></li></a>
+                    </div>
+                  </div>
+                  <div class="filterList form">
+                    <ul>
+                        <li ng-repeat="filter in filters.conditions">
+                          <label class="short">
+                              <input type="checkbox" checked="checked"> {{filter.condition.name}}
+                          </label>
+
+                          <!--No dropdown hide-->
+                          <span class="medium switch" ng-if="!filter.condition.char_ctrl == 'slider'">
+                            <label>
+                              <input ng-model="filter.condition.operator"
+                                 type="radio" name="toggleCountry" checked="checked" value="must"> {{'is' | translate}}
+                            </label>
+                            <label>
+                              <input ng-model="filter.condition.operator" 
+                                 type="radio" name="toggleCountry" value="must_not"> {{'not' | translate}}
+                            </label>
+                          </span>
+
+                          <!--Dropdown show -->
+                          <span class="medium" ng-if="filter.condition.char_ctrl == 'slider'">
+                              <select class="search-filter-relation" 
+                                    ng-model="filter.condition.relation" ng-options="relation.key as relation.val for relation in filter.condition.relations">
+                              </select>
+                          </span> 
+
+                          <span class="long">
+                                  <sc-country ng-if="filter.condition.char_ctrl == 'dropdown' && (filter.condition.name == 'country' || filter.condition.name == 'passport' || filter.condition.name == 'nationality')" conditions="filters.conditions" class="search-filter-characteristic" ng-model="filter.condition.value" options="filter.condition.char.collection">
+                              </sc-country>
+                          <sc-league ng-if="filter.condition.char_ctrl == 'dropdown' && (filter.condition.name == 'league')" conditions="filters.conditions" class="search-filter-characteristic" ng-model="filter.condition.value" options="filter.condition.char.collection">
+                              </sc-league>
+                          <sc-default ng-if="filter.condition.char_ctrl == 'dropdown' && (filter.condition.name != 'league' && filter.condition.name != 'country' && filter.condition.name != 'passport' && filter.condition.name != 'nationality')" conditions="filters.conditions" class="search-filter-characteristic" ng-model="filter.condition.value" options="filter.condition.char.collection">
+                              </sc-default>
+                          <div ng-if="filter.condition.char_ctrl == 'slider'">
+                              <div ng-if="filter.condition.relation == 'from_to'">
+                                  <rzslider rz-slider-floor="filter.condition.char.range.floor" rz-slider-ceil="filter.condition.char.range.ceil" rz-slider-model="filter.condition.char.range.min" rz-slider-high="filter.condition.char.range.max" rz-slider-step="{{filter.condition.char.range.step}}"></rzslider>
+                                  </div>
+                              <div ng-if="filter.condition.relation != 'from_to'">
+                                  <rzslider rz-slider-floor="filter.condition.char.normal.floor" rz-slider-ceil="filter.condition.char.normal.ceil" rz-slider-model="filter.condition.value"></rzslider>
+                                  </div>
+                              </div>
+                          </span>
+                          <a href="" ng-click="removeFilter(filter);"><i class="fa fa-times"></i></a>
+                        </li>
+                    </ul>
+                  </div><!--.filterList-->
+                </div><!--.row-->
+                <div class="result" style="overflow-y:auto;max-height:440px;">
+                  <div class="h2">{{'results' | translate}}</div>
+                  <table>
+                    <colgroup style="width: 5%;">
+                    <colgroup span="4" style="width: 22%;"></colgroup>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>{{'name' | translate}}</th>
+                        <th>{{'position' | translate}}</th>
+                        <th>{{'born' | translate}}</th>
+                        <th>{{'league' | translate}}</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr ng-show="!results || results.hits.length==0">
+                        <td colspan="2">{{'no_results' | translate}}y</td>
+                      <tr>
+                      <tr ng-repeat="player in results.hits">
+                        <td>
+                          <img src="img/blank.gif" 
+                          class="flag flag-{{player._source.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.country.name}}">
+                        </td>
+                        <td><a href="" ng-click="newTab('Player: '+ player._source.firstName +  ' ' + player._source.lastName,'dashboard.player',player)">{{player._source.firstName}} {{player._source.lastName}}</a></td>
+                        <td style="text-transform:capitalize;">{{player._source.playerPosition}}</td>
+                        <td>{{player._source.dateOfBirth}}</td>
+                        <td>{{player._source.latestPlayerStats.league.name}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div><!--.finder-->
+        </div><!--.section.first-->
+</div>

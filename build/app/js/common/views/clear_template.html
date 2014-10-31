@@ -1,0 +1,9 @@
+<div ui-view="header"></div>
+<div id="main">
+	<div ui-view="sidebar"></div>
+    <div id="mainBody">
+    	<advanced-search ng-show="search.advanced"></advanced-search>
+    	<quicksearch search="search"></quicksearch>
+        <div class="content" ui-view="tabcontent" style="margin:0px"></div>
+    </div>
+</div>
