@@ -1,30 +1,98 @@
 'use strict';
 
 angular.module('app.calendar')
-  .directive('calendar', function ($q,Restangular) {
+  .directive('calendar', function ($q,Restangular,Season,$rootScope,$timeout) {
     return {
       restrict: 'A',
         link: function(scope, element, attrs) {
 
-            scope.getLeagues = function(view){
-                var defered = $q.defer();
-                /*
-                 $http.get(api + '/api/leagues').success(function(result){
+          var currentSeason = Season;
 
-                 defered.resolve(result);
-                 })
-                 */
-                var d_start = new Date(moment(view.start._d).format());
-                var d_end = new Date(moment(view.end._d).format());
+          currentSeason.initSeason($rootScope.currentSeason);
 
-                var start = d_start.getFullYear()+"-"+(((d_start.getMonth() + 1) < 10 ) ? "0" + (d_start.getMonth() + 1) : (d_start.getMonth() + 1))+"-"+ ((d_start.getDate() < 10) ? "0" + d_start.getDate() : d_start.getDate());
-                var end = d_end.getFullYear()+"-"+(((d_end.getMonth() + 1) < 10 ) ? "0" + (d_end.getMonth() + 1) : (d_end.getMonth() + 1))+"-"+ ((d_end.getDate() < 10) ? "0" + d_end.getDate() : d_end.getDate());
+          scope.checkSeason = function(view){
 
-                Restangular.all('api/leaguesCalendar').getList({hasgame:true, game:true, start:start,  end:end}).then(function(result){
-                    defered.resolve(result);
-                });
-                return defered.promise;
+            /*Season dates*/
+            scope.seasonData = scope.getSeasonData();
+            scope.season = scope.getSeason();
+
+            /*current calendar view*/
+            var d_start = new Date(moment(view.intervalStart._d).format());
+            var view_year = d_start.getFullYear();
+            var view_month = d_start.getMonth()+1;
+
+            var year = false;
+
+            if(view_year == scope.season){
+              if(Number(view_month) < scope.seasonData.config.month_start){
+                //prev season
+                year = view_year-1;
+              }else{
+                year = view_year;
+              }
+            }else if(view_year > scope.season){
+                if(Number(view_month) > scope.seasonData.config.month_end){
+                  //next season
+                  year = view_year;
+                }
+            }else if(view_year < scope.season){
+              if(Number(view_month) < scope.seasonData.config.month_start){
+                //prev season
+                year = view_year-1;
+              }else{
+                //next season
+                year = view_year;
+              }
             }
+
+            if(year !== false){
+              $timeout(function(){
+                scope.updateSeasonData(year);
+                scope.season = scope.getSeason();
+                scope.$apply();
+              }, 0);
+
+
+            }
+
+          };
+
+          scope.updateSeasonData = function(season){
+            currentSeason.updateSeasonData(season);
+            scope.seasonData = currentSeason.getSeasonData();
+
+          }
+
+          scope.getSeason = function(){
+            return currentSeason.getSeason();
+          }
+
+          scope.getSeasonData = function(){
+            return currentSeason.getSeasonData();
+          }
+
+          scope.$watch('season', function(newval){
+
+            scope.updateSeasonData(newval);
+
+            scope.getLeagues(scope.seasonData).then(function(result){
+              scope.leagues = result;
+            });
+          }, true);
+
+          scope.getLeagues = function(seasonData){
+            //console.log(seasonData);
+            var defered = $q.defer();
+
+            var start = seasonData.start;
+            var end = seasonData.end;
+
+            Restangular.all('api/leaguesCalendar').getList({hasgame:true, game:true, start:start,  end:end}).then(function(result){
+              defered.resolve(_.sortBy(result,function(item){return item.level;}));
+            });
+            return defered.promise;
+
+          }
 
             $(element).fullCalendar({
                   defaultView: 'month',
@@ -36,9 +104,10 @@ angular.module('app.calendar')
                   editable: false,
                   events: [],
                   viewRender: function (view, element) {
-                      scope.getLeagues(view).then(function(result){
-                          scope.leagues = result;
-                      });
+                      //scope.getLeagues(view).then(function(result){
+                      //    scope.leagues = result;
+                      //});
+                    scope.checkSeason(view);
 
 
                   }
@@ -57,7 +126,7 @@ angular.module('app.calendar')
                   return "OT"
                 }
               }
-              
+
               return "";
             }
             scope.update = function(){
@@ -67,6 +136,7 @@ angular.module('app.calendar')
               var out = [];
 
               if(scope.leagues){
+
                 for(var i in scope.leagues){
                   var league = scope.leagues[i];
                   if(league && league.active){
@@ -94,6 +164,10 @@ angular.module('app.calendar')
               }
               $(element).fullCalendar('addEventSource',out);
             }
+
+          scope.seasonData = scope.getSeasonData();
+          scope.season = scope.getSeason();
+
         }
     };
   });
