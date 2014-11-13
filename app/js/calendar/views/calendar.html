@@ -291,16 +291,16 @@
 <div class="section">
     <div class="h2">Select game calendars</div>
     <div class="calndrListFull">
-      <ul ng-repeat="league in leagues | orderBy:'country.name'">
-        <li class="calndrCountry">
+      <ul>
+        <li ng-repeat="league_country in leagues | orderBy:'country.name' | unique:'country.name'" class="calndrCountry">
           <div class="h6">
             <label>
               <input type="checkbox">
-              <img src="/img/flags/{{league.country.name | lowercase }}.jpg" class="flag flag-{{league.country.abbreviation | lowercase }}" alt="{{league.country.name}}"> <span>{{league.country.name}}</span>
+              <img src="/img/flags/{{league_country.country.name | lowercase }}.jpg" class="flag flag-{{league_country.country.abbreviation | lowercase }}" alt="{{league_country.country.name}}"> <span>{{league_country.country.name}}</span>
             </label>
           </div>
           <ul class="calndrLeagues">
-            <li>
+            <li ng-repeat="league in leagues | filter:league_country.country.name">
               <label>
                 <input type="checkbox"> <span>{{league.name}}</span>
               </label>
@@ -420,6 +420,7 @@
 </div><!--.container-fluid-->
 </div><!--.mainBody-->
 </div>
+<!--
 <div id="main">
     <div ui-view="sidebar"></div>
     <div id="mainBody">
@@ -433,9 +434,10 @@
                                     {{'includes.calendar.sidebar.CREATE' | translate}}
                                 </a>
                             <ul class="dropdown-menu">
-                                <!-- dropdown menu links
 
-                                 <input type="checkbox" ng-model="league.check" />-->
+                            -->    <!--dropdown menu links
+
+                                 <input type="checkbox" ng-model="league.check" />--><!--
                             </ul>
                             </p>
                             <ul class="unstyled">
@@ -450,12 +452,13 @@
                     </div>
                 </div>
                 <div class="col-md-10">
-
+-->
                     <!-- calendar -->
-
+<!--
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+-->
