@@ -420,3 +420,42 @@
 </div><!--.container-fluid-->
 </div><!--.mainBody-->
 </div>
+<div id="main">
+    <div ui-view="sidebar"></div>
+    <div id="mainBody">
+        <div class="container calendar-page">
+            <div class="row">
+                <div class="col-md-2">
+                    <div >
+                        <div class="module">
+                            <p>
+                                <a class="btn bbtn dropdown-toggle" data-toggle="dropdown" href="#" style="display:none;">
+                                    {{'includes.calendar.sidebar.CREATE' | translate}}
+                                </a>
+                            <ul class="dropdown-menu">
+                                <!-- dropdown menu links
+
+                                 <input type="checkbox" ng-model="league.check" />-->
+                            </ul>
+                            </p>
+                            <ul class="unstyled">
+                                <li ng-repeat="league in leagues | orderBy:['country.name','level']" class="calendar-league-list" >
+                                    <a href="javascript:;" ng-init="league.active = false;" ng-click="league.active = !league.active;">
+                                        <div class="calendarsquare" style="background-color:{{league.active && league.color || ''}}"></div>
+                                        <span> {{league.country.name}} - {{league.name}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+
+                    <!-- calendar -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,121 @@
+<div class="section first" id="quickSearch" ng-show="search.searchterm.length>0">
+          
+             
+<a href="" ng-click="search.searchterm=''" class="close"><i class="fa fa-times"></i></a>
+          <div class="quickSearch">
+            <div class="results">
+              <div class="col">
+                <div class="h6">{{'players' | translate}}</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="player in players">
+                    <a href="" ng-click="newTab('Player: '+ player._source.player.firstName +  ' ' + player._source.player.lastName,'dashboard.player',player._source.player);">
+                      <img src="img/blank.gif" class="flag flag-{{player._source.player.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.player.country.name}}">
+                      <ul class="info">
+                        <li class="name">{{player._source.player.firstName}} {{player._source.player.lastName}} (D)</li>
+                        <li class="dob">{{player._source.player.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li class="from">
+                          <span>{{player._source.season.name}} {{player._source.team.name}}</span>
+                          <span>{{player._source.league.name}} &#47; {{player._source.team.country.name}}</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+             <div class="col">
+                <div class="h6">{{'staff' | translate}}</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="staff in staffs">
+                    <a href="">
+                      <img src="img/blank.gif" class="flag flag-{{staff._source.staff.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
+                      <ul class="info">
+                        <li class="name">{{staff._source.staff.firstName}} {{staff._source.staff.lastName}}</li>
+                        <li class="dob">{{staff._source.staff.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                        <li><b>{{staff._source.staffRole}}</b></li>
+                        <li class="from">
+                          <span>{{staff._source.season.name}} {{staff._source.team.name}}</span>
+                          <span>{{staff._source.league.name}} &#47; {{staff._source.league.country['iso3166_3']}}</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <!--<div class="col">
+                <div class="h6">Agents</div>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-de" alt="Germany">
+                      <ul class="info">
+                        <li class="name">Uwe Krupp</li>
+                        <li class="dob">14.02.1965</li>
+                        <li><b>Scout</b></li>
+                        <li class="from">
+                          <span>Agency Name, Germany</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <img src="img/blank.gif" class="flag flag-se" alt="Sweden">
+                      <ul class="info">
+                        <li class="name">John Doe</li>
+                        <li class="dob">12.23.1987</li>
+                        <li><b>Agent</b></li>
+                        <li class="from">
+                          <span>Agency Name, Sweden</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>-->
+              <div class="col">
+                <div class="h6">{{'teams' | translate}}</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="team in teams">
+                    <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team._source.team)">
+                      <img src="img/blank.gif" class="flag flag-{{team._source.league.country['iso3166_2'].toLowerCase()}}" alt="{{team._source.league.country.name}}">
+                      <ul class="info">
+                        <li class="name">{{team._source.team.name}}</li>
+                        <li class="from">
+                          <span>{{team._source.league.name}} &#47; {{team._source.league.country['iso3166_3']}}</span>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="h6">{{'leagues' | translate}}</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="league in leagues">
+                    <a href="" ng-click="newTab('Teams of '+ league._source.name,'dashboard.teams',league)">
+                      <img src="img/blank.gif" class="flag flag-{{league._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
+                      <ul class="info">
+                        <li class="name">{{league._source.name}}, {{league._source.country.name}}</li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="h6">{{'countries' | translate}}</div>
+                <ul class="list">
+                  <li class="item" ng-repeat="country in countries">
+                    <a href="" ng-click="newTab('Leagues of '+ country._source.name,'dashboard.leagues',country)">
+                      <img src="img/blank.gif" class="flag flag-{{country._source['iso3166_2'].toLowerCase()}}" alt="Germany">
+                      <ul class="info">
+                        <li class="name">{{country._source.name}}</li>
+                      </ul>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+           </div>

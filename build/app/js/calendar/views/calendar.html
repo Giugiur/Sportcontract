@@ -1,0 +1,442 @@
+<div ui-view="header"></div>
+<div id="main">
+<div id="sideMenu">
+    <ul>
+        <li>
+            <a href="#">
+                <i class="fa fa-comments-o"></i>
+                <span>Communication</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-cubes"></i>
+                <span>Organisation</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-globe"></i>
+                <span>Scouting</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class="fa fa-calendar"></i>
+                <span>Calendar</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="mainBody">
+
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-md-12">
+    <div class="viewBar">
+        <div class="backBtn">
+            <a href="#"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <a href="#" class="close"><i class="fa fa-times"></i></a>
+    </div>
+</div>
+<div class="col-xs-9">
+    <div class="section">
+        <div calendar></div>
+    </div>
+</div>
+<div class="col-xs-3">
+<div class="section">
+<div class="collapsed-rm">
+<div class="h2">
+    My calendars <a href="#"><i class="fa fa-chevron-up"></i></a>
+    <div class="sectionCtrl">
+        <a href="#"><i class="fa fa-plus"></i> <span>add</span></a>
+    </div>
+</div>
+<div class="inner">
+    <div class="calList">
+        <ul>
+            <li class="cal itemOpts">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <span>Training calendar</span>
+                </label>
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="opt"><a href="#editCal1" role="tab" data-toggle="tab"><i class="fa fa-edit"></i> Edit</a></li>
+                    <li class="opt"><a href="#shareCal1" role="tab" data-toggle="tab"><i class="fa fa-share-alt"></i> Share</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="editCal1">
+                        <div class="calEdit">
+                            <label>
+                                <span>Title&#58;</span>
+                                <input type="text">
+                            </label>
+                            <div class="eventsList">
+                                <span>Events&#58;</span>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <div>13.02.15</div>
+                                        <p>Eat apples.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <div>14.02.15</div>
+                                        <p>Drink 2 liters of water and go out for a walk.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <div>17.02.15</div>
+                                        <p>Eat oranges.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <div>21.02.15</div>
+                                        <p>Walk and run.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <div>02.03.15</div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur magnam, distinctio id ex voluptatum alias in sunt ipsam error.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                                        <label class="date">
+                                            <span>Date&#58;</span>
+                                            <input type="text">
+                                        </label>
+                                        <label>
+                                            <span>Event&#58;</span>
+                                            <textarea></textarea>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="addEvent">
+                                <a href="#"><i class="fa fa-plus"></i></a>
+                            </div>
+                            <div>
+                                <button>Save</button>
+                                <button>Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="shareCal1">
+                        <div class="calShare">
+                            <div class="shareWith">
+                                <label><input type="radio" name="shareWith"> With club</label>
+                                <label><input type="radio" name="shareWith" checked="checked"> With certain members&#58;</label>
+                            </div>
+                            <div class="staffList">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic3.jpg" class="photo" alt="">
+                                                <span class="name">John Doe</span>
+                                                <span class="job">Assistant coach</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic4.jpg" class="photo" alt="">
+                                                <span class="name">Steven Astwood</span>
+                                                <span class="job">Head coach</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic2.jpg" class="photo" alt="">
+                                                <span class="name">Anton Efremov</span>
+                                                <span class="job">Manager sport</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic3.jpg" class="photo" alt="">
+                                                <span class="name">John Doe</span>
+                                                <span class="job">Assistant coach</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic4.jpg" class="photo" alt="">
+                                                <span class="name">Steven Astwood</span>
+                                                <span class="job">Head coach</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox">
+                                            <div class="title">
+                                                <img src="img/userpic2.jpg" class="photo" alt="">
+                                                <span class="name">Anton Efremov</span>
+                                                <span class="job">Manager sport</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div><!--.staffList-->
+                            <div class="shareMsg">
+                                <label>
+                                    <span>Message&#58;</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                            <div>
+                                <button>Share</button>
+                                <button>Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cal itemOpts">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <span>Upcoming meetings</span>
+                </label>
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="opt"><a href="#editCal2" role="tab" data-toggle="tab"><i class="fa fa-edit"></i> Edit</a></li>
+                    <li class="opt"><a href="#shareCal2" role="tab" data-toggle="tab"><i class="fa fa-share-alt"></i> Share</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="editCal2">
+                        edit
+                    </div>
+                    <div class="tab-pane" id="shareCal2">
+                        share
+                    </div>
+                </div>
+            </li>
+            <li class="cal itemOpts">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <span>Health calendar</span>
+                </label>
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="opt"><a href="#editCal3" role="tab" data-toggle="tab"><i class="fa fa-edit"></i> Edit</a></li>
+                    <li class="opt"><a href="#shareCal3" role="tab" data-toggle="tab"><i class="fa fa-share-alt"></i> Share</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="editCal3">
+                        edit
+                    </div>
+                    <div class="tab-pane" id="shareCal3">
+                        share
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="section">
+    <div class="h2">
+        Game calendars
+        <div class="sectionCtrl">
+            <a href="#"><i class="fa fa-plus"></i> <span>add</span></a>
+        </div>
+    </div>
+    <div class="calList">
+        <ul>
+            <li class="cal">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <img src="img/blank.gif" class="flag flag-fi" alt="Finland"> <span>Liiga</span>
+                </label>
+            </li>
+            <li class="cal">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <img src="img/blank.gif" class="flag flag-de" alt="Germany"> <span>DEL</span>
+                </label>
+            </li>
+            <li class="cal">
+                <label class="calToggle">
+                    <input type="checkbox">
+                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
+                    <img src="img/blank.gif" class="flag flag-se" alt="Sweden"> <span>SHL</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="h2">Select game calendars</div>
+    <div class="calndrListFull">
+        <ul>
+            <li class="calndrCountry">
+                <div class="h6">
+                    <label>
+                        <input type="checkbox">
+                        <img src="img/blank.gif" class="flag flag-au" alt="Australia"> <span>Australia</span>
+                    </label>
+                </div>
+                <ul class="calndrLeagues">
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>AHL</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>AHL2</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>AHL3</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+            <li class="calndrCountry">
+                <div class="h6">
+                    <label>
+                        <input type="checkbox">
+                        <img src="img/blank.gif" class="flag flag-at" alt="Austria"> <span>Austria</span>
+                    </label>
+                </div>
+                <ul class="calndrLeagues">
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>League A</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>League B</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>League C</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+            <li class="calndrCountry">
+                <div class="h6">
+                    <label>
+                        <input type="checkbox">
+                        <img src="img/blank.gif" class="flag flag-by" alt="Belarus"> <span>Belarus</span>
+                    </label>
+                </div>
+                <ul class="calndrLeagues">
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>A-League</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>B-League</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>C-League</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+            <li class="calndrCountry">
+                <div class="h6">
+                    <label>
+                        <input type="checkbox">
+                        <img src="img/blank.gif" class="flag flag-bg" alt="Bulgaria"> <span>Bulgaria</span>
+                    </label>
+                </div>
+                <ul class="calndrLeagues">
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>B-League 1</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>B-League 2</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox"> <span>B-League 3</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <button>Update</button>
+    <button>Cancel</button>
+</div>
+</div>
+
+</div><!--.container-fluid-->
+</div><!--.mainBody-->
+</div>
+<div id="main">
+    <div ui-view="sidebar"></div>
+    <div id="mainBody">
+        <div class="container calendar-page">
+            <div class="row">
+                <div class="col-md-2">
+                    <div >
+                        <div class="module">
+                            <p>
+                                <a class="btn bbtn dropdown-toggle" data-toggle="dropdown" href="#" style="display:none;">
+                                    {{'includes.calendar.sidebar.CREATE' | translate}}
+                                </a>
+                            <ul class="dropdown-menu">
+                                <!-- dropdown menu links
+
+                                 <input type="checkbox" ng-model="league.check" />-->
+                            </ul>
+                            </p>
+                            <ul class="unstyled">
+                                <li ng-repeat="league in leagues | orderBy:['country.name','level']" class="calendar-league-list" >
+                                    <a href="javascript:;" ng-init="league.active = false;" ng-click="league.active = !league.active;">
+                                        <div class="calendarsquare" style="background-color:{{league.active && league.color || ''}}"></div>
+                                        <span> {{league.country.name}} - {{league.name}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+
+                    <!-- calendar -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

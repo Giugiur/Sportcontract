@@ -12,7 +12,7 @@ angular.module('app.admin.common',['ui.bootstrap','ui.bootstrap.tpls']);
 angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearch','app.search','app.video','ngSanitize', 'ngAnimate', 'ui.router',
 
 	'pascalprecht.translate','templates','rzModule','ngProgress','ui.grid','dcbImgFallback', "com.2fdevs.videogular",
-        "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls','app.simple_contact','app.calendar'])
+        "com.2fdevs.videogular.plugins.controls",'app.admin','app.admin.common',"ui.bootstrap",'ui.bootstrap.tpls','app.simple_contact','app.calendar','formCreator'])
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
@@ -492,6 +492,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                     views:{
 
                         "content@admin" : {
+                            controller : TemplateCtrl,
                             templateUrl : "admin_modules/templates/views/templates.html"
 
                         }

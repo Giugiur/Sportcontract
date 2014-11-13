@@ -9,6 +9,9 @@ var compass = require('gulp-compass');
 var protractor = require("gulp-protractor").protractor;
 var webdriver_standalone = require("gulp-protractor").webdriver_standalone;
 
+var _ = require('underscore');
+
+
 gulp.task('compass', function () {
     return gulp.src('app/scss/main.scss')
         .pipe(compass({
@@ -62,10 +65,11 @@ gulp.task('watch',function(){
         'build/**/*.html',
         'build/**/*.js',
         'build/**/*.css'
-    ], function(event) {
+    ], _.debounce(function(event) {
+
         return gulp.src(event.path)
             .pipe(connect.reload());
-    });
+    },1500));
     gulp.watch(['./app/js/**/*.js','./app/js/**/*.json','./app/bower_components/**/*.js','!./app/js/**/*test.js'],['index','copy']);
     gulp.watch(['!./app/index.html','./app/js/**/*.html'],['templates','index','copy']);
     gulp.watch(['./app/scss/*.scss'],['compass']);
