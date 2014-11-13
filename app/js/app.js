@@ -138,7 +138,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                       },
 			      	game : function($q,$http,api,$stateParams){
 			      		var defered = $q.defer();
-			      		
+
 				    	$http.get(api + '/api/games/' + $stateParams.id ).success(function(result){
 				    		defered.resolve(result);
 				    	})
@@ -166,7 +166,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 				      return $translate.refresh();
 				    },
 				    countries : function(ngProgress,Storage){
-				    	
+
 				    	var storageCountries = Storage.init('api/countries',false,{});
 				    	return storageCountries.all();
 				    }
@@ -193,7 +193,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                           return $translate.refresh();
                       },
                       associations : function(ngProgress,$http,$stateParams,$q,api){
-				    	
+
 				    	var defered = $q.defer();
 				    	$http.get(api + '/api/countries/' + $stateParams.id + '/associations').success(function(result){
 				    		defered.resolve(result);
@@ -274,7 +274,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                         return defered.promise;
                     },
 				    teams : function(ngProgress,$http,$stateParams,$q,api,Season){
-				    	
+
 				    	var defered = $q.defer();
 				    	var season = Season.getSeason();
 				    	$http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position').success(function(result){
@@ -321,9 +321,9 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                           return defered.promise;
                       },
 				    players : function(ngProgress,$http,$stateParams,$q,api){
-				    	
+
 				    	var defered = $q.defer();
-				    	var season = $stateParams.season?$stateParams.season:2013;
+				    	var season = $stateParams.season?$stateParams.season:$rootScope.currentSeason;
 				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player&season=' + season).success(function(result){
                             result = _.map(result,function(res){
                                 return res.player;
@@ -362,7 +362,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                           return $translate.refresh();
                       },
 				    player : function(ngProgress,$http,$stateParams,$q,api){
-				    	
+
 				    	var defered = $q.defer();
                         $http.get(api + '/api/players/' + $stateParams.id ).success(function(result){
                             defered.resolve(result);
@@ -376,7 +376,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      url: "/settings",
                   views:{
 			      	"main" : {
-			      		
+
 			      		templateUrl: "common/views/clear_template.html"
 			      	},
 			      	"sidebar@settings" : {
@@ -428,7 +428,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      		controller : AdminHeaderCtrl
 			      	},
 			      	"main" : {
-			      		
+
 			      		templateUrl: "admin_modules/dashboard/views/dashboard.html"
 			      	}
 			      },
@@ -448,10 +448,10 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			    }).state('admin.staff', {
 			      url: "/staff",
 			      views:{
-			      	
+
 			      	"content@admin" : {
 			      		templateUrl : "admin_modules/staff/views/staff.html"
-			      		
+
 			      	}
 			      },
                     resolve:{
@@ -469,10 +469,10 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			    }).state('admin.user_rights', {
 			      url: "/userrights",
 			      views:{
-			      	
+
 			      	"content@admin" : {
 			      		templateUrl : "admin_modules/user_rights/views/user_rights.html"
-			      		
+
 			      	}
 			      },
                     resolve:{
@@ -570,7 +570,26 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
         		advanced: false
 
             };
-        	
+
+          $rootScope.defaultSeason = 2014;
+          //$rootScope.currentSeason = 2013;
+
+          //for development purposes
+          //needs to get commented out when in production state
+          $rootScope.currentSeason = $rootScope.defaultSeason;
+
+          $rootScope.setSeason = function(season){
+
+            if(season != $rootScope.defaultSeason){
+              $rootScope.currentSeason = Number(season);
+            }else{
+              $rootScope.currentSeason = Number(season);
+            }
+
+          }
+
+          $rootScope.setSeason($rootScope.currentSeason);
+
         }]);
 
 angular.module('app').factory('interceptorNgProgress', function ($injector) {
@@ -580,7 +599,7 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
 
   getNgProgress = function() {
     ng_progress = ng_progress || $injector.get("ngProgress");
-    
+
     return ng_progress;
   };
 
@@ -621,14 +640,14 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
     }
   }
 });
-angular.module('app').factory('seasonInterceptor', function ($injector) {
+angular.module('app').factory('seasonInterceptor', function ($injector,$rootScope) {
     var Season = $injector.get('Season');
     return {
         request: function (config) {
                 if(config.url.indexOf('html')==-1 && config.url.indexOf('json')==-1 && config.url.indexOf('api')>-1){
-                    config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
+                  Season.initSeason($rootScope.currentSeason);
+                  config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
                 }
-
 
             return config;
         }
