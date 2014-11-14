@@ -573,11 +573,11 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
             };
 
           $rootScope.defaultSeason = 2014;
-          //$rootScope.currentSeason = 2013;
+          $rootScope.currentSeason = 2013;
 
           //for development purposes
           //needs to get commented out when in production state
-          $rootScope.currentSeason = $rootScope.defaultSeason;
+          //$rootScope.currentSeason = $rootScope.defaultSeason;
 
           $rootScope.setSeason = function(season){
 

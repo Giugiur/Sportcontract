@@ -8,7 +8,7 @@ angular.module('app.calendar')
 
           var currentSeason = Season;
 
-          currentSeason.initSeason($rootScope.currentSeason);
+          //currentSeason.initSeason($rootScope.currentSeason);
 
           scope.checkSeason = function(view){
 
@@ -92,6 +92,19 @@ angular.module('app.calendar')
             });
             return defered.promise;
 
+          }
+
+          scope.switchSeason = function(val){
+            var view = $(element).fullCalendar('getView');
+            var d_start = new Date(moment(view.intervalStart._d).format());
+            var view_month = d_start.getMonth()+1;
+
+            scope.updateSeasonData(val);
+
+            if(view_month < scope.seasonData.config.month_start)
+              val = Number(val)+1;
+
+            $(element).fullCalendar('gotoDate',val+"-"+(Number(view_month)<10 ? "0"+view_month : view_month)+"-01");
           }
 
             $(element).fullCalendar({
