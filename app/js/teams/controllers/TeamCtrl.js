@@ -1,5 +1,5 @@
 var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seasons,league,
-                        api, ngProgress ,$timeout,$anchorScroll,$location,$rootScope) {
+                        api, ngProgress ,$timeout,$anchorScroll,$location,$rootScope,Tabs) {
 
   $scope.teams = teams;
   $scope.leaders ;

@@ -11,13 +11,17 @@ angular.module('app.common').service('Tabs',['$state',function($state){
                 s4() + '-' + s4() + s4() + s4();
         };
     })();
-	self.tabs = [{
+    var tab = {
         state : "dashboard.countries",
-        params : {},
+        params : {
+            unique : guid()
+        },
         name: "Home",
         href : $state.href("dashboard.countries",{}),
         id : guid()
-    }];
+    }
+    tab.href = $state.href("dashboard.countries",tab.params);
+    self.tabs[tab];
 
 
 
@@ -39,13 +43,18 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 	}
 	self.newTab = function(name,state,params){
         if(!name){
-            self.tabs.push({
+            var tab = {
                 state : "dashboard.countries",
-                params : {},
+                params : {
+                    unique : guid()
+                },
                 name: "Home",
                 href : $state.href("dashboard.countries",{}),
                 id : guid()
-            })
+            }
+            tab.href = $state.href("dashboard.countries",tab.params);
+            self.tabs.push(tab)
+
             self.save();
             $state.go("dashboard.countries",{});
         }else{
@@ -120,6 +129,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
         self.tabs[index].params = params;
         self.tabs[index].href = $state.href(state,params);
         self.tabs[index].name = name;
+
         $state.go(state,params);
     }
 	self.setTabs = function(tabs){

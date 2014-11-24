@@ -1,5 +1,5 @@
 <div class="tabViews" ng-init="view='overview'">
-    <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+    <a ui-sref="dashboard.teams({id:team.latestTeamStats.league.id})" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="{{view=='overview'&&'active'||''}}">
             <a href="" ng-click="view='overview'">{{'overview' | translate}}</a>

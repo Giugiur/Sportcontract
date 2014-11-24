@@ -147,7 +147,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      }
 			    })
 			   .state('dashboard.countries', {
-			      url: "/countries",
+			      url: "/countries?unique",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "countries/views/countries.html",
