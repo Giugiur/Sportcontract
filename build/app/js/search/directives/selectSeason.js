@@ -7,9 +7,10 @@ angular.module('app.search')
             replace : true,
             require : '^ngModel',
             scope : {
-                ngModel: '='
+                ngModel: '=',
+                change:'&onChange'
             },
-            template: '<select class="season">' +
+            template: '<select class="season" ng-change="change()">' +
                 '<option ng-selected="{{season.val == ngModel}}" ng-repeat="season in seasons" value="{{season.val}}">{{season.text}}</option>' +
                 '</select>',
             link: function(scope, elem, attrs){

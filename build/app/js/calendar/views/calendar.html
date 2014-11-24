@@ -38,7 +38,8 @@
         <div class="backBtn">
             <a href="#"><i class="fa fa-arrow-left"></i></a>
         </div>
-        <a href="#" class="close"><i class="fa fa-times"></i></a>
+      <season-select ng-model="season" on-change="switchSeason(season)"></season-select>
+      <a href="#" class="close"><i class="fa fa-times"></i></a>
     </div>
 </div>
 <div class="col-xs-9">
@@ -290,7 +291,24 @@
 <div class="section">
     <div class="h2">Select game calendars</div>
     <div class="calndrListFull">
-        <ul>
+      <ul>
+        <li ng-repeat="league_country in leagues | orderBy:'country.name' | unique:'country.name'" class="calndrCountry">
+          <div class="h6">
+            <label>
+              <input type="checkbox">
+              <img src="/img/flags/{{league_country.country.name | lowercase }}.jpg" class="flag flag-{{league_country.country.abbreviation | lowercase }}" alt="{{league_country.country.name}}"> <span>{{league_country.country.name}}</span>
+            </label>
+          </div>
+          <ul class="calndrLeagues">
+            <li ng-repeat="league in leagues | filter:league_country.country.name">
+              <label>
+                <input type="checkbox"> <span>{{league.name}}</span>
+              </label>
+            </li>
+            </ul>
+        </li>
+      </ul>
+        <!--<ul>
             <li class="calndrCountry">
                 <div class="h6">
                     <label>
@@ -391,16 +409,18 @@
                     </li>
                 </ul>
             </li>
-        </ul>
+        </ul>-->
     </div>
     <button>Update</button>
     <button>Cancel</button>
 </div>
 </div>
 
+</div><!--.row-->
 </div><!--.container-fluid-->
 </div><!--.mainBody-->
 </div>
+<!--
 <div id="main">
     <div ui-view="sidebar"></div>
     <div id="mainBody">
@@ -414,9 +434,10 @@
                                     {{'includes.calendar.sidebar.CREATE' | translate}}
                                 </a>
                             <ul class="dropdown-menu">
-                                <!-- dropdown menu links
 
-                                 <input type="checkbox" ng-model="league.check" />-->
+                            -->    <!--dropdown menu links
+
+                                 <input type="checkbox" ng-model="league.check" />--><!--
                             </ul>
                             </p>
                             <ul class="unstyled">
@@ -431,12 +452,13 @@
                     </div>
                 </div>
                 <div class="col-md-10">
-
+-->
                     <!-- calendar -->
-
+<!--
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+-->

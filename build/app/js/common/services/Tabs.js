@@ -1,18 +1,25 @@
 angular.module('app.common').service('Tabs',['$state',function($state){
 	var self = this;
-	self.tabs = [];
+    var guid = (function() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+        }
+        return function() {
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                s4() + '-' + s4() + s4() + s4();
+        };
+    })();
+	self.tabs = [{
+        state : "dashboard.countries",
+        params : {},
+        name: "Home",
+        href : $state.href("dashboard.countries",{}),
+        id : guid()
+    }];
 
-	var guid = (function() {
-	  function s4() {
-	    return Math.floor((1 + Math.random()) * 0x10000)
-	               .toString(16)
-	               .substring(1);
-	  }
-	  return function() {
-	    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-	           s4() + '-' + s4() + s4() + s4();
-	  };
-	})();
+
 
 	self.initTabs = function(){
 		var tabs = JSON.parse(localStorage.getItem('tabs'));
@@ -83,7 +90,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		localStorage.setItem('tabs',JSON.stringify(temp));
 	}
 	self.active = function(state){
-  		if($state.href(state.state,state.params) == '#' + window.location.href.split('#')[1]){
+  		if($state.href(state.state,state.params) == window.location.href.split('#')[1]){
   			return true;
   		}else{
   			return false;
@@ -95,5 +102,6 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 	self.getTabs = function(){
 		return self.tabs;
 	}
+
 	return self;
 }])

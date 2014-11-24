@@ -6,7 +6,7 @@ angular.module('app.admin.common').run(function($q,StateInterceptor,$modal){
     StateInterceptor.addInterceptorStart(
         'admin_check',
         function(event, toState, toParams, fromState, fromParams){
-            console.log(toState)
+            //console.log(toState)
             if(toState.name.indexOf('admin') > -1 && !adminVerified){
                 return true;
             }else{

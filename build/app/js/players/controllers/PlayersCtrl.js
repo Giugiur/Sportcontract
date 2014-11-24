@@ -5,7 +5,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   $scope.team = team;
   $scope.players=players;
   $scope.seasons = seasons;
-  $scope.season=$stateParams.season?$stateParams.season:2013;
+  $scope.season=$stateParams.season?$stateParams.season:$rootScope.currentSeason;
 
 
     $scope.scrollTo = function(i){
