@@ -38,15 +38,28 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		$state.go(self.tabs[0].state,self.tabs[0].params);
 	}
 	self.newTab = function(name,state,params){
-		self.tabs.push({
-			state : state,
-			params : params,
-			name : name,
-			href : $state.href(state,params),
-			id : guid()
-		})
-		self.save();
-		$state.go(state,params);
+        if(!name){
+            self.tabs.push({
+                state : "dashboard.countries",
+                params : {},
+                name: "Home",
+                href : $state.href("dashboard.countries",{}),
+                id : guid()
+            })
+            self.save();
+            $state.go(state,params);
+        }else{
+            self.tabs.push({
+                state : state,
+                params : params,
+                name : name,
+                href : $state.href(state,params),
+                id : guid()
+            })
+            self.save();
+            $state.go(state,params);
+        }
+
 	}
 	self.closeTab = function(tab){
 		var index ;
@@ -96,6 +109,19 @@ angular.module('app.common').service('Tabs',['$state',function($state){
   			return false;
   		}
   	}
+    self.goTo = function(state,params,name){
+        var index;
+        for(var i in self.tabs){
+            if(self.active(self.tabs[i])){
+                index = i;
+            }
+        }
+        self.tabs[index].state = state;
+        self.tabs[index].params = params;
+        self.tabs[index].href = $state.href(state,params);
+        self.tabs[index].name = name;
+        $state.go(state,params);
+    }
 	self.setTabs = function(tabs){
 		
 	}

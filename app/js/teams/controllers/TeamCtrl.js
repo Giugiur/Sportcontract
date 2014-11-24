@@ -17,7 +17,8 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
 
   $scope.goTeam = function(object){
   	object.season = $scope.season;
-  	$state.go('dashboard.players',object);
+      Tabs.goTo('dashboard.players',object, "Players in " + object.name);
+
   }
   $scope.changeSeason = function(){
 

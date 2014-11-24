@@ -10,7 +10,7 @@
             <div id="tabs">
               <div class="tabCtrls">
                 <a href="#"><i class="fa fa-home"></i></a>
-                <a href="#"><i class="fa fa-plus"></i></a>
+                <a ng-click="Tab.newTab();"><i class="fa fa-plus"></i></a>
               </div>
               <ul class="etabs">
                 <li class="tab {{Tab.active(tab)&&'active' || ''}}" ng-repeat="tab in Tab.getTabs()">
