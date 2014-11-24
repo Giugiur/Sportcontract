@@ -14,7 +14,7 @@
               </div>
               <ul class="etabs">
                 <li class="tab {{Tab.active(tab)&&'active' || ''}}" ng-repeat="tab in Tab.getTabs()">
-                  <a href="#{{tab.href}}" class="title">{{tab.name}}</a>
+                  <a href="{{tab.href}}" class="title">{{tab.name}}</a>
                   <span class="closeTab"><a ng-click="Tab.closeTab(tab);"></a></span>
                 </li>
               </ul>

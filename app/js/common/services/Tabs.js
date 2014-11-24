@@ -90,7 +90,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		localStorage.setItem('tabs',JSON.stringify(temp));
 	}
 	self.active = function(state){
-  		if($state.href(state.state,state.params) == window.location.href.split('#')[1]){
+  		if($state.href(state.state,state.params) == '#' + window.location.href.split('#')[1]){
   			return true;
   		}else{
   			return false;
