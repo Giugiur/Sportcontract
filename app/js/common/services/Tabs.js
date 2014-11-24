@@ -21,7 +21,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
         id : guid()
     }
     tab.href = $state.href("dashboard.countries",tab.params);
-    self.tabs[tab];
+    self.tabs = [tab];
 
 
 
