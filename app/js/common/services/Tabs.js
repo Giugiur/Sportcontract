@@ -47,7 +47,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
                 id : guid()
             })
             self.save();
-            $state.go(state,params);
+            $state.go("dashboard.countries",{});
         }else{
             self.tabs.push({
                 state : state,
