@@ -89,13 +89,15 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		if(self.active(tab)){
 			if(index-1 == -1){
 				if(self.tabs[0]){
-                    self.goTo(self.tab[0].state,self.tabs[0].params,self.tabs[0].name);
+                    var tab = self.tabs[0];
+                    self.setActive(tab);
 				}else{
                     self.newTab();
 				}
 				
 			}else{
-                self.goTo(self.tab[index-1].state,self.tabs[index-1].params,self.tabs[index-1].name);
+                var tab = self.tab[index-1];
+                self.setActive(tab);
 			}
 			
 		}
