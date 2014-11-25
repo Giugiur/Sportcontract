@@ -1,5 +1,5 @@
 var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,
-                           $anchorScroll,$location,$filter,$timeout,$rootScope) {
+                           $anchorScroll,$location,$filter,$timeout,$rootScope,Tabs) {
 
 
   $scope.team = team;
@@ -17,8 +17,14 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   $scope.goPlayer = function(object){
   	object.season = $scope.season;
       console.log(object);
-  	$state.go('dashboard.player',object);
+      Tabs.goTo('dashboard.player',object, "Player " + object.firstName + " " + object.lastName);
+
   }
+  $scope.goUp = function(){
+      console.log($scope.team);
+      Tabs.goTo('dashboard.teams',$scope.team.latestTeamStats.league, "Teams in " + $scope.team.latestTeamStats.league.name)
+  }
+
   $scope.changeSeason = function(){
 
   	var temp = {

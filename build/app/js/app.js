@@ -677,6 +677,6 @@ angular.module('app').filter('age',function(){
             }
             return age;
         }
-        return getAge(newDate(input));
+        return getAge(new Date(input));
     }
 })

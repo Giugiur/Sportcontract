@@ -20,6 +20,9 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
       Tabs.goTo('dashboard.players',object, "Players in " + object.name);
 
   }
+  $scope.goUp = function(){
+      Tabs.goTo('dashboard.leagues',$scope.league.country,"League in " + $scope.league.country.name);
+  }
   $scope.changeSeason = function(){
 
   	var temp = {

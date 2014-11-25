@@ -6,11 +6,13 @@ var LeagueCtrl = function($scope, $http, Storage, $state, $stateParams, Tabs,api
 
 
   $scope.goLeague = function(object){
-  	$state.go('dashboard.teams',object);
+      Tabs.goTo('dashboard.teams',object, "Teams in " + object.name);
+
   }
     $scope.goTeam = function(object){
         object.season = $scope.season;
-        $state.go('dashboard.players',object);
+        Tabs.goTo('dashboard.players',object, "Players in " + object.name);
+
     }
     $scope.getFlag = function(country){
         return country.flag?country.flag:'http://beta.eliteprospects.com/images/flags/64/' + country['iso3166_3'] +'.png';

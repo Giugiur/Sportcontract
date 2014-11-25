@@ -147,7 +147,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 			      }
 			    })
 			   .state('dashboard.countries', {
-			      url: "/countries?unique",
+			      url: "/countries",
 			      views:{
 			      	"tabcontent@dashboard" : {
 			      		templateUrl: "countries/views/countries.html",
@@ -677,6 +677,6 @@ angular.module('app').filter('age',function(){
             }
             return age;
         }
-        return getAge(newDate(input));
+        return getAge(new Date(input));
     }
 })

@@ -22,7 +22,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
     }
     tab.href = $state.href("dashboard.countries",tab.params);
     self.tabs = [tab];
-
+    self.activeTab;
 
 
 	self.initTabs = function(){
@@ -56,17 +56,18 @@ angular.module('app.common').service('Tabs',['$state',function($state){
             self.tabs.push(tab)
 
             self.save();
-            $state.go("dashboard.countries",tab.params);
+            self.setActive(tab);
         }else{
-            self.tabs.push({
+            var tab = {
                 state : state,
                 params : params,
                 name : name,
                 href : $state.href(state,params),
                 id : guid()
-            })
+            };
+            self.tabs.push(tab)
             self.save();
-            $state.go(state,params);
+            self.setActive(tab);
         }
 
 	}
@@ -112,11 +113,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		localStorage.setItem('tabs',JSON.stringify(temp));
 	}
 	self.active = function(state){
-  		if($state.href(state.state,state.params) == '#' + window.location.href.split('#')[1]){
-  			return true;
-  		}else{
-  			return false;
-  		}
+        return self.activeTab && self.activeTab.state == state.state && self.activeTab.params == state.params && self.activeTab.id == state.id;
   	}
     self.goTo = function(state,params,name){
         var index;
@@ -131,6 +128,18 @@ angular.module('app.common').service('Tabs',['$state',function($state){
         self.tabs[index].name = name;
 
         $state.go(state,params);
+    }
+    self.goHome = function(){
+
+            self.goTo('dashboard.countries',{},"Home");
+    }
+    self.setActive = function(tab){
+        if(!tab){
+            self.activeTab = self.tabs[0];
+        }else{
+            self.activeTab = tab;
+        }
+        $state.go(self.activeTab.state,self.activeTab.params);
     }
 	self.setTabs = function(tabs){
 		
