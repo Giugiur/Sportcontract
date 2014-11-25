@@ -26,7 +26,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   }
   $scope.getImage = function(player){
       if(player.imageUrl){
-          return 'http://files.eliteprospects.com/layout/players/' player.imageUrl;
+          return 'http://files.eliteprospects.com/layout/players/'+player.imageUrl;
       }else{
           return 'img/playerplaceholder.jpg';
       }

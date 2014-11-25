@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/playerplaceholder.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" afterPath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/views/players.html" afterPath="$PROJECT_DIR$/app/js/players/views/players.html" />
     </list>
@@ -51,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3270">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+              <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -90,8 +89,8 @@
       <file leaf-file-name="players.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.50151974" vertical-offset="2235" max-vertical-offset="9060">
-              <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.7948328" vertical-offset="917" max-vertical-offset="9060">
+              <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -836,15 +835,15 @@
     <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3270">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.50151974" vertical-offset="2235" max-vertical-offset="9060">
-          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.7948328" vertical-offset="917" max-vertical-offset="9060">
+          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
           <folding />
         </state>
       </provider>

@@ -59,7 +59,7 @@ angular.module('app.quicksearch').directive('quicksearch',['api','$http','$rootS
 	     		});
 	     	})
 	     }
-	     var searchFunc = _.throttle(function(newval){
+	     var searchFunc = _.debounce(function(newval){
 	     			alwaysSuccess($http.get(api +'/api/search/teams/' + newval.searchterm),function(data){
 	     				scope.teams = data.hits.hits;
 	     				alwaysSuccess($http.get(api +'/api/search/leagues/' + newval.searchterm),function(data){
