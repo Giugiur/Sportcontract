@@ -96,7 +96,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 				}
 				
 			}else{
-                var tab = self.tab[index-1];
+                var tab = self.tabs[index-1];
                 self.setActive(tab);
 			}
 			
