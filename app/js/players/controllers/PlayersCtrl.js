@@ -24,7 +24,13 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
       console.log($scope.team);
       Tabs.goTo('dashboard.teams',$scope.team.latestTeamStats.league, "Teams in " + $scope.team.latestTeamStats.league.name)
   }
-
+  $scope.getImage = function(player){
+      if(player.imageUrl){
+          return 'http://files.eliteprospects.com/layout/players/' player.imageUrl;
+      }else{
+          return 'img/playerplaceholder.jpg';
+      }
+  }
   $scope.changeSeason = function(){
 
   	var temp = {
