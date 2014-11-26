@@ -351,6 +351,7 @@
         <table>
             <thead>
             <tr>
+                <th>Player</th>
                 <th>From</th>
                 <th></th>
                 <th>To</th>
@@ -359,6 +360,7 @@
             </thead>
             <tbody>
             <tr ng-repeat="player in ::gridTransfers.data">
+                <td>{{::player.player.firstName +' ' + player.player.lastName}}</td>
                 <td>{{::player.fromTeam.name}}</td>
                 <td>==></td>
                 <td>{{::player.toTeam.name}}</td>

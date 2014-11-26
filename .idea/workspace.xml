@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" afterPath="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/countries/views/countries.html" afterPath="$PROJECT_DIR$/app/js/countries/views/countries.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" afterPath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/teams/views/teams.html" afterPath="$PROJECT_DIR$/app/js/teams/views/teams.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +108,8 @@
       <file leaf-file-name="teams.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5726872" vertical-offset="0" max-vertical-offset="12090">
-              <caret line="26" column="105" selection-start-line="26" selection-start-column="105" selection-end-line="26" selection-end-column="105" />
+            <state vertical-scroll-proportion="0.7929515" vertical-offset="4890" max-vertical-offset="12120">
+              <caret line="362" column="79" selection-start-line="362" selection-start-column="79" selection-end-line="362" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -1175,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/teams/views/teams.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5726872" vertical-offset="0" max-vertical-offset="12090">
-          <caret line="26" column="105" selection-start-line="26" selection-start-column="105" selection-end-line="26" selection-end-column="105" />
+        <state vertical-scroll-proportion="0.7929515" vertical-offset="4890" max-vertical-offset="12120">
+          <caret line="362" column="79" selection-start-line="362" selection-start-column="79" selection-end-line="362" selection-end-column="79" />
           <folding />
         </state>
       </provider>
