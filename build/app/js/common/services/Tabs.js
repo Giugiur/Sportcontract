@@ -79,10 +79,7 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 				index = i;
 			}
 		}
-		console.log(index);
 		if(index !== undefined){
-			console.log(index);
-
 			self.tabs.splice(index,1);
 			self.save();
 		}
@@ -92,13 +89,15 @@ angular.module('app.common').service('Tabs',['$state',function($state){
 		if(self.active(tab)){
 			if(index-1 == -1){
 				if(self.tabs[0]){
-					$state.go(self.tabs[0].state,self.tabs[0].params);
+                    var tab = self.tabs[0];
+                    self.setActive(tab);
 				}else{
-					$state.go("dashboard.countries");
+                    self.newTab();
 				}
 				
 			}else{
-				$state.go(self.tabs[index-1].state,self.tabs[index-1].params);
+                var tab = self.tabs[index-1];
+                self.setActive(tab);
 			}
 			
 		}

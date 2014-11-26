@@ -16,7 +16,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
-        	$httpProvider.interceptors.push('interceptorNgProgress');
+
             $httpProvider.interceptors.push('seasonInterceptor');
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
@@ -646,7 +646,7 @@ angular.module('app').factory('seasonInterceptor', function ($injector,$rootScop
     return {
         request: function (config) {
                 if(config.url.indexOf('html')==-1 && config.url.indexOf('json')==-1 && config.url.indexOf('api')>-1){
-                  Season.initSeason($rootScope.currentSeason);
+                  //Season.initSeason($rootScope.currentSeason);
                   config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
                 }
 

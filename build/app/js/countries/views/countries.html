@@ -4,10 +4,10 @@
                     <div class="col-md-12">
                                     <div class="h2 center">{{'select_country' | translate}}</div>
                                     <ul class="countries">
-                                        <li ng-repeat="country in countries | orderBy:'name'" >
+                                        <li ng-repeat="country in ::countries | orderBy:'name'" >
                                             <a ng-click="goCountry(country);"  href="">
-                                                <img ng-src="{{getFlag(country)}}"  alt="{{country.name}}" >
-                                                <span style="text-tranform:capitalize;display:block;height:18px;overflow-y:hidden;">{{country.name.toLowerCase() | translate }}</span>
+                                                <img ng-src="{{getFlag(country)}}"  alt="{{::country.name}}" >
+                                                <span style="text-tranform:capitalize;display:block;height:18px;overflow-y:hidden;">{{::country.name.toLowerCase() | translate }}</span>
                                             </a>
                                         </li>
                                     </ul>

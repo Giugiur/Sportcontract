@@ -147,13 +147,15 @@ var TeamCtrl = function($scope, $http, Storage, $state, $stateParams, teams,seas
 
 var SetupTeamGrids = function(api,teams,$stateParams,$scope,$http){
     /**standings **/
+    $http.get(api + '/api/leagues/' + $stateParams.id + '/teams?fields=team,GP,W,L,OTW,OTL,GF,GA,TP,position&gpfilter=yes').success(function(result){
+        $scope.gridStandings.data =  _.sortBy(result,function(item){return item.position;});
+    })
 
-    $scope.gridStandings.data =  _.sortBy(teams,function(item){return item.position;});
 
 
     /**stats**/
     $http.get(api + '/api/leagues/' + $stateParams.id + '/players' ).success(function(players){
-        $scope.gridStatsPlayers.data =  players['SKATER'];
+        $scope.gridStatsPlayers.data =  _.sortBy(players['SKATER'],function(item){return item.GP*-1;});
         $scope.gridStatsGoalies.data =  players['GOALIE'];
     })
 

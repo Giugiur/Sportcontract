@@ -66,7 +66,6 @@ gulp.task('watch',function(){
         'build/**/*.js',
         'build/**/*.css'
     ], _.debounce(function(event) {
-
         return gulp.src(event.path)
             .pipe(connect.reload());
     },1500));

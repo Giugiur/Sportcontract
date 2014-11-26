@@ -11,7 +11,7 @@
 
 <div class="row">
 <div class="col-xs-9">
-<div class="section col-xs-12" ng-repeat="association in associations" ng-init="view='overview'">
+<div class="section col-xs-12" ng-repeat="association in ::associations" ng-init="view='overview'">
 <div class="h1 pull-left">{{association.shortName}} &#8212; {{association.name}} </div>
     <div class="views pull-right">
         <ul>
@@ -117,11 +117,11 @@
 
 <!-- Start of the overview which contains national teams -->
 <ul class="list-inline mb" ng-if="view=='overview'">
-    <li ng-repeat="team in association.teams"><a ng-click="goTeam(team.team);" href="">{{team.team.name}}</a></li>
+    <li ng-repeat="team in ::association.teams"><a ng-click="goTeam(team.team);" href="">{{team.team.name}}</a></li>
 </ul>
 <!-- End of the overview part -->
-    <div class="mb" ng-if="view=='contacts'" ng-repeat="team in association.teams">
-        <div class="h3">{{team.team.name}}</div>
+    <div class="mb" ng-if="view=='contacts'" ng-repeat="team in ::association.teams">
+        <div class="h3">{{::team.team.name}}</div>
         <simplecontact teamid="team.team.id"></simplecontact>
     </div>
 
@@ -133,12 +133,12 @@
 </div>
 <div class="leagues">
     <ul>
-        <li ng-repeat="league in association.leagues">
+        <li ng-repeat="league in ::association.leagues">
             <a ng-click="goLeague(league);">
 
-                <img src="{{league.logo && league.logo || 'img/leagueLogo1.png'}}" alt="">
+                <img src="{{league.imageUrl && league.imageUrl || 'img/leagueLogo1.png'}}" alt="">
                                       <span>
-                                            {{league.name}}
+                                            {{::league.name}}
                                         <span>{{'tagged_video' | translate}} &amp; {{'statistics' | translate}}</span>
                                       </span>
             </a>
@@ -159,8 +159,8 @@
             <season></season>
         </div>
         <div class="cntrFlag">
-            <img ng-src="{{getFlag(country)}}"  alt="{{country.name}}" style="width:120px;height:120px;">
-            <span>{{country.name.toLowerCase()}}</span>
+            <img ng-src="{{getFlag(country)}}"  alt="{{::country.name}}" style="width:120px;height:120px;">
+            <span>{{::country.name.toLowerCase()}}</span>
         </div>
     </div>
 </div>

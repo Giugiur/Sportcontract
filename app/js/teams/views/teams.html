@@ -11,19 +11,20 @@
         </li>
     </ul>
 </div>
-<div class="anchors">
+<div class="anchors" ng-init="subview='overview';" >
     <ul>
+        <li><a ng-click="subview='overview'">Teams</a></li>
 
-        <li><a ng-click="scrollTo('standings')" ng-show="gridStandings.data && gridStandings.data.length>0 ">{{'standings' | translate}}</a></li>
-        <li><a ng-click="scrollTo('stats')" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0">{{'player_stats' | translate}}</a></li>
-        <li><a ng-click="scrollTo('statsalltime')" ng-show="gridStatsPlayersAllTime.data && gridStatsPlayersAllTime.data.length>0">{{'all_time_high' | translate}}</a></li>
-        <li><a ng-click="scrollTo('freeagents')" ng-show="gridFreeAgents.data && gridFreeAgents.data.length>0">{{'free_agents' | translate}}</a></li>
+        <li ng-show="gridStandings.data && gridStandings.data.length>0 "><a ng-click="subview='standing'" >{{'standings' | translate}}</a></li>
+        <li ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0"><a ng-click="subview='stats'" >{{'player_stats' | translate}}</a></li>
+        <li ng-show="gridStatsPlayersAllTime.data && gridStatsPlayersAllTime.data.length>0"><a ng-click="subview='alltimehigh';" >{{'all_time_high' | translate}}</a></li>
+        <li ng-show="gridFreeAgents.data && gridFreeAgents.data.length>0"><a ng-click="subview='freeagents'" >{{'free_agents' | translate}}</a></li>
         <!--<li><a href="#">Next season free agents</a></li>-->
-        <li><a ng-click="scrollTo('injured')" ng-show="gridInjured.data && gridInjured.data.length>0">{{'injuries' | translate}}</a></li>
-        <li><a ng-click="scrollTo('champions')" ng-show="gridChampions.data && gridChampions.data.length>0">{{'champions' | translate}}</a></li>
-        <li><a ng-click="scrollTo('awards')" ng-show="gridAwards.data && gridAwards.data.length>0">{{'awards' | translate}}</a></li>
+        <li ng-show="gridInjured.data && gridInjured.data.length>0" ><a ng-click="subview='injured'" >{{'injuries' | translate}}</a></li>
+        <li  ng-show="gridChampions.data && gridChampions.data.length>0"><a ng-click="scrollTo('champions')">{{'champions' | translate}}</a></li>
+        <li ng-show="gridAwards.data && gridAwards.data.length>0"><a ng-click="scrollTo('awards')" >{{'awards' | translate}}</a></li>
 
-        <li><a ng-click="scrollTo('transfers')" ng-show="gridTransfers.data && gridTransfers.data.length>0">{{'transfers' | translate}}</a></li>
+        <li ng-show="gridTransfers.data && gridTransfers.data.length>0"><a ng-click="subview='transfered'" >{{'transfers' | translate}}</a></li>
     </ul>
 </div>
 
@@ -37,7 +38,7 @@
     </div>
     <img ng-src="{{league.logo}}" class="leagueLogo" alt="">
     <div>
-        <img src="img/blank.gif" class="flag flag-{{league.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{league.name}}
+        <img src="img/blank.gif" class="flag flag-{{::league.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{league.name}}
     </div>
 </div>
 <div class="dates row">
@@ -100,11 +101,11 @@
     </div>
 </div><!--.row-->
 
-<div class="collapsed-rm">
+<div class="collapsed-rm" ng-if="subview=='overview'">
 <div class="h2">{{'teams' | translate}} <a href=""><i class="fa fa-chevron-down"></i></a></div>
 <div class="inner">
 <ul class="teams">
-<li ng-repeat="team in teams">
+<li ng-repeat="team in ::teams">
     <ul class="lastGames">
         <li>
             <span class="win" tooltip="Win, 3-1, Lulea"></span>
@@ -124,9 +125,9 @@
     </ul>
     <a href="" ng-click="goTeam(team.team);">
         <div>
-            <img ng-src="http://files.eliteprospects.com/layout/logos/{{team.team.imageUrl}}" alt="">
+            <img ng-src="http://files.eliteprospects.com/layout/logos/{{::team.team.imageUrl}}" alt="">
         </div>
-        <span>{{team.team.name}}</span>
+        <span>{{::team.team.name}}</span>
     </a>
 </li>
 
@@ -134,6 +135,240 @@
 </div>
 </div><!--.collapsed-->
 
+<!--
+    Standing table
+-->
+    <div class="collapsed-rm" ng-if="subview=='standing'">
+        <div class="h2">
+            {{'standings' | translate}}
+            <a href=""><i class="fa fa-chevron-down"></i></a>
+        </div>
+        <div class="inner">
+            <table>
+                <!--
+                 {name:'',field:'position'},
+              {name:'Team',field:'team.name'},
+              {name:'GP',field:'GP'},
+              {name:'W',field:'W'},
+              {name:'L',field:'L'},
+              {name:'OTW',field:'OTW'},
+              {name:'OTL',field:'OTL'},
+              {name:'GF',field:'GF'},
+              {name:'GA',field:'GA'},
+              {name:'TP',field:'TP'}
+                -->
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Team</th>
+                    <th>GP</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>OTW</th>
+                    <th>OTL</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>TP</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="team in ::gridStandings.data">
+                    <td>{{::team.position}}</td>
+                    <td>{{::team.team.name}}</td>
+                    <td>{{::team.GP}}</td>
+                    <td>{{::team.W}}</td>
+                    <td>{{::team.L}}</td>
+                    <td>{{::team.OTW}}</td>
+                    <td>{{::team.OTL}}</td>
+                    <td>{{::team.GF}}</td>
+                    <td>{{::team.GA}}</td>
+                    <td>{{::team.TP}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<!--
+    Stats table
+-->
+<div class="collapsed-rm" ng-if="subview=='stats'">
+    <div class="h2">
+        {{'players' | translate}}
+        <a href=""><i class="fa fa-chevron-down"></i></a>
+    </div>
+    <div class="inner">
+        <table>
+            <thead>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>GP</th>
+                <th>G</th>
+                <th>A</th>
+                <th>TP</th>
+                <th>PPG</th>
+                <th>PIM</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in ::gridStatsPlayers.data | limitTo:20">
+                <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                <td>{{::player.team.name}}</td>
+                <td>{{::player.GP}}</td>
+                <td>{{::player.G}}</td>
+                <td>{{::player.A}}</td>
+                <td>{{::player.TP}}</td>
+                <td>{{::player.PPG}}</td>
+                <td>{{::player.PIM}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="h2">
+        {{'goalies' | translate}}
+        <a href=""><i class="fa fa-chevron-down"></i></a>
+    </div>
+    <div class="inner">
+        <table>
+            <thead>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>GP</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in ::gridStatsGoalies.data| limitTo:20">
+                <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                <td>{{::player.team.name}}</td>
+                <td>{{::player.GP}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--
+    All time
+     $scope.gridStatsPlayersAllTime = {
+      columnDefs : [
+          {name : 'Firstname',field:'firstname'},
+          {name : 'Lastname',field:'lastname'},
+          {name : 'GP',field:'GP'},
+          {name : 'G',field : 'G'},
+          {name : 'A',field:'A'},
+          {name : 'TP',field:'TP'},
+          {name : 'PPG',field:'PPG'},
+          {name : 'PIM',field:'PIM'}
+
+
+      ],enableFiltering:true};
+-->
+<div class="collapsed-rm" ng-if="subview=='alltimehigh'">
+    <div class="h2">
+        {{'players' | translate}}
+        <a href=""><i class="fa fa-chevron-down"></i></a>
+    </div>
+    <div class="inner">
+        <table>
+            <thead>
+            <tr>
+                <th>Player</th>
+
+                <th>GP</th>
+                <th>G</th>
+                <th>A</th>
+                <th>TP</th>
+                <th>PPG</th>
+                <th>PIM</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in ::gridStatsPlayersAllTime.data">
+                <td>{{::player._id.firstname + ' ' + player._id.lastname}}</td>
+                <td>{{::player.GP}}</td>
+                <td>{{::player.G}}</td>
+                <td>{{::player.A}}</td>
+                <td>{{::player.TP}}</td>
+                <td>{{::player.PPG}}</td>
+                <td>{{::player.PIM}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!--
+    Table Injured
+-->
+<div class="collapsed-rm" ng-if="subview=='injured'">
+    <div class="h2">
+        {{'injured' | translate}}
+        <a href=""><i class="fa fa-chevron-down"></i></a>
+    </div>
+    <div class="inner">
+        <table>
+            <thead>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in ::gridInjured.data">
+                <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                <td>{{::player.team.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<!--
+    Table Transfered
+    $scope.gridTransfers = {columnDefs : [
+      {name : 'From',field:'fromTeam.name'},
+      {name : 'To',field:'toTeam.name'},
+      {name : 'Date',field:'transferDate'}
+    -->
+<div class="collapsed-rm" ng-if="subview=='transfered'">
+    <div class="h2">
+        {{'transfered' | translate}}
+        <a href=""><i class="fa fa-chevron-down"></i></a>
+    </div>
+    <div class="inner">
+        <table>
+            <thead>
+            <tr>
+                <th>From</th>
+                <th></th>
+                <th>To</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in ::gridTransfers.data">
+                <td>{{::player.fromTeam.name}}</td>
+                <td>==></td>
+                <td>{{::player.toTeam.name}}</td>
+                <td>{{::player.transferDate}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
 </div>
 </div>
 <div class="col-xs-4">
@@ -154,7 +389,7 @@
         <tbody>
         <tr ng-repeat="leader in leaders">
             <td>{{$index + 1}}</td>
-            <td><a href="">{{leader.player.firstName}} {{leader.player.lastName}}</a></td>
+            <td><a href="">{{leader._id.firstname}} {{leader._id.lastname}}</a></td>
             <td>{{leader.GP}}</td>
             <td>{{leader.G}}</td>
             <td>{{leader.A}}</td>
@@ -464,7 +699,7 @@
 </div>
 </div> -->
 
-<a id="standings"></a>
+<!--<a id="standings"></a>
 <div class="row" ng-show="gridStandings.data && gridStandings.data.length>0 && view=='overview'">
     <div class="col-xs-12">
         <div class="section">
@@ -493,7 +728,7 @@
     </div>
 </div>
 
-<a id="statsalltime"></a>
+<!--<a id="statsalltime"></a>
 <div class="row" ng-show="gridStatsPlayersAllTime.data && gridStatsPlayersAllTime.data.length>0 && view=='overview'">
 <div class="row">
     <div class="col-xs-12">
@@ -562,5 +797,5 @@
             <simplecontact teamid="1"></simplecontact>
         </div>
     </div>
-</div>
+</div>-->
 </div>
