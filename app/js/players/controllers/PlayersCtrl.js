@@ -4,6 +4,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
 
   $scope.team = team;
   $scope.players=players;
+    console.log(players);
   $scope.seasons = seasons;
   $scope.season=$stateParams.season?$stateParams.season:$rootScope.currentSeason;
 

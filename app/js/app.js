@@ -324,10 +324,12 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
 				    	var defered = $q.defer();
 				    	var season = $stateParams.season?$stateParams.season:$rootScope.currentSeason;
-				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player&season=' + season).success(function(result){
+				    	$http.get(api + '/api/teams/' + $stateParams.id + '/players?fields=player').success(function(result){
+                            console.log(result)
                             result = _.map(result,function(res){
                                 return res.player;
                             })
+                            console.log(result)
 				    		defered.resolve(result);
 				    	})
 				    	return defered.promise;

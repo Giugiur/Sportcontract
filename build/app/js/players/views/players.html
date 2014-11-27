@@ -11,18 +11,18 @@
 </div>
 <div class="anchors" ng-if="view=='overview'">
     <ul>
-
-        <li><a ng-click="scrollTo('Roster')" ng-show="gridRoster.data && gridRoster.data.length>0">{{'roster' | translate}}</a></li>
-        <li><a ng-click="scrollTo('stats')" ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0">{{'player_stats' | translate}}</a></li>
-        <li><a ng-click="scrollTo('teamstats')" ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0">{{'team_stats' | translate}}</a></li>
-        <li><a ng-click="scrollTo('captain')" ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0">{{'captains' | translate}}</a></li>
-        <li><a ng-click="scrollTo('staff')" ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0">{{'staff' | translate}}</a></li>
+        <li ><a ng-click="subview='players'" >Players</a></li>
+        <li ng-show="gridRoster.data && gridRoster.data.length>0"><a ng-click="subview='roster'" >{{'roster' | translate}}</a></li>
+        <li ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0"><a ng-click="subview='stats'" >{{'player_stats' | translate}}</a></li>
+        <li ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0"><a ng-click="subview='teamstats'" >{{'team_stats' | translate}}</a></li>
+        <li ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0"><a ng-click="subview='captains'" >{{'captains' | translate}}</a></li>
+        <li ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0"><a ng-click="subview='staff'" >{{'staff' | translate}}</a></li>
         <li><a ng-click="scrollTo('arena')" >{{'arena' | translate}}</a></li>
-        <li><a ng-click="scrollTo('retired')" ng-show="gridRetired.data && gridRetired.data.length>0">{{'retired_numbers' | translate}}</a></li>
-        <li><a ng-click="scrollTo('topplayers')" ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0">{{'season_best' | translate}}</a></li>
-        <li><a ng-click="scrollTo('topplayersall')" ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0">{{'all_time_high' | translate}}</a></li>
+        <li ng-show="gridRetired.data && gridRetired.data.length>0"><a ng-click="subview='retired'" >{{'retired_numbers' | translate}}</a></li>
+        <li ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0"><a ng-click="subview='topplayers'" >{{'season_best' | translate}}</a></li>
+        <li ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0"><a ng-click="subview='topplayersall'" >{{'all_time_high' | translate}}</a></li>
         <!--<li><a >Where are they now?</a></li>-->
-        <li><a ng-click="scrollTo('transfers')" ng-show="gridTransfers.data && gridTransfers.data.length>0">{{'transfers' | translate}}</a></li>
+        <li ng-show="gridTransfers.data && gridTransfers.data.length>0"><a ng-click="subview='transfers'" >{{'transfers' | translate}}</a></li>
 
 
     </ul>
@@ -76,7 +76,7 @@
                     </table>
                 </div>
             </div>
-
+            <div>
             <div class="h2">{{'goalies' | translate}}</div>
             <div class="playerList">
                 <ul>
@@ -130,6 +130,7 @@
                         </a>
                     </li>
                 </ul>
+            </div>
             </div>
         </div>
     </div>
@@ -470,6 +471,7 @@
 
 
 </div><!--.row-->
+        <!--
 <a name="roster"></a>
 <div class="row" ng-show="gridRoster.data && gridRoster.data.length>0" ng-if="view=='overview'">
     <div class="col-xs-12">
@@ -594,5 +596,5 @@
     </div>
 
 </div>
-
+-->
 <simplecontact ng-if="view=='contacts'" teamid="team.id"></simplecontact>
