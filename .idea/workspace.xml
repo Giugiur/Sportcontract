@@ -2,109 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/australia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/australia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/australia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/australia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/austria.jpg" afterPath="$PROJECT_DIR$/app/img/flags/austria.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/austria2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/austria2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/belarus.jpg" afterPath="$PROJECT_DIR$/app/img/flags/belarus.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/belarus2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/belarus2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/belgium.jpg" afterPath="$PROJECT_DIR$/app/img/flags/belgium.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/belgium2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/belgium2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/bosnia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/bosnia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/bosniaandherzegovina.jpg" afterPath="$PROJECT_DIR$/app/img/flags/bosniaandherzegovina.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/bulgaria.jpg" afterPath="$PROJECT_DIR$/app/img/flags/bulgaria.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/bulgaria2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/bulgaria2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/canada.jpg" afterPath="$PROJECT_DIR$/app/img/flags/canada.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/canada2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/canada2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/china.jpg" afterPath="$PROJECT_DIR$/app/img/flags/china.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/china2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/china2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/croatia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/croatia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/croatia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/croatia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/czech.jpg" afterPath="$PROJECT_DIR$/app/img/flags/czech.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/czech2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/czech2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/czechrepublic.jpg" afterPath="$PROJECT_DIR$/app/img/flags/czechrepublic.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/denmark.jpg" afterPath="$PROJECT_DIR$/app/img/flags/denmark.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/denmark2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/denmark2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/estonia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/estonia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/estonia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/estonia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/finland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/finland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/finland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/finland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/flag_uca.jpg" afterPath="$PROJECT_DIR$/app/img/flags/flag_uca.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/flag_uca2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/flag_uca2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/france.jpg" afterPath="$PROJECT_DIR$/app/img/flags/france.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/france2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/france2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/german2xy.jpg" afterPath="$PROJECT_DIR$/app/img/flags/german2xy.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/germany.jpg" afterPath="$PROJECT_DIR$/app/img/flags/germany.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/greece.jpg" afterPath="$PROJECT_DIR$/app/img/flags/greece.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/greece2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/greece2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/hongkong.jpg" afterPath="$PROJECT_DIR$/app/img/flags/hongkong.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/hongkong2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/hongkong2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/hungary.jpg" afterPath="$PROJECT_DIR$/app/img/flags/hungary.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/hungary2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/hungary2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/iceland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/iceland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/iceland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/iceland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/international.jpg" afterPath="$PROJECT_DIR$/app/img/flags/international.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/international2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/international2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/ireland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/ireland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/ireland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/ireland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/israel.jpg" afterPath="$PROJECT_DIR$/app/img/flags/israel.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/israel2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/israel2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/italy.jpg" afterPath="$PROJECT_DIR$/app/img/flags/italy.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/italy2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/italy2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/japan.jpg" afterPath="$PROJECT_DIR$/app/img/flags/japan.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/japan2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/japan2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/kazahstan2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/kazahstan2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/kazakhstan.jpg" afterPath="$PROJECT_DIR$/app/img/flags/kazakhstan.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/latvia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/latvia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/latvia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/latvia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/lithuania.jpg" afterPath="$PROJECT_DIR$/app/img/flags/lithuania.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/lithuania2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/lithuania2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/luxembourg.jpg" afterPath="$PROJECT_DIR$/app/img/flags/luxembourg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/luxembourg2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/luxembourg2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/mexico.jpg" afterPath="$PROJECT_DIR$/app/img/flags/mexico.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/mexico2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/mexico2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/mongolia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/mongolia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/mongolia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/mongolia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/netherlands.jpg" afterPath="$PROJECT_DIR$/app/img/flags/netherlands.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/netherlands2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/netherlands2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/newzealand.jpg" afterPath="$PROJECT_DIR$/app/img/flags/newzealand.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/newzeland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/newzeland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/norvey.jpg" afterPath="$PROJECT_DIR$/app/img/flags/norvey.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/norway.jpg" afterPath="$PROJECT_DIR$/app/img/flags/norway.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/norway2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/norway2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/poland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/poland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/poland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/poland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/romania.jpg" afterPath="$PROJECT_DIR$/app/img/flags/romania.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/romania2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/romania2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/russia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/russia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/russianfederation.jpg" afterPath="$PROJECT_DIR$/app/img/flags/russianfederation.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/serbia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/serbia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/serbia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/serbia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/slovakia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/slovakia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/slovakia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/slovakia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/slovenia.jpg" afterPath="$PROJECT_DIR$/app/img/flags/slovenia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/slovenia2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/slovenia2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/southafrica.jpg" afterPath="$PROJECT_DIR$/app/img/flags/southafrica.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/southafrica2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/southafrica2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/spain.jpg" afterPath="$PROJECT_DIR$/app/img/flags/spain.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/spain2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/spain2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/sweden.jpg" afterPath="$PROJECT_DIR$/app/img/flags/sweden.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/sweden2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/sweden2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/switzerland.jpg" afterPath="$PROJECT_DIR$/app/img/flags/switzerland.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/switzerland2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/switzerland2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/turkey.jpg" afterPath="$PROJECT_DIR$/app/img/flags/turkey.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/turkey2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/turkey2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/uae2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/uae2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/uk2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/uk2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/ukraine.jpg" afterPath="$PROJECT_DIR$/app/img/flags/ukraine.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/ukraine2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/ukraine2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/unitedarabemirates.jpg" afterPath="$PROJECT_DIR$/app/img/flags/unitedarabemirates.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/unitedkingdom.jpg" afterPath="$PROJECT_DIR$/app/img/flags/unitedkingdom.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/unitedstates.jpg" afterPath="$PROJECT_DIR$/app/img/flags/unitedstates.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/flags/us2x.jpg" afterPath="$PROJECT_DIR$/app/img/flags/us2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" afterPath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" afterPath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/views/players.html" afterPath="$PROJECT_DIR$/app/js/players/views/players.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/services/Season.js" afterPath="$PROJECT_DIR$/app/js/common/services/Season.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" afterPath="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,20 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeamCtrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="3165">
-              <caret line="107" column="42" selection-start-line="104" selection-start-column="2" selection-end-line="107" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlayersCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.977273" vertical-offset="2444" max-vertical-offset="3135">
+            <state vertical-scroll-proportion="-8.340909" vertical-offset="2648" max-vertical-offset="3135">
               <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding />
             </state>
@@ -160,18 +50,28 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.909092" vertical-offset="6470" max-vertical-offset="10350">
-              <caret line="326" column="98" selection-start-line="326" selection-start-column="98" selection-end-line="326" selection-end-column="98" />
+            <state vertical-scroll-proportion="-3.6818182" vertical-offset="8658" max-vertical-offset="10380">
+              <caret line="588" column="38" selection-start-line="588" selection-start-column="25" selection-end-line="588" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="players.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Season.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/common/services/Season.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1035">
+              <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="players.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21526718" vertical-offset="2484" max-vertical-offset="9690">
-              <caret line="469" column="10" selection-start-line="469" selection-start-column="10" selection-end-line="469" selection-end-column="10" />
+            <state vertical-scroll-proportion="-4.32" vertical-offset="2484" max-vertical-offset="9690">
+              <caret line="474" column="45" selection-start-line="474" selection-start-column="45" selection-end-line="474" selection-end-column="45" />
               <folding>
                 <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
                 <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
@@ -185,11 +85,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <file leaf-file-name="seasonDropdown.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="677" max-vertical-offset="1395">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5514706" vertical-offset="0" max-vertical-offset="720">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/common/services/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -225,16 +135,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="countries.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/countries/views/countries.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -257,11 +157,9 @@
         <option value="$PROJECT_DIR$/app/js/common/controllers/HeaderCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/common/views/header.html" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
-        <option value="$PROJECT_DIR$/app/js/common/services/Season.js" />
         <option value="$PROJECT_DIR$/app/js/common/services/User.js" />
         <option value="$PROJECT_DIR$/app/js/common/services/URI.js" />
         <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
-        <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/build/main.css" />
         <option value="$PROJECT_DIR$/app/index.html" />
@@ -294,11 +192,13 @@
         <option value="$PROJECT_DIR$/app/js/countries/views/countries.html" />
         <option value="$PROJECT_DIR$/app/js/teams/controllers/TeamCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/teams/views/teams.html" />
-        <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/common/services/Season.js" />
+        <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
       </list>
     </option>
   </component>
@@ -572,6 +472,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="refactor_sport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -888,6 +862,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23324397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17688513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -897,7 +872,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23324397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1203,30 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common/services/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common/services/Season.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/club.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="271.95834" vertical-offset="6527" max-vertical-offset="9285">
@@ -1291,22 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.909092" vertical-offset="6470" max-vertical-offset="10350">
-          <caret line="326" column="98" selection-start-line="326" selection-start-column="98" selection-end-line="326" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.977273" vertical-offset="2444" max-vertical-offset="3135">
-          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.66" vertical-offset="1957" max-vertical-offset="2625">
@@ -1317,8 +1251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21526718" vertical-offset="2484" max-vertical-offset="9690">
-          <caret line="469" column="10" selection-start-line="469" selection-start-column="10" selection-end-line="469" selection-end-column="10" />
+        <state vertical-scroll-proportion="-4.32" vertical-offset="2484" max-vertical-offset="9690">
+          <caret line="474" column="45" selection-start-line="474" selection-start-column="45" selection-end-line="474" selection-end-column="45" />
           <folding>
             <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
             <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
@@ -1328,6 +1262,46 @@
             <element signature="tag#div#10;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
             <element signature="tag#div#11;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.340909" vertical-offset="2648" max-vertical-offset="3135">
+          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6818182" vertical-offset="8658" max-vertical-offset="10380">
+          <caret line="588" column="38" selection-start-line="588" selection-start-column="25" selection-end-line="588" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/services/Season.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1035">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/services/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5514706" vertical-offset="0" max-vertical-offset="720">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

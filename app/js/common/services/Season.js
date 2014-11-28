@@ -12,7 +12,7 @@ angular.module('app.common').service('Season', ['$rootScope',function($rootScope
   self.season = {
     start : "",
     end : "",
-    season : "",
+    season : 2013,
     config : self.config
   }
 

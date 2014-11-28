@@ -649,6 +649,8 @@ angular.module('app').factory('seasonInterceptor', function ($injector,$rootScop
         request: function (config) {
                 if(config.url.indexOf('html')==-1 && config.url.indexOf('json')==-1 && config.url.indexOf('api')>-1){
                   //Season.initSeason($rootScope.currentSeason);
+                  console.log('Added season',Season.getSeason());
+
                   config.url =  URI(config.url).addSearch({'season':Season.getSeason()}).toString();
                 }
 

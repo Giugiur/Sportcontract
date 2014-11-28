@@ -1,16 +1,19 @@
-angular.module('app.common').directive('season',['$rootScope','User', function($rootScope,User) {
+angular.module('app.common').directive('season',['$rootScope','User','$state','Season',
+    function($rootScope,User,$state,Season) {
     return {
         restrict: 'E',
         scope: {
 
         },
         transclude : true,
-        template: '<select ng-model="selectedSeason.val" ng-options="season.name as season.display for season in seasons" ng-change="changed();">' +
+        template: '<select ng-model="selectedSeason.val" ' +
+            'ng-options="season.name as season.display for season in seasons"' +
+            ' ng-change="changed();">' +
             '</select>',
         link : function link(scope, element, attrs) {
             scope.selectedSeason = {
-                val : 2014
-            };
+                val : Season.getSeason()
+            }
             scope.seasons = [
                 {
                     name : 2014,
@@ -31,6 +34,7 @@ angular.module('app.common').directive('season',['$rootScope','User', function($
             ]
             scope.changed = function(){
                 User.setSeason(scope.selectedSeason.val);
+                $state.go($state.$current, null, { reload: true });
                 $rootScope.$emit('seasonchanged');
             }
         }
