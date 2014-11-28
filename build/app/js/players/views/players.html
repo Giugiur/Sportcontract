@@ -37,12 +37,12 @@
                 {{'season' | translate}}
                <season></season>
             </div>
-            <div class="h1">{{team.name}}
-                <a href="" class="muted" title="{{team.latestTeamStats.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.latestTeamStats.league.name}}</a>
+            <div class="h1">{{team.team.name}}
+                <a href="" class="muted" title="{{team.league.name}}"> <img src="img/blank.gif" class="flag flag-{{team.league.country['iso3166_2'].toLowerCase()}}" alt="Sweden"> {{team.league.name}}</a>
             </div>
             <div class="mb">
                 <div class="image">
-                    <img src="http://files.eliteprospects.com/layout/logos/{{team.imageUrl}}" class="leagueLogo"  alt="">
+                    <img src="http://files.eliteprospects.com/layout/logos/{{team.team.imageUrl}}" class="leagueLogo"  alt="">
                     <ul class="list-inline">
                         <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -55,15 +55,15 @@
                         <tbody>
                         <tr>
                             <th>{{'town' | translate}}:</th>
-                            <td>{{team.locality.name}}</td>
+                            <td>{{team.team.locality.name}}</td>
                         </tr>
                         <tr>
                             <th><ut>founded</ut>:</th>
-                            <td>{{team.foundedYear}}</td>
+                            <td>{{team.team.foundedYear}}</td>
                         </tr>
                         <tr>
                             <th>{{'colors' | translate}}:</th>
-                            <td>{{team.colors}}</td>
+                            <td>{{team.team.colors}}</td>
                         </tr>
                         <tr>
                             <th>{{'affiliates' | translate}}:</th>
@@ -931,4 +931,4 @@
 
 </div>
 -->
-<simplecontact ng-show="view=='contacts'" teamid="team.id"></simplecontact>
+<simplecontact ng-show="view=='contacts'" teamid="team.team.id"></simplecontact>

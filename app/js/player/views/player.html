@@ -1,6 +1,6 @@
 
 <div class="tabViews" ng-init="type='overview'">
-    <a href="#" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
+    <a ng-click="goUp();" class="backBtn"><i class="fa fa-chevron-circle-left"></i></a>
     <ul class="views">
         <li class="{{type=='overview' && 'active' ||''}}">
             <a ng-click="type='overview'">Overview</a>

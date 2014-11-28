@@ -23,7 +23,7 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   }
   $scope.goUp = function(){
       console.log($scope.team);
-      Tabs.goTo('dashboard.teams',$scope.team.latestTeamStats.league, "Teams in " + $scope.team.latestTeamStats.league.name)
+      Tabs.goTo('dashboard.teams',$scope.team.league, "Teams in " + $scope.team.league.name)
   }
   $scope.getImage = function(player){
       if(player.imageUrl){

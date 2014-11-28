@@ -1,4 +1,4 @@
-var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, ngProgress,api,$anchorScroll,$location,$rootScope,$timeout) {
+var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, ngProgress,api,$anchorScroll,$location,$rootScope,$timeout,Tabs) {
 
 
     $scope.scrollTo = function(i){
@@ -12,7 +12,9 @@ var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, 
   $scope.calculateBMI = function(height,weight){
       return Number(weight)/Math.pow(Number(height)/100,2);
   }
-
+    $scope.goUp = function(){
+        Tabs.goTo('dashboard.players',$scope.player.team,'Players in ' + $scope.player.team.name);
+    }
   $http.get(api + '/api/players/' + $stateParams.id + '/stats').success(function(result){
       $scope.stats = result;
   })
