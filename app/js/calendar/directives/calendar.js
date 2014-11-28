@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('app.calendar')
-  .directive('calendar', function ($q,Restangular,Season,$rootScope,$timeout) {
+  .directive('calendar', function ($q,Restangular,Season,$rootScope,$timeout,User) {
     return {
       restrict: 'A',
         link: function(scope, element, attrs) {
 
           var currentSeason = Season;
+
+          scope.user = User.getUser();
 
           //currentSeason.initSeason($rootScope.currentSeason);
 
@@ -94,6 +96,60 @@ angular.module('app.calendar')
 
           }
 
+          scope.checkLeagueInUserCalendars = function(leagueId){
+
+            var index = -1;
+            var i = 0;
+            angular.forEach(scope.user.calendars.leagueCalendars, function(cal){
+              if(cal.league == leagueId)
+                index = i;
+              i++;
+            });
+
+            return index;
+          }
+
+          scope.toggleLeague = function(leagueId){
+
+            var index = scope.checkLeagueInUserCalendars(leagueId);
+
+              if(index > -1){
+                scope.user.calendars.leagueCalendars.splice(index,1);
+              }
+              else{
+                scope.user.calendars.leagueCalendars.push({league:leagueId, active:true});
+              }
+            User.$save();
+            scope.update();
+          }
+
+          scope.isActiveLeague = function(leagueId){
+
+            var tmp = false;
+
+            angular.forEach(scope.user.calendars.leagueCalendars, function(cal) {
+
+              if (cal.league == leagueId) {
+                tmp = cal.active;
+              }
+
+            });
+
+            return tmp;
+
+          }
+
+          scope.toggleLeagueActive = function(leagueId){
+            angular.forEach(scope.user.calendars.leagueCalendars, function(cal){
+              if(cal.league == leagueId){
+                cal.active = !cal.active;
+              }
+            });
+
+            User.$save();
+            scope.update();
+          }
+
           scope.switchSeason = function(val){
             var view = $(element).fullCalendar('getView');
             var d_start = new Date(moment(view.intervalStart._d).format());
@@ -106,6 +162,8 @@ angular.module('app.calendar')
 
             $(element).fullCalendar('gotoDate',val+"-"+(Number(view_month)<10 ? "0"+view_month : view_month)+"-01");
           }
+
+
 
             $(element).fullCalendar({
                   defaultView: 'month',
@@ -152,7 +210,8 @@ angular.module('app.calendar')
 
                 for(var i in scope.leagues){
                   var league = scope.leagues[i];
-                  if(league && league.active){
+                  if(league && scope.isActiveLeague(league._id)){
+
                     for(var o in league.games){
 
                       var temp = league.games[o];
@@ -181,6 +240,15 @@ angular.module('app.calendar')
           scope.seasonData = scope.getSeasonData();
           scope.season = scope.getSeason();
 
+          scope.selection = {};
+          //toggle CalendarCollection
+          scope.showCal = false;
+
+          var date = new Date(moment().format());
+          var month = date.getMonth()+1;
+          var day = date.getDate();
+
+          $(element).fullCalendar('gotoDate',scope.season+"-"+(Number(month)<10 ? "0"+month : month)+"-"+(Number(day)<10 ? "0"+day : day))
         }
     };
   });

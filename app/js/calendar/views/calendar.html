@@ -3,7 +3,7 @@
 <div id="sideMenu">
     <ul>
         <li>
-            <a href="#">
+            <a href="#/communication">
                 <i class="fa fa-comments-o"></i>
                 <span>Communication</span>
             </a>
@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="active">
-            <a href="#">
+            <a href="#/calendar">
                 <i class="fa fa-calendar"></i>
                 <span>Calendar</span>
             </a>
@@ -38,8 +38,8 @@
         <div class="backBtn">
             <a href="#"><i class="fa fa-arrow-left"></i></a>
         </div>
-      <season-select ng-model="season" on-change="switchSeason(season)"></season-select>
-      <a href="#" class="close"><i class="fa fa-times"></i></a>
+      <span class="right" style="margin-right:25px;"><season-select ng-model="season" on-change="switchSeason(season)"></season-select></span>
+      <span class="right"><a href="#" class="close"><i class="fa fa-times"></i></a></span>
     </div>
 </div>
 <div class="col-xs-9">
@@ -254,55 +254,41 @@
 </div>
 </div>
 
-<div class="section">
+<div class="section" ng-show="!angular.isUndefined(leagues) && leagues.length > 0">
     <div class="h2">
         Game calendars
         <div class="sectionCtrl">
-            <a href="#"><i class="fa fa-plus"></i> <span>add</span></a>
+            <a ng-click="showCal=!showCal"><i class="fa fa-plus"></i> <span>add</span></a>
         </div>
     </div>
     <div class="calList">
-        <ul>
-            <li class="cal">
+        <ul ng-repeat="l in leagues">
+            <li class="cal" ng-repeat="league in user.calendars.leagueCalendars" ng-if="l._id == league.league">
                 <label class="calToggle">
-                    <input type="checkbox">
-                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
-                    <img src="img/blank.gif" class="flag flag-fi" alt="Finland"> <span>Liiga</span>
-                </label>
-            </li>
-            <li class="cal">
-                <label class="calToggle">
-                    <input type="checkbox">
-                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
-                    <img src="img/blank.gif" class="flag flag-de" alt="Germany"> <span>DEL</span>
-                </label>
-            </li>
-            <li class="cal">
-                <label class="calToggle">
-                    <input type="checkbox">
-                    <a href="#" class="delete"><i class="fa fa-times"></i></a>
-                    <img src="img/blank.gif" class="flag flag-se" alt="Sweden"> <span>SHL</span>
+                  <input type="checkbox" value="{{league.league}}" ng-checked="league.active" ng-click="toggleLeagueActive(league.league)">
+                  <a href="javascript:;" class="delete" ng-click="toggleLeague(league.league)"><i class="fa fa-times"></i></a>
+                  <img src="/img/flags/{{l.country.name | lowercase }}.jpg" class="flag flag-{{l.country.abbreviation | lowercase }}" alt="{{l.name}}"> <span>{{l.name}}</span>
                 </label>
             </li>
         </ul>
     </div>
 </div>
 
-<div class="section">
+<div class="section" ng-show="showCal">
     <div class="h2">Select game calendars</div>
     <div class="calndrListFull">
       <ul>
         <li ng-repeat="league_country in leagues | orderBy:'country.name' | unique:'country.name'" class="calndrCountry">
           <div class="h6">
             <label>
-              <input type="checkbox">
+              <input type="checkbox" value="{{league._id}}">
               <img src="/img/flags/{{league_country.country.name | lowercase }}.jpg" class="flag flag-{{league_country.country.abbreviation | lowercase }}" alt="{{league_country.country.name}}"> <span>{{league_country.country.name}}</span>
             </label>
           </div>
           <ul class="calndrLeagues">
             <li ng-repeat="league in leagues | filter:league_country.country.name">
               <label>
-                <input type="checkbox"> <span>{{league.name}}</span>
+                <input type="checkbox" value="{{league._id}}" ng-checked="checkLeagueInUserCalendars(league._id) > -1" ng-click="toggleLeague(league._id)"> <span>{{league.name}}</span>
               </label>
             </li>
             </ul>
