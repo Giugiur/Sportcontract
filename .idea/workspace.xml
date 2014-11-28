@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9b2375e-7c39-4e16-97aa-7b9ed2d645d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" afterPath="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" afterPath="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" afterPath="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" afterPath="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/player/views/player.html" afterPath="$PROJECT_DIR$/app/js/player/views/player.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/players/views/players.html" afterPath="$PROJECT_DIR$/app/js/players/views/players.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="refactor_sport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PlayerCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8272059" vertical-offset="0" max-vertical-offset="1230">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
               <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
@@ -101,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="players.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="players.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="9690">
-              <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.8108108" vertical-offset="705" max-vertical-offset="9750">
+              <caret line="73" column="62" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
               <folding>
                 <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
                 <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
@@ -197,12 +191,12 @@
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/js/common/services/Season.js" />
         <option value="$PROJECT_DIR$/app/js/common/directives/seasonDropdown.js" />
-        <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
         <option value="$PROJECT_DIR$/app/js/players/controllers/PlayersCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/leagues/views/leagues.html" />
         <option value="$PROJECT_DIR$/app/js/leagues/controllers/LeagueCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/player/views/player.html" />
         <option value="$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/players/views/players.html" />
       </list>
     </option>
   </component>
@@ -1299,22 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="9690">
-          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#10;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-            <element signature="tag#div#11;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/leagues/views/leagues.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="2625">
@@ -1357,9 +1335,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/player/controllers/PlayerCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8272059" vertical-offset="0" max-vertical-offset="1230">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/players/views/players.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8108108" vertical-offset="705" max-vertical-offset="9750">
+          <caret line="73" column="62" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+          <folding>
+            <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#10;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+            <element signature="tag#div#11;tag#div#0;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

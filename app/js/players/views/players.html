@@ -69,7 +69,11 @@
                             <th>{{'affiliates' | translate}}:</th>
                             <td>
                                 <ul>
-                                    <li ng-repeat="team in affiliates"><a ui-sref="dashboard.players(team.team)">{{team.team.name}}</a></li>
+                                    <li ng-repeat="team in affiliates">
+                                        <a ng-click="Tabs.goTo('dashboard.players',team.team,'Players in ' + team.team.name)">
+                                            {{team.team.name}}
+                                        </a>
+                                    </li>
                                 </ul>
                             </td>
                         </tr>
