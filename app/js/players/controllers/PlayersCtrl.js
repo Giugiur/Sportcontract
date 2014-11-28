@@ -1,7 +1,7 @@
 var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players,seasons,team, ngProgress,api,
                            $anchorScroll,$location,$filter,$timeout,$rootScope,Tabs) {
 
-
+  $scope.Tabs = Tabs;
   $scope.team = team;
   $scope.players=players;
     console.log(players);
