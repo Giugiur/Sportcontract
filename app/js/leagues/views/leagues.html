@@ -136,7 +136,7 @@
         <li ng-repeat="league in ::association.leagues">
             <a ng-click="goLeague(league);">
 
-                <img src="{{league.imageUrl && league.imageUrl || 'img/leagueLogo1.png'}}" alt="">
+                <img src="{{league.logo && league.logo || 'img/leagueLogo1.png'}}" alt="">
                                       <span>
                                             {{::league.name}}
                                         <span>{{'tagged_video' | translate}} &amp; {{'statistics' | translate}}</span>

@@ -9,7 +9,8 @@
         </li>
     </ul>
 </div>
-<div class="anchors" ng-if="view=='overview'">
+
+<div class="anchors" ng-init="subview='players';"  ng-show="view=='overview'">
     <ul>
         <li ><a ng-click="subview='players'" >Players</a></li>
         <li ng-show="gridRoster.data && gridRoster.data.length>0"><a ng-click="subview='roster'" >{{'roster' | translate}}</a></li>
@@ -17,7 +18,7 @@
         <li ng-show="gridStatsTeam.data && gridStatsTeam.data.length>0"><a ng-click="subview='teamstats'" >{{'team_stats' | translate}}</a></li>
         <li ng-show="gridTeamCaptains.data && gridTeamCaptains.data.length>0"><a ng-click="subview='captains'" >{{'captains' | translate}}</a></li>
         <li ng-show="gridTeamStaff.data && gridTeamStaff.data.length>0"><a ng-click="subview='staff'" >{{'staff' | translate}}</a></li>
-        <li><a ng-click="scrollTo('arena')" >{{'arena' | translate}}</a></li>
+        <li><a ng-click="subview='arena'" >{{'arena' | translate}}</a></li>
         <li ng-show="gridRetired.data && gridRetired.data.length>0"><a ng-click="subview='retired'" >{{'retired_numbers' | translate}}</a></li>
         <li ng-show="gridTopPlayers.data && gridTopPlayers.data.length>0"><a ng-click="subview='topplayers'" >{{'season_best' | translate}}</a></li>
         <li ng-show="gridTopPlayersAll.data && gridTopPlayersAll.data.length>0"><a ng-click="subview='topplayersall'" >{{'all_time_high' | translate}}</a></li>
@@ -28,7 +29,7 @@
     </ul>
 </div>
 
-<div class="row" ng-if="view=='overview'">
+<div class="row" ng-show="view=='overview'">
 <div class="col-xs-6">
     <div class="section">
         <div class="clubInfo">
@@ -76,7 +77,7 @@
                     </table>
                 </div>
             </div>
-            <div>
+            <div ng-if="subview=='players';">
             <div class="h2">{{'goalies' | translate}}</div>
             <div class="playerList">
                 <ul>
@@ -131,6 +132,339 @@
                     </li>
                 </ul>
             </div>
+            </div>
+            <div ng-if="subview=='roster'">
+                <div class="h2">Roster</div>
+                <!--
+                     $scope.gridRoster={
+                        enableFiltering:true,
+                        columnDefs : [
+                            {name : 'Player',
+                                cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'},
+                            {name : 'Age',
+                                cellTemplate: '<span>{{row.entity.player.dateOfBirth | age}}</span>'},
+                            {name : 'Born',field : 'player.dateOfBirth'},
+                            {name : 'Birthplace', field :'player.country.name'},
+                            {name : 'HT',field : 'player.height'},
+                            {name : 'WT',field : 'player.weight'},
+                            {name : 'Shoots', field : 'player.shoots'}
+                        ],
+                        data : $s
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Age</th>
+                        <th>Born</th>
+                        <th>Birthplace</th>
+                        <th>HT</th>
+                        <th>WT</th>
+                        <th>Shoots</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridRoster.data">
+                        <td>{{::player.firstName + ' ' + player.lastName}}</td>
+                        <td>{{::player.dateOfBirth | age}}</td>
+                        <td>{{::player.dateOfBirth}}</td>
+                        <td>{{::player.country.name}}</td>
+                        <td>{{::player.height}}</td>
+                        <td>{{::player.weight}}</td>
+                        <td>{{::player.shoots}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='stats'">
+                <div class="h2">{{'player_stats' | translate}}</div>
+                <!--
+                     $scope.gridStatsPlayers={
+                          columnDefs : [
+                              {name : 'Player',
+                                  cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'},
+
+                              {name : 'GP',field:'GP'},
+                              {name : 'G',field : 'G'},
+                              {name : 'A',field:'A'},
+                              {name : 'TP',field:'TP'},
+                              {name : 'PPG',field:'PPG'},
+                              {name : 'PIM',field:'PIM'}
+
+
+                          ],
+                          enableFiltering:true
+                      }
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>TP</th>
+                        <th>PPG</th>
+                        <th>PIM</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridStatsPlayers.data">
+                        <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                        <td>{{::player.GP}}</td>
+                        <td>{{::player.G}}</td>
+                        <td>{{::player.A}}</td>
+                        <td>{{::player.TP}}</td>
+                        <td>{{::player.PPG}}</td>
+                        <td>{{::player.PIM}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr/>
+                <div class="h2">{{'goalies_stats' | translate}}</div>
+                <!--
+                     $scope.gridStatsGoalies = {
+                      columnDefs : [
+                          {name : 'Player',
+                              cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'},
+
+                          {name : 'GP',field:'GP'},
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>GP</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridStatsGoalies.data">
+                        <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                        <td>{{::player.GP}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='teamstats'">
+                <div class="h2">Team stats</div>
+                <!--
+                    $scope.gridStatsTeam = {
+                        enableFiltering:true};
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>League</th>
+                        <th>Position</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="entry in ::gridStatsTeam.data">
+                        <td>{{::entry.season.startYear}}</td>
+                        <td>{{::entry.league.name}}</td>
+                        <td>{{::entry.position}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='captains'">
+                <div class="h2">Team Captains</div>
+                <!--
+                     $scope.gridTeamCaptains = {
+                      columnDefs : [
+                          {name : 'Jersey',
+                            field: 'jerseyNumber'},
+                          {name : 'Player',
+                              cellTemplate: '<span>{{row.entity.player.firstName}} {{row.entity.player.lastName}}</span>'},
+
+                          {name : 'GP',field:'GP'},
+                        {name : 'G',field : 'G'},
+                       {name : 'A',field:'A'},
+                       {name : 'TP',field:'TP'},
+                       {name : 'PPG',field:'PPG'},
+                       {name : 'PIM',field:'PIM'}
+
+
+                      ],
+                      enableFiltering:true};
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Jersey</th>
+                        <th>Player</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>TP</th>
+                        <th>PPG</th>
+                        <th>PIM</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridTeamCaptains.data">
+                        <td>{{::player.jerseyNumber}}</td>
+                        <td>{{::player.player.firstName + ' ' + player.player.lastName}}</td>
+                        <td>{{::player.GP}}</td>
+                        <td>{{::player.G}}</td>
+                        <td>{{::player.A}}</td>
+                        <td>{{::player.TP}}</td>
+                        <td>{{::player.PPG}}</td>
+                        <td>{{::player.PIM}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='staff'">
+                <div class="h2">Staff</div>
+                <!--
+                     $scope.gridTeamStaff = {columnDefs : [
+                        {name : 'Firstname',field:'staff.firstName'},
+                        {name : 'Lastname',field:'staff.lastName'},
+                        {name : 'Staff Role',field:'staffRole'}
+                    ],enableFiltering:true};
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="staff in ::gridTeamStaff.data">
+                        <td>{{::staff.staff.firstName + ' ' + staff.staff.lastName}}</td>
+                        <td>{{::staff.staffRole}}</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='topplayers'">
+                <div class="h2">Top Players</div>
+                <!--
+                     $scope.gridTopPlayers = {
+                      columnDefs : [
+                          {name : 'Firstname',field:'firstname'},
+                          {name : 'Lastname',field:'lastname'},
+                          {name : 'GP',field:'GP'},
+                          {name : 'G',field : 'G'},
+                          {name : 'A',field:'A'},
+                          {name : 'TP',field:'TP'},
+                          {name : 'PPG',field:'PPG'},
+                          {name : 'PIM',field:'PIM'}
+
+
+                      ],enableFiltering:true};
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>TP</th>
+                        <th>PPG</th>
+                        <th>PIM</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridTopPlayers.data">
+                        <td>{{::player._id.firstname + ' ' + player._id.lastname}}</td>
+                        <td>{{::player.GP}}</td>
+                        <td>{{::player.G}}</td>
+                        <td>{{::player.A}}</td>
+                        <td>{{::player.TP}}</td>
+                        <td>{{::player.PPG}}</td>
+                        <td>{{::player.PIM}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='topplayersall'">
+                <div class="h2">Top Players All time</div>
+                <!--
+                     $scope.gridTopPlayers = {
+                      columnDefs : [
+                          {name : 'Firstname',field:'firstname'},
+                          {name : 'Lastname',field:'lastname'},
+                          {name : 'GP',field:'GP'},
+                          {name : 'G',field : 'G'},
+                          {name : 'A',field:'A'},
+                          {name : 'TP',field:'TP'},
+                          {name : 'PPG',field:'PPG'},
+                          {name : 'PIM',field:'PIM'}
+
+
+                      ],enableFiltering:true};
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>TP</th>
+                        <th>PPG</th>
+                        <th>PIM</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="player in ::gridTopPlayersAll.data | limitTo:20">
+                        <td>{{::player._id.firstname + ' ' + player._id.lastname}}</td>
+                        <td>{{::player.GP}}</td>
+                        <td>{{::player.G}}</td>
+                        <td>{{::player.A}}</td>
+                        <td>{{::player.TP}}</td>
+                        <td>{{::player.PPG}}</td>
+                        <td>{{::player.PIM}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='transfers'">
+                <div class="h2">Transfers</div>
+                <!--
+                     $scope.gridTransfers = {columnDefs : [
+                          {name : 'From',field:'fromTeam.name'},
+                          {name : 'To',field:'toTeam.name'},
+                          {name : 'Date',field:'transferDate'}
+                -->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>From</th>
+                        <th></th>
+                        <th>To</th>
+                        <th>Date</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="transfer in ::gridTransfers.data">
+                        <td>{{::transfer.player.firstName + ' ' + transfer.player.lastName}}</td>
+                        <td>{{::transfer.fromTeam.name}}</td>
+                        <td>==></td>
+                        <td>{{::transfer.toTeam.name}}</td>
+                        <td>{{::transfer.transferDate}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="subview=='arena'">
+                <div class="h2">Arena</div>
+                <img ng-src="http://files.eliteprospects.com/layout/arenas/{{team.arena.imageUrl}}"/>
+                <ul>
+                    <li>Location : {{team.arena.locality.name}}</li>
+                    <li>Capacity : {{team.arena.capacity}}</li>
+                    <li>Constructed : {{team.arena.yearOfConstruction}}</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -597,4 +931,4 @@
 
 </div>
 -->
-<simplecontact ng-if="view=='contacts'" teamid="team.id"></simplecontact>
+<simplecontact ng-show="view=='contacts'" teamid="team.id"></simplecontact>

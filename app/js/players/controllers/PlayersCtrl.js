@@ -183,27 +183,17 @@ var SetupPlayerGrids = function(api,players,$stateParams,$scope,$http){
     /**topplayers**/
     $http.get(api + '/api/teams/' + $stateParams.id + '/players/top/current').success(function(teams){
 
-        $scope.gridTopPlayers.data = _.map(teams,function(item){
-            item.firstname = item['player.firstName'];
-            item.lastname = item['player.lastName'];
-            delete item['player.firstName'];
-            delete item['player.lastName'];
-            return item;
-        });
+        $scope.gridTopPlayers.data = teams;
     })
     /**topplayers all time**/
     $http.get(api + '/api/teams/' + $stateParams.id + '/players/top/all').success(function(teams){
-        $scope.gridTopPlayersAll.data = _.map(teams,function(item){
-            item.firstname = item['player.firstName'];
-            item.lastname = item['player.lastName'];
-            delete item['player.firstName'];
-            delete item['player.lastName'];
-            return item;
-        });
+        $scope.gridTopPlayersAll.data = teams;
     })
     /**topplayers all time**/
     $http.get(api + '/api/teams/' + $stateParams.id + '/transfers').success(function(teams){
-        $scope.gridTransfers.data = teams;
+        $scope.gridTransfers.data = _.sortBy(teams,function(item){
+            return item.id * -1;
+        });
     })
     $http.get('http://api.eliteprospects.com/beta/teams/' + $stateParams.id +'/affiliates').success(function(teams){
         $scope.affiliates = teams.data;
