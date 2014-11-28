@@ -19,7 +19,7 @@ angular.module('app.search')
 
                 scope.mod = asService.loadModule('player');
                 scope.newTab = function(a,b,c){
-                    console.log(a,b,c);
+                    //console.log(a,b,c);
                     Tabs.newTab(a,b,c._source);
                  }
                 scope.conditions = asService.loadConditions(scope.mod);
@@ -900,7 +900,7 @@ angular.module('app.search')
                             '}' +
                         '}';
 
-                    console.log(scope.filters);
+                    //console.log(scope.filters);
                     if(scope.filters && scope.filters.conditions.length>0){
                         $http.get(api  + '/api/advancedSearch/players/'+query).success(function (data) {
                             scope.results = data;
@@ -908,7 +908,7 @@ angular.module('app.search')
                     }else{
                         scope.results = [];
                     }
-                    
+
 
                 }
 

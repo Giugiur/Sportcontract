@@ -108,7 +108,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                       },
 			      	games : function($q,$http,api){
 			      		var defered = $q.defer();
-			      		console.log("hi");
+			      		//console.log("hi");
 				    	$http.get(api + '/api/games' ).success(function(result){
 				    		defered.resolve(result);
 				    	})
@@ -553,7 +553,13 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                                 defered.resolve(result);
                             });
                             return defered.promise;
-                        }
+                        },calendars : function($http,$stateParams,$q,api){
+                            var defered = $q.defer();
+                            $http.get(api + '/api/new/calendars/').success(function(result){
+                              defered.resolve(result);
+                            });
+                        return defered.promise;
+                      }
                     }
 
                 })
@@ -572,8 +578,8 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
             };
 
-          $rootScope.defaultSeason = 2014;
-          $rootScope.currentSeason = 2013;
+          $rootScope.defaultSeason = 2013;
+          $rootScope.currentSeason = 2014;
 
           //for development purposes
           //needs to get commented out when in production state
@@ -581,15 +587,13 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 
           $rootScope.setSeason = function(season){
 
-            if(season != $rootScope.defaultSeason){
-              $rootScope.currentSeason = Number(season);
-            }else{
+            if(season != $rootScope.currentSeason){
               $rootScope.currentSeason = Number(season);
             }
 
           }
 
-          $rootScope.setSeason($rootScope.currentSeason);
+          $rootScope.setSeason($rootScope.defaultSeason);
 
         }]);
 
@@ -643,6 +647,7 @@ angular.module('app').factory('interceptorNgProgress', function ($injector) {
 });
 angular.module('app').factory('seasonInterceptor', function ($injector,$rootScope) {
     var Season = $injector.get('Season');
+
     return {
         request: function (config) {
                 if(config.url.indexOf('html')==-1 && config.url.indexOf('json')==-1 && config.url.indexOf('api')>-1){

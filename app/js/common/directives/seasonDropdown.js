@@ -9,7 +9,7 @@ angular.module('app.common').directive('season',['$rootScope','User', function($
             '</select>',
         link : function link(scope, element, attrs) {
             scope.selectedSeason = {
-                val : 2014
+                val : $rootScope.currentSeason
             };
             scope.seasons = [
                 {

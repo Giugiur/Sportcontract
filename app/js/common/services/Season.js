@@ -19,18 +19,20 @@ angular.module('app.common').service('Season', ['$rootScope',function($rootScope
   self.currentMonth = Number(moment().format('MM'));
   self.currentYear = Number(moment().format('YYYY'));
 
-  self.initSeason = function(){
-
-    if(self.currentMonth >= self.config.month_start ){
-      self.season.start = self.currentYear+"-"+(((self.config.month_start) < 10 ) ? "0" + (self.config.month_start) : (self.config.month_start))+"-"+ ((self.config.day_start < 10) ? "0" + self.config.day_start : self.config.day_start);
-      self.season.end = (self.currentYear+1)+"-"+(((self.config.month_end) < 10 ) ? "0" + (self.config.month_end) : (self.config.month_end))+"-"+ ((self.config.day_end < 10) ? "0" + self.config.day_end : self.config.day_end);
-      self.setSeason(self.currentYear);
+  self.initSeason = function(season){
+    if(angular.isUndefined(season)){
+      if (self.currentMonth >= self.config.month_start) {
+        self.season.start = self.currentYear + "-" + (((self.config.month_start) < 10 ) ? "0" + (self.config.month_start) : (self.config.month_start)) + "-" + ((self.config.day_start < 10) ? "0" + self.config.day_start : self.config.day_start);
+        self.season.end = (self.currentYear + 1) + "-" + (((self.config.month_end) < 10 ) ? "0" + (self.config.month_end) : (self.config.month_end)) + "-" + ((self.config.day_end < 10) ? "0" + self.config.day_end : self.config.day_end);
+        self.setSeason(self.currentYear);
+      } else {
+        self.season.start = (self.currentYear - 1) + "-" + (((self.config.month_start) < 10 ) ? "0" + (self.config.month_start) : (self.config.month_start)) + "-" + ((self.config.day_start < 10) ? "0" + self.config.day_start : self.config.day_start);
+        self.season.end = self.currentYear + "-" + (((self.config.month_end) < 10 ) ? "0" + (self.config.month_end) : (self.config.month_end)) + "-" + ((self.config.day_end < 10) ? "0" + self.config.day_end : self.config.day_end);
+        self.setSeason(self.currentYear - 1);
+      }
     }else{
-      self.season.start = (self.currentYear-1)+"-"+(((self.config.month_start) < 10 ) ? "0" + (self.config.month_start) : (self.config.month_start))+"-"+ ((self.config.day_start < 10) ? "0" + self.config.day_start : self.config.day_start);
-      self.season.end = self.currentYear+"-"+(((self.config.month_end) < 10 ) ? "0" + (self.config.month_end) : (self.config.month_end))+"-"+ ((self.config.day_end < 10) ? "0" + self.config.day_end : self.config.day_end);
-      self.setSeason(self.currentYear-1);
+      self.setSeason(season);
     }
-
   }
 
   self.updateSeasonData = function(season){
@@ -55,7 +57,7 @@ angular.module('app.common').service('Season', ['$rootScope',function($rootScope
   }
 /*
   if($rootScope.currentSeason != self.currentYear) {
-    self.setSeasonData($rootScope.currentSeason);
+    self.updateSeasonData($rootScope.currentSeason);
   }else {
     self.setCurrentSeason();
   }
