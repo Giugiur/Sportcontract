@@ -2,6 +2,7 @@ var CalendarCtrl = function($scope,$http, Storage, $state, Tabs, ngProgress, tea
 
     ngProgress.complete();
 
+
     $scope.teams = teams;
     $scope.mapped_teams = {};
 
@@ -13,5 +14,10 @@ var CalendarCtrl = function($scope,$http, Storage, $state, Tabs, ngProgress, tea
             $scope.mapped_teams[team._id]  = team;
         })
     },true)
+
+    //this only works as long as there are no tabs set within calendar module
+    $scope.goBack = function(){
+      Tabs.goTo(Tabs.activeTab.state,Tabs.activeTab.params,Tabs.activeTab.name);
+    }
 
   };

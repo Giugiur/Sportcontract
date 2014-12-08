@@ -10,7 +10,7 @@ angular.module('app.calendar')
 
           scope.user = User.getUser();
 
-          //currentSeason.initSeason($rootScope.currentSeason);
+          /*gameCalendar*/
 
           scope.checkSeason = function(view){
 
@@ -162,6 +162,10 @@ angular.module('app.calendar')
 
             $(element).fullCalendar('gotoDate',val+"-"+(Number(view_month)<10 ? "0"+view_month : view_month)+"-01");
           }
+
+
+          //MyCalendar
+
 
 
 

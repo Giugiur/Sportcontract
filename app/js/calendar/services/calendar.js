@@ -10,6 +10,10 @@ angular.module('app.calendar').
       return self.calendar;
     }
 
+    self.setCalendar = function(calendar){
+      self.calendar = calendar;
+    }
+
     self.$save = function(){
       var deferred = $q.defer();
       $http.put(api + "/api/new/calendars/" + self.calendar._id,self.calendar).success(function(result){
@@ -17,4 +21,6 @@ angular.module('app.calendar').
       })
       return deferred.promise;
     }
+
+    return self;
   });

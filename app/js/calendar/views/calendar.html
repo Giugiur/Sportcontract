@@ -36,7 +36,7 @@
 <div class="col-md-12">
     <div class="viewBar">
         <div class="backBtn">
-            <a href="#"><i class="fa fa-arrow-left"></i></a>
+            <a ng-click="goBack();"><i class="fa fa-arrow-left"></i></a>
         </div>
       <span class="right" style="margin-right:25px;"><season-select ng-model="season" on-change="switchSeason(season)"></season-select></span>
       <span class="right"><a href="#" class="close"><i class="fa fa-times"></i></a></span>
@@ -51,12 +51,12 @@
 <div class="section">
 <div class="collapsed-rm">
 <div class="h2">
-    My calendars <a href="#"><i class="fa fa-chevron-up"></i></a>
+    My calendars <a ng-click="showCalList = !showCalList"><i class="fa" ng-class="{'fa-chevron-up':showCalList, 'fa-chevron-down':!showCalList}"></i></a>
     <div class="sectionCtrl">
         <a href="#"><i class="fa fa-plus"></i> <span>add</span></a>
     </div>
 </div>
-<div class="inner">
+<div ng-show="showCalList" ng-init="showCalList = true" class="inner">
     <div class="calList">
         <ul>
             <li class="cal itemOpts">
@@ -256,12 +256,12 @@
 
 <div class="section" ng-show="!angular.isUndefined(leagues) && leagues.length > 0">
     <div class="h2">
-        Game calendars
+        Game calendars <a ng-click="showGameCalList = !showGameCalList"><i class="fa" ng-class="{'fa-chevron-up':showGameCalList, 'fa-chevron-down':!showGameCalList}"></i></a>
         <div class="sectionCtrl">
             <a ng-click="showCal=!showCal"><i class="fa fa-plus"></i> <span>add</span></a>
         </div>
     </div>
-    <div class="calList">
+    <div ng-show="showGameCalList" ng-init="showGameCalList = true" class="calList">
         <ul ng-repeat="l in leagues">
             <li class="cal" ng-repeat="league in user.calendars.leagueCalendars" ng-if="l._id == league.league">
                 <label class="calToggle">
