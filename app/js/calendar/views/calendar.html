@@ -275,7 +275,11 @@
 </div>
 
 <div class="section" ng-show="showCal">
-    <div class="h2">Select game calendars</div>
+    <div class="h2">Select game calendars
+      <div class="sectionCtrl">
+        <a ng-click="showCal=!showCal"><i class="fa fa-times"></i></a>
+      </div>
+    </div>
     <div class="calndrListFull">
       <ul>
         <li ng-repeat="league_country in leagues | orderBy:'country.name' | unique:'country.name'" class="calndrCountry">
@@ -397,8 +401,8 @@
             </li>
         </ul>-->
     </div>
-    <button>Update</button>
-    <button>Cancel</button>
+    <!--<button>Update</button>
+    <button>Cancel</button>-->
 </div>
 </div>
 
