@@ -10,6 +10,9 @@ module.exports = function(config){
         'app/bower_components/lodash/dist/lodash.js',
         'app/bower_components/restangular/dist/restangular.js',
         'app/bower_components/moment/moment.js',
+        'app/bower_components/angular-translate/angular-translate.js',
+        'app/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js',
+        'app/bower_components/angularjs-slider/rzslider.js',
         'app/bower_components/angular-mocks/angular-mocks.js',
         //'app/js/**/*.js',
         //'app/js/**/**/*.js',
@@ -17,7 +20,14 @@ module.exports = function(config){
         'app/js/common/**/*.js',
         'app/js/login/app.js',
         'app/js/login/controllers/*.js',
-        'test/unit/login/**/*.js'
+        'app/js/countries/**/*.js',
+        'app/js/search/app.js',
+        'app/js/search/**/*.js',
+        'app/js/dashboard/app.js',
+        'app/js/dashboard/**/*.js',
+
+        'test/unit/login/**/*.js',
+        'test/unit/dashboard/**/*.js'
     ],
 
     autoWatch : false,

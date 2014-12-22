@@ -1,8 +1,11 @@
-var DashboardCtrl = function($scope,Tabs,$state,$rootScope) {
-	 // Tabs.initTabs();
-  	$scope.tabs = Tabs.getTabs();
-  	$scope.Tab = Tabs;
+(function(){
+    var DashboardCtrl = function($scope,Tabs,$state,$rootScope) {
+        $scope.tabs = Tabs.getTabs();
+        $scope.Tab = Tabs;
 
-    Tabs.setActive();
+        Tabs.setActive();
+    };
 
-};
+    var dashboardModule = angular.module('app.dashboard');
+    dashboardModule.controller("DashboardCtrl", ["$scope", "Tabs", "$state", "$rootScope", DashboardCtrl]);
+}());
