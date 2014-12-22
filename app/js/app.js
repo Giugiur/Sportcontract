@@ -1,7 +1,4 @@
-
-angular.module('app.common', ['restangular']);
 angular.module('app.dashboard', ['ui.router','pascalprecht.translate','app.common','app.search']);
-angular.module('app.login',['ui.router','app.common']);
 angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.video',['ui.router','app.common']);
 angular.module('app.search',['ui.router','app.common','rzModule']);
@@ -16,7 +13,6 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
 	.value('version', '0.1')
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider','$translateProvider','$translatePartialLoaderProvider',
         function($httpProvider, $stateProvider, $urlRouterProvider,$translateProvider,$translatePartialLoaderProvider) {
-
             $httpProvider.interceptors.push('seasonInterceptor');
         	$urlRouterProvider.otherwise("/login");
         	$stateProvider
@@ -511,16 +507,7 @@ angular.module('app', ['app.dashboard', 'app.common','app.login','app.quicksearc
                             return $translate.refresh();
                         }
                     }
-                }).state('login', {
-			      url: "/login",
-			      views:{
-			      	"main" : {
-			      		controller : LoginCtrl,
-			      		templateUrl: "login/views/login.html"
-			      	}
-			      }
-			    })
-                .state('calendar', {
+                }).state('calendar', {
                     url: "/calendar",
                     views:{
                         "main" : {

@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+    var gulp = require('gulp');
 var angularFilesort = require('gulp-angular-filesort');
 var templateCache = require('gulp-angular-templatecache');
 var connect = require('gulp-connect');
@@ -8,6 +8,7 @@ var es = require('event-stream');
 var compass = require('gulp-compass');
 var protractor = require("gulp-protractor").protractor;
 var webdriver_standalone = require("gulp-protractor").webdriver_standalone;
+var karma = require('gulp-karma');
 
 var _ = require('underscore');
 
@@ -48,6 +49,21 @@ gulp.task('copy',function(){
     gulp.src(['./app/assets/**/*.*','./app/img/**/*.*','./app/translations/**/*.*'],{ base: './app/' })
         .pipe(gulp.dest('./build'));
 })
+
+gulp.task('test', function() {
+    var testFiles = [
+        'test/unit/** /*.js'
+    ];
+
+    return gulp.src([])
+        .pipe(karma({
+          configFile: 'test/karma-unit.conf.js',
+          action: 'run'
+        }))
+        .on('error', function(err) {
+          throw err;
+        });
+});
 
 gulp.task('e2etest',function(){
     gulp.src(["./modules/**/uitest.js"])
