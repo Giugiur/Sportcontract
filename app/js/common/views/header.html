@@ -15,10 +15,10 @@
 
                     <div class="btnMulti">
                         <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown">
-                            <!-- <span class="userName">{{user.username}}</span>
-                            <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span> -->
-                            <span class="userName">Peter Manager</span>
-                            <span>Adler Mannheim</span> &#8212; <span>Sport Manager</span>
+                            <span class="userName">{{user.username}}</span>
+                            <div ng-if="user.functions.length">
+                                <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span>
+                            </div>
                             <i class="fa fa-caret-down"></i>
                         </a>
                         <div class="dropdown" ng-show="dropdown">
