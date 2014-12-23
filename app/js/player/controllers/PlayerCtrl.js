@@ -1,23 +1,25 @@
 var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, ngProgress,api,$anchorScroll,$location,$rootScope,$timeout,Tabs) {
 
-
     $scope.scrollTo = function(i){
         $location.hash(i);
 
         // call $anchorScroll()
         $anchorScroll();
     }
-  $scope.player=player;
-  $scope.stats;
-  $scope.calculateBMI = function(height,weight){
-      return Number(weight)/Math.pow(Number(height)/100,2);
-  }
+    $scope.player=player;
+    $scope.stats;
+    $scope.calculateBMI = function(height,weight){
+        return Number(weight)/Math.pow(Number(height)/100,2);
+    };
+
     $scope.goUp = function(){
         Tabs.goTo('dashboard.players',$scope.player.team,'Players in ' + $scope.player.team.name);
-    }
-  $http.get(api + '/api/players/' + $stateParams.id + '/stats').success(function(result){
-      $scope.stats = result;
-  })
+    };
+
+    $http.get(api + '/api/players/' + $stateParams.id + '/stats').success(function(result){
+        $scope.stats = result;
+    })
+
     $scope.gridCarreerTotal = {
         enableFiltering:true,
         columnDefs : [
@@ -40,7 +42,7 @@ var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, 
         {name : 'From' , field:'fromTeam.name'},
         {name : 'To' , field : 'toTeam.name'}
 
-]};
+    ]};
     $scope.gridAwards = {
         columnDefs : [
 
@@ -50,13 +52,12 @@ var PlayerCtrl = function($scope, $http, Storage, $state, $stateParams, player, 
         enableFiltering:true,
         data : player.awards
     }
+
     $rootScope.$on('seasonchanged',function(){
         SetupSinglePlayerGrids(api,player,$stateParams,$scope,$http);
     })
     $timeout(function(){
-
-
-    SetupSinglePlayerGrids(api,player,$stateParams,$scope,$http);
+        SetupSinglePlayerGrids(api,player,$stateParams,$scope,$http);
     },0)
 };
 

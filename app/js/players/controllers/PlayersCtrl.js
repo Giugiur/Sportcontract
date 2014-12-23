@@ -4,7 +4,6 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
   $scope.Tabs = Tabs;
   $scope.team = team;
   $scope.players=players;
-    console.log(players);
   $scope.seasons = seasons;
   $scope.season=$stateParams.season?$stateParams.season:$rootScope.currentSeason;
 
@@ -17,12 +16,10 @@ var PlayersCtrl = function($scope, $http, Storage, $state, $stateParams, players
     }
   $scope.goPlayer = function(object){
   	object.season = $scope.season;
-      console.log(object);
       Tabs.goTo('dashboard.player',object, "Player " + object.firstName + " " + object.lastName);
 
   }
   $scope.goUp = function(){
-      console.log($scope.team);
       Tabs.goTo('dashboard.teams',$scope.team.league, "Teams in " + $scope.team.league.name)
   }
   $scope.getImage = function(player){

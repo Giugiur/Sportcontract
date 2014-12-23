@@ -15,7 +15,7 @@
     <ul>
         <li><a ng-click="subview='overview'">Teams</a></li>
 
-        <li ng-show="gridStandings.data && gridStandings.data.length>0 "><a ng-click="subview='standing'" >{{'standings' | translate}}</a></li>
+        <li ng-show="gridStandings.data && gridStandings.data.length>0"><a ng-click="subview='standing'" >{{'standings' | translate}}</a></li>
         <li ng-show="gridStatsPlayers.data && gridStatsPlayers.data.length>0"><a ng-click="subview='stats'" >{{'player_stats' | translate}}</a></li>
         <li ng-show="gridStatsPlayersAllTime.data && gridStatsPlayersAllTime.data.length>0"><a ng-click="subview='alltimehigh';" >{{'all_time_high' | translate}}</a></li>
         <li ng-show="gridFreeAgents.data && gridFreeAgents.data.length>0"><a ng-click="subview='freeagents'" >{{'free_agents' | translate}}</a></li>
