@@ -20,6 +20,11 @@ describe('Scenario: Dashboard module - testing module', function() {
         expect(dashboardModule.isDisplayed()).toBeTruthy();
     });
 
+    it("THEN side menu should shown", function(){
+        var sideMenu = element(by.id("sideMenu"));
+        expect(sideMenu.isDisplayed()).toBeTruthy();
+    });
+
     it("THEN dashboard should have a home tab activated", function(){
         var homeTab = element(by.className("title"));
         expect(homeTab.isDisplayed()).toBeTruthy(); 
