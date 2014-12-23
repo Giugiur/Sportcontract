@@ -1,5 +1,5 @@
 describe('Scenario: User Option tests', function() {
-    //logging in
+
     it("WHEN the user is logged in", function(done){
         loginTheUser(done);
     });

@@ -1,5 +1,5 @@
 describe('Scenario: SideMenu tests', function() {
-    //logging in
+
     it("WHEN the user is logged in", function(done){
         loginTheUser(done);
     });

@@ -1,5 +1,5 @@
 describe('Scenario: Dashboard module - testing header', function() {
-    //logging in
+
     it("WHEN the user is logged in", function(done){
         browser.get('#/login');
 
