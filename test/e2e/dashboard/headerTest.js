@@ -67,25 +67,5 @@ describe('Scenario: Dashboard module - testing header', function() {
             var userOptions = element(by.className("userOptions"));
             expect(userOptions.isDisplayed()).toBeTruthy();
         });
-
-        it("AND clicking on the user options section it should show more details", function(done){
-            var dropdownTrigger = element(by.id("dropdownTrigger"));
-            dropdownTrigger.click().then(function(){
-                var dropdownExpanded = element(by.id("dropdownExpanded"));
-                expect(dropdownExpanded.isDisplayed()).toBeTruthy();
-
-                done();
-            });
-        });
-
-        it("AND when clicking on the user options section when it's expanded THEN it should be collapsed", function(done){
-            var dropdownTrigger = element(by.id("dropdownTrigger"));
-            dropdownTrigger.click().then(function(){
-                var dropdownExpanded = element(by.id("dropdownExpanded"));
-                expect(dropdownExpanded.isDisplayed()).not.toBeTruthy();
-
-                done();
-            });
-        });
     });
 });
