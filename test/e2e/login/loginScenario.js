@@ -1,30 +1,27 @@
 describe('Scenario: Login module', function() {
-    browser.get('#/login');
+    var loginButton, username, password;
 
-    var loginButton = element(by.className('btn'));
-    var username = element(by.model('username'));
-    var password = element(by.model('password'));
+    it('WHEN user landing on the login page', function(){
+        browser.get('#/login');
 
-    it("login page should shown", function(){
+        loginButton = element(by.className('btn'));
+        username = element(by.model('username'));
+        password = element(by.model('password'));
+    });
+
+    it("THEN login page should shown", function(){
         expect(loginButton.isDisplayed()).toBeTruthy();
         expect(username.isDisplayed()).toBeTruthy();
         expect(password.isDisplayed()).toBeTruthy();
     });
-/*
-    it("clicking on the login button should redirect the user to the dashboard page", function(done){
-        browser.get('#/login');
 
-        var loginButton = element(by.class('btn'));
-        var username = element(by.model('username'));
-        var password = element(by.model('password'));
-
+    xit("AND clicking on the login button it should redirect the user to the dashboard page", function(done){
         username.sendKeys("q");
         password.sendKeys("q");
 
         loginButton.click().then(function(){
-            expect(browser.getLocationAbsUrl()).toMatch("/login");
+            expect(browser.getLocationAbsUrl()).toMatch("/dashboard");
             done();
         });
     });
-*/
 });

@@ -14,14 +14,14 @@
                     </script>
 
                     <div class="btnMulti">
-                        <a href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown">
+                        <a id="dropdownTrigger" href="" ng-init="dropdown=false;" ng-click="dropdown=!dropdown">
                             <span class="userName">{{user.username}}</span>
                             <div ng-if="user.functions.length">
                                 <span>{{user.functions[0].team}}</span> &#8212; <span>{{user.functions[0].func}}</span>
                             </div>
                             <i class="fa fa-caret-down"></i>
                         </a>
-                        <div class="dropdown" ng-show="dropdown">
+                        <div id="dropdownExpanded" class="dropdown" ng-show="dropdown">
                             <!-- <ul>
                                 <li ng-repeat="language in languages">
                                     <a href="" ng-click="changeLanguage(language);setDropdown(false);">{{language}}</a>
@@ -40,7 +40,7 @@
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="League name, club, player, staff&#8230;" ng-model="search.searchterm">
 
-                    <a href="" ng-click="search.advanced = !search.advanced"><i class="fa fa-plus"></i></a>
+                    <a id="fa-plus-link" href="" ng-click="search.advanced = !search.advanced"><i class="fa fa-plus"></i></a>
                 </div>       
             </div>
         </div>

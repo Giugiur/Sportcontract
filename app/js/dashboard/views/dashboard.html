@@ -7,10 +7,10 @@
           <div class="row">
           	<advanced-search ng-show="search.advanced"></advanced-search>
           	<quicksearch search="search"></quicksearch>
-            <div id="tabs">
+            <div id="tabs" class="dashboardModule">
               <div class="tabCtrls">
-                <a ng-click="Tab.goHome();"><i class="fa fa-home"></i></a>
-                <a ng-click="Tab.newTab();"><i class="fa fa-plus"></i></a>
+                <a id="tabHome" ng-click="Tab.goHome();"><i class="fa fa-home"></i></a>
+                <a id="tabNew" ng-click="Tab.newTab();"><i class="fa fa-plus"></i></a>
               </div>
               <ul class="etabs">
                 <li class="tab {{Tab.active(tab)&&'active' || ''}}" ng-repeat="tab in Tab.getTabs()">
