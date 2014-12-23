@@ -50,4 +50,15 @@ describe('Scenario: Dashboard module - testing module', function() {
         var countriesList = element.all(by.css(".countries li"));
         expect(countriesList.count()).toBe(48);
     });
+
+    it("AND clicking on a country should goes to the country page", function(done){
+        var countriesList = element.all(by.css(".countries li"));
+        var germanyListItem = countriesList.get(14);
+        var germanyLink = germanyListItem.element(by.tagName("a"));
+
+        germanyLink.click().then(function(){
+            expect(browser.getLocationAbsUrl()).toMatch("/dashboard/leagues/21");
+            done();
+        });
+    });
 });
