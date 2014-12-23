@@ -1,15 +1,23 @@
-angular.module('app.common').service('Languages',['$http','api',function($http,api){
-	var self = this;
-	self.languages = [];
+(function(){
+	'use strict';
 
-	$http.get(api + '/api/getLanguages').success(function(result){
-		for(var i in result){
-			self.languages.push(result[i]);
-		}
-	})
-	self.getLanguages = function(){
-		return self.languages;
-	}
+	var Languages = function($http,api){
+		var self = this;
+		self.languages = [];
 
-	return self;
-}])
+		$http.get(api + '/api/getLanguages').success(function(result){
+			for(var i in result){
+				self.languages.push(result[i]);
+			}
+		});
+
+		self.getLanguages = function(){
+			return self.languages;
+		};
+
+		return self;
+	};
+
+	var commonModule = angular.module('app.common');
+	commonModule.service("Languages", ["$http", "api", Languages]);	
+}());

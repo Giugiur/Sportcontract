@@ -1,4 +1,4 @@
-    var gulp = require('gulp');
+var gulp = require('gulp');
 var angularFilesort = require('gulp-angular-filesort');
 var templateCache = require('gulp-angular-templatecache');
 var connect = require('gulp-connect');
@@ -66,10 +66,10 @@ gulp.task('test', function() {
 });
 
 gulp.task('e2etest',function(){
-    gulp.src(["./modules/**/uitest.js"])
+    gulp.src(["./test/e2e/**/**.js"])
         .pipe(protractor({
-            configFile: "./protractor.config.js",
-            args: ['--baseUrl', 'http://127.0.0.1:9000']
+            configFile: "./test/protractor.config.js",
+            args: ['--baseUrl', 'http://localhost:9000']
         }))
         .on('error', function(e) {  })
 })
