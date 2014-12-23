@@ -4,7 +4,7 @@
 <a href="" ng-click="search.searchterm=''" class="close"><i class="fa fa-times"></i></a>
           <div class="quickSearch">
             <div class="results">
-              <div class="col">
+              <div id="playersCol" class="col">
                 <div class="h6">{{'players' | translate}}</div>
                 <ul class="list">
                   <li class="item" ng-repeat="player in players">
@@ -22,7 +22,7 @@
                   </li>
                 </ul>
               </div>
-             <div class="col">
+             <div id="staffCol" class="col">
                 <div class="h6">{{'staff' | translate}}</div>
                 <ul class="list">
                   <li class="item" ng-repeat="staff in staffs">
@@ -73,7 +73,7 @@
                   </li>
                 </ul>
               </div>-->
-              <div class="col">
+              <div id="teamsCol" class="col">
                 <div class="h6">{{'teams' | translate}}</div>
                 <ul class="list">
                   <li class="item" ng-repeat="team in teams">
@@ -89,7 +89,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col">
+              <div id="leaguesCol" class="col">
                 <div class="h6">{{'leagues' | translate}}</div>
                 <ul class="list">
                   <li class="item" ng-repeat="league in leagues">
@@ -102,7 +102,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col">
+              <div id="countriesCol" class="col">
                 <div class="h6">{{'countries' | translate}}</div>
                 <ul class="list">
                   <li class="item" ng-repeat="country in countries">

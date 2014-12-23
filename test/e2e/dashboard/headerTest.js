@@ -25,47 +25,13 @@ describe('Scenario: Dashboard module - testing header', function() {
         expect(logo.isDisplayed()).toBeTruthy();
     });
 
-    describe("WHEN testing search field section", function(){
-        it("THEN search icon should shown", function(){
-            var searchIcon = element(by.className("fa-search"));
-            expect(searchIcon.isDisplayed()).toBeTruthy();
-        });
-
-        it("AND search field should shown", function(){
-            var searchField = element(by.model("search.searchterm"));
-            expect(searchField.isDisplayed()).toBeTruthy();
-        });
-
-        it("AND advanced search link should shown", function(){
-            var searchPlus = element(by.id("fa-plus-link"));
-            expect(searchPlus.isDisplayed()).toBeTruthy();
-        });
-
-        it("AND clicking on advanced search icon the adcanced search section should shown", function(done){
-            var searchPlus = element(by.id("fa-plus-link"));
-            searchPlus.click().then(function(){
-                var advancedSearch = element(by.id("advancedSearchPartial"));
-                expect(advancedSearch.isDisplayed()).toBeTruthy();
-
-                done();
-            });
-        });
-
-        it("AND when clicking on advanced search icon when it's expanded THEN it should shown not be hidden", function(done){
-            var searchPlus = element(by.id("fa-plus-link"));
-            searchPlus.click().then(function(){
-                var advancedSearch = element(by.id("advancedSearchPartial"));
-                expect(advancedSearch.isDisplayed()).not.toBeTruthy();
-
-                done();
-            });
-        });
+    it("AND search field should shown", function(){
+        var searchField = element(by.model("search.searchterm"));
+        expect(searchField.isDisplayed()).toBeTruthy();
     });
 
-    describe("WHEN testing user options section", function(){
-        it("THEN user options section should shown", function(){
-            var userOptions = element(by.className("userOptions"));
-            expect(userOptions.isDisplayed()).toBeTruthy();
-        });
+    it("AND user options section should shown", function(){
+        var userOptions = element(by.className("userOptions"));
+        expect(userOptions.isDisplayed()).toBeTruthy();
     });
 });
