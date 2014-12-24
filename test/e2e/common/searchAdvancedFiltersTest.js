@@ -82,6 +82,36 @@ describe('Scenario: Advanced Search tests - testing filters', function() {
         xit("AND dont forget to fix the bug about the advanced search missing fields - and uncomment checks in there after it!", function(){});
     });
 
+    describe('WHEN testing clickability', function(){
+        it("GIVEN 'nationality' filter applied", function(){
+            applyFilter(filterIndexes.nationality, checkResult);
+        });
+
+        it("THEN clicking on a player should open a new tab on the page", function(){
+            var resultsRows = element.all(by.css("#advancedSearchPartial .result table tr.resultHits"));
+            var resultRow = resultsRows.first();
+            var resultColPlayerName = resultRow.element(by.css(".resultColPlayerName a"));
+
+            resultColPlayerName.click().then(function(){
+                var tabs = element.all(by.css(".dashboardModule ul.etabs li"));
+                var activeTab = element(by.css(".dashboardModule ul.etabs li.active"));
+                var tabName = activeTab.element(by.css("a.title"));
+
+                expect(tabs.count()).toBe(2);
+                expect(activeTab.isDisplayed()).toBeTruthy();
+
+                tabs.first().getText().then(function(text){
+                    expect(text).toBe("Home");
+                });
+                
+                tabName.getText().then(function(text){
+                    expect(text.length).toBeGreaterThan(0);
+                    expect(text).not.toBe("Home");
+                });
+            });
+        })
+    });
+
     var filterIndexes = {
         nationality : 1,
         passport: 2,
