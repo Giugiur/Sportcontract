@@ -7,7 +7,7 @@ describe('Scenario: Advanced Search tests - testing filters', function() {
         expandingAdvancedSearch(done);
     });
 
-    describe('THEN testing each filters', function() {    
+    describe('THEN testing each filters', function() {
         afterEach(function(done){
             var removeFilter = element(by.css("#advancedSearchPartial .filterList li a"));
             removeFilter.click().then(function(){
@@ -78,6 +78,8 @@ describe('Scenario: Advanced Search tests - testing filters', function() {
         it("AND when it's expanded it should have hits when applying 'PM' filter", function(){
             applyFilter(filterIndexes.PM, checkResult);
         });
+
+        xit("AND dont forget to fix the bug about the advanced search missing fields - and uncomment checks in there after it!", function(){});
     });
 
     var filterIndexes = {
@@ -108,43 +110,46 @@ describe('Scenario: Advanced Search tests - testing filters', function() {
         var allOptions = element.all(by.css("#advancedSearchPartial .filterAdd option"));
         allOptions.get(filterIndex).click().then(clickingOnAddFilterButton);
     };
+    
 
-    xit("AND dont forget to fix the bug about the advanced search missing fields - and uncomment checks in there after it!", function(){});
     var checkResult = function(){
         var resultsRows = element.all(by.css("#advancedSearchPartial .result table tr.resultHits"));
         expect(resultsRows.count()).toBeGreaterThan(0);
 
-        resultsRows.each(function(resultRow){
-            var resultColFlag = resultRow.element(by.css(".resultColFlag img"));
-            var resultColPlayerName = resultRow.element(by.css(".resultColPlayerName a"));
-            var resultColPosition = resultRow.element(by.className("resultColPosition"));
-            var resultColDateOfBirth = resultRow.element(by.className("resultColDateOfBirth"));
-            var resultColLeague = resultRow.element(by.className("resultColLeague"));
+        var resultRow = resultsRows.first();
+        checkRow(resultRow);
+    };
 
-            expect(resultColFlag.isDisplayed()).toBeTruthy();
+    var checkRow = function(resultRow){
+        var resultColFlag = resultRow.element(by.css(".resultColFlag img"));
+        var resultColPlayerName = resultRow.element(by.css(".resultColPlayerName a"));
+        var resultColPosition = resultRow.element(by.className("resultColPosition"));
+        var resultColDateOfBirth = resultRow.element(by.className("resultColDateOfBirth"));
+        var resultColLeague = resultRow.element(by.className("resultColLeague"));
 
-            expect(resultColPlayerName.isDisplayed()).toBeTruthy();
-            resultColPlayerName.getText().then(function(text){
-                expect(text.length).toBeGreaterThan(0);
-            });
-            
-            expect(resultColPosition.isDisplayed()).toBeTruthy();
-            resultColPosition.getText().then(function(text){
-                expect(text.length).toBeGreaterThan(0);
-            });
+        expect(resultColFlag.isDisplayed()).toBeTruthy();
 
-            /*Do not delete these checks! Fix the bug and uncomment these rows.
-                expect(resultColDateOfBirth.isDisplayed()).toBeTruthy();
-                resultColDateOfBirth.getText().then(function(text){
-                    expect(text.length).toBeGreaterThan(0);
-                });
-
-                expect(resultColLeague.isDisplayed()).toBeTruthy();
-                resultColLeague.getText().then(function(text){
-                    expect(text.length).toBeGreaterThan(0);
-                });
-            */
+        expect(resultColPlayerName.isDisplayed()).toBeTruthy();
+        resultColPlayerName.getText().then(function(text){
+            expect(text.length).toBeGreaterThan(0);
         });
+
+        expect(resultColPosition.isDisplayed()).toBeTruthy();
+        resultColPosition.getText().then(function(text){
+            expect(text.length).toBeGreaterThan(0);
+        });
+
+        /*Do not delete these checks! Fix the bug and uncomment these rows.
+            expect(resultColDateOfBirth.isDisplayed()).toBeTruthy();
+            resultColDateOfBirth.getText().then(function(text){
+                expect(text.length).toBeGreaterThan(0);
+            });
+
+            expect(resultColLeague.isDisplayed()).toBeTruthy();
+            resultColLeague.getText().then(function(text){
+                expect(text.length).toBeGreaterThan(0);
+            });
+        */
     };
 
     var expandingAdvancedSearch = function(done){

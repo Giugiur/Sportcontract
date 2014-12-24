@@ -3,7 +3,6 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
 
     specs: [
-        'e2e/*.js',
         'e2e/**/*.js'
     ],
 
@@ -13,6 +12,6 @@ exports.config = {
     framework: 'jasmine',
 
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000
+        defaultTimeoutInterval: 80000
     }
 };
