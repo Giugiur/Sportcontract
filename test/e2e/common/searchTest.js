@@ -57,6 +57,82 @@ describe('Scenario: Search tests', function() {
         });
     });
 
+    describe('WHEN: testing clickabiliby on each section', function() {
+        beforeEach(function(){
+            var searchField = element(by.model("search.searchterm"));
+            searchField.sendKeys("ger");
+        });
+
+        afterEach(function(done){
+            var tabs = element.all(by.css(".dashboardModule ul.etabs li"));
+            var closable = tabs.get(1).element(by.css(".closeTab a"));
+
+            closable.click().then(function(){
+                done();
+            });
+        });
+
+        it("AND clicking on a player hit should load the player page", function(){
+            var allPlayers = element.all(by.css("#playersCol li"));
+            var playerLink = allPlayers.first().element(by.css("a"));
+            var removablePart = "Player: ";
+
+            verifyClickability(playerLink, removablePart);
+        });
+
+        xit("AND clicking on a staff hit should load the staff page", function(){});
+
+        it("AND clicking on a team hit should load the team page", function(){
+            var allTeams = element.all(by.css("#teamsCol li"));
+            var teamLink = allTeams.first().element(by.css("a"));
+            var removablePart = "Players of ";
+
+            verifyClickability(teamLink, removablePart);
+        });
+
+        it("AND clicking on a league hit should load the league page", function(){
+            var allTeams = element.all(by.css("#leaguesCol li"));
+            var leagueLink = allTeams.first().element(by.css("a"));
+            var removablePart = "Teams of ";
+
+            verifyClickability(leagueLink, removablePart); 
+        });
+
+        it("AND clicking on a country hit should load the country page", function(){
+            var allTeams = element.all(by.css("#countriesCol li"));
+            var countryLink = allTeams.first().element(by.css("a"));
+            var removablePart = "Leagues of ";
+
+            verifyClickability(countryLink, removablePart);  
+        });
+    });
+
+    var verifyClickability = function(clickableElement, removablePart){
+        clickableElement.element(by.css(".name")).getText().then(function(playerName){
+            clickableElement.click().then(function(){
+                var tabs = element.all(by.css(".dashboardModule ul.etabs li"));
+                var activeTab = element(by.css(".dashboardModule ul.etabs li.active"));
+                var tabName = activeTab.element(by.css("a.title"));
+
+                expect(tabs.count()).toBe(2);
+                expect(activeTab.isDisplayed()).toBeTruthy();
+
+                tabs.first().getText().then(function(text){
+                    expect(text).toBe("Home");
+                });
+
+                tabName.getText().then(function(text){
+                    text = text.substr(removablePart.length);
+                    expect(text.length).toBeGreaterThan(0);
+                    expect(text).not.toBe("Home");
+
+                    expect(playerName.indexOf(text)).not.toBe(-1);
+                    expect(playerName.indexOf(text)).toBeGreaterThan(-1);
+                });
+            });
+        });
+    };
+
     var loginTheUser = function(done){
         browser.get('#/login');
 
