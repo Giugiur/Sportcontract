@@ -66,7 +66,7 @@ gulp.task('test', function() {
 });
 
 gulp.task('e2etest',function(){
-    gulp.src(["./test/e2e/**/**.js"])
+    gulp.src([])
         .pipe(protractor({
             configFile: "./test/protractor.config.js",
             args: ['--baseUrl', 'http://localhost:9000']

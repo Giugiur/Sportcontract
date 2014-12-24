@@ -84,15 +84,15 @@
                       <tr ng-show="!results || results.hits.length==0">
                         <td colspan="2">{{'no_results' | translate}}y</td>
                       <tr>
-                      <tr ng-repeat="player in results.hits">
-                        <td>
+                      <tr ng-repeat="player in results.hits" class="resultHits">
+                        <td class="resultColFlag">
                           <img src="img/blank.gif" 
                           class="flag flag-{{player._source.country['iso3166_2'].toLowerCase()}}" alt="{{player._source.country.name}}">
                         </td>
-                        <td><a href="" ng-click="newTab('Player: '+ player._source.firstName +  ' ' + player._source.lastName,'dashboard.player',player)">{{player._source.firstName}} {{player._source.lastName}}</a></td>
-                        <td style="text-transform:capitalize;">{{player._source.playerPosition}}</td>
-                        <td>{{player._source.dateOfBirth}}</td>
-                        <td>{{player._source.latestPlayerStats.league.name}}</td>
+                        <td class="resultColPlayerName"><a href="" ng-click="newTab('Player: '+ player._source.firstName +  ' ' + player._source.lastName,'dashboard.player',player)">{{player._source.firstName}} {{player._source.lastName}}</a></td>
+                        <td class="resultColPosition" style="text-transform:capitalize;">{{player._source.playerPosition}}</td>
+                        <td class="resultColDateOfBirth">{{player._source.dateOfBirth}}</td>
+                        <td class="resultColLeague">{{player._source.latestPlayerStats.league.name}}</td>
                       </tr>
                     </tbody>
                   </table>
