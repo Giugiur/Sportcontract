@@ -1,0 +1,696 @@
+{
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 21,
+    "max_score": 2.6495626,
+    "hits": [
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "leagues",
+        "_type": "league",
+        "_id": "53cce9e286a89f7e15b36e7c",
+        "_score": 2.6495626,
+        "_source": {
+          "virtual": "false",
+          "gameType": "REGULAR_SEASON",
+          "imageUrl": "",
+          "hideParentLeagueName": "false",
+          "hasChildLeagues": "true",
+          "teamClass": "MEN",
+          "country": {
+            "id": 21,
+            "updated": "2014-03-03T15:07:40Z",
+            "name": "Germany",
+            "continent": "EUROPE",
+            "abbreviation": "ER",
+            "shortName": "",
+            "iso3166_2": "DE",
+            "iso3166_3": "DEU"
+          },
+          "playerLevel": "PROFESSIONAL",
+          "id": 72,
+          "updated": "2014-07-03T12:29:54Z",
+          "name": "Germany4",
+          "fullName": "Regionalliga",
+          "teamType": "CLUB",
+          "searchable": "true"
+        },
+        "_explanation": {
+          "value": 2.6495626,
+          "description": "sum of:",
+          "details": [
+            {
+              "value": 0.90847147,
+              "description": "max of:",
+              "details": [
+                {
+                  "value": 0.90847147,
+                  "description": "ConstantScore(name:/.*ger.*/^10.0)^10.0, product of:",
+                  "details": [
+                    {
+                      "value": 10,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09084715,
+                      "description": "queryNorm"
+                    }
+                  ]
+                },
+                {
+                  "value": 0.09084715,
+                  "description": "ConstantScore(country.name:/.*ger.*/), product of:",
+                  "details": [
+                    {
+                      "value": 1,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09084715,
+                      "description": "queryNorm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1.559397,
+              "description": "weight(searchable:true in 306) [PerFieldSimilarity], result of:",
+              "details": [
+                {
+                  "value": 1.559397,
+                  "description": "score(doc=306,freq=1.0 = termFreq=1.0\n), product of:",
+                  "details": [
+                    {
+                      "value": 0.37638646,
+                      "description": "queryWeight, product of:",
+                      "details": [
+                        {
+                          "value": 4.143074,
+                          "description": "idf(docFreq=119, maxDocs=2781)"
+                        },
+                        {
+                          "value": 0.09084715,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 4.143074,
+                      "description": "fieldWeight in 306, product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "tf(freq=1.0), with freq of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "termFreq=1.0"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4.143074,
+                          "description": "idf(docFreq=119, maxDocs=2781)"
+                        },
+                        {
+                          "value": 1,
+                          "description": "fieldNorm(doc=306)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.1816943,
+              "description": "ConstantScore(name:ger*^2.0)^2.0, product of:",
+              "details": [
+                {
+                  "value": 2,
+                  "description": "boost"
+                },
+                {
+                  "value": 0.09084715,
+                  "description": "queryNorm"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "leagues",
+        "_type": "league",
+        "_id": "53cce9ee86a89f7e15b38d37",
+        "_score": 2.6495626,
+        "_source": {
+          "id": 496,
+          "playerLevel": "PROFESSIONAL",
+          "virtual": "false",
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-05-09T12:02:10Z",
+          "hideParentLeagueName": "false",
+          "imageUrl": "",
+          "name": "Germany U16 2",
+          "hasChildLeagues": "true",
+          "teamType": "CLUB",
+          "teamClass": "MEN",
+          "searchable": "true",
+          "country": {
+            "id": 21,
+            "updated": "2014-03-03T15:07:40Z",
+            "name": "Germany",
+            "continent": "EUROPE",
+            "abbreviation": "ER",
+            "shortName": "",
+            "iso3166_2": "DE",
+            "iso3166_3": "DEU"
+          }
+        },
+        "_explanation": {
+          "value": 2.6495626,
+          "description": "sum of:",
+          "details": [
+            {
+              "value": 0.90847147,
+              "description": "max of:",
+              "details": [
+                {
+                  "value": 0.90847147,
+                  "description": "ConstantScore(name:/.*ger.*/^10.0)^10.0, product of:",
+                  "details": [
+                    {
+                      "value": 10,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09084715,
+                      "description": "queryNorm"
+                    }
+                  ]
+                },
+                {
+                  "value": 0.09084715,
+                  "description": "ConstantScore(country.name:/.*ger.*/), product of:",
+                  "details": [
+                    {
+                      "value": 1,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09084715,
+                      "description": "queryNorm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1.559397,
+              "description": "weight(searchable:true in 567) [PerFieldSimilarity], result of:",
+              "details": [
+                {
+                  "value": 1.559397,
+                  "description": "score(doc=567,freq=1.0 = termFreq=1.0\n), product of:",
+                  "details": [
+                    {
+                      "value": 0.37638646,
+                      "description": "queryWeight, product of:",
+                      "details": [
+                        {
+                          "value": 4.143074,
+                          "description": "idf(docFreq=119, maxDocs=2781)"
+                        },
+                        {
+                          "value": 0.09084715,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 4.143074,
+                      "description": "fieldWeight in 567, product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "tf(freq=1.0), with freq of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "termFreq=1.0"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4.143074,
+                          "description": "idf(docFreq=119, maxDocs=2781)"
+                        },
+                        {
+                          "value": 1,
+                          "description": "fieldNorm(doc=567)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.1816943,
+              "description": "ConstantScore(name:ger*^2.0)^2.0, product of:",
+              "details": [
+                {
+                  "value": 2,
+                  "description": "boost"
+                },
+                {
+                  "value": 0.09084715,
+                  "description": "queryNorm"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "leagues",
+        "_type": "league",
+        "_id": "53cce9e686a89f7e15b377a6",
+        "_score": 2.6471567,
+        "_source": {
+          "id": 291,
+          "playerLevel": "PROFESSIONAL",
+          "virtual": "false",
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-02-18T08:56:14Z",
+          "hideParentLeagueName": "false",
+          "imageUrl": "",
+          "name": "Germany (other)",
+          "hasChildLeagues": "false",
+          "teamType": "CLUB",
+          "teamClass": "MEN",
+          "searchable": "true",
+          "country": {
+            "id": 21,
+            "updated": "2014-03-03T15:07:40Z",
+            "name": "Germany",
+            "continent": "EUROPE",
+            "abbreviation": "ER",
+            "shortName": "",
+            "iso3166_2": "DE",
+            "iso3166_3": "DEU"
+          }
+        },
+        "_explanation": {
+          "value": 2.6471567,
+          "description": "sum of:",
+          "details": [
+            {
+              "value": 0.90858436,
+              "description": "max of:",
+              "details": [
+                {
+                  "value": 0.90858436,
+                  "description": "ConstantScore(name:/.*ger.*/^10.0)^10.0, product of:",
+                  "details": [
+                    {
+                      "value": 10,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "ConstantScore(country.name:/.*ger.*/), product of:",
+                  "details": [
+                    {
+                      "value": 1,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1.5568553,
+              "description": "weight(searchable:true in 476) [PerFieldSimilarity], result of:",
+              "details": [
+                {
+                  "value": 1.5568553,
+                  "description": "score(doc=476,freq=1.0 = termFreq=1.0\n), product of:",
+                  "details": [
+                    {
+                      "value": 0.37610295,
+                      "description": "queryWeight, product of:",
+                      "details": [
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 0.09085844,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 4.139439,
+                      "description": "fieldWeight in 476, product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "tf(freq=1.0), with freq of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "termFreq=1.0"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 1,
+                          "description": "fieldNorm(doc=476)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.18171687,
+              "description": "ConstantScore(name:ger*^2.0)^2.0, product of:",
+              "details": [
+                {
+                  "value": 2,
+                  "description": "boost"
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "queryNorm"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "leagues",
+        "_type": "league",
+        "_id": "53cce9e686a89f7e15b377be",
+        "_score": 2.6471567,
+        "_source": {
+          "id": 493,
+          "playerLevel": "PROFESSIONAL",
+          "virtual": "false",
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-05-09T12:02:10Z",
+          "hideParentLeagueName": "false",
+          "imageUrl": "",
+          "name": "Germany U18 3",
+          "hasChildLeagues": "true",
+          "teamType": "CLUB",
+          "teamClass": "MEN",
+          "searchable": "true",
+          "country": {
+            "id": 21,
+            "updated": "2014-03-03T15:07:40Z",
+            "name": "Germany",
+            "continent": "EUROPE",
+            "abbreviation": "ER",
+            "shortName": "",
+            "iso3166_2": "DE",
+            "iso3166_3": "DEU"
+          }
+        },
+        "_explanation": {
+          "value": 2.6471567,
+          "description": "sum of:",
+          "details": [
+            {
+              "value": 0.90858436,
+              "description": "max of:",
+              "details": [
+                {
+                  "value": 0.90858436,
+                  "description": "ConstantScore(name:/.*ger.*/^10.0)^10.0, product of:",
+                  "details": [
+                    {
+                      "value": 10,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "ConstantScore(country.name:/.*ger.*/), product of:",
+                  "details": [
+                    {
+                      "value": 1,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1.5568553,
+              "description": "weight(searchable:true in 480) [PerFieldSimilarity], result of:",
+              "details": [
+                {
+                  "value": 1.5568553,
+                  "description": "score(doc=480,freq=1.0 = termFreq=1.0\n), product of:",
+                  "details": [
+                    {
+                      "value": 0.37610295,
+                      "description": "queryWeight, product of:",
+                      "details": [
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 0.09085844,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 4.139439,
+                      "description": "fieldWeight in 480, product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "tf(freq=1.0), with freq of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "termFreq=1.0"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 1,
+                          "description": "fieldNorm(doc=480)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.18171687,
+              "description": "ConstantScore(name:ger*^2.0)^2.0, product of:",
+              "details": [
+                {
+                  "value": 2,
+                  "description": "boost"
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "queryNorm"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "leagues",
+        "_type": "league",
+        "_id": "53cce9f386a89f7e15b397fd",
+        "_score": 2.6471567,
+        "_source": {
+          "id": 492,
+          "playerLevel": "PROFESSIONAL",
+          "virtual": "false",
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-05-09T12:02:11Z",
+          "hideParentLeagueName": "false",
+          "imageUrl": "",
+          "name": "Germany U20 4",
+          "hasChildLeagues": "true",
+          "teamType": "CLUB",
+          "teamClass": "MEN",
+          "searchable": "true",
+          "country": {
+            "id": 21,
+            "updated": "2014-03-03T15:07:40Z",
+            "name": "Germany",
+            "continent": "EUROPE",
+            "abbreviation": "ER",
+            "shortName": "",
+            "iso3166_2": "DE",
+            "iso3166_3": "DEU"
+          }
+        },
+        "_explanation": {
+          "value": 2.6471567,
+          "description": "sum of:",
+          "details": [
+            {
+              "value": 0.90858436,
+              "description": "max of:",
+              "details": [
+                {
+                  "value": 0.90858436,
+                  "description": "ConstantScore(name:/.*ger.*/^10.0)^10.0, product of:",
+                  "details": [
+                    {
+                      "value": 10,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "ConstantScore(country.name:/.*ger.*/), product of:",
+                  "details": [
+                    {
+                      "value": 1,
+                      "description": "boost"
+                    },
+                    {
+                      "value": 0.09085844,
+                      "description": "queryNorm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1.5568553,
+              "description": "weight(searchable:true in 815) [PerFieldSimilarity], result of:",
+              "details": [
+                {
+                  "value": 1.5568553,
+                  "description": "score(doc=815,freq=1.0 = termFreq=1.0\n), product of:",
+                  "details": [
+                    {
+                      "value": 0.37610295,
+                      "description": "queryWeight, product of:",
+                      "details": [
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 0.09085844,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 4.139439,
+                      "description": "fieldWeight in 815, product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "tf(freq=1.0), with freq of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "termFreq=1.0"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4.139439,
+                          "description": "idf(docFreq=120, maxDocs=2794)"
+                        },
+                        {
+                          "value": 1,
+                          "description": "fieldNorm(doc=815)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.18171687,
+              "description": "ConstantScore(name:ger*^2.0)^2.0, product of:",
+              "details": [
+                {
+                  "value": 2,
+                  "description": "boost"
+                },
+                {
+                  "value": 0.09085844,
+                  "description": "queryNorm"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

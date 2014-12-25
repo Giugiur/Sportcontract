@@ -1,4 +1,3 @@
-angular.module('app.quicksearch',['ui.router','app.common']);
 angular.module('app.video',['ui.router','app.common']);
 angular.module('app.calendar',['ui.router','app.common']);
 angular.module('app.simple_contact',['app.common']);

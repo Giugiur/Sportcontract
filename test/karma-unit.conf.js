@@ -13,6 +13,7 @@ module.exports = function(config){
         'app/bower_components/moment/moment.js',
         'app/bower_components/angular-translate/angular-translate.js',
         'app/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js',
+        'app/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
         'app/bower_components/angular-sanitize/angular-sanitize.js',
         'app/bower_components/angular-animate/angular-animate.js',
         'app/bower_components/angularjs-slider/rzslider.js',
@@ -35,7 +36,10 @@ module.exports = function(config){
 
         //unit tests
         'test/unit/**/*.js',
-        'test/unit/**/**/*.js'
+        'test/unit/**/**/*.js',
+
+        //fixtures
+        {pattern: 'test/mock/*.json', watched: true, served: true, included: false}
     ],
 
     preprocessors: {
@@ -44,6 +48,7 @@ module.exports = function(config){
     },
 
     ngHtml2JsPreprocessor: {
+       stripPrefix: 'app/js/',
        moduleName: 'templates'
     },
 
@@ -60,13 +65,14 @@ module.exports = function(config){
 
     autoWatch : false,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery', 'jasmine'],
 
     browsers : ['PhantomJS'],
 
     plugins : [
         'karma-phantomjs-launcher',
         'karma-jasmine',
+        'karma-jasmine-jquery',
         'karma-ng-html2js-preprocessor',
         'karma-coverage'
     ]

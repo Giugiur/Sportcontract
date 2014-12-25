@@ -1,0 +1,23 @@
+{
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 0,
+    "max_score": null,
+    "hits": [{
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+    }]
+  }
+}

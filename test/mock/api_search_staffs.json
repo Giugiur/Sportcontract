@@ -1,0 +1,896 @@
+{
+  "took": 21,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 421,
+    "max_score": null,
+    "hits": [
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "staffstats",
+        "_type": "staffstat",
+        "_id": "53e125a27ac9cd302809e651",
+        "_score": 0.21451978,
+        "_source": {
+          "id": 101236,
+          "staff": {
+            "yearOfBirth": 1961,
+            "dateOfBirth": "1961-05-14",
+            "id": 422,
+            "lastName": "Vigneault",
+            "updated": "2014-07-27T19:45:31Z",
+            "imageUrl": "getty_vanalainvigneault.jpg",
+            "bioHistory": "<b>COACHING CAREER</b><br>\r\n- Trois Rivieres Draveurs (Head Coach) 1986-1987<br>\r\n- Hull Olympiques (Head Coach) 1987-1992<br>\r\n- Ottawa Senators (Assistant Coach) 1992-1996<br>\r\n- Beaufort Harfangs (Head Coach) 1996-1997<br>\r\n- Montréal Canadiens (Head Coach) 1997-2001<br>\r\n- Prince Edward Island Rocket (Head Coach) 2003-2005<br>\r\n- Manitoba Moose (Head Coach) 2005-2006<br>\r\n- Vancouver Canucks (Head Coach) 2006-present<br>",
+            "firstName": "Alain",
+            "birthPlace": {
+              "id": 14387,
+              "parentLocality": {
+                "id": 61,
+                "name": "Quebec",
+                "localityType": "STATE",
+                "country": {
+                  "id": 3,
+                  "updated": "2014-07-15T11:42:40Z",
+                  "name": "Canada",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "CAN",
+                  "shortName": "",
+                  "iso3166_2": "CA",
+                  "iso3166_3": "CAN"
+                }
+              },
+              "updated": "2014-07-15T16:51:08Z",
+              "name": "Québec",
+              "localityType": "CITY"
+            },
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            }
+          },
+          "sort": 0,
+          "visibleInRoster": "true",
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "updated": "2014-07-27T19:45:31Z",
+          "team": {
+            "id": 68,
+            "inactive": "false",
+            "editorialNotes": "<b>1994 Stanley Cup Championship Lineup</b><br>\r\nAdam Graves - Mark Messier - Alexei Kovalev<br>\r\nStépahen Matteau -  EsaTikkanen - Steve Larmer<br>\r\nGreg Gilbert - Craig MacTavish - Brian Noonan<br>\r\nGlen Anderson - Sergei Nemchinov - Joey Kocur<br><br>\r\n\r\nBrian Leetch - Jeff Beukeboom<br>\r\nKevin Lowe - Sergei Zubov<br>\r\nJay Wells - Alexander Karpovtsev<br>",
+            "arena": {
+              "id": 92,
+              "yearOfConstruction": 1968,
+              "information": "",
+              "imageUrl": "madison_square_garden.jpg",
+              "name": "Madison Square Garden",
+              "locality": {
+                "id": 146,
+                "parentLocality": {
+                  "id": 32,
+                  "name": "New York",
+                  "localityType": "STATE",
+                  "country": {
+                    "id": 6,
+                    "updated": "2014-03-03T15:07:46Z",
+                    "name": "United States",
+                    "continent": "NORTH_AMERICA",
+                    "abbreviation": "USA",
+                    "shortName": "USA",
+                    "iso3166_2": "US",
+                    "iso3166_3": "USA"
+                  }
+                },
+                "name": "Manhattan",
+                "localityType": "CITY"
+              },
+              "capacity": 18200
+            },
+            "updated": "2014-06-05T03:29:05Z",
+            "imageUrl": "new_york_rangers.png",
+            "foundedYear": 1926,
+            "colors": "Blue + Red + White",
+            "name": "New York Rangers",
+            "locality": {
+              "id": 1884,
+              "parentLocality": {
+                "id": 32,
+                "name": "New York",
+                "localityType": "STATE",
+                "country": {
+                  "id": 6,
+                  "updated": "2014-03-03T15:07:46Z",
+                  "name": "United States",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "USA",
+                  "shortName": "USA",
+                  "iso3166_2": "US",
+                  "iso3166_3": "USA"
+                }
+              },
+              "name": "New York",
+              "localityType": "CITY"
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 6,
+              "updated": "2014-03-03T15:07:46Z",
+              "name": "United States",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "USA",
+              "shortName": "USA",
+              "iso3166_2": "US",
+              "iso3166_3": "USA"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "NHL2013-14.png",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "true",
+            "teamClass": "MEN",
+            "playerLevel": "PROFESSIONAL",
+            "id": 7,
+            "updated": "2014-07-03T12:29:47Z",
+            "name": "NHL",
+            "continent": "NORTH_AMERICA",
+            "fullName": "National Hockey League",
+            "teamType": "CLUB",
+            "searchable": "true"
+          },
+          "staffRole": "Head Coach"
+        },
+        "sort": [
+          0.21451978,
+          2014,
+          0.21451978
+        ],
+        "_explanation": {
+          "value": 0.21451978,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.64355934,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.64355934,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.64355934,
+                      "description": "ConstantScore(team.name:/.*ger*./^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.06435593,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.33333334,
+              "description": "coord(1/3)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "staffstats",
+        "_type": "staffstat",
+        "_id": "53e124687ac9cd3028091794",
+        "_score": 0.21451978,
+        "_source": {
+          "id": 102052,
+          "staff": {
+            "yearOfBirth": 1984,
+            "dateOfBirth": "1984-02-15",
+            "id": 16646,
+            "lastName": "McDonald",
+            "updated": "2014-08-04T20:57:37Z",
+            "firstName": "Dan",
+            "birthPlace": {
+              "id": 14560,
+              "parentLocality": {
+                "id": 59,
+                "name": "Ontario",
+                "localityType": "STATE",
+                "country": {
+                  "id": 3,
+                  "updated": "2014-07-15T11:42:40Z",
+                  "name": "Canada",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "CAN",
+                  "shortName": "",
+                  "iso3166_2": "CA",
+                  "iso3166_3": "CAN"
+                }
+              },
+              "name": "New Liskeard",
+              "localityType": "CITY"
+            },
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            }
+          },
+          "sort": 0,
+          "visibleInRoster": "true",
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "updated": "2014-08-04T20:57:37Z",
+          "team": {
+            "id": 6346,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-07-03T13:30:30Z",
+            "imageUrl": "",
+            "foundedYear": 1953,
+            "name": "New Liskeard Cubs Midget AAA",
+            "locality": {
+              "id": 14560,
+              "parentLocality": {
+                "id": 59,
+                "name": "Ontario",
+                "localityType": "STATE",
+                "country": {
+                  "id": 3,
+                  "updated": "2014-07-15T11:42:40Z",
+                  "name": "Canada",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "CAN",
+                  "shortName": "",
+                  "iso3166_2": "CA",
+                  "iso3166_3": "CAN"
+                }
+              },
+              "name": "New Liskeard",
+              "localityType": "CITY"
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "false",
+            "teamClass": "MEN",
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            },
+            "playerLevel": "PROFESSIONAL",
+            "id": 403,
+            "updated": "2014-07-03T12:30:39Z",
+            "name": "GNML",
+            "fullName": "Great North Midget Hockey League",
+            "teamType": "CLUB",
+            "searchable": "true"
+          },
+          "staffRole": "Head Coach"
+        },
+        "sort": [
+          0.21451978,
+          2014,
+          0.21451978
+        ],
+        "_explanation": {
+          "value": 0.21451978,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.64355934,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.64355934,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.64355934,
+                      "description": "ConstantScore(team.name:/.*ger*./^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.06435593,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.33333334,
+              "description": "coord(1/3)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "staffstats",
+        "_type": "staffstat",
+        "_id": "53e124867ac9cd3028092d1f",
+        "_score": 0.21451978,
+        "_source": {
+          "id": 92577,
+          "staff": {
+            "id": 3271,
+            "lastName": "Gustavsson",
+            "updated": "2014-05-23T09:52:17Z",
+            "firstName": "Mats",
+            "birthPlace": {
+              "id": 213,
+              "name": "Kiruna",
+              "localityType": "CITY",
+              "country": {
+                "id": 1,
+                "updated": "2014-03-03T15:07:45Z",
+                "name": "Sweden",
+                "continent": "EUROPE",
+                "abbreviation": "SWE",
+                "shortName": "",
+                "iso3166_2": "SE",
+                "iso3166_3": "SWE"
+              }
+            },
+            "country": {
+              "id": 1,
+              "updated": "2014-03-03T15:07:45Z",
+              "name": "Sweden",
+              "continent": "EUROPE",
+              "abbreviation": "SWE",
+              "shortName": "",
+              "iso3166_2": "SE",
+              "iso3166_3": "SWE"
+            }
+          },
+          "sort": 0,
+          "visibleInRoster": "true",
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "updated": "2014-03-20T09:19:32Z",
+          "team": {
+            "id": 1039,
+            "inactive": "false",
+            "editorialNotes": "- Founded 1964 as Amager SIK<br>\r\n- Was included in Tårnby Boldklub in 1966 as Tårnby Skøjte- og Ishockeyafdeling<br>\r\n- Named Tårnby Skøjte- og Ishockeyklub from 1978 to 1985<br>\r\n- Kastrup Ishockey Club from 1985 to 2001<br>\r\n- Current elite team is Amager Elite Ishockey",
+            "arena": {
+              "id": 25,
+              "yearOfConstruction": 1978,
+              "information": "",
+              "imageUrl": "",
+              "name": "Kastrup Skøjtehal",
+              "locality": {
+                "id": 93,
+                "name": "Kastrup",
+                "localityType": "CITY",
+                "country": {
+                  "id": 7,
+                  "updated": "2014-03-03T15:07:39Z",
+                  "name": "Denmark",
+                  "continent": "EUROPE",
+                  "abbreviation": "DEN",
+                  "shortName": "",
+                  "iso3166_2": "DK",
+                  "iso3166_3": "DNK"
+                }
+              },
+              "capacity": 1405
+            },
+            "updated": "2014-07-15T11:44:55Z",
+            "imageUrl": "amagerishockeynytlogo.jpg",
+            "foundedYear": 1964,
+            "name": "Amager Ishockey",
+            "locality": {
+              "id": 93,
+              "name": "Kastrup",
+              "localityType": "CITY",
+              "country": {
+                "id": 7,
+                "updated": "2014-03-03T15:07:39Z",
+                "name": "Denmark",
+                "continent": "EUROPE",
+                "abbreviation": "DEN",
+                "shortName": "",
+                "iso3166_2": "DK",
+                "iso3166_3": "DNK"
+              }
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 7,
+              "updated": "2014-03-03T15:07:39Z",
+              "name": "Denmark",
+              "continent": "EUROPE",
+              "abbreviation": "DEN",
+              "shortName": "",
+              "iso3166_2": "DK",
+              "iso3166_3": "DNK"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "denmark2.png",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "true",
+            "teamClass": "MEN",
+            "country": {
+              "id": 7,
+              "updated": "2014-03-03T15:07:39Z",
+              "name": "Denmark",
+              "continent": "EUROPE",
+              "abbreviation": "DEN",
+              "shortName": "",
+              "iso3166_2": "DK",
+              "iso3166_3": "DNK"
+            },
+            "playerLevel": "PROFESSIONAL",
+            "id": 112,
+            "updated": "2014-07-03T12:30:00Z",
+            "name": "Denmark2",
+            "fullName": "1. Division",
+            "teamType": "CLUB",
+            "searchable": "true"
+          },
+          "staffRole": "Head Coach"
+        },
+        "sort": [
+          0.21451978,
+          2014,
+          0.21451978
+        ],
+        "_explanation": {
+          "value": 0.21451978,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.64355934,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.64355934,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.64355934,
+                      "description": "ConstantScore(team.name:/.*ger*./^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.06435593,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.33333334,
+              "description": "coord(1/3)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "staffstats",
+        "_type": "staffstat",
+        "_id": "53e1239c7ac9cd30280894a9",
+        "_score": 0.21451978,
+        "_source": {
+          "id": 92857,
+          "staff": {
+            "yearOfBirth": 1973,
+            "dateOfBirth": "1973-05-11",
+            "id": 11390,
+            "lastName": "Diener",
+            "updated": "2014-05-23T09:52:20Z",
+            "firstName": "Michael",
+            "country": {
+              "id": 10,
+              "updated": "2014-03-03T15:07:45Z",
+              "name": "Switzerland",
+              "continent": "EUROPE",
+              "abbreviation": "SUI",
+              "shortName": "",
+              "iso3166_2": "CH",
+              "iso3166_3": "CHE"
+            }
+          },
+          "sort": 0,
+          "visibleInRoster": "true",
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "updated": "2014-03-28T06:12:00Z",
+          "team": {
+            "id": 5455,
+            "inactive": "false",
+            "editorialNotes": "",
+            "arena": {
+              "id": 641,
+              "yearOfConstruction": 1997,
+              "information": "",
+              "imageUrl": "",
+              "name": "Bodensee Arena",
+              "locality": {
+                "id": 627,
+                "name": "Kreuzlingen",
+                "localityType": "CITY",
+                "country": {
+                  "id": 10,
+                  "updated": "2014-03-03T15:07:45Z",
+                  "name": "Switzerland",
+                  "continent": "EUROPE",
+                  "abbreviation": "SUI",
+                  "shortName": "",
+                  "iso3166_2": "CH",
+                  "iso3166_3": "CHE"
+                }
+              },
+              "capacity": 4004
+            },
+            "updated": "2014-07-08T20:39:11Z",
+            "imageUrl": "logo_669_446.jpg",
+            "foundedYear": 1956,
+            "colors": "Red + White + Black",
+            "name": "Kreuzlingen-Konstanz",
+            "locality": {
+              "id": 627,
+              "name": "Kreuzlingen",
+              "localityType": "CITY",
+              "country": {
+                "id": 10,
+                "updated": "2014-03-03T15:07:45Z",
+                "name": "Switzerland",
+                "continent": "EUROPE",
+                "abbreviation": "SUI",
+                "shortName": "",
+                "iso3166_2": "CH",
+                "iso3166_3": "CHE"
+              }
+            },
+            "fullName": "EHC Kreuzlingen-Konstanz",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 10,
+              "updated": "2014-03-03T15:07:45Z",
+              "name": "Switzerland",
+              "continent": "EUROPE",
+              "abbreviation": "SUI",
+              "shortName": "",
+              "iso3166_2": "CH",
+              "iso3166_3": "CHE"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "true",
+            "teamClass": "MEN",
+            "country": {
+              "id": 10,
+              "updated": "2014-03-03T15:07:45Z",
+              "name": "Switzerland",
+              "continent": "EUROPE",
+              "abbreviation": "SUI",
+              "shortName": "",
+              "iso3166_2": "CH",
+              "iso3166_3": "CHE"
+            },
+            "playerLevel": "PROFESSIONAL",
+            "id": 322,
+            "updated": "2014-07-03T12:30:28Z",
+            "name": "Switzerland4",
+            "fullName": "2. Amateur Regio League",
+            "teamType": "CLUB",
+            "searchable": "true"
+          },
+          "staffRole": "Sports Manager"
+        },
+        "sort": [
+          0.21451978,
+          2014,
+          0.21451978
+        ],
+        "_explanation": {
+          "value": 0.21451978,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.64355934,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.64355934,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.64355934,
+                      "description": "ConstantScore(team.name:/.*ger*./^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.06435593,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.33333334,
+              "description": "coord(1/3)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 2,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "staffstats",
+        "_type": "staffstat",
+        "_id": "53e123d77ac9cd302808c08e",
+        "_score": 0.21451978,
+        "_source": {
+          "id": 94120,
+          "staff": {
+            "id": 15486,
+            "lastName": "Maser",
+            "updated": "2014-05-23T09:52:56Z",
+            "firstName": "Darrell",
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            }
+          },
+          "sort": 0,
+          "visibleInRoster": "true",
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "updated": "2014-05-23T09:52:56Z",
+          "team": {
+            "id": 859,
+            "inactive": "false",
+            "editorialNotes": "",
+            "arena": {
+              "id": 1540,
+              "yearOfConstruction": 1970,
+              "information": "",
+              "imageUrl": "",
+              "name": "Medicine Hat Arena",
+              "locality": {
+                "id": 1362,
+                "parentLocality": {
+                  "id": 51,
+                  "name": "Alberta",
+                  "localityType": "STATE",
+                  "country": {
+                    "id": 3,
+                    "updated": "2014-07-15T11:42:40Z",
+                    "name": "Canada",
+                    "continent": "NORTH_AMERICA",
+                    "abbreviation": "CAN",
+                    "shortName": "",
+                    "iso3166_2": "CA",
+                    "iso3166_3": "CAN"
+                  }
+                },
+                "name": "Medicine Hat",
+                "localityType": "CITY"
+              },
+              "capacity": 4006
+            },
+            "updated": "2014-05-16T00:51:07Z",
+            "imageUrl": "medicine.gif",
+            "foundedYear": 1970,
+            "colors": "Orange + Black",
+            "name": "Medicine Hat Tigers",
+            "locality": {
+              "id": 1362,
+              "parentLocality": {
+                "id": 51,
+                "name": "Alberta",
+                "localityType": "STATE",
+                "country": {
+                  "id": 3,
+                  "updated": "2014-07-15T11:42:40Z",
+                  "name": "Canada",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "CAN",
+                  "shortName": "",
+                  "iso3166_2": "CA",
+                  "iso3166_3": "CAN"
+                }
+              },
+              "name": "Medicine Hat",
+              "localityType": "CITY"
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 3,
+              "updated": "2014-07-15T11:42:40Z",
+              "name": "Canada",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "CAN",
+              "shortName": "",
+              "iso3166_2": "CA",
+              "iso3166_3": "CAN"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "WHL2013-14.png",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "true",
+            "teamClass": "MEN",
+            "playerLevel": "PROFESSIONAL",
+            "id": 36,
+            "updated": "2014-07-03T12:29:53Z",
+            "name": "WHL",
+            "continent": "NORTH_AMERICA",
+            "fullName": "Western Hockey League",
+            "teamType": "CLUB",
+            "searchable": "true"
+          },
+          "staffRole": "Franchise Owner"
+        },
+        "sort": [
+          0.21451978,
+          2014,
+          0.21451978
+        ],
+        "_explanation": {
+          "value": 0.21451978,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.64355934,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.64355934,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.64355934,
+                      "description": "ConstantScore(team.name:/.*ger*./^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.06435593,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.33333334,
+              "description": "coord(1/3)"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

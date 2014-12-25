@@ -1,0 +1,1080 @@
+{
+  "took": 63,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 18926,
+    "max_score": null,
+    "hits": [
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "playerstats",
+        "_type": "playerstat",
+        "_id": "53ced8bd9a2a3f270a2285fb",
+        "_score": 0.20529793,
+        "_source": {
+          "playerPosition": "SKATER",
+          "id": 8506628,
+          "visibleInRoster": "true",
+          "sort": 0,
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "player": {
+            "yearOfBirth": 1992,
+            "dateOfBirth": "1992-08-20",
+            "playerPosition": "DEFENSEMAN",
+            "id": 153272,
+            "lastName": "Henkel",
+            "updated": "2014-06-16T11:45:16Z",
+            "contract": "14/15",
+            "playerStatus": "ACTIVE",
+            "firstName": "Alexander",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          },
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-06-16T11:39:45Z",
+          "contractType": "NORMAL",
+          "team": {
+            "id": 743,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-06-20T12:19:11Z",
+            "imageUrl": "sonthoffen.gif",
+            "foundedYear": 1999,
+            "name": "ERC Sonthofen 1999",
+            "locality": {
+              "id": 549,
+              "name": "Sonthofen",
+              "localityType": "CITY",
+              "country": {
+                "id": 21,
+                "updated": "2014-03-03T15:07:40Z",
+                "name": "Germany",
+                "continent": "EUROPE",
+                "abbreviation": "ER",
+                "shortName": "",
+                "iso3166_2": "DE",
+                "iso3166_3": "DEU"
+              }
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "germany3.png",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "true",
+            "teamClass": "MEN",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            },
+            "playerLevel": "PROFESSIONAL",
+            "id": 90,
+            "updated": "2014-07-03T12:29:57Z",
+            "name": "Germany3",
+            "fullName": "Oberliga",
+            "teamType": "CLUB",
+            "searchable": "true"
+          }
+        },
+        "sort": [
+          0.20529793,
+          2014,
+          0.20529793
+        ],
+        "_explanation": {
+          "value": 0.20529793,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.5132448,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.4514645,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.4514645,
+                      "description": "ConstantScore(league.name:/.*ger.*/^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 0.04514645,
+                      "description": "ConstantScore(team.country.name:/.*ger.*/), product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0.061780322,
+                  "description": "weight(gameType:regular_season in 28) [PerFieldSimilarity], result of:",
+                  "details": [
+                    {
+                      "value": 0.061780322,
+                      "description": "score(doc=28,freq=1.0 = termFreq=1.0\n), product of:",
+                      "details": [
+                        {
+                          "value": 0.05281252,
+                          "description": "queryWeight, product of:",
+                          "details": [
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 0.04514645,
+                              "description": "queryNorm"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 1.1698045,
+                          "description": "fieldWeight in 28, product of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "tf(freq=1.0), with freq of:",
+                              "details": [
+                                {
+                                  "value": 1,
+                                  "description": "termFreq=1.0"
+                                }
+                              ]
+                            },
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 1,
+                              "description": "fieldNorm(doc=28)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.4,
+              "description": "coord(2/5)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "playerstats",
+        "_type": "playerstat",
+        "_id": "53ced8b89a2a3f270a22839b",
+        "_score": 0.20529793,
+        "_source": {
+          "playerPosition": "SKATER",
+          "id": 8499986,
+          "visibleInRoster": "true",
+          "sort": 0,
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "player": {
+            "yearOfBirth": 1998,
+            "dateOfBirth": "1998-06-06",
+            "playerPosition": "DEFENSEMAN",
+            "id": 288160,
+            "lastName": "Patterson",
+            "height": 183,
+            "weight": 70,
+            "updated": "2014-06-04T23:29:16Z",
+            "shoots": "LEFT",
+            "playerStatus": "ACTIVE",
+            "firstName": "Michael",
+            "country": {
+              "id": 6,
+              "updated": "2014-03-03T15:07:46Z",
+              "name": "United States",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "USA",
+              "shortName": "USA",
+              "iso3166_2": "US",
+              "iso3166_3": "USA"
+            }
+          },
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-06-04T23:25:34Z",
+          "contractType": "NORMAL",
+          "team": {
+            "id": 16208,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-07-03T13:36:54Z",
+            "imageUrl": "",
+            "foundedYear": 2013,
+            "name": "Connecticut Jr. Rangers 16U",
+            "locality": {
+              "id": 3043,
+              "parentLocality": {
+                "id": 7,
+                "name": "Connecticut",
+                "localityType": "STATE",
+                "country": {
+                  "id": 6,
+                  "updated": "2014-03-03T15:07:46Z",
+                  "name": "United States",
+                  "continent": "NORTH_AMERICA",
+                  "abbreviation": "USA",
+                  "shortName": "USA",
+                  "iso3166_2": "US",
+                  "iso3166_3": "USA"
+                }
+              },
+              "name": "Stamford",
+              "localityType": "CITY"
+            },
+            "fullName": "Connecticut Jr. Rangers",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 6,
+              "updated": "2014-03-03T15:07:46Z",
+              "name": "United States",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "USA",
+              "shortName": "USA",
+              "iso3166_2": "US",
+              "iso3166_3": "USA"
+            }
+          },
+          "league": {
+            "id": 620,
+            "playerLevel": "PROFESSIONAL",
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "updated": "2014-05-09T12:02:27Z",
+            "hideParentLeagueName": "false",
+            "imageUrl": "",
+            "name": "USPHL 16U",
+            "hasChildLeagues": "true",
+            "teamType": "CLUB",
+            "teamClass": "MEN",
+            "searchable": "true",
+            "country": {
+              "id": 6,
+              "updated": "2014-03-03T15:07:46Z",
+              "name": "United States",
+              "continent": "NORTH_AMERICA",
+              "abbreviation": "USA",
+              "shortName": "USA",
+              "iso3166_2": "US",
+              "iso3166_3": "USA"
+            }
+          }
+        },
+        "sort": [
+          0.20529793,
+          2014,
+          0.20529793
+        ],
+        "_explanation": {
+          "value": 0.20529793,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.5132448,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.4514645,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.4514645,
+                      "description": "ConstantScore(team.name:/.*ger.*/^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0.061780322,
+                  "description": "weight(gameType:regular_season in 64) [PerFieldSimilarity], result of:",
+                  "details": [
+                    {
+                      "value": 0.061780322,
+                      "description": "score(doc=64,freq=1.0 = termFreq=1.0\n), product of:",
+                      "details": [
+                        {
+                          "value": 0.05281252,
+                          "description": "queryWeight, product of:",
+                          "details": [
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 0.04514645,
+                              "description": "queryNorm"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 1.1698045,
+                          "description": "fieldWeight in 64, product of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "tf(freq=1.0), with freq of:",
+                              "details": [
+                                {
+                                  "value": 1,
+                                  "description": "termFreq=1.0"
+                                }
+                              ]
+                            },
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 1,
+                              "description": "fieldNorm(doc=64)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.4,
+              "description": "coord(2/5)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "playerstats",
+        "_type": "playerstat",
+        "_id": "53ced4e69a2a3f270a20c660",
+        "_score": 0.20529793,
+        "_source": {
+          "playerPosition": "SKATER",
+          "id": 8517377,
+          "visibleInRoster": "true",
+          "sort": 0,
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "player": {
+            "yearOfBirth": 1977,
+            "dateOfBirth": "1977-08-04",
+            "playerPosition": "DEFENSEMAN",
+            "id": 5492,
+            "lastName": "Angelbrant",
+            "height": 177,
+            "weight": 76,
+            "updated": "2014-07-08T07:52:19Z",
+            "contract": "15/16",
+            "playerStatus": "ACTIVE",
+            "firstName": "Anders",
+            "country": {
+              "id": 1,
+              "updated": "2014-03-03T15:07:45Z",
+              "name": "Sweden",
+              "continent": "EUROPE",
+              "abbreviation": "SWE",
+              "shortName": "",
+              "iso3166_2": "SE",
+              "iso3166_3": "SWE"
+            }
+          },
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-07-08T07:52:19Z",
+          "contractType": "NORMAL",
+          "team": {
+            "id": 1267,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-05-08T15:14:00Z",
+            "imageUrl": "knights_logo_transp.png",
+            "foundedYear": 1961,
+            "name": "Kongsvinger",
+            "locality": {
+              "id": 1233,
+              "name": "Kongsvinger",
+              "localityType": "CITY",
+              "country": {
+                "id": 5,
+                "updated": "2014-03-03T15:07:43Z",
+                "name": "Norway",
+                "continent": "EUROPE",
+                "abbreviation": "NOR",
+                "shortName": "",
+                "iso3166_2": "NO",
+                "iso3166_3": "NOR"
+              }
+            },
+            "fullName": "Kongsvinger Idrettslag",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 5,
+              "updated": "2014-03-03T15:07:43Z",
+              "name": "Norway",
+              "continent": "EUROPE",
+              "abbreviation": "NOR",
+              "shortName": "",
+              "iso3166_2": "NO",
+              "iso3166_3": "NOR"
+            }
+          },
+          "league": {
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "imageUrl": "norway2.jpg",
+            "hideParentLeagueName": "false",
+            "hasChildLeagues": "false",
+            "teamClass": "MEN",
+            "country": {
+              "id": 5,
+              "updated": "2014-03-03T15:07:43Z",
+              "name": "Norway",
+              "continent": "EUROPE",
+              "abbreviation": "NOR",
+              "shortName": "",
+              "iso3166_2": "NO",
+              "iso3166_3": "NOR"
+            },
+            "playerLevel": "PROFESSIONAL",
+            "id": 89,
+            "updated": "2014-07-03T12:29:56Z",
+            "name": "Norway2",
+            "fullName": "1. divisjon",
+            "teamType": "CLUB",
+            "searchable": "true"
+          }
+        },
+        "sort": [
+          0.20529793,
+          2014,
+          0.20529793
+        ],
+        "_explanation": {
+          "value": 0.20529793,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.5132448,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.4514645,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.4514645,
+                      "description": "ConstantScore(team.name:/.*ger.*/^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0.061780322,
+                  "description": "weight(gameType:regular_season in 97) [PerFieldSimilarity], result of:",
+                  "details": [
+                    {
+                      "value": 0.061780322,
+                      "description": "score(doc=97,freq=1.0 = termFreq=1.0\n), product of:",
+                      "details": [
+                        {
+                          "value": 0.05281252,
+                          "description": "queryWeight, product of:",
+                          "details": [
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 0.04514645,
+                              "description": "queryNorm"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 1.1698045,
+                          "description": "fieldWeight in 97, product of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "tf(freq=1.0), with freq of:",
+                              "details": [
+                                {
+                                  "value": 1,
+                                  "description": "termFreq=1.0"
+                                }
+                              ]
+                            },
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 1,
+                              "description": "fieldNorm(doc=97)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.4,
+              "description": "coord(2/5)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "playerstats",
+        "_type": "playerstat",
+        "_id": "53ced4e69a2a3f270a20c658",
+        "_score": 0.20529793,
+        "_source": {
+          "playerPosition": "SKATER",
+          "id": 8517036,
+          "visibleInRoster": "true",
+          "sort": 0,
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "player": {
+            "dateOfBirth": "1974-09-30",
+            "yearOfBirth": 1974,
+            "lastName": "Nemirovsky",
+            "weight": 89,
+            "contract": "14/15",
+            "secondaryCountry": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            },
+            "playerStatus": "ACTIVE",
+            "country": {
+              "id": 9,
+              "updated": "2014-03-03T15:07:44Z",
+              "name": "Russian Federation",
+              "continent": "ASIA",
+              "abbreviation": "RUS",
+              "shortName": "Russia",
+              "iso3166_2": "RU",
+              "iso3166_3": "RUS"
+            },
+            "id": 31479,
+            "playerPosition": "RIGHT_WING",
+            "height": 180,
+            "updated": "2014-07-08T07:51:46Z",
+            "shoots": "LEFT",
+            "firstName": "Mikhail"
+          },
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-07-08T07:51:46Z",
+          "contractType": "NORMAL",
+          "team": {
+            "id": 4565,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-05-08T15:14:00Z",
+            "imageUrl": "kissingerwoelfe.jpg",
+            "foundedYear": 2004,
+            "name": "EC Bad Kissingen",
+            "locality": {
+              "id": 18378,
+              "name": "Bad Kissingen",
+              "localityType": "CITY",
+              "country": {
+                "id": 21,
+                "updated": "2014-03-03T15:07:40Z",
+                "name": "Germany",
+                "continent": "EUROPE",
+                "abbreviation": "ER",
+                "shortName": "",
+                "iso3166_2": "DE",
+                "iso3166_3": "DEU"
+              }
+            },
+            "fullName": "EC Bad Kissinger Wölfe",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          },
+          "league": {
+            "id": 110,
+            "playerLevel": "PROFESSIONAL",
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "updated": "2014-05-09T12:01:23Z",
+            "hideParentLeagueName": "false",
+            "imageUrl": "",
+            "name": "Germany5",
+            "hasChildLeagues": "true",
+            "teamType": "CLUB",
+            "teamClass": "MEN",
+            "searchable": "true",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          }
+        },
+        "sort": [
+          0.20529793,
+          2014,
+          0.20529793
+        ],
+        "_explanation": {
+          "value": 0.20529793,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.5132448,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.4514645,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.4514645,
+                      "description": "ConstantScore(league.name:/.*ger.*/^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 0.04514645,
+                      "description": "ConstantScore(team.country.name:/.*ger.*/), product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0.061780322,
+                  "description": "weight(gameType:regular_season in 99) [PerFieldSimilarity], result of:",
+                  "details": [
+                    {
+                      "value": 0.061780322,
+                      "description": "score(doc=99,freq=1.0 = termFreq=1.0\n), product of:",
+                      "details": [
+                        {
+                          "value": 0.05281252,
+                          "description": "queryWeight, product of:",
+                          "details": [
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 0.04514645,
+                              "description": "queryNorm"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 1.1698045,
+                          "description": "fieldWeight in 99, product of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "tf(freq=1.0), with freq of:",
+                              "details": [
+                                {
+                                  "value": 1,
+                                  "description": "termFreq=1.0"
+                                }
+                              ]
+                            },
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 1,
+                              "description": "fieldNorm(doc=99)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.4,
+              "description": "coord(2/5)"
+            }
+          ]
+        }
+      },
+      {
+        "_shard": 4,
+        "_node": "V6tpJtOSRI6NrOtP72xoJQ",
+        "_index": "playerstats",
+        "_type": "playerstat",
+        "_id": "53ced4189a2a3f270a2056ab",
+        "_score": 0.20529793,
+        "_source": {
+          "playerPosition": "SKATER",
+          "id": 8524240,
+          "jerseyNumber": 63,
+          "visibleInRoster": "true",
+          "sort": 0,
+          "season": {
+            "id": 127,
+            "endYear": 2015,
+            "startYear": 2014,
+            "seasonTypeStart": "AUTUMN",
+            "name": "2014-2015",
+            "active": "false",
+            "seasonTypeEnd": "SPRING"
+          },
+          "player": {
+            "yearOfBirth": 1993,
+            "dateOfBirth": "1993-04-01",
+            "playerPosition": "FORWARD",
+            "id": 53146,
+            "lastName": "Söllner",
+            "height": 178,
+            "weight": 82,
+            "updated": "2014-07-14T20:55:30Z",
+            "contract": "14/15",
+            "shoots": "LEFT",
+            "playerStatus": "ACTIVE",
+            "firstName": "Felix",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          },
+          "gameType": "REGULAR_SEASON",
+          "updated": "2014-07-14T21:05:32Z",
+          "contractType": "NORMAL",
+          "team": {
+            "id": 1237,
+            "inactive": "false",
+            "editorialNotes": "",
+            "updated": "2014-05-08T15:14:00Z",
+            "imageUrl": "",
+            "foundedYear": 1953,
+            "name": "ERSC Amberg",
+            "locality": {
+              "id": 551,
+              "name": "Amberg",
+              "localityType": "CITY",
+              "country": {
+                "id": 21,
+                "updated": "2014-03-03T15:07:40Z",
+                "name": "Germany",
+                "continent": "EUROPE",
+                "abbreviation": "ER",
+                "shortName": "",
+                "iso3166_2": "DE",
+                "iso3166_3": "DEU"
+              }
+            },
+            "fullName": "",
+            "teamType": "CLUB",
+            "searchable": "true",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          },
+          "league": {
+            "id": 110,
+            "playerLevel": "PROFESSIONAL",
+            "virtual": "false",
+            "gameType": "REGULAR_SEASON",
+            "updated": "2014-05-09T12:01:23Z",
+            "hideParentLeagueName": "false",
+            "imageUrl": "",
+            "name": "Germany5",
+            "hasChildLeagues": "true",
+            "teamType": "CLUB",
+            "teamClass": "MEN",
+            "searchable": "true",
+            "country": {
+              "id": 21,
+              "updated": "2014-03-03T15:07:40Z",
+              "name": "Germany",
+              "continent": "EUROPE",
+              "abbreviation": "ER",
+              "shortName": "",
+              "iso3166_2": "DE",
+              "iso3166_3": "DEU"
+            }
+          }
+        },
+        "sort": [
+          0.20529793,
+          2014,
+          0.20529793
+        ],
+        "_explanation": {
+          "value": 0.20529793,
+          "description": "product of:",
+          "details": [
+            {
+              "value": 0.5132448,
+              "description": "sum of:",
+              "details": [
+                {
+                  "value": 0.4514645,
+                  "description": "max of:",
+                  "details": [
+                    {
+                      "value": 0.4514645,
+                      "description": "ConstantScore(league.name:/.*ger.*/^10.0)^10.0, product of:",
+                      "details": [
+                        {
+                          "value": 10,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    },
+                    {
+                      "value": 0.04514645,
+                      "description": "ConstantScore(team.country.name:/.*ger.*/), product of:",
+                      "details": [
+                        {
+                          "value": 1,
+                          "description": "boost"
+                        },
+                        {
+                          "value": 0.04514645,
+                          "description": "queryNorm"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0.061780322,
+                  "description": "weight(gameType:regular_season in 118) [PerFieldSimilarity], result of:",
+                  "details": [
+                    {
+                      "value": 0.061780322,
+                      "description": "score(doc=118,freq=1.0 = termFreq=1.0\n), product of:",
+                      "details": [
+                        {
+                          "value": 0.05281252,
+                          "description": "queryWeight, product of:",
+                          "details": [
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 0.04514645,
+                              "description": "queryNorm"
+                            }
+                          ]
+                        },
+                        {
+                          "value": 1.1698045,
+                          "description": "fieldWeight in 118, product of:",
+                          "details": [
+                            {
+                              "value": 1,
+                              "description": "tf(freq=1.0), with freq of:",
+                              "details": [
+                                {
+                                  "value": 1,
+                                  "description": "termFreq=1.0"
+                                }
+                              ]
+                            },
+                            {
+                              "value": 1.1698045,
+                              "description": "idf(docFreq=51865, maxDocs=61465)"
+                            },
+                            {
+                              "value": 1,
+                              "description": "fieldNorm(doc=118)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.4,
+              "description": "coord(2/5)"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
