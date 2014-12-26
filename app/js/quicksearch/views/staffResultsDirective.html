@@ -1,0 +1,19 @@
+<div id="staffCol" class="col">
+    <div class="h6">{{'staff' | translate}}</div>
+    <ul class="list">
+        <li class="item" ng-repeat="staff in staffs">
+            <a href="">
+                <img src="img/blank.gif" class="flag flag-{{staff._source.staff.country['iso3166_2'].toLowerCase()}}" alt="Sweden">
+                <ul class="info">
+                    <li class="name">{{staff._source.staff.firstName}} {{staff._source.staff.lastName}}</li>
+                    <li class="dob">{{staff._source.staff.dateOfBirth | date:'MM.dd.yyyy'}}</li>
+                    <li><b>{{staff._source.staffRole}}</b></li>
+                    <li class="from">
+                        <span>{{staff._source.season.name}} {{staff._source.team.name}}</span>
+                        <span>{{staff._source.league.name}} &#47; {{staff._source.league.country['iso3166_3']}}</span>
+                    </li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+</div>

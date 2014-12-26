@@ -24,7 +24,7 @@ describe("QuickSearch", function() {
           searchterm : ""
         };
 
-        element = '<quicksearch search="search"></quicksearch>';
+        element = '<quick-search search="search"></quick-search>';
         element = $compile(element)(scope);
         scope.$digest();
 

@@ -1,0 +1,16 @@
+<div id="teamsCol" class="col">
+    <div class="h6">{{'teams' | translate}}</div>
+    <ul class="list">
+        <li class="item" ng-repeat="team in teams">
+            <a href="" ng-click="newTab('Players of '+ team._source.team.name,'dashboard.players',team._source.team)">
+                <img src="img/blank.gif" class="flag flag-{{team._source.league.country['iso3166_2'].toLowerCase()}}" alt="{{team._source.league.country.name}}">
+                <ul class="info">
+                    <li class="name">{{team._source.team.name}}</li>
+                    <li class="from">
+                        <span>{{team._source.league.name}} &#47; {{team._source.league.country['iso3166_3']}}</span>
+                    </li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+</div>

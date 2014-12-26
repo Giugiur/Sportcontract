@@ -1,0 +1,13 @@
+<div id="leaguesCol" class="col">
+    <div class="h6">{{'leagues' | translate}}</div>
+    <ul class="list">
+        <li class="item" ng-repeat="league in leagues">
+            <a href="" ng-click="newTab('Teams of '+ league._source.name,'dashboard.teams',league)">
+                <img src="img/blank.gif" class="flag flag-{{league._source.country['iso3166_2'].toLowerCase()}}" alt="Germany">
+                <ul class="info">
+                    <li class="name">{{league._source.name}}, {{league._source.country.name}}</li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+</div>

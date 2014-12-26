@@ -1,15 +1,14 @@
 (function(){
     'use strict';
 
-    var quicksearch = function(api,$http,$rootScope,Tabs,$q) {
-
+    var quickSearch = function(api,$http,$rootScope,Tabs,$q) {
         return {
             restrict: 'E',
             scope: {
                 'search': '='
             },
             transclude: true,
-            templateUrl: 'quicksearch/views/quicksearch.html',
+            templateUrl: 'quicksearch/views/quickSearchDirective.html',
             link: function(scope){
                 scope.players = [];
                 scope.teams = [];
@@ -118,5 +117,5 @@
     }
 
     var quicksearchModule = angular.module('app.quicksearch');
-    quicksearchModule.directive('quicksearch',['api','$http','$rootScope','Tabs', '$q', quicksearch]);
+    quicksearchModule.directive('quickSearch',['api','$http','$rootScope','Tabs', '$q', quickSearch]);
 }());
