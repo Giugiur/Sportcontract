@@ -1,23 +1,32 @@
 (function(){
-	'use strict';
+    'use strict';
 
-	var Languages = function($http,api){
-		var self = this;
-		self.languages = [];
+    var Languages = function($http,api){
+        var languages = [];
 
-		$http.get(api + '/api/getLanguages').success(function(result){
-			for(var i in result){
-				self.languages.push(result[i]);
-			}
-		});
+        var getLanguages = function(){
+            return languages;
+        };
 
-		self.getLanguages = function(){
-			return self.languages;
-		};
+        var getLanguagesCallback = function(result){
+            for(var i in result){
+                if(result.hasOwnProperty(i)){
+                    languages.push(result[i]);
+                }
+            }
+        };
 
-		return self;
-	};
+        var init = function(){
+            $http.get(api + '/api/getLanguages').success(getLanguagesCallback);
+        };
 
-	var commonModule = angular.module('app.common');
-	commonModule.service("Languages", ["$http", "api", Languages]);	
+        init();
+
+        return {
+            "getLanguages": getLanguages
+        };
+    };
+
+    var commonModule = angular.module('app.common');
+    commonModule.service("Languages", ["$http", "api", Languages]);
 }());
