@@ -2,34 +2,51 @@
     'use strict';
 
     var User = function($http,api,$q,Season){
-        var self = this;
-        self.user;
+        var user;
 
-        self.setUser = function(user){
-            self.user = user;
+        var $save = function(){
+            if(typeof user === "undefined"){
+                throw "Can't save user object because it not exists yet!";
+            }
+
+            var deferred = $q.defer();
+            $http.put(api + "/api/users/" + user._id,user).success(function(result){
+                deferred.resolve(result);
+            });
+
+            return deferred.promise;
         };
 
-        self.getUser = function(){
-            return self.user;
-        }
+        var setUser = function(userObject){
+            if(typeof userObject === "undefined"){
+                throw "You must pass 'user' to function setUser";
+            }
 
-        self.setSeason = function(season){
-            self.user.season = season;
+            user = userObject;
+        };
+
+        var getUser = function(){
+            return user;
+        };
+
+        var setSeason = function(season){
+            if(typeof season === "undefined"){
+                throw "You must pass 'season' to function setSeason";
+            }
+
+            user.season = season;
             Season.setSeason(season);
-            self.$save();
-        }
+            $save();
+        };
 
-        self.$save = function(){
-            var deferred = $q.defer();
-            $http.put(api + "/api/users/" + self.user._id,self.user).success(function(result){
-                deferred.resolve(result);
-            })
-            return deferred.promise;
-        }
-
-        return self;
+        return {
+            "setUser": setUser,
+            "getUser": getUser,
+            "setSeason": setSeason,
+            "$save": $save
+        };
     };
 
     var commonModule = angular.module('app.common');
-    commonModule.service('User',['$http','api','$q','Season', User]);    
+    commonModule.service('User',['$http','api','$q','Season', User]);
 }());
